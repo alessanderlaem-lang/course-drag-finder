@@ -47,7 +47,7 @@ const Index = () => {
             </h1>
             
             <p className="text-sm sm:text-base md:text-lg text-[#d1d1d1] max-w-2xl mx-auto px-4 sm:px-6 leading-relaxed">
-              Tenha o mesmo acesso que os grandes players têm: networking poderoso, ferramentas premium e recursos exclusivos. +7.000 membros já estão um passo à frente do mercado.
+              Tenha o mesmo acesso que os grandes players têm: networking poderoso, ferramentas premium e recursos exclusivos. +7.000 membros já estão à frente do mercado.
             </p>
 
             {/* CTA Button */}
