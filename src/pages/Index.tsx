@@ -61,7 +61,7 @@ const Index = () => {
                 className="group bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-sm sm:text-base px-6 sm:px-10 py-5 sm:py-6 rounded-full shadow-glow transition-all duration-300 hover:scale-105"
               >
                 <Unlock className="w-4 h-4 sm:w-5 sm:h-5 mr-2 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
-                EXPLORAR O ACERVO
+                Quero saber mais
               </Button>
             </div>
           </div>
