@@ -39,15 +39,15 @@ const Index = () => {
           {/* Content */}
           <div className="relative z-20 -mt-8 sm:-mt-12 md:-mt-16 text-center space-y-3 sm:space-y-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight px-4 sm:px-6">
-              <span className="text-white">Maior comunidade de</span>
+              <span className="text-white">A Maior Comunidade de</span>
               <br />
-              <span className="text-[#FF0000]">Rateio & Networking do</span>
+              <span className="text-[#FF0000]">Marketing Digital e Networking</span>
               <br />
-              <span className="text-white">Brasil +20k cursos</span>
+              <span className="text-white">do Brasil</span>
             </h1>
             
             <p className="text-sm sm:text-base md:text-lg text-[#d1d1d1] max-w-2xl mx-auto px-4 sm:px-6 leading-relaxed">
-              Os maiores rateios de cursos do Brasil, com todo o conhecimento que você precisa — na palma da sua mão!
+              Tenha o mesmo acesso que os grandes players têm: networking poderoso, ferramentas premium e recursos exclusivos. +7.000 membros já estão um passo à frente do mercado.
             </p>
 
             {/* CTA Button */}
