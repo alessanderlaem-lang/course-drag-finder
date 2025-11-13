@@ -9,7 +9,7 @@ const BlackFridayBanner = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-[#8B0000] text-white py-2.5 px-4 shadow-lg">
       <div className="max-w-7xl mx-auto relative">
-        <p className="text-xs sm:text-sm md:text-base font-medium text-center pr-8">
+        <p className="text-xs sm:text-sm md:text-base font-medium text-center px-8">
           Só no mês de novembro: Compre agora e ganhe 1 mês de{" "}
           <span className="inline-block bg-white text-[#8B0000] px-3 py-1 rounded-md font-bold mx-1 border-2 border-white shadow-sm">
             ChatGPT Plus GRÁTIS
