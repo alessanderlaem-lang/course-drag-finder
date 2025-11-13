@@ -7,23 +7,21 @@ const BlackFridayBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#8B0000] to-[#FF0000] text-white py-2 px-4 shadow-lg">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-        <div className="flex-1 text-center">
-          <p className="text-xs sm:text-sm md:text-base font-semibold leading-snug">
-            <span className="animate-pulse">Só no mês de novembro:</span> Compre agora e ganhe 1 mês de{" "}
-            <span className="bg-white text-[#FF0000] px-2 py-0.5 rounded text-xs sm:text-sm font-bold">
-              ChatGPT Plus GRÁTIS
-            </span>
-            !
-          </p>
-        </div>
+    <div className="fixed top-0 left-0 right-0 z-50 bg-[#8B0000] text-white py-2.5 px-4 shadow-lg">
+      <div className="max-w-7xl mx-auto flex items-center justify-center gap-3 relative">
+        <p className="text-xs sm:text-sm md:text-base font-medium text-center">
+          Só no mês de novembro: Compre agora e ganhe 1 mês de{" "}
+          <span className="inline-block bg-white text-[#8B0000] px-3 py-1 rounded-md font-bold mx-1 border-2 border-white shadow-sm">
+            ChatGPT Plus GRÁTIS
+          </span>
+          !
+        </p>
         <button
           onClick={() => setIsVisible(false)}
-          className="flex-shrink-0 hover:bg-white/20 rounded-full p-1 transition-colors"
+          className="absolute right-0 flex-shrink-0 hover:bg-white/20 rounded-full p-1 transition-colors"
           aria-label="Fechar banner"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
       </div>
     </div>
