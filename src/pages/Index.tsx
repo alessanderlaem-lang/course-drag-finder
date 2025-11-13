@@ -6,6 +6,7 @@ import MembersCounter from "@/components/MembersCounter";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
+import BlackFridayBanner from "@/components/BlackFridayBanner";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 
@@ -19,8 +20,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Black Friday Banner */}
+      <BlackFridayBanner />
       {/* Hero Section */}
-      <section className="relative pt-8 sm:pt-12 pb-8 sm:pb-12 px-4 sm:px-6 overflow-hidden" style={{ background: 'radial-gradient(ellipse at center, rgba(139, 0, 0, 0.4) 0%, rgba(0, 0, 0, 1) 70%)' }}>
+      <section className="relative pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-6 overflow-hidden" style={{ background: 'radial-gradient(ellipse at center, rgba(139, 0, 0, 0.4) 0%, rgba(0, 0, 0, 1) 70%)' }}>
 
         <div className="relative z-10 max-w-4xl mx-auto">
           {/* Mascot with Logo */}
