@@ -11,9 +11,9 @@ const BlackFridayBanner = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
         <div className="flex-1 text-center">
           <p className="text-xs sm:text-sm md:text-base font-semibold leading-snug">
-            🔥 <span className="animate-pulse">Só no mês de novembro:</span> Compre agora e ganhe{" "}
+            <span className="animate-pulse">Só no mês de novembro:</span> Compre agora e ganhe 1 mês de{" "}
             <span className="bg-white text-[#FF0000] px-2 py-0.5 rounded text-xs sm:text-sm font-bold">
-              1 mês de ChatGPT GRÁTIS
+              ChatGPT Plus GRÁTIS
             </span>
             !
           </p>
