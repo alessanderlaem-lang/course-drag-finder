@@ -47,7 +47,7 @@ const Index = () => {
             </p>
             
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4 sm:px-6">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4 sm:px-6">
               <span className="text-white">Maior comunidade de</span>
               <br />
               <span className="text-[#FF0000]">Marketing Digital &Networking</span>
