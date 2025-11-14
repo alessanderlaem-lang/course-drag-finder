@@ -47,7 +47,7 @@ const Index = () => {
             </p>
             
             {/* Headline */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4 sm:px-6">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight px-4 sm:px-6">
               <span className="text-white">Maior comunidade de</span>
               <br />
               <span className="text-[#FF0000]">Marketing Digital &Networking</span>
@@ -56,7 +56,7 @@ const Index = () => {
             </h1>
             
             {/* Subheadline */}
-            <p className="text-sm sm:text-base text-[#a1a1a1] max-w-2xl mx-auto px-4 sm:px-6 leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#a1a1a1] max-w-2xl mx-auto px-4 sm:px-6 leading-relaxed">
               Tenha o mesmo acesso que os grandes players têm: networking poderoso, ferramentas premium e recursos exclusivos. +7.000 membros já estão à frente do mercado.
             </p>
 
