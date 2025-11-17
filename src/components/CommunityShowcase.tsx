@@ -34,8 +34,7 @@ const CommunityShowcase = () => {
       items: [
         "Cursos completos de tráfego pago",
         "Estratégias atualizadas semanalmente",
-        "Cases reais de escala (6 e 7 dígitos)",
-        "Análise de campanhas vencedoras",
+        "Estratégias reais de escala",
         "Otimização de ROI e ROAS"
       ],
       highlight: "Do básico à escala avançada"
@@ -47,7 +46,6 @@ const CommunityShowcase = () => {
       items: [
         "Templates de copy prontos para usar",
         "Fórmulas comprovadas de persuasão",
-        "Análise de copies vencedoras",
         "Scripts de VSL que convertem",
         "Copywriting para anúncios pagos"
       ],
@@ -86,7 +84,6 @@ const CommunityShowcase = () => {
       items: [
         "Templates prontos para usar",
         "Tutoriais completos de ferramentas",
-        "Acesso a ferramentas premium",
         "Criativos para anúncios",
         "Edição de vídeo profissional"
       ],
