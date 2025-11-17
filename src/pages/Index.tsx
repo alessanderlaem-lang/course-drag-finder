@@ -12,10 +12,10 @@ import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 
 const Index = () => {
-  const scrollToPricing = () => {
-    const pricingSection = document.querySelector('[id*="pricing"]');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const scrollToNextSection = () => {
+    const topicsSection = document.querySelector('#topics-section');
+    if (topicsSection) {
+      topicsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -86,7 +86,7 @@ const Index = () => {
               <div className="flex justify-center lg:justify-start pt-2 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                 <Button 
                   size="lg"
-                  onClick={scrollToPricing}
+                  onClick={scrollToNextSection}
                   className="group relative bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] overflow-hidden"
                 >
                   {/* Efeito de brilho ao passar o mouse */}
