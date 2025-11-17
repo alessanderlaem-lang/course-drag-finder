@@ -1,4 +1,4 @@
-import { Unlock, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import ScrollingTopics from "@/components/ScrollingTopics";
 import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -7,19 +7,11 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 import BlackFridayBanner from "@/components/BlackFridayBanner";
-import Navigation from "@/components/Navigation";
 import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 
 const Index = () => {
-  const scrollToTopics = () => {
-    const topicsSection = document.getElementById('topics-section');
-    if (topicsSection) {
-      topicsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   const scrollToPricing = () => {
     const pricingSection = document.querySelector('[id*="pricing"]');
     if (pricingSection) {
@@ -29,14 +21,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Navigation Menu */}
-      <Navigation />
-      
-      {/* Black Friday Banner */}
+      {/* Black Friday Banner - Apenas o banner, sem menu */}
       <BlackFridayBanner />
       
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 overflow-hidden bg-black">
+      <section className="relative min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 overflow-hidden bg-black mt-12 sm:mt-14">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div className="absolute inset-0" style={{
@@ -93,31 +82,19 @@ const Index = () => {
                 Tenha o mesmo acesso que os grandes players têm: networking poderoso, ferramentas premium e recursos exclusivos. +7.000 membros já estão à frente do mercado.
               </p>
 
-              {/* CTAs com animação */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-                {/* CTA Primário */}
+              {/* CTA Único - "Quero saber mais" */}
+              <div className="flex justify-center lg:justify-start pt-2 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                 <Button 
                   size="lg"
                   onClick={scrollToPricing}
-                  className="group relative bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] overflow-hidden"
+                  className="group relative bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] overflow-hidden"
                 >
                   {/* Efeito de brilho ao passar o mouse */}
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-                  <span className="relative flex items-center">
-                    COMEÇAR AGORA
-                    <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="relative flex items-center text-lg sm:text-xl">
+                    Quero saber mais
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
-                </Button>
-
-                {/* CTA Secundário */}
-                <Button 
-                  size="lg"
-                  onClick={scrollToTopics}
-                  variant="outline"
-                  className="group border-2 border-white text-white hover:bg-white hover:text-black font-bold text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-lg transition-all duration-300 hover:scale-105"
-                >
-                  <Unlock className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:rotate-12" />
-                  VER COMUNIDADE
                 </Button>
               </div>
             </div>
