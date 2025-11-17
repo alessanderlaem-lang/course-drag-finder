@@ -118,14 +118,14 @@ const CommunityShowcase = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-8 sm:py-20 lg:py-24 px-4 bg-black"
+      className="relative py-4 sm:py-20 lg:py-24 px-4 bg-black"
     >
       {/* Gradiente sutil de fundo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Container Principal */}
       <div className="relative max-w-7xl mx-auto">
-        <div className={`relative bg-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-8 sm:p-10 lg:p-14 pt-16 sm:pt-14 lg:pt-16 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`relative bg-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-8 sm:p-10 lg:p-14 pt-20 sm:pt-14 lg:pt-16 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Header */}
           <div className="relative text-center mb-12 sm:mb-16">
