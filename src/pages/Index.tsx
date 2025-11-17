@@ -52,7 +52,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* COLUNA ESQUERDA - Texto */}
-            <div className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1">
+            <div className="space-y-4 sm:space-y-5 text-center lg:text-left order-2 lg:order-1">
               
               {/* Badge de Prova Social com animação de glow */}
               <div className="inline-flex items-center gap-2 bg-red-500/20 border-2 border-red-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full animate-pulse-glow animate-fade-in-up">
