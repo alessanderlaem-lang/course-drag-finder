@@ -10,7 +10,10 @@ import {
   CheckCircle2,
   Zap,
   Users,
-  MessageSquare
+  MessageSquare,
+  Package,
+  Wand2,
+  FileText
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -118,14 +121,14 @@ const CommunityShowcase = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-4 sm:py-20 lg:py-24 px-4 bg-black"
+      className="relative py-2 sm:py-20 lg:py-24 px-2 sm:px-4 bg-black"
     >
       {/* Gradiente sutil de fundo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Container Principal */}
       <div className="relative max-w-7xl mx-auto">
-        <div className={`relative bg-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-8 sm:p-10 lg:p-14 pt-20 sm:pt-14 lg:pt-16 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`relative bg-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-6 sm:p-10 lg:p-14 pt-20 sm:pt-14 lg:pt-16 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Header */}
           <div className="relative text-center mb-12 sm:mb-16">
@@ -136,6 +139,37 @@ const CommunityShowcase = () => {
             <p className="relative text-base sm:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
               Conteúdo organizado, atualizado semanalmente e acesso vitalício. Não é só teoria — é o que realmente funciona no mercado hoje.
             </p>
+          </div>
+
+          {/* Value Badges - MOVIDO PARA CIMA (antes dos pilares) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-16">
+            {[
+              { icon: Zap, title: "Atualizações Semanais", desc: "Novos conteúdos toda semana" },
+              { icon: CheckCircle2, title: "Acesso Vitalício", desc: "Pague uma vez, acesse para sempre" },
+              { icon: Users, title: "Comunidade no Discord", desc: "+7.000 membros ativos" },
+              { icon: MessageSquare, title: "Acesso via Telegram", desc: "Conteúdos exclusivos" }
+            ].map((badge, index) => {
+              const BadgeIcon = badge.icon;
+              return (
+                <div
+                  key={index}
+                  className="group relative bg-[#111111] border border-gray-900 rounded-xl p-4 sm:p-5 hover:border-red-500/30 transition-all duration-300"
+                >
+                  {/* Ícone centralizado no topo */}
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/15 transition-colors">
+                      <BadgeIcon className="w-6 h-6 text-red-500" />
+                    </div>
+                  </div>
+                  
+                  {/* Texto centralizado */}
+                  <div className="text-center">
+                    <h4 className="font-bold text-white text-sm mb-1">{badge.title}</h4>
+                    <p className="text-xs text-gray-500">{badge.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Pillars Grid - FECHADOS POR PADRÃO */}
@@ -200,47 +234,46 @@ const CommunityShowcase = () => {
             })}
           </div>
 
-          {/* Rateio Highlight */}
-          <div className="relative bg-[#111111] border border-gray-900 rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12">
-            <div className="text-center">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+          {/* NOVA SEÇÃO DE RATEIO - Com categorias do Discord */}
+          <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-6 sm:p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                 + Acesso ao maior acervo de rateio do Brasil
               </h3>
               <p className="text-sm sm:text-base text-gray-400 max-w-3xl mx-auto">
-                Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de cursos complementares organizados por categoria. Tudo atualizado semanalmente.
+                Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de recursos organizados por categoria. Tudo atualizado semanalmente.
               </p>
             </div>
-          </div>
 
-          {/* Value Badges - DESIGN MAIS PROFISSIONAL */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-            {[
-              { icon: Zap, title: "Atualizações Semanais", desc: "Novos conteúdos toda semana" },
-              { icon: CheckCircle2, title: "Acesso Vitalício", desc: "Pague uma vez, acesse para sempre" },
-              { icon: Users, title: "Comunidade no Discord", desc: "+7.000 membros ativos" },
-              { icon: MessageSquare, title: "Acesso via Telegram", desc: "Conteúdos exclusivos" }
-            ].map((badge, index) => {
-              const BadgeIcon = badge.icon;
-              return (
-                <div
-                  key={index}
-                  className="group relative bg-[#111111] border border-gray-900 rounded-xl p-4 sm:p-5 hover:border-red-500/30 transition-all duration-300"
-                >
-                  {/* Ícone centralizado no topo */}
-                  <div className="flex justify-center mb-3">
-                    <div className="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/15 transition-colors">
-                      <BadgeIcon className="w-6 h-6 text-red-500" />
+            {/* Grid de Categorias do Discord */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                { icon: Package, title: "APKs", desc: "Aplicativos premium" },
+                { icon: Wand2, title: "SaaS", desc: "Ferramentas online" },
+                { icon: FileText, title: "PLRs", desc: "Conteúdos prontos" },
+                { icon: Palette, title: "Design", desc: "Templates e recursos" },
+                { icon: Rocket, title: "Automações", desc: "Bots e scripts" },
+                { icon: Target, title: "Tráfego", desc: "Materiais de ads" },
+                { icon: PenTool, title: "Copy", desc: "Swipes e templates" },
+                { icon: ShoppingBag, title: "E-commerce", desc: "Produtos e fornecedores" }
+              ].map((category, index) => {
+                const CategoryIcon = category.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-[#0a0a0a] border border-gray-900 rounded-xl p-4 hover:border-red-500/30 transition-all duration-300"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <div className="p-3 bg-red-500/10 rounded-lg mb-3">
+                        <CategoryIcon className="w-5 h-5 text-red-500" />
+                      </div>
+                      <h4 className="font-bold text-white text-sm mb-1">{category.title}</h4>
+                      <p className="text-xs text-gray-500">{category.desc}</p>
                     </div>
                   </div>
-                  
-                  {/* Texto centralizado */}
-                  <div className="text-center">
-                    <h4 className="font-bold text-white text-sm mb-1">{badge.title}</h4>
-                    <p className="text-xs text-gray-500">{badge.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
         </div>
