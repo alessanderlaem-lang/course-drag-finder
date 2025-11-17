@@ -80,7 +80,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   onClick={scrollToNextSection}
-                  className="group relative bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] overflow-hidden"
+                  className="group relative bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] overflow-hidden focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
                 >
                   {/* Efeito de brilho ao passar o mouse */}
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
