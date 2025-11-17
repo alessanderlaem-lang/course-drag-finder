@@ -4,8 +4,7 @@ import {
   PenTool, 
   Rocket, 
   ShoppingBag, 
-  Palette, 
-  Bot,
+  Palette,
   ChevronDown,
   ChevronUp,
   CheckCircle2,
@@ -92,19 +91,6 @@ const CommunityShowcase = () => {
         "Edição de vídeo profissional"
       ],
       highlight: "+1.000 templates inclusos"
-    },
-    {
-      title: "Automatize com Inteligência Artificial",
-      description: "ChatGPT, Midjourney, automações e ferramentas de IA para escalar seu negócio sem aumentar o time.",
-      icon: Bot,
-      items: [
-        "Prompts prontos e otimizados",
-        "Agentes de IA exclusivos da Rise",
-        "Automações completas de processos",
-        "Ferramentas de IA premium",
-        "Integração de IA no negócio"
-      ],
-      highlight: "Acesso a +50 ferramentas de IA"
     }
   ];
 
