@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
+import React from "react";
 import ScrollingTopics from "@/components/ScrollingTopics";
 import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -18,6 +19,45 @@ const Index = () => {
       topicsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+
+  // Efeito de brilho que segue o mouse no botão
+  React.useEffect(() => {
+    const button = document.querySelector('.glow-button') as HTMLElement;
+    if (!button) return;
+
+    let lastPercentage = 0;
+    const brilhoWidth = 15; // Largura do brilho em porcentagem
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = button.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const buttonWidth = rect.width;
+
+      // Calcular a posição em porcentagem e centralizar o brilho
+      let percentage = ((mouseX / buttonWidth) * 100) - (brilhoWidth / 2);
+
+      // Ajuste de limites
+      if (percentage < 0) percentage = 0;
+      if (percentage > 100 - brilhoWidth) percentage = 100 - brilhoWidth;
+
+      // Atualiza a variável CSS --glow-left
+      button.style.setProperty('--glow-left', `${percentage}%`);
+      lastPercentage = percentage;
+    };
+
+    const handleMouseLeave = () => {
+      // Mantém a última posição do brilho
+      button.style.setProperty('--glow-left', `${lastPercentage}%`);
+    };
+
+    button.addEventListener('mousemove', handleMouseMove);
+    button.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      button.removeEventListener('mousemove', handleMouseMove);
+      button.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-black">
@@ -74,20 +114,24 @@ const Index = () => {
                 Tenha o mesmo acesso que os grandes players têm: networking poderoso, ferramentas premium e recursos exclusivos. +7.000 membros já estão à frente do mercado.
               </p>
 
-              {/* CTA Único - "Quero saber mais" */}
+              {/* CTA Único - "Quero saber mais" com efeito de brilho que segue o mouse */}
               <div className="flex justify-center lg:justify-start pt-2 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-                <Button 
-                  size="lg"
+                <button 
                   onClick={scrollToNextSection}
-                  className="group relative bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] overflow-hidden"
+                  className="glow-button group relative bg-gradient-to-br from-red-500 to-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.4)] hover:shadow-[0_0_60px_rgba(239,68,68,0.6)] overflow-hidden cursor-pointer"
+                  style={{ '--glow-left': '0%' } as React.CSSProperties}
                 >
-                  {/* Efeito de brilho ao passar o mouse */}
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-                  <span className="relative flex items-center text-lg sm:text-xl">
+                  {/* Borda externa com glow */}
+                  <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%+8px)] h-[calc(100%+8px)] rounded-full border border-white/40 bg-white/10 opacity-50 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none" />
+                  
+                  {/* Brilho que segue o mouse */}
+                  <span className="glow-effect absolute top-1/2 -translate-y-1/2 w-[15%] h-[80%] bg-white blur-[15px] opacity-70 mix-blend-screen pointer-events-none" style={{ left: 'var(--glow-left, 0%)' }} />
+                  
+                  <span className="relative flex items-center text-lg sm:text-xl z-10" style={{ textShadow: '1px 1px 10px rgba(0, 0, 0, 0.2)' }}>
                     Quero saber mais
                     <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
-                </Button>
+                </button>
               </div>
             </div>
 
