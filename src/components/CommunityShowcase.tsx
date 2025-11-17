@@ -26,7 +26,7 @@ interface PillarContent {
   highlight: string;
 }
 
-// Reorganização: badges antes dos pilares + nova seção de rateio
+// Reorganização: badges antes dos pilares + nova seção de rateio - Deploy forçado
 const CommunityShowcase = () => {
   const [expandedPillar, setExpandedPillar] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
