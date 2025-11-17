@@ -142,8 +142,8 @@ const CommunityShowcase = () => {
             </p>
           </div>
 
-          {/* Value Badges - MOVIDO PARA CIMA (antes dos pilares) */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-16">
+          {/* Value Badges - ESTILO MINIMALISTA RATOFLIX */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
             {[
               { icon: Zap, title: "Atualizações Semanais", desc: "Novos conteúdos toda semana" },
               { icon: CheckCircle2, title: "Acesso Vitalício", desc: "Pague uma vez, acesse para sempre" },
@@ -154,23 +154,26 @@ const CommunityShowcase = () => {
               return (
                 <div
                   key={index}
-                  className="group relative bg-[#111111] border border-gray-900 rounded-xl p-4 sm:p-5 hover:border-red-500/30 transition-all duration-300"
+                  className="group relative flex flex-col items-center text-center p-3 sm:p-4"
                 >
-                  {/* Ícone centralizado no topo */}
-                  <div className="flex justify-center mb-3">
-                    <div className="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/15 transition-colors">
-                      <BadgeIcon className="w-6 h-6 text-red-500" />
-                    </div>
+                  {/* Ícone minimalista */}
+                  <div className="mb-2">
+                    <BadgeIcon className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
                   </div>
                   
-                  {/* Texto centralizado */}
-                  <div className="text-center">
-                    <h4 className="font-bold text-white text-sm mb-1">{badge.title}</h4>
-                    <p className="text-xs text-gray-500">{badge.desc}</p>
-                  </div>
+                  {/* Texto minimalista */}
+                  <h4 className="font-semibold text-white text-xs sm:text-sm mb-1">{badge.title}</h4>
+                  <p className="text-[10px] sm:text-xs text-gray-500">{badge.desc}</p>
                 </div>
               );
             })}
+          </div>
+
+          {/* Frase de Impacto */}
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-base sm:text-lg font-semibold text-white">
+              Essa é a <span className="text-red-500">vantagem</span> de quem está dentro da Rise Community.
+            </p>
           </div>
 
           {/* Pillars Grid - FECHADOS POR PADRÃO */}
