@@ -118,73 +118,23 @@ const CommunityShowcase = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-2 sm:py-20 lg:py-24 px-2 sm:px-4 bg-black"
+      className="relative py-4 sm:py-20 lg:py-24 px-4 bg-black"
     >
       {/* Gradiente sutil de fundo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Container Principal */}
       <div className="relative max-w-7xl mx-auto">
-        <div className={`relative bg-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-6 sm:p-10 lg:p-14 pt-20 sm:pt-14 lg:pt-16 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`relative bg-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-8 sm:p-10 lg:p-14 pt-20 sm:pt-14 lg:pt-16 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Header */}
           <div className="relative text-center mb-12 sm:mb-16">
             <h2 className="relative text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               Tudo que você precisa para dominar o{" "}
-              <span className="text-red-500">marketing digital</span> está aqui.{" "}
-              <span className="text-white">E você não está sozinho.</span>
+              <span className="text-red-500">marketing digital</span> está aqui
             </h2>
-            <p className="relative text-base sm:text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto mb-8">
-              Enquanto seus concorrentes buscam respostas no Google, você tem acesso direto a quem já faturou milhões. Enquanto eles tentam e erram sozinhos, você tem <span className="text-red-500 font-bold">+7.000 empreendedores</span> prontos para ajudar.
-            </p>
-          </div>
-
-          {/* Vantagem Competitiva - 3 Pilares */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 sm:mb-16">
-            {/* Conhecimento Completo */}
-            <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-6 hover:border-red-500/30 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <div className="p-4 bg-red-500/10 rounded-2xl mb-4">
-                  <Target className="w-8 h-8 text-red-500" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Conhecimento Completo</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Todo conteúdo de marketing digital em um só lugar. Sempre atualizado, sempre acessível. Não perca tempo procurando: <span className="text-white font-semibold">está tudo aqui</span>.
-                </p>
-              </div>
-            </div>
-
-            {/* Networking Poderoso */}
-            <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-6 hover:border-red-500/30 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <div className="p-4 bg-red-500/10 rounded-2xl mb-4">
-                  <Users className="w-8 h-8 text-red-500" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Networking Poderoso</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Conecte-se com quem já está à frente do mercado. Encontre sócios, parceiros e mentores. Dúvidas? <span className="text-white font-semibold">Alguém já passou por isso</span> e vai te ajudar.
-                </p>
-              </div>
-            </div>
-
-            {/* Suporte Real */}
-            <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-6 hover:border-red-500/30 transition-all duration-300">
-              <div className="flex flex-col items-center text-center">
-                <div className="p-4 bg-red-500/10 rounded-2xl mb-4">
-                  <Rocket className="w-8 h-8 text-red-500" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Suporte Real</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  Precisa de ajuda em um projeto? A comunidade te apoia. Quer validar uma ideia? Receba feedback honesto. Travou em algo? <span className="text-white font-semibold">Alguém já resolveu</span> e vai te mostrar como.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Frase de Impacto */}
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-lg sm:text-xl font-bold text-white">
-              Essa é a <span className="text-red-500">vantagem</span> de quem está dentro da Rise Community.
+            <p className="relative text-base sm:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
+              Conteúdo organizado, atualizado semanalmente e acesso vitalício. Não é só teoria — é o que realmente funciona no mercado hoje.
             </p>
           </div>
 
