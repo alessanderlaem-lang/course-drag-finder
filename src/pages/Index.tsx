@@ -65,11 +65,13 @@ const Index = () => {
               </div>
 
               {/* Headline com animação de entrada */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.15] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <span className="text-white">Maior comunidade de</span>
                 <br />
-                <span className="text-red-500 relative">
+                <span className="text-red-500 relative inline-block">
                   Marketing Digital
+                  <br className="sm:hidden" />
+                  <span className="text-red-500"> e Networking</span>
                   {/* Underline decorativo */}
                   <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-red-500/0 via-red-500/50 to-red-500/0 blur-sm" />
                 </span>
