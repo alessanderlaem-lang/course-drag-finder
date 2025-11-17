@@ -11,7 +11,7 @@ const BlackFridayBanner = () => {
       <div className="max-w-7xl mx-auto relative py-1.5 px-4 sm:px-6">
         {/* Conteúdo principal - texto inline horizontal */}
         <p className="text-center text-xs sm:text-sm font-medium pr-6 sm:pr-0">
-          <span className="font-semibold text-yellow-300">OFERTA EXCLUSIVA NOVEMBRO:</span>{" "}
+          <span className="font-semibold text-yellow-300">OFERTA EXCLUSIVA DE NOVEMBRO:</span>{" "}
           Compre agora e ganhe{" "}
           <span className="inline-block bg-white text-red-900 px-2 py-0.5 rounded font-bold text-xs sm:text-sm border border-yellow-400 mx-0.5">
             1 MÊS ChatGPT Plus GRÁTIS
