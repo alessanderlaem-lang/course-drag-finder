@@ -172,7 +172,7 @@ const CommunityShowcase = () => {
           {/* Frase de Impacto - Forçar render */}
           <div className="text-center mb-12 sm:mb-16">
             <p className="text-base sm:text-lg font-bold text-white">
-              Essa é a <span className="text-red-500">vantagem</span> de quem está dentro da Rise Community.
+              Essa é a <span className="text-red-500">vantagem</span> de quem está dentro da Rise Community:
             </p>
           </div>
 
