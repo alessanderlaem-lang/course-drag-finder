@@ -49,7 +49,7 @@ const Index = () => {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto">
           {/* Layout em duas colunas no desktop, empilhado no mobile */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-6 lg:gap-12 items-center">
             
             {/* COLUNA ESQUERDA - Texto */}
             <div className="space-y-4 sm:space-y-5 text-center lg:text-left order-2 lg:order-1">
