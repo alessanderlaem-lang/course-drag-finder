@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import ScrollingTopics from "@/components/ScrollingTopics";
+import CommunityShowcase from "@/components/CommunityShowcase";
 import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import MembersCounter from "@/components/MembersCounter";
@@ -124,9 +125,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Explore Topics Section */}
+      {/* Community Showcase Section */}
       <div id="topics-section">
-        <ScrollingTopics />
+        <CommunityShowcase />
       </div>
 
       {/* Bonus Section */}
