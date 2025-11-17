@@ -142,40 +142,6 @@ const CommunityShowcase = () => {
             </p>
           </div>
 
-          {/* Value Badges - ESTILO MINIMALISTA RATOFLIX */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
-            {[
-              { icon: Zap, title: "Atualizações Semanais", desc: "Novos conteúdos toda semana" },
-              { icon: CheckCircle2, title: "Acesso Vitalício", desc: "Pague uma vez, acesse para sempre" },
-              { icon: Users, title: "Comunidade no Discord", desc: "+7.000 membros ativos" },
-              { icon: MessageSquare, title: "Acesso via Telegram", desc: "Conteúdos exclusivos" }
-            ].map((badge, index) => {
-              const BadgeIcon = badge.icon;
-              return (
-                <div
-                  key={index}
-                  className="group relative flex flex-col items-center text-center p-3 sm:p-4"
-                >
-                  {/* Ícone minimalista */}
-                  <div className="mb-2">
-                    <BadgeIcon className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
-                  </div>
-                  
-                  {/* Texto minimalista */}
-                  <h4 className="font-semibold text-white text-xs sm:text-sm mb-1">{badge.title}</h4>
-                  <p className="text-[10px] sm:text-xs text-gray-500">{badge.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Frase de Impacto - Forçar render */}
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-base sm:text-lg font-bold text-white">
-              Essa é a <span className="text-red-500">vantagem</span> de quem está dentro da Rise Community:
-            </p>
-          </div>
-
           {/* Pillars Grid - FECHADOS POR PADRÃO */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {pillars.map((pillar, index) => {
