@@ -5,6 +5,8 @@ import {
   Rocket, 
   ShoppingBag, 
   Palette,
+  ChevronDown,
+  ChevronUp,
   CheckCircle2,
   Zap,
   Users,
@@ -22,6 +24,7 @@ interface PillarContent {
 }
 
 const CommunityShowcase = () => {
+  const [expandedPillar, setExpandedPillar] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -108,6 +111,10 @@ const CommunityShowcase = () => {
     }
   ];
 
+  const togglePillar = (index: number) => {
+    setExpandedPillar(expandedPillar === index ? null : index);
+  };
+
   return (
     <section 
       ref={sectionRef}
@@ -131,10 +138,11 @@ const CommunityShowcase = () => {
             </p>
           </div>
 
-          {/* Pillars Grid - SEM EXPANSÃO */}
+          {/* Pillars Grid - FECHADOS POR PADRÃO */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon;
+              const isExpanded = expandedPillar === index;
 
               return (
                 <div
@@ -142,37 +150,49 @@ const CommunityShowcase = () => {
                   className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <Card className="group relative bg-[#111111] border-gray-900 hover:border-red-500/30 transition-all duration-300 h-full">
+                  <Card 
+                    className="group relative bg-[#111111] border-gray-900 hover:border-red-500/30 transition-all duration-300 cursor-pointer"
+                    onClick={() => togglePillar(index)}
+                  >
                     <CardContent className="p-4 sm:p-6">
-                      {/* Icon and Title */}
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/15 transition-colors flex-shrink-0">
-                          <Icon className="w-6 h-6 text-red-500" />
+                      {/* Icon, Title e Chevron */}
+                      <div className="flex items-start justify-between mb-3">
+                        <div className="flex items-center gap-3">
+                          <div className="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/15 transition-colors flex-shrink-0">
+                            <Icon className="w-6 h-6 text-red-500" />
+                          </div>
+                          <h3 className="text-lg font-bold text-white">
+                            {pillar.title}
+                          </h3>
                         </div>
-                        <h3 className="text-lg font-bold text-white">
-                          {pillar.title}
-                        </h3>
+                        {isExpanded ? (
+                          <ChevronUp className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" />
+                        )}
                       </div>
 
-                      {/* Description */}
-                      <p className="text-gray-400 text-sm mb-4">
+                      {/* Description - SEMPRE VISÍVEL */}
+                      <p className="text-gray-400 text-sm">
                         {pillar.description}
                       </p>
 
-                      {/* Items - SEMPRE VISÍVEIS */}
-                      <ul className="space-y-2 mb-4">
-                        {pillar.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-start gap-2 text-sm text-gray-400">
-                            <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {/* Badge */}
-                      <Badge variant="outline" className="bg-red-500/10 text-red-500 border-red-500/20 text-xs">
-                        {pillar.highlight}
-                      </Badge>
+                      {/* Items - APENAS QUANDO EXPANDIDO */}
+                      {isExpanded && (
+                        <div className="mt-4 pt-4 border-t border-gray-900 animate-in slide-in-from-top-2 duration-300">
+                          <ul className="space-y-2 mb-4">
+                            {pillar.items.map((item, itemIndex) => (
+                              <li key={itemIndex} className="flex items-start gap-2 text-sm text-gray-400">
+                                <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <Badge variant="outline" className="bg-red-500/10 text-red-500 border-red-500/20 text-xs">
+                            {pillar.highlight}
+                          </Badge>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 </div>
@@ -180,7 +200,7 @@ const CommunityShowcase = () => {
             })}
           </div>
 
-          {/* Rateio Highlight - SEM EFEITOS EXCESSIVOS */}
+          {/* Rateio Highlight */}
           <div className="relative bg-[#111111] border border-gray-900 rounded-2xl p-6 sm:p-8 mb-8 sm:mb-12">
             <div className="text-center">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
@@ -192,27 +212,31 @@ const CommunityShowcase = () => {
             </div>
           </div>
 
-          {/* Value Badges */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {/* Value Badges - DESIGN MAIS PROFISSIONAL */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {[
-              { icon: Zap, title: "Atualizações Semanais", desc: "Novos conteúdos toda semana", delay: "0ms" },
-              { icon: CheckCircle2, title: "Acesso Vitalício", desc: "Pague uma vez, acesse para sempre", delay: "100ms" },
-              { icon: Users, title: "Comunidade no Discord", desc: "+7.000 membros ativos", delay: "200ms" },
-              { icon: MessageSquare, title: "Acesso via Telegram", desc: "Conteúdos exclusivos", delay: "300ms" }
+              { icon: Zap, title: "Atualizações Semanais", desc: "Novos conteúdos toda semana" },
+              { icon: CheckCircle2, title: "Acesso Vitalício", desc: "Pague uma vez, acesse para sempre" },
+              { icon: Users, title: "Comunidade no Discord", desc: "+7.000 membros ativos" },
+              { icon: MessageSquare, title: "Acesso via Telegram", desc: "Conteúdos exclusivos" }
             ].map((badge, index) => {
               const BadgeIcon = badge.icon;
               return (
                 <div
                   key={index}
-                  className={`group flex items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-[#111111] border border-gray-900 rounded-xl hover:border-red-500/30 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                  style={{ transitionDelay: badge.delay }}
+                  className="group relative bg-[#111111] border border-gray-900 rounded-xl p-4 sm:p-5 hover:border-red-500/30 transition-all duration-300"
                 >
-                  <div className="p-3 bg-red-500/10 rounded-lg flex-shrink-0 group-hover:bg-red-500/15 transition-colors">
-                    <BadgeIcon className="w-6 h-6 text-red-500" />
+                  {/* Ícone centralizado no topo */}
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 bg-red-500/10 rounded-lg group-hover:bg-red-500/15 transition-colors">
+                      <BadgeIcon className="w-6 h-6 text-red-500" />
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-white text-sm sm:text-base">{badge.title}</h4>
-                    <p className="text-xs sm:text-sm text-gray-400">{badge.desc}</p>
+                  
+                  {/* Texto centralizado */}
+                  <div className="text-center">
+                    <h4 className="font-bold text-white text-sm mb-1">{badge.title}</h4>
+                    <p className="text-xs text-gray-500">{badge.desc}</p>
                   </div>
                 </div>
               );
