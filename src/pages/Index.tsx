@@ -7,6 +7,8 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 import BlackFridayBanner from "@/components/BlackFridayBanner";
+import Navigation from "@/components/Navigation";
+import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 
@@ -27,14 +29,33 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      {/* Navigation Menu */}
+      <Navigation />
+      
       {/* Black Friday Banner */}
       <BlackFridayBanner />
       
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 overflow-hidden bg-black">
-        {/* Background decorativo - círculo de luz */}
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+
+        {/* Floating Particles */}
+        <FloatingParticles />
+
+        {/* Background decorativo - múltiplos círculos de luz */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] lg:w-[900px] lg:h-[900px] bg-red-600/10 rounded-full blur-3xl" />
+          {/* Círculo principal */}
+          <div className="w-[500px] h-[500px] sm:w-[700px] sm:h-[700px] lg:w-[900px] lg:h-[900px] bg-red-600/10 rounded-full blur-3xl animate-pulse-slow" />
+          
+          {/* Círculos secundários */}
+          <div className="absolute top-[20%] left-[10%] w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] bg-red-500/5 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-[20%] right-[10%] w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] bg-red-500/5 rounded-full blur-2xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto">
@@ -44,8 +65,8 @@ const Index = () => {
             {/* COLUNA ESQUERDA - Texto */}
             <div className="space-y-6 sm:space-y-8 text-center lg:text-left order-2 lg:order-1">
               
-              {/* Badge de Prova Social */}
-              <div className="inline-flex items-center gap-2 bg-red-500/20 border-2 border-red-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full">
+              {/* Badge de Prova Social com animação de glow */}
+              <div className="inline-flex items-center gap-2 bg-red-500/20 border-2 border-red-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full animate-pulse-glow animate-fade-in-up">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                 </svg>
@@ -54,30 +75,38 @@ const Index = () => {
                 </span>
               </div>
 
-              {/* Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight">
+              {/* Headline com animação de entrada */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <span className="text-white">Maior comunidade de</span>
                 <br />
-                <span className="text-red-500">Marketing Digital</span>
+                <span className="text-red-500 relative">
+                  Marketing Digital
+                  {/* Underline decorativo */}
+                  <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-red-500/0 via-red-500/50 to-red-500/0 blur-sm" />
+                </span>
                 <br />
                 <span className="text-white">do Brasil</span>
               </h1>
               
-              {/* Subheadline */}
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              {/* Subheadline com animação */}
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 Tenha o mesmo acesso que os grandes players têm: networking poderoso, ferramentas premium e recursos exclusivos. +7.000 membros já estão à frente do mercado.
               </p>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+              {/* CTAs com animação */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                 {/* CTA Primário */}
                 <Button 
                   size="lg"
                   onClick={scrollToPricing}
-                  className="group bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)]"
+                  className="group relative bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-lg border-4 border-dashed border-red-500 hover:border-red-400 transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] overflow-hidden"
                 >
-                  COMEÇAR AGORA
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  {/* Efeito de brilho ao passar o mouse */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                  <span className="relative flex items-center">
+                    COMEÇAR AGORA
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
                 </Button>
 
                 {/* CTA Secundário */}
@@ -94,14 +123,18 @@ const Index = () => {
             </div>
 
             {/* COLUNA DIREITA - Mascote */}
-            <div className="flex justify-center items-center order-1 lg:order-2">
+            <div className="flex justify-center items-center order-1 lg:order-2 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="relative">
-                {/* Círculo de luz atrás do mascote */}
+                {/* Múltiplos círculos de luz atrás do mascote */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] bg-red-500/20 rounded-full blur-2xl" />
+                  {/* Círculo principal */}
+                  <div className="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] bg-red-500/20 rounded-full blur-2xl animate-pulse-slow" />
+                  
+                  {/* Círculo secundário */}
+                  <div className="absolute w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-red-600/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1.5s' }} />
                 </div>
                 
-                {/* Mascote */}
+                {/* Mascote com efeito de drop shadow */}
                 <img 
                   src={mascotLogo} 
                   alt="Rise Community Mascot" 
@@ -109,8 +142,12 @@ const Index = () => {
                   height="500"
                   loading="eager"
                   fetchPriority="high"
-                  className="relative z-10 w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[450px] h-auto object-contain drop-shadow-2xl"
+                  className="relative z-10 w-full max-w-[280px] sm:max-w-[350px] lg:max-w-[450px] h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                 />
+
+                {/* Elementos decorativos ao redor do mascote */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 border-2 border-red-500/30 rounded-full animate-pulse-slow" />
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 border-2 border-red-500/30 rounded-full animate-pulse-slow" style={{ animationDelay: '1s' }} />
               </div>
             </div>
 
@@ -124,7 +161,9 @@ const Index = () => {
       </div>
 
       {/* Bonus Section */}
-      <BonusSection />
+      <div id="bonus-section">
+        <BonusSection />
+      </div>
 
       {/* Testimonials Carousel */}
       <TestimonialsCarousel />
