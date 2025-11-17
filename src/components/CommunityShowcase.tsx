@@ -13,7 +13,31 @@ import {
   MessageSquare,
   Package,
   Wand2,
-  FileText
+  FileText,
+  Bot,
+  Code,
+  Lightbulb,
+  FileStack,
+  Puzzle,
+  FolderOpen,
+  Flame,
+  Video,
+  TrendingUp,
+  FileEdit,
+  Trophy,
+  Settings,
+  Mail,
+  MessageCircle,
+  Monitor,
+  Gamepad2,
+  Bell,
+  LayoutGrid,
+  User,
+  X,
+  Sparkles,
+  Scissors,
+  Music,
+  Diamond
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -30,6 +54,7 @@ interface PillarContent {
 const CommunityShowcase = () => {
   const [expandedPillar, setExpandedPillar] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [showAllCategories, setShowAllCategories] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer para animação de entrada
@@ -215,34 +240,83 @@ const CommunityShowcase = () => {
               </p>
             </div>
 
-            {/* Grid de Categorias do Discord */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {/* Grid de Categorias do Discord - Compacto com Expandir */}
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {[
-                { icon: Package, title: "APKs", desc: "Aplicativos premium" },
-                { icon: Wand2, title: "SaaS", desc: "Ferramentas online" },
-                { icon: FileText, title: "PLRs", desc: "Conteúdos prontos" },
-                { icon: Palette, title: "Design", desc: "Templates e recursos" },
-                { icon: Rocket, title: "Automações", desc: "Bots e scripts" },
-                { icon: Target, title: "Tráfego", desc: "Materiais de ads" },
-                { icon: PenTool, title: "Copy", desc: "Swipes e templates" },
-                { icon: ShoppingBag, title: "E-commerce", desc: "Produtos e fornecedores" }
+                { icon: Package, title: "APKs" },
+                { icon: Wand2, title: "SaaS" },
+                { icon: FileText, title: "PLRs" },
+                { icon: Palette, title: "Design" },
+                { icon: Rocket, title: "Automações" },
+                { icon: Target, title: "Tráfego" },
+                { icon: PenTool, title: "Copy" },
+                { icon: ShoppingBag, title: "E-commerce" },
+                { icon: Bot, title: "Robôs" },
+                { icon: Code, title: "Scripts" },
+                { icon: Lightbulb, title: "Dicas" },
+                { icon: FileStack, title: "PDFs" },
+                // Categorias extras (mostradas após expandir)
+                ...(showAllCategories ? [
+                  { icon: Puzzle, title: "Extensão" },
+                  { icon: FolderOpen, title: "Geral" },
+                  { icon: Flame, title: "Hot" },
+                  { icon: Video, title: "Vídeos" },
+                  { icon: TrendingUp, title: "Pack-Trader" },
+                  { icon: FileEdit, title: "Docs Editáveis" },
+                  { icon: Trophy, title: "Tropa-D7" },
+                  { icon: Settings, title: "Plugins" },
+                  { icon: LayoutGrid, title: "Planilhas" },
+                  { icon: Bot, title: "Funis-TypeBot" },
+                  { icon: Sparkles, title: "Prompts" },
+                  { icon: Users, title: "Leads" },
+                  { icon: PenTool, title: "Copys-Script" },
+                  { icon: User, title: "Métodos" },
+                  { icon: Diamond, title: "Prova-Social" },
+                  { icon: MessageCircle, title: "Aquec-WhatsApp" },
+                  { icon: Mail, title: "Email-Marketing" },
+                  { icon: MessageSquare, title: "Figurinhas-WPP" },
+                  { icon: Monitor, title: "Programas-PC" },
+                  { icon: Gamepad2, title: "Jogos" },
+                  { icon: Bell, title: "Notificações" },
+                  { icon: LayoutGrid, title: "Painéis" },
+                  { icon: Scissors, title: "Cortes-Virais" },
+                  { icon: Music, title: "Fontes" },
+                  { icon: Video, title: "Pack-PLR-Video" }
+                ] : [])
               ].map((category, index) => {
                 const CategoryIcon = category.icon;
                 return (
                   <div
                     key={index}
-                    className="bg-[#0a0a0a] border border-gray-900 rounded-xl p-4 hover:border-red-500/30 transition-all duration-300"
+                    className="bg-[#0a0a0a] border border-gray-900 rounded-lg p-3 hover:border-red-500/30 transition-all duration-300"
                   >
-                    <div className="flex flex-col items-center text-center">
-                      <div className="p-3 bg-red-500/10 rounded-lg mb-3">
-                        <CategoryIcon className="w-5 h-5 text-red-500" />
-                      </div>
-                      <h4 className="font-bold text-white text-sm mb-1">{category.title}</h4>
-                      <p className="text-xs text-gray-500">{category.desc}</p>
+                    <div className="flex flex-col items-center text-center gap-2">
+                      <CategoryIcon className="w-4 h-4 text-red-500" />
+                      <span className="text-xs font-medium text-white">{category.title}</span>
                     </div>
                   </div>
                 );
               })}
+            </div>
+
+            {/* Botão Ver Mais */}
+            <div className="flex justify-center mt-6">
+              <button
+                onClick={() => setShowAllCategories(!showAllCategories)}
+                className="flex items-center gap-2 px-6 py-3 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 hover:border-red-500/50 rounded-lg transition-all duration-300 text-white font-medium text-sm"
+              >
+                {showAllCategories ? (
+                  <>
+                    <ChevronUp className="w-4 h-4" />
+                    Ver menos categorias
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="w-4 h-4" />
+                    Ver todas as categorias (+25)
+                  </>
+                )}
+              </button>
             </div>
           </div>
 
