@@ -307,35 +307,107 @@ const CommunityShowcase = () => {
                 <>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">400+ Robôs Automatizados</span>
+                    <span className="text-sm sm:text-base font-medium">Bônus Exclusivo</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">600+ Scripts Prontos</span>
+                    <span className="text-sm sm:text-base font-medium">Puxadas de Dados</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">2.000+ Dicas Práticas</span>
+                    <span className="text-sm sm:text-base font-medium">+30k em PLRs</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">8.000+ PDFs e E-books</span>
+                    <span className="text-sm sm:text-base font-medium">Source iGaming e SaaS</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">1.000+ Extensões Chrome</span>
+                    <span className="text-sm sm:text-base font-medium">Gerador de Notificações</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">500+ Packs de Conteúdo</span>
+                    <span className="text-sm sm:text-base font-medium">Dicas</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">300+ Planilhas e Modelos</span>
+                    <span className="text-sm sm:text-base font-medium">PDF's</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">200+ Funis Prontos</span>
+                    <span className="text-sm sm:text-base font-medium">Extensão</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Geral</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Robôs</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Vídeos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Modelos de Contratos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Documentos Editáveis</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Planilhas</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Dropshipping</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Prompt's</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Leads</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Copys Script</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Script's Venda Prontos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Funis e Type Bot</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">PLR</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Tráfego Pago e BM</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Aquecimento WhatsApp</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Cripto</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Jogos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium">Painéis</span>
                   </div>
                 </>
               )}
