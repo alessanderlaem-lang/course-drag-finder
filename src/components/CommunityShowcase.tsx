@@ -55,6 +55,7 @@ const CommunityShowcase = () => {
   const [expandedPillar, setExpandedPillar] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [showAllCategories, setShowAllCategories] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer para animação de entrada
@@ -142,6 +143,66 @@ const CommunityShowcase = () => {
 
   const togglePillar = (index: number) => {
     setExpandedPillar(expandedPillar === index ? null : index);
+  };
+
+  // Dados de conteúdo para cada categoria
+  const categoryContent: Record<string, { items: string[], count: string }> = {
+    "APKs": {
+      items: ["Photoshop Premium", "Canva Pro", "CapCut Pro", "Lightroom Premium", "InShot Pro", "PicsArt Gold", "VSCO Premium", "Snapseed Pro", "Adobe Premiere", "After Effects"],
+      count: "500+"
+    },
+    "SaaS": {
+      items: ["Notion Premium", "ChatGPT Plus", "Grammarly Premium", "Jasper AI", "Copy.ai Pro", "Surfer SEO", "SEMrush Premium", "Ahrefs Pro", "Canva Teams", "Figma Pro"],
+      count: "300+"
+    },
+    "PLRs": {
+      items: ["PLR Marketing Digital", "PLR Finanças", "PLR Emagrecimento", "PLR Relacionamentos", "PLR Produtividade", "PLR Vendas", "PLR Instagram", "PLR TikTok", "PLR E-commerce", "PLR Copywriting"],
+      count: "10.000+"
+    },
+    "Design": {
+      items: ["Templates Canva", "Mockups Premium", "Fontes Exclusivas", "Ícones Profissionais", "Ilustrações Vetoriais", "Texturas HD", "Backgrounds 4K", "Logos Editáveis", "Banners Prontos", "Thumbnails YouTube"],
+      count: "5.000+"
+    },
+    "Automações": {
+      items: ["Bot WhatsApp", "Bot Instagram", "Bot Telegram", "Automacao N8N", "Scripts Python", "Zapier Templates", "Make Scenarios", "Bot Discord", "Auto-Responder", "Web Scraping"],
+      count: "800+"
+    },
+    "Tráfego": {
+      items: ["Criativos Facebook Ads", "Scripts Google Ads", "Templates TikTok Ads", "Banners Display", "Copy de Anúncios", "Landingpages Prontas", "Swipes de Vendas", "Audiências Segmentadas", "Estratégias de Retargeting", "Funis Completos"],
+      count: "2.000+"
+    },
+    "Copy": {
+      items: ["Scripts de VSL", "Copy de Vendas", "E-mails Prontos", "Headlines Matadoras", "CTAs Comprovados", "Storytelling Templates", "Gatilhos Mentais", "Swipes de Lançamento", "Copy para Redes Sociais", "Roteiros de Vídeo"],
+      count: "3.000+"
+    },
+    "E-commerce": {
+      items: ["Fornecedores Validados", "Produtos Vencedores", "Lojas Prontas Shopify", "Templates Mercado Livre", "Estratégias Shopee", "Dropshipping USA", "Produtos Nacionais", "Nichos Lucrativos", "Cálculo de Margem", "Automação de Pedidos"],
+      count: "1.500+"
+    },
+    "Robôs": {
+      items: ["Robô de Leads", "Robô de Mensagens", "Robô de Postagens", "Robô de Comentários", "Robô de Follow/Unfollow", "Robô de Scraping", "Robô de Análise", "Robô de Backup", "Robô de Relatórios", "Robô Multi-Contas"],
+      count: "400+"
+    },
+    "Scripts": {
+      items: ["Scripts Python", "Scripts JavaScript", "Scripts PHP", "Scripts Node.js", "Scripts Automação", "Scripts Web Scraping", "Scripts API", "Scripts Database", "Scripts Deploy", "Scripts Backup"],
+      count: "600+"
+    },
+    "Dicas": {
+      items: ["Dicas de Marketing", "Dicas de Vendas", "Dicas de Produtividade", "Dicas de Design", "Dicas de Tráfego", "Dicas de Copy", "Dicas de Automação", "Dicas de E-commerce", "Dicas de Redes Sociais", "Dicas de Monetização"],
+      count: "2.000+"
+    },
+    "PDFs": {
+      items: ["E-books Marketing", "Guias Completos", "Checklists", "Planilhas", "Relatórios", "Apresentações", "Infográficos", "Mapas Mentais", "Tutoriais", "Estudos de Caso"],
+      count: "8.000+"
+    }
+  };
+
+  const openCategoryModal = (categoryTitle: string) => {
+    setSelectedCategory(categoryTitle);
+  };
+
+  const closeCategoryModal = () => {
+    setSelectedCategory(null);
   };
 
   return (
@@ -288,7 +349,8 @@ const CommunityShowcase = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-[#0a0a0a] border border-gray-900 rounded-lg p-3 hover:border-red-500/30 transition-all duration-300"
+                    onClick={() => openCategoryModal(category.title)}
+                    className="bg-[#0a0a0a] border border-gray-900 rounded-lg p-3 hover:border-red-500/30 hover:scale-105 transition-all duration-300 cursor-pointer"
                   >
                     <div className="flex flex-col items-center text-center gap-2">
                       <CategoryIcon className="w-4 h-4 text-red-500" />
@@ -322,6 +384,60 @@ const CommunityShowcase = () => {
 
         </div>
       </div>
+
+      {/* Modal de Categoria */}
+      {selectedCategory && categoryContent[selectedCategory] && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in"
+          onClick={closeCategoryModal}
+        >
+          <div 
+            className="relative bg-[#111111] border-2 border-red-500/30 rounded-2xl p-6 sm:p-8 max-w-2xl w-full max-h-[80vh] overflow-hidden animate-scale-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header do Modal */}
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-800">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-1">{selectedCategory}</h3>
+                <p className="text-sm text-gray-400">{categoryContent[selectedCategory].count} itens disponíveis</p>
+              </div>
+              <button
+                onClick={closeCategoryModal}
+                className="p-2 hover:bg-red-500/10 rounded-lg transition-colors"
+              >
+                <X className="w-6 h-6 text-gray-400 hover:text-red-500" />
+              </button>
+            </div>
+
+            {/* Lista de Itens com Scroll */}
+            <div className="overflow-y-auto max-h-[50vh] pr-2 custom-scrollbar">
+              <div className="space-y-2">
+                {categoryContent[selectedCategory].items.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-3 bg-[#0a0a0a] border border-gray-900 rounded-lg hover:border-red-500/30 transition-all duration-300"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0" />
+                    <span className="text-sm text-gray-300">{item}</span>
+                  </div>
+                ))}
+                
+                {/* Indicador de Mais Conteúdo */}
+                <div className="flex items-center justify-center gap-2 p-4 text-gray-500 text-sm">
+                  <span>... e muito mais!</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer do Modal */}
+            <div className="mt-6 pt-4 border-t border-gray-800 text-center">
+              <p className="text-xs text-gray-500">
+                Todo o conteúdo é atualizado semanalmente
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
