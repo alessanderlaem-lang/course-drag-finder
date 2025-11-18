@@ -350,11 +350,24 @@ const CommunityShowcase = () => {
                   <div
                     key={index}
                     onClick={() => openCategoryModal(category.title)}
-                    className="bg-[#0a0a0a] border border-gray-900 rounded-lg p-3 hover:border-red-500/30 hover:scale-105 transition-all duration-300 cursor-pointer"
+                    className="group relative bg-[#0a0a0a] border border-gray-900 rounded-lg p-3 hover:border-red-500/30 hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden"
                   >
-                    <div className="flex flex-col items-center text-center gap-2">
+                    {/* Conteúdo Normal */}
+                    <div className="flex flex-col items-center text-center gap-2 group-hover:opacity-0 transition-opacity duration-300">
                       <CategoryIcon className="w-4 h-4 text-red-500" />
                       <span className="text-xs font-medium text-white">{category.title}</span>
+                      {categoryContent[category.title] && (
+                        <span className="text-[10px] text-gray-500">{categoryContent[category.title].count} itens</span>
+                      )}
+                    </div>
+                    
+                    {/* Conteúdo Hover */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#0a0a0a]">
+                      <CategoryIcon className="w-5 h-5 text-red-500" />
+                      <span className="text-xs font-bold text-white">{category.title}</span>
+                      <span className="text-[10px] text-red-500 flex items-center gap-1">
+                        👉 Clique para ver
+                      </span>
                     </div>
                   </div>
                 );
