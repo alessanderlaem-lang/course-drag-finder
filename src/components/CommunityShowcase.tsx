@@ -143,6 +143,8 @@ const CommunityShowcase = () => {
     setExpandedPillar(expandedPillar === index ? null : index);
   };
 
+  const [showAllCategories, setShowAllCategories] = useState(false);
+
   return (
     <section 
       ref={sectionRef}
@@ -258,6 +260,108 @@ const CommunityShowcase = () => {
               <p className="text-xs sm:text-sm text-gray-500">
                 Acesso completo a todos os canais e categorias do Discord
               </p>
+            </div>
+          </div>
+
+          {/* Lista de Categorias */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <h4 className="text-xl sm:text-2xl font-bold text-white text-center mb-8">
+              O que você encontra dentro:
+            </h4>
+            
+            {/* Grid de categorias */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {/* Categorias principais (sempre visíveis) */}
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">500+ APKs Premium</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">10.000+ PLRs</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">300+ SaaS Tools</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">5.000+ Design Assets</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">800+ Automações</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">2.000+ Materiais de Tráfego</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">3.000+ Copy & Scripts</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                <span className="text-sm sm:text-base">1.500+ E-commerce</span>
+              </div>
+
+              {/* Categorias extras (expansíveis) */}
+              {showAllCategories && (
+                <>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">400+ Robôs Automatizados</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">600+ Scripts Prontos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">2.000+ Dicas Práticas</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">8.000+ PDFs e E-books</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">1.000+ Extensões Chrome</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">500+ Packs de Conteúdo</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">300+ Planilhas e Modelos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">200+ Funis Prontos</span>
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Botão Ver Mais */}
+            <div className="text-center mt-6">
+              <button
+                onClick={() => setShowAllCategories(!showAllCategories)}
+                className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors"
+              >
+                {showAllCategories ? (
+                  <>
+                    <ChevronUp className="w-4 h-4" />
+                    Ver menos categorias
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="w-4 h-4" />
+                    + Ver mais categorias
+                  </>
+                )}
+              </button>
             </div>
           </div>
 
