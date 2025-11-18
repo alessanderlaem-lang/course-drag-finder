@@ -144,17 +144,6 @@ const CommunityShowcase = () => {
   };
 
   const [showAllCategories, setShowAllCategories] = useState(false);
-  const categoriesRef = useRef<HTMLDivElement>(null);
-
-  const handleToggleCategories = () => {
-    if (showAllCategories && categoriesRef.current) {
-      // Ao fechar, faz scroll suave para o topo da seção
-      categoriesRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setTimeout(() => setShowAllCategories(false), 300);
-    } else {
-      setShowAllCategories(!showAllCategories);
-    }
-  };
 
   return (
     <section 
@@ -245,7 +234,7 @@ const CommunityShowcase = () => {
       </div>
 
       {/* NOVA SEÇÃO INDEPENDENTE - Mockup + Rateio */}
-      <div ref={categoriesRef} className="relative max-w-7xl mx-auto mt-8 sm:mt-12">
+      <div className="relative max-w-7xl mx-auto mt-8 sm:mt-12">
         <div className={`relative bg-gradient-to-b from-[#111111] to-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-6 sm:p-10 lg:p-14 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Título e Descrição */}
             <div className="text-center mb-8">
@@ -423,7 +412,7 @@ const CommunityShowcase = () => {
             {/* Botão Ver Mais */}
             <div className="text-center mt-6">
               <button
-                onClick={handleToggleCategories}
+                onClick={() => setShowAllCategories(!showAllCategories)}
                 className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors"
               >
                 {showAllCategories ? (
