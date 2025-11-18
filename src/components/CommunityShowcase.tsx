@@ -271,35 +271,35 @@ const CommunityShowcase = () => {
               {/* Categorias principais (sempre visíveis) */}
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">500+ APKs Premium</span>
+                <span className="text-sm sm:text-base font-medium">Hot</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">10.000+ PLRs</span>
+                <span className="text-sm sm:text-base font-medium">Design</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">300+ SaaS Tools</span>
+                <span className="text-sm sm:text-base font-medium">Edição</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">5.000+ Design Assets</span>
+                <span className="text-sm sm:text-base font-medium">Páginas de Vendas</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">800+ Automações</span>
+                <span className="text-sm sm:text-base font-medium">SaaS</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">2.000+ Materiais de Tráfego</span>
+                <span className="text-sm sm:text-base font-medium">APKs</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">3.000+ Copy & Scripts</span>
+                <span className="text-sm sm:text-base font-medium">iGaming</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base">1.500+ E-commerce</span>
+                <span className="text-sm sm:text-base font-medium">N8N</span>
               </div>
 
               {/* Categorias extras (expansíveis) */}
