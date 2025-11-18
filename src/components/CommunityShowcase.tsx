@@ -229,7 +229,7 @@ const CommunityShowcase = () => {
           </div>
 
           {/* NOVA SEÇÃO DE RATEIO - Com categorias do Discord */}
-          <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-6 sm:p-8">
+          <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-4 sm:p-8">
             <div className="text-center mb-8">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                 + Acesso ao maior acervo de rateio do Brasil
@@ -240,20 +240,20 @@ const CommunityShowcase = () => {
             </div>
 
             {/* Mockup do Discord */}
-            <div className="relative">
+            <div className="relative -mx-2 sm:mx-0">
               {/* Imagem do Mockup */}
-              <div className="relative rounded-2xl overflow-hidden">
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden">
                 <img 
                   src="/images/discord-mockup.png" 
                   alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain scale-110 sm:scale-100"
                   loading="lazy"
                 />
               </div>
               
               {/* Texto abaixo do mockup */}
-              <div className="text-center mt-6">
-                <p className="text-sm text-gray-500">
+              <div className="text-center mt-4 sm:mt-6 px-2 sm:px-0">
+                <p className="text-xs sm:text-sm text-gray-500">
                   Acesso completo a todos os canais e categorias do Discord
                 </p>
               </div>
