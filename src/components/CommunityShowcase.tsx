@@ -230,8 +230,12 @@ const CommunityShowcase = () => {
             })}
           </div>
 
-          {/* BLOCO ÚNICO INTEGRADO - Título + Mockup + Lista */}
-          <div className="relative bg-gradient-to-b from-[#111111] to-[#0a0a0a] border-2 border-gray-800 rounded-2xl p-4 sm:p-8 overflow-hidden">
+        </div>
+      </div>
+
+      {/* NOVA SEÇÃO INDEPENDENTE - Mockup + Rateio */}
+      <div className="relative max-w-7xl mx-auto mt-8 sm:mt-12">
+        <div className={`relative bg-gradient-to-b from-[#111111] to-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-6 sm:p-10 lg:p-14 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Título e Descrição */}
             <div className="text-center mb-8">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -357,11 +361,8 @@ const CommunityShowcase = () => {
               </button>
             </div>
             </div>
-          </div>
-
         </div>
       </div>
-
 
     </section>
   );
