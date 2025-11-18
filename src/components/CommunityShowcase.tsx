@@ -149,7 +149,7 @@ const CommunityShowcase = () => {
   const handleToggleCategories = () => {
     if (showAllCategories && categoriesRef.current) {
       // Ao fechar, faz scroll suave para o topo da seção
-      categoriesRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      categoriesRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setTimeout(() => setShowAllCategories(false), 300);
     } else {
       setShowAllCategories(!showAllCategories);
@@ -424,7 +424,7 @@ const CommunityShowcase = () => {
             <div className="text-center mt-6">
               <button
                 onClick={handleToggleCategories}
-                className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-500 transition-colors"
+                className="inline-flex items-center gap-2 text-base text-gray-400 hover:text-red-500 transition-colors py-4 px-6"
               >
                 {showAllCategories ? (
                   <>
