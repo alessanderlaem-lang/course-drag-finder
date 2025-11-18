@@ -311,10 +311,6 @@ const CommunityShowcase = () => {
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Puxadas de Dados</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
                     <span className="text-sm sm:text-base font-medium">+30k em PLRs</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
