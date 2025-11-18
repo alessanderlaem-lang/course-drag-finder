@@ -230,10 +230,10 @@ const CommunityShowcase = () => {
             })}
           </div>
 
-          {/* NOVA SEÇÃO DE RATEIO - Com categorias do Discord */}
-          {/* Bloco com Título e Descrição */}
-          <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-4 sm:p-8 mb-8">
-            <div className="text-center">
+          {/* NOVA SEÇÃO DE RATEIO - Bloco Único Integrado */}
+          <div className="relative bg-gradient-to-b from-[#111111] to-[#0a0a0a] border-2 border-gray-800 rounded-2xl p-4 sm:p-8 overflow-hidden">
+            {/* Título e Descrição */}
+            <div className="text-center mb-8">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                 + Acesso ao maior acervo de rateio do Brasil
               </h3>
@@ -241,33 +241,27 @@ const CommunityShowcase = () => {
                 Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de recursos organizados por categoria. Tudo atualizado semanalmente.
               </p>
             </div>
-          </div>
 
-          {/* Mockup do Discord - FORA DO BLOCO */}
-          <div className="relative overflow-hidden">
-            {/* Imagem do Mockup */}
-            <div className="relative max-w-5xl mx-auto">
-              <img 
-                src="/images/discord-mockup.png" 
-                alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
-                className="w-full h-auto object-contain scale-125 sm:scale-100"
-                loading="lazy"
-              />
+            {/* Mockup do Discord */}
+            <div className="relative mb-10">
+              <div className="relative max-w-4xl mx-auto">
+                <img 
+                  src="/images/discord-mockup.png" 
+                  alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
+                  className="w-full h-auto object-contain scale-110 sm:scale-100"
+                  loading="lazy"
+                />
+              </div>
             </div>
-            
-            {/* Texto abaixo do mockup */}
-            <div className="text-center mt-6">
-              <p className="text-xs sm:text-sm text-gray-500">
-                Acesso completo a todos os canais e categorias do Discord
-              </p>
-            </div>
-          </div>
 
-          {/* Lista de Categorias */}
-          <div className="mt-12 max-w-3xl mx-auto">
-            <h4 className="text-xl sm:text-2xl font-bold text-white text-center mb-8">
-              O que você encontra dentro:
-            </h4>
+            {/* Divisor sutil */}
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-8"></div>
+
+            {/* Lista de Categorias */}
+            <div className="max-w-3xl mx-auto">
+              <h4 className="text-xl sm:text-2xl font-bold text-white text-center mb-6">
+                O que você encontra dentro:
+              </h4>
             
             {/* Grid de categorias */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -362,6 +356,7 @@ const CommunityShowcase = () => {
                   </>
                 )}
               </button>
+            </div>
             </div>
           </div>
 
