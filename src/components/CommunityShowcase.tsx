@@ -54,8 +54,6 @@ interface PillarContent {
 const CommunityShowcase = () => {
   const [expandedPillar, setExpandedPillar] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [showAllCategories, setShowAllCategories] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer para animação de entrada
@@ -143,66 +141,6 @@ const CommunityShowcase = () => {
 
   const togglePillar = (index: number) => {
     setExpandedPillar(expandedPillar === index ? null : index);
-  };
-
-  // Dados de conteúdo para cada categoria
-  const categoryContent: Record<string, { items: string[], count: string }> = {
-    "APKs": {
-      items: ["Photoshop Premium", "Canva Pro", "CapCut Pro", "Lightroom Premium", "InShot Pro", "PicsArt Gold", "VSCO Premium", "Snapseed Pro", "Adobe Premiere", "After Effects"],
-      count: "500+"
-    },
-    "SaaS": {
-      items: ["Notion Premium", "ChatGPT Plus", "Grammarly Premium", "Jasper AI", "Copy.ai Pro", "Surfer SEO", "SEMrush Premium", "Ahrefs Pro", "Canva Teams", "Figma Pro"],
-      count: "300+"
-    },
-    "PLRs": {
-      items: ["PLR Marketing Digital", "PLR Finanças", "PLR Emagrecimento", "PLR Relacionamentos", "PLR Produtividade", "PLR Vendas", "PLR Instagram", "PLR TikTok", "PLR E-commerce", "PLR Copywriting"],
-      count: "10.000+"
-    },
-    "Design": {
-      items: ["Templates Canva", "Mockups Premium", "Fontes Exclusivas", "Ícones Profissionais", "Ilustrações Vetoriais", "Texturas HD", "Backgrounds 4K", "Logos Editáveis", "Banners Prontos", "Thumbnails YouTube"],
-      count: "5.000+"
-    },
-    "Automações": {
-      items: ["Bot WhatsApp", "Bot Instagram", "Bot Telegram", "Automacao N8N", "Scripts Python", "Zapier Templates", "Make Scenarios", "Bot Discord", "Auto-Responder", "Web Scraping"],
-      count: "800+"
-    },
-    "Tráfego": {
-      items: ["Criativos Facebook Ads", "Scripts Google Ads", "Templates TikTok Ads", "Banners Display", "Copy de Anúncios", "Landingpages Prontas", "Swipes de Vendas", "Audiências Segmentadas", "Estratégias de Retargeting", "Funis Completos"],
-      count: "2.000+"
-    },
-    "Copy": {
-      items: ["Scripts de VSL", "Copy de Vendas", "E-mails Prontos", "Headlines Matadoras", "CTAs Comprovados", "Storytelling Templates", "Gatilhos Mentais", "Swipes de Lançamento", "Copy para Redes Sociais", "Roteiros de Vídeo"],
-      count: "3.000+"
-    },
-    "E-commerce": {
-      items: ["Fornecedores Validados", "Produtos Vencedores", "Lojas Prontas Shopify", "Templates Mercado Livre", "Estratégias Shopee", "Dropshipping USA", "Produtos Nacionais", "Nichos Lucrativos", "Cálculo de Margem", "Automação de Pedidos"],
-      count: "1.500+"
-    },
-    "Robôs": {
-      items: ["Robô de Leads", "Robô de Mensagens", "Robô de Postagens", "Robô de Comentários", "Robô de Follow/Unfollow", "Robô de Scraping", "Robô de Análise", "Robô de Backup", "Robô de Relatórios", "Robô Multi-Contas"],
-      count: "400+"
-    },
-    "Scripts": {
-      items: ["Scripts Python", "Scripts JavaScript", "Scripts PHP", "Scripts Node.js", "Scripts Automação", "Scripts Web Scraping", "Scripts API", "Scripts Database", "Scripts Deploy", "Scripts Backup"],
-      count: "600+"
-    },
-    "Dicas": {
-      items: ["Dicas de Marketing", "Dicas de Vendas", "Dicas de Produtividade", "Dicas de Design", "Dicas de Tráfego", "Dicas de Copy", "Dicas de Automação", "Dicas de E-commerce", "Dicas de Redes Sociais", "Dicas de Monetização"],
-      count: "2.000+"
-    },
-    "PDFs": {
-      items: ["E-books Marketing", "Guias Completos", "Checklists", "Planilhas", "Relatórios", "Apresentações", "Infográficos", "Mapas Mentais", "Tutoriais", "Estudos de Caso"],
-      count: "8.000+"
-    }
-  };
-
-  const openCategoryModal = (categoryTitle: string) => {
-    setSelectedCategory(categoryTitle);
-  };
-
-  const closeCategoryModal = () => {
-    setSelectedCategory(null);
   };
 
   return (
@@ -301,156 +239,35 @@ const CommunityShowcase = () => {
               </p>
             </div>
 
-            {/* Grid de Categorias do Discord - Compacto com Expandir */}
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-              {[
-                { icon: Package, title: "APKs" },
-                { icon: Wand2, title: "SaaS" },
-                { icon: FileText, title: "PLRs" },
-                { icon: Palette, title: "Design" },
-                { icon: Rocket, title: "Automações" },
-                { icon: Target, title: "Tráfego" },
-                { icon: PenTool, title: "Copy" },
-                { icon: ShoppingBag, title: "E-commerce" },
-                { icon: Bot, title: "Robôs" },
-                { icon: Code, title: "Scripts" },
-                { icon: Lightbulb, title: "Dicas" },
-                { icon: FileStack, title: "PDFs" },
-                // Categorias extras (mostradas após expandir)
-                ...(showAllCategories ? [
-                  { icon: Puzzle, title: "Extensão" },
-                  { icon: FolderOpen, title: "Geral" },
-                  { icon: Flame, title: "Hot" },
-                  { icon: Video, title: "Vídeos" },
-                  { icon: TrendingUp, title: "Pack-Trader" },
-                  { icon: FileEdit, title: "Docs Editáveis" },
-                  { icon: Trophy, title: "Tropa-D7" },
-                  { icon: Settings, title: "Plugins" },
-                  { icon: LayoutGrid, title: "Planilhas" },
-                  { icon: Bot, title: "Funis-TypeBot" },
-                  { icon: Sparkles, title: "Prompts" },
-                  { icon: Users, title: "Leads" },
-                  { icon: PenTool, title: "Copys-Script" },
-                  { icon: User, title: "Métodos" },
-                  { icon: Diamond, title: "Prova-Social" },
-                  { icon: MessageCircle, title: "Aquec-WhatsApp" },
-                  { icon: Mail, title: "Email-Marketing" },
-                  { icon: MessageSquare, title: "Figurinhas-WPP" },
-                  { icon: Monitor, title: "Programas-PC" },
-                  { icon: Gamepad2, title: "Jogos" },
-                  { icon: Bell, title: "Notificações" },
-                  { icon: LayoutGrid, title: "Painéis" },
-                  { icon: Scissors, title: "Cortes-Virais" },
-                  { icon: Music, title: "Fontes" },
-                  { icon: Video, title: "Pack-PLR-Video" }
-                ] : [])
-              ].map((category, index) => {
-                const CategoryIcon = category.icon;
-                return (
-                  <div
-                    key={index}
-                    onClick={() => openCategoryModal(category.title)}
-                    className="group relative bg-[#0a0a0a] border border-gray-900 rounded-lg p-3 hover:border-red-500/30 hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden"
-                  >
-                    {/* Conteúdo Normal */}
-                    <div className="flex flex-col items-center text-center gap-2 group-hover:opacity-0 transition-opacity duration-300">
-                      <CategoryIcon className="w-4 h-4 text-red-500" />
-                      <span className="text-xs font-medium text-white">{category.title}</span>
-                      {categoryContent[category.title] && (
-                        <span className="text-[10px] text-gray-500">{categoryContent[category.title].count} itens</span>
-                      )}
-                    </div>
-                    
-                    {/* Conteúdo Hover */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#0a0a0a]">
-                      <CategoryIcon className="w-5 h-5 text-red-500" />
-                      <span className="text-xs font-bold text-white">{category.title}</span>
-                      <span className="text-[10px] text-red-500 flex items-center gap-1">
-                        👉 Clique para ver
-                      </span>
-                    </div>
+            {/* Mockup do Discord */}
+            <div className="relative">
+              {/* Placeholder para o mockup - SERÁ SUBSTITUÍDO PELA IMAGEM REAL */}
+              <div className="relative bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] border-2 border-gray-800 rounded-2xl p-8 sm:p-12 flex items-center justify-center min-h-[400px] sm:min-h-[500px]">
+                {/* Placeholder Text */}
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-red-500/10 rounded-full mb-6">
+                    <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 text-red-500" />
                   </div>
-                );
-              })}
-            </div>
-
-            {/* Botão Ver Mais */}
-            <div className="flex justify-center mt-6">
-              <button
-                onClick={() => setShowAllCategories(!showAllCategories)}
-                className="flex items-center gap-2 px-6 py-3 bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 hover:border-red-500/50 rounded-lg transition-all duration-300 text-white font-medium text-sm"
-              >
-                {showAllCategories ? (
-                  <>
-                    <ChevronUp className="w-4 h-4" />
-                    Ver menos categorias
-                  </>
-                ) : (
-                  <>
-                    <ChevronDown className="w-4 h-4" />
-                    Ver todas as categorias (+25)
-                  </>
-                )}
-              </button>
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                    Veja tudo que você terá acesso
+                  </h4>
+                  <p className="text-sm sm:text-base text-gray-400 max-w-md mx-auto">
+                    Centenas de canais organizados por categoria com conteúdo atualizado semanalmente
+                  </p>
+                  <div className="mt-6 inline-block px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <p className="text-xs text-gray-500">
+                      Mockup do Discord será adicionado aqui
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
 
-      {/* Modal de Categoria */}
-      {selectedCategory && categoryContent[selectedCategory] && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in"
-          onClick={closeCategoryModal}
-        >
-          <div 
-            className="relative bg-[#111111] border-2 border-red-500/30 rounded-2xl p-6 sm:p-8 max-w-2xl w-full max-h-[80vh] overflow-hidden animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header do Modal */}
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-800">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-1">{selectedCategory}</h3>
-                <p className="text-sm text-gray-400">{categoryContent[selectedCategory].count} itens disponíveis</p>
-              </div>
-              <button
-                onClick={closeCategoryModal}
-                className="p-2 hover:bg-red-500/10 rounded-lg transition-colors"
-              >
-                <X className="w-6 h-6 text-gray-400 hover:text-red-500" />
-              </button>
-            </div>
 
-            {/* Lista de Itens com Scroll */}
-            <div className="overflow-y-auto max-h-[50vh] pr-2 custom-scrollbar">
-              <div className="space-y-2">
-                {categoryContent[selectedCategory].items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-3 p-3 bg-[#0a0a0a] border border-gray-900 rounded-lg hover:border-red-500/30 transition-all duration-300"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-red-500 flex-shrink-0" />
-                    <span className="text-sm text-gray-300">{item}</span>
-                  </div>
-                ))}
-                
-                {/* Indicador de Mais Conteúdo */}
-                <div className="flex items-center justify-center gap-2 p-4 text-gray-500 text-sm">
-                  <span>... e muito mais!</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Footer do Modal */}
-            <div className="mt-6 pt-4 border-t border-gray-800 text-center">
-              <p className="text-xs text-gray-500">
-                Todo o conteúdo é atualizado semanalmente
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
