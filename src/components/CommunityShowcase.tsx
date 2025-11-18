@@ -146,7 +146,7 @@ const CommunityShowcase = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-2 sm:py-20 lg:py-24 px-2 sm:px-4 bg-black"
+      className="relative py-2 sm:py-20 lg:py-24 px-2 sm:px-4 bg-black overflow-x-hidden"
     >
       {/* Gradiente sutil de fundo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -229,8 +229,9 @@ const CommunityShowcase = () => {
           </div>
 
           {/* NOVA SEÇÃO DE RATEIO - Com categorias do Discord */}
-          <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-4 sm:p-8">
-            <div className="text-center mb-8">
+          {/* Bloco com Título e Descrição */}
+          <div className="relative bg-[#111111] border-2 border-gray-800 rounded-2xl p-4 sm:p-8 mb-8">
+            <div className="text-center">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                 + Acesso ao maior acervo de rateio do Brasil
               </h3>
@@ -238,25 +239,25 @@ const CommunityShowcase = () => {
                 Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de recursos organizados por categoria. Tudo atualizado semanalmente.
               </p>
             </div>
+          </div>
 
-            {/* Mockup do Discord */}
-            <div className="relative -mx-2 sm:mx-0">
-              {/* Imagem do Mockup */}
-              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden">
-                <img 
-                  src="/images/discord-mockup.png" 
-                  alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
-                  className="w-full h-auto object-contain scale-150 sm:scale-100"
-                  loading="lazy"
-                />
-              </div>
-              
-              {/* Texto abaixo do mockup */}
-              <div className="text-center mt-4 sm:mt-6 px-2 sm:px-0">
-                <p className="text-xs sm:text-sm text-gray-500">
-                  Acesso completo a todos os canais e categorias do Discord
-                </p>
-              </div>
+          {/* Mockup do Discord - FORA DO BLOCO */}
+          <div className="relative overflow-hidden">
+            {/* Imagem do Mockup */}
+            <div className="relative max-w-5xl mx-auto">
+              <img 
+                src="/images/discord-mockup.png" 
+                alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+            
+            {/* Texto abaixo do mockup */}
+            <div className="text-center mt-6">
+              <p className="text-xs sm:text-sm text-gray-500">
+                Acesso completo a todos os canais e categorias do Discord
+              </p>
             </div>
           </div>
 
