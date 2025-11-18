@@ -252,7 +252,7 @@ const CommunityShowcase = () => {
                 <img 
                   src="/images/discord-mockup.png" 
                   alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain scale-110 sm:scale-100"
                   loading="lazy"
                 />
               </div>
