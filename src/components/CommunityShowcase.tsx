@@ -241,25 +241,21 @@ const CommunityShowcase = () => {
 
             {/* Mockup do Discord */}
             <div className="relative">
-              {/* Placeholder para o mockup - SERÁ SUBSTITUÍDO PELA IMAGEM REAL */}
-              <div className="relative bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] border-2 border-gray-800 rounded-2xl p-8 sm:p-12 flex items-center justify-center min-h-[400px] sm:min-h-[500px]">
-                {/* Placeholder Text */}
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-red-500/10 rounded-full mb-6">
-                    <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 text-red-500" />
-                  </div>
-                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-3">
-                    Veja tudo que você terá acesso
-                  </h4>
-                  <p className="text-sm sm:text-base text-gray-400 max-w-md mx-auto">
-                    Centenas de canais organizados por categoria com conteúdo atualizado semanalmente
-                  </p>
-                  <div className="mt-6 inline-block px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-lg">
-                    <p className="text-xs text-gray-500">
-                      Mockup do Discord será adicionado aqui
-                    </p>
-                  </div>
-                </div>
+              {/* Imagem do Mockup */}
+              <div className="relative rounded-2xl overflow-hidden">
+                <img 
+                  src="/images/discord-mockup.png" 
+                  alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                />
+              </div>
+              
+              {/* Texto abaixo do mockup */}
+              <div className="text-center mt-6">
+                <p className="text-sm text-gray-500">
+                  Acesso completo a todos os canais e categorias do Discord
+                </p>
               </div>
             </div>
           </div>
