@@ -37,7 +37,7 @@ const TestimonialsCarousel = () => {
     <section className="w-full py-6 md:py-8 px-4 md:px-6 bg-background">
       <div className="max-w-6xl mx-auto text-center">
         {/* Título */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-6 md:mb-8 max-w-3xl mx-auto">
+        <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold leading-tight mb-6 md:mb-8 max-w-2xl mx-auto px-2">
           O que <span className="neon-gradient">nossos membros</span>
           <br />
           estão falando

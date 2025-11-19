@@ -1,11 +1,40 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const MembersCounter = () => {
   const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
   const targetCount = 7155; // Novo valor final
   
   useEffect(() => {
-    // Duração total da animação em ms (2.5 segundos para ser mais rápido mas natural)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Só anima quando a seção está visível E ainda não animou
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            startAnimation();
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Anima quando 30% da seção está visível
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
+  const startAnimation = () => {
+    // Duração total da animação em ms (2.5 segundos)
     const duration = 2500;
     const startTime = Date.now();
     
@@ -27,13 +56,8 @@ const MembersCounter = () => {
       }
     };
     
-    // Pequeno delay antes de iniciar a animação
-    const timer = setTimeout(() => {
-      requestAnimationFrame(animate);
-    }, 300);
-    
-    return () => clearTimeout(timer);
-  }, []);
+    requestAnimationFrame(animate);
+  };
   
   // Formatar número com separador de milhar
   const formatNumber = (num: number) => {
@@ -41,7 +65,7 @@ const MembersCounter = () => {
   };
 
   return (
-    <section className="w-full py-6 md:py-8 px-4 md:px-6 bg-background">
+    <section ref={sectionRef} className="w-full py-6 md:py-8 px-4 md:px-6 bg-background">
       <div className="max-w-4xl mx-auto text-center space-y-4">
         {/* Título */}
         <h2 className="text-xl md:text-2xl text-white font-normal">
