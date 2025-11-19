@@ -339,16 +339,28 @@ const CommunityShowcase = () => {
 
               {/* Categorias extras (expansíveis) - 2 colunas no mobile */}
               {showAllCategories && (
-                <div className="grid grid-cols-2 gap-2 mb-6 animate-in slide-in-from-top-2 duration-300">
-                  {extraCategories.map((category, index) => (
+                <div className="space-y-4 mb-6 animate-in slide-in-from-top-2 duration-300">
+                  <div className="grid grid-cols-2 gap-2">
+                    {extraCategories.map((category, index) => (
+                      <Badge 
+                        key={index}
+                        variant="outline" 
+                        className="bg-gray-800/50 text-gray-300 border-gray-700 px-3 py-2 text-xs sm:text-sm font-medium transition-all hover:scale-105 hover:bg-gray-700/50 text-center justify-center"
+                      >
+                        {category}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  {/* Badge final destacado */}
+                  <div className="flex justify-center pt-2">
                     <Badge 
-                      key={index}
                       variant="outline" 
-                      className="bg-gray-800/50 text-gray-300 border-gray-700 px-3 py-2 text-xs sm:text-sm font-medium transition-all hover:scale-105 hover:bg-gray-700/50 text-center justify-center"
+                      className="bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400 border-red-500/40 px-6 py-3 text-sm sm:text-base font-bold transition-all hover:scale-110 hover:from-red-500/30 hover:to-orange-500/30 shadow-lg shadow-red-500/20"
                     >
-                      {category}
+                      🔥 E muito mais+
                     </Badge>
-                  ))}
+                  </div>
                 </div>
               )})
 
