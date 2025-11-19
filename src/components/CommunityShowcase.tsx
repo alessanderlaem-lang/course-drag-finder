@@ -391,6 +391,22 @@ const CommunityShowcase = () => {
         </div>
       </div>
 
+      {/* Divisor Visual Elegante */}
+      <div className="relative max-w-7xl mx-auto mt-20 sm:mt-28 lg:mt-32 mb-8">
+        {/* Linha gradiente */}
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
+        
+        {/* Ponto central com brilho */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="relative">
+            {/* Brilho externo */}
+            <div className="absolute inset-0 bg-red-500/20 blur-xl rounded-full w-16 h-16 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"></div>
+            {/* Ponto central */}
+            <div className="relative w-3 h-3 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 };
