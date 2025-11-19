@@ -357,7 +357,7 @@ const CommunityShowcase = () => {
                       variant="outline" 
                       className="bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400 border-red-500/40 px-6 py-3 text-sm sm:text-base font-bold transition-all hover:scale-110 hover:from-red-500/30 hover:to-orange-500/30 shadow-lg shadow-red-500/20"
                     >
-                      🔥 E muito mais+
+                      E muito mais+
                     </Badge>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ const CommunityShowcase = () => {
                 ) : (
                   <>
                     <ChevronDown className="w-5 h-5 group-hover:transform group-hover:translate-y-1 transition-transform" />
-                    <span className="font-semibold">🔥 Ver mais categorias</span>
+                    <span className="font-semibold">Ver mais categorias</span>
                   </>
                 )}
               </button>

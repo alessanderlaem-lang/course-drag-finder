@@ -37,7 +37,7 @@ const TestimonialsCarousel = () => {
     <section className="w-full py-6 md:py-8 px-4 md:px-6 bg-background">
       <div className="max-w-6xl mx-auto text-center">
         {/* Título */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 md:mb-8 max-w-4xl mx-auto px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 md:mb-8 max-w-4xl mx-auto px-4">
           O que nossos membros estão falando
         </h2>
 
