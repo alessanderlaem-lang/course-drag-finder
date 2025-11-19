@@ -1,4 +1,45 @@
+import { useState, useEffect } from 'react';
+
 const MembersCounter = () => {
+  const [count, setCount] = useState(0);
+  const targetCount = 7155; // Novo valor final
+  
+  useEffect(() => {
+    // Duração total da animação em ms (2.5 segundos para ser mais rápido mas natural)
+    const duration = 2500;
+    const startTime = Date.now();
+    
+    const animate = () => {
+      const currentTime = Date.now();
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function para movimento suave (ease-out)
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(easeOutQuart * targetCount);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setCount(targetCount);
+      }
+    };
+    
+    // Pequeno delay antes de iniciar a animação
+    const timer = setTimeout(() => {
+      requestAnimationFrame(animate);
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, []);
+  
+  // Formatar número com separador de milhar
+  const formatNumber = (num: number) => {
+    return num.toLocaleString('pt-BR');
+  };
+
   return (
     <section className="w-full py-6 md:py-8 px-4 md:px-6 bg-background">
       <div className="max-w-4xl mx-auto text-center space-y-4">
@@ -10,7 +51,7 @@ const MembersCounter = () => {
         {/* Número Principal */}
         <div className="relative inline-block">
           <h3 className="text-7xl md:text-8xl lg:text-9xl font-bold text-[#FF0000] tracking-tight leading-none">
-            4,651
+            {formatNumber(count)}
           </h3>
           {/* Efeito de brilho no número */}
           <div className="absolute inset-0 blur-3xl bg-[#FF0000]/25" />
