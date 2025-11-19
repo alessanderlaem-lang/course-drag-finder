@@ -361,7 +361,7 @@ const CommunityShowcase = () => {
                     </Badge>
                   </div>
                 </div>
-              )})
+              )}
 
               {/* Botão Ver Mais - Destacado e Clicável */}
               <button
