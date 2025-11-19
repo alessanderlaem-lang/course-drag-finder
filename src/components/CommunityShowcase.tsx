@@ -156,16 +156,16 @@ const CommunityShowcase = () => {
     }
   };
 
-  // Categorias com cor padronizada (vermelho)
+  // Categorias com cor padronizada (cinza)
   const categories = [
-    { name: "Hot", color: "bg-red-500/20 text-red-400 border-red-500/30" },
-    { name: "Design", color: "bg-red-500/20 text-red-400 border-red-500/30" },
-    { name: "Edição", color: "bg-red-500/20 text-red-400 border-red-500/30" },
-    { name: "Páginas de Vendas", color: "bg-red-500/20 text-red-400 border-red-500/30" },
-    { name: "SaaS", color: "bg-red-500/20 text-red-400 border-red-500/30" },
-    { name: "APKs", color: "bg-red-500/20 text-red-400 border-red-500/30" },
-    { name: "iGaming", color: "bg-red-500/20 text-red-400 border-red-500/30" },
-    { name: "N8N", color: "bg-red-500/20 text-red-400 border-red-500/30" },
+    { name: "Hot", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
+    { name: "Design", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
+    { name: "Edição", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
+    { name: "Páginas de Vendas", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
+    { name: "SaaS", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
+    { name: "APKs", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
+    { name: "iGaming", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
+    { name: "N8N", color: "bg-gray-800/50 text-gray-300 border-gray-700" },
   ];
 
   const extraCategories = [
