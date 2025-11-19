@@ -173,7 +173,6 @@ const CommunityShowcase = () => {
     "+30k em PLRs",
     "Source iGaming e SaaS",
     "Gerador de Notificações",
-    "Dicas",
     "PDF's",
     "Extensão",
     "Geral",
