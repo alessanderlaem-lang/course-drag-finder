@@ -156,6 +156,46 @@ const CommunityShowcase = () => {
     }
   };
 
+  // Categorias com cores
+  const categories = [
+    { name: "Hot", color: "bg-red-500/20 text-red-400 border-red-500/30" },
+    { name: "Design", color: "bg-purple-500/20 text-purple-400 border-purple-500/30" },
+    { name: "Edição", color: "bg-blue-500/20 text-blue-400 border-blue-500/30" },
+    { name: "Páginas de Vendas", color: "bg-green-500/20 text-green-400 border-green-500/30" },
+    { name: "SaaS", color: "bg-orange-500/20 text-orange-400 border-orange-500/30" },
+    { name: "APKs", color: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30" },
+    { name: "iGaming", color: "bg-pink-500/20 text-pink-400 border-pink-500/30" },
+    { name: "N8N", color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" },
+  ];
+
+  const extraCategories = [
+    "Bônus Exclusivo",
+    "+30k em PLRs",
+    "Source iGaming e SaaS",
+    "Gerador de Notificações",
+    "Dicas",
+    "PDF's",
+    "Extensão",
+    "Geral",
+    "Robôs",
+    "Vídeos",
+    "Modelos de Contratos",
+    "Documentos Editáveis",
+    "Planilhas",
+    "Dropshipping",
+    "Prompt's",
+    "Leads",
+    "Copys Script",
+    "Script's Venda Prontos",
+    "Funis e Type Bot",
+    "PLR",
+    "Tráfego Pago e BM",
+    "Aquecimento WhatsApp",
+    "Cripto",
+    "Jogos",
+    "Painéis"
+  ];
+
   return (
     <section 
       ref={sectionRef}
@@ -244,202 +284,99 @@ const CommunityShowcase = () => {
         </div>
       </div>
 
-      {/* NOVA SEÇÃO INDEPENDENTE - Mockup + Rateio */}
-      <div ref={categoriesRef} className="relative max-w-7xl mx-auto mt-8 sm:mt-12">
-        <div className={`relative bg-gradient-to-b from-[#111111] to-[#0a0a0a] border-2 border-gray-800 rounded-3xl p-6 sm:p-10 lg:p-14 transition-all duration-1000 shadow-2xl ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            {/* Título e Descrição */}
-            <div className="text-center mb-8">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-                + Acesso ao maior acervo de rateio do Brasil
-              </h3>
-              <p className="text-sm sm:text-base text-gray-400 max-w-3xl mx-auto">
-                Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de recursos organizados por categoria. Tudo atualizado semanalmente.
-              </p>
-            </div>
+      {/* NOVA SEÇÃO DE RATEIO - SEM BLOCO, DESIGN PROFISSIONAL */}
+      <div ref={categoriesRef} className="relative max-w-7xl mx-auto mt-16 sm:mt-24 lg:mt-32">
+        {/* Gradiente de fundo da seção */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-950/10 to-transparent pointer-events-none" />
+        
+        <div className={`relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Título e Descrição */}
+          <div className="text-center mb-12 sm:mb-16 px-4">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <span className="text-red-500">+</span> Acesso ao maior acervo de rateio do Brasil
+            </h3>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto">
+              Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de recursos organizados por categoria. Tudo atualizado semanalmente.
+            </p>
+          </div>
 
-            {/* Mockup do Discord */}
-            <div className="relative mb-10">
-              <div className="relative max-w-4xl mx-auto">
+          {/* Layout 2 Colunas: Mockup + Categorias */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center px-4">
+            
+            {/* Coluna Esquerda - Mockup (60%) */}
+            <div className="lg:col-span-3 relative">
+              {/* Efeito de brilho vermelho ao redor do mockup */}
+              <div className="absolute inset-0 bg-red-500/20 blur-[100px] rounded-full scale-110 pointer-events-none" />
+              
+              <div className="relative">
                 <img 
                   src="/images/discord-mockup.png" 
                   alt="Mockup do Discord da Rise Community mostrando todos os canais e categorias disponíveis"
-                  className="w-full h-auto object-contain scale-110 sm:scale-100"
+                  className="w-full h-auto object-contain relative z-10"
                   loading="lazy"
                 />
               </div>
             </div>
 
-            {/* Divisor sutil */}
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-8"></div>
-
-            <div className="max-w-3xl mx-auto">
-              <h4 className="text-xl sm:text-2xl font-bold text-white text-center mb-6">
+            {/* Coluna Direita - Categorias (40%) */}
+            <div className="lg:col-span-2">
+              <h4 className="text-2xl sm:text-3xl font-bold text-white mb-6">
                 O que você encontra dentro:
               </h4>
-            
-            {/* Grid de categorias */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {/* Categorias principais (sempre visíveis) */}
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">Hot</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">Design</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">Edição</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">Páginas de Vendas</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">SaaS</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">APKs</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">iGaming</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-medium">N8N</span>
+              
+              {/* Grid de badges coloridos */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {categories.map((category, index) => (
+                  <Badge 
+                    key={index}
+                    variant="outline" 
+                    className={`${category.color} border px-4 py-2 text-sm font-medium transition-all hover:scale-105`}
+                  >
+                    {category.name}
+                  </Badge>
+                ))}
               </div>
 
               {/* Categorias extras (expansíveis) */}
               {showAllCategories && (
-                <>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Bônus Exclusivo</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">+30k em PLRs</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Source iGaming e SaaS</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Gerador de Notificações</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Dicas</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">PDF's</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Extensão</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Geral</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Robôs</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Vídeos</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Modelos de Contratos</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Documentos Editáveis</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Planilhas</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Dropshipping</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Prompt's</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Leads</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Copys Script</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Script's Venda Prontos</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Funis e Type Bot</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">PLR</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Tráfego Pago e BM</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Aquecimento WhatsApp</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Cripto</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Jogos</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle2 className="w-5 h-5 text-red-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base font-medium">Painéis</span>
-                  </div>
-                </>
+                <div className="flex flex-wrap gap-2 mb-6 animate-in slide-in-from-top-2 duration-300">
+                  {extraCategories.map((category, index) => (
+                    <Badge 
+                      key={index}
+                      variant="outline" 
+                      className="bg-gray-800/50 text-gray-300 border-gray-700 px-4 py-2 text-sm font-medium transition-all hover:scale-105 hover:bg-gray-700/50"
+                    >
+                      {category}
+                    </Badge>
+                  ))}
+                </div>
               )}
-            </div>
 
-            {/* Botão Ver Mais */}
-            <div className="text-center mt-6">
+              {/* Botão Ver Mais - Sem bordas tracejadas */}
               <button
                 onClick={handleToggleCategories}
-                className="inline-flex items-center gap-2 text-base text-gray-400 hover:text-red-500 transition-colors py-4 px-6"
+                className="inline-flex items-center gap-2 text-base text-gray-400 hover:text-red-500 transition-colors group"
               >
                 {showAllCategories ? (
                   <>
-                    <ChevronUp className="w-4 h-4" />
-                    Ver menos categorias
+                    <ChevronUp className="w-5 h-5 group-hover:transform group-hover:-translate-y-1 transition-transform" />
+                    <span className="font-medium">Ver menos categorias</span>
                   </>
                 ) : (
                   <>
-                    <ChevronDown className="w-4 h-4" />
-                    + Ver mais categorias
+                    <ChevronDown className="w-5 h-5 group-hover:transform group-hover:translate-y-1 transition-transform" />
+                    <span className="font-medium">+ Ver mais categorias</span>
                   </>
                 )}
               </button>
+
+              {/* Texto adicional */}
+              <p className="text-sm text-gray-500 mt-6">
+                <span className="text-red-500 font-bold">+50 categorias</span> organizadas e atualizadas semanalmente
+              </p>
             </div>
-            </div>
+
+          </div>
         </div>
       </div>
 
