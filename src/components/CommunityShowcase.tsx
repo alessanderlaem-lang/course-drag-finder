@@ -363,20 +363,20 @@ const CommunityShowcase = () => {
                 </div>
               )})
 
-              {/* Botão Ver Mais - Sem bordas tracejadas */}
+              {/* Botão Ver Mais - Destacado e Clicável */}
               <button
                 onClick={handleToggleCategories}
-                className="inline-flex items-center gap-2 text-sm sm:text-base text-gray-400 hover:text-red-500 transition-colors group w-full justify-center sm:justify-start"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 hover:bg-red-500/20 hover:border-red-500/50 transition-all group w-full justify-center sm:w-auto cursor-pointer"
               >
                 {showAllCategories ? (
                   <>
                     <ChevronUp className="w-5 h-5 group-hover:transform group-hover:-translate-y-1 transition-transform" />
-                    <span className="font-medium">Ver menos categorias</span>
+                    <span className="font-semibold">Ver menos categorias</span>
                   </>
                 ) : (
                   <>
                     <ChevronDown className="w-5 h-5 group-hover:transform group-hover:translate-y-1 transition-transform" />
-                    <span className="font-medium">+ Ver mais categorias</span>
+                    <span className="font-semibold">🔥 Ver mais categorias</span>
                   </>
                 )}
               </button>
@@ -387,22 +387,6 @@ const CommunityShowcase = () => {
               </p>
             </div>
 
-          </div>
-        </div>
-      </div>
-
-      {/* Divisor Visual Elegante */}
-      <div className="relative max-w-7xl mx-auto mt-20 sm:mt-28 lg:mt-32 mb-8">
-        {/* Linha gradiente */}
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-        
-        {/* Ponto central com brilho */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="relative">
-            {/* Brilho externo */}
-            <div className="absolute inset-0 bg-red-500/20 blur-xl rounded-full w-16 h-16 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"></div>
-            {/* Ponto central */}
-            <div className="relative w-3 h-3 bg-red-500 rounded-full shadow-lg shadow-red-500/50"></div>
           </div>
         </div>
       </div>

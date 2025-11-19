@@ -29,7 +29,7 @@ const BonusSection = () => {
   ];
 
   return (
-    <section className="w-full py-12 md:py-16 lg:py-20 px-4 md:px-6 bg-background">
+    <section className="w-full py-6 md:py-8 px-4 md:px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Título */}
         <div className="text-center mb-6 md:mb-8 space-y-2">
