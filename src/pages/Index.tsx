@@ -90,7 +90,7 @@ const Index = () => {
             </div>
 
             {/* COLUNA DIREITA - Mascote */}
-            <div className="flex justify-center items-center order-1 lg:order-2 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="flex justify-center items-center order-1 lg:order-2 animate-fade-in -mt-32 sm:-mt-12 lg:mt-0" style={{ animationDelay: '0.3s' }}>
               <div className="relative">
                 {/* Múltiplos círculos de luz atrás do mascote */}
                 <div className="absolute inset-0 flex items-center justify-center">
