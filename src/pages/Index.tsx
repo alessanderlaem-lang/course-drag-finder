@@ -7,7 +7,7 @@ import MembersCounter from "@/components/MembersCounter";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
-import BlackFridayBanner from "@/components/BlackFridayBanner";
+
 import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
@@ -22,9 +22,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Black Friday Banner */}
-      <BlackFridayBanner />
-      
       {/* Hero Section - padding-top ao invés de margin-top para evitar espaço vazio */}
       <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 overflow-hidden bg-black pt-16 sm:pt-20">
         {/* Grid Pattern Background */}
