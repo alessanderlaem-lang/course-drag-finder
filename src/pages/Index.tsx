@@ -22,8 +22,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section - padding-top ao invés de margin-top para evitar espaço vazio */}
-      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 overflow-hidden bg-black pt-16 sm:pt-20">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 overflow-hidden bg-black">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div className="absolute inset-0" style={{
