@@ -50,7 +50,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-6 lg:gap-12 items-center">
             
             {/* COLUNA ESQUERDA - Texto */}
-            <div className="space-y-4 sm:space-y-5 text-center lg:text-left order-2 lg:order-1 -mt-16 sm:-mt-12 lg:mt-0 relative z-20">
+            <div className="space-y-4 sm:space-y-5 text-center lg:text-left order-2 lg:order-1 -mt-8 sm:-mt-12 lg:mt-0 relative z-20">
               
               {/* Headline com animação de entrada */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.15] tracking-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -90,7 +90,7 @@ const Index = () => {
             </div>
 
             {/* COLUNA DIREITA - Mascote */}
-            <div className="flex justify-center items-center order-1 lg:order-2 animate-fade-in -mt-32 sm:-mt-12 lg:mt-0" style={{ animationDelay: '0.3s' }}>
+            <div className="flex justify-center items-center order-1 lg:order-2 animate-fade-in -mt-20 sm:-mt-12 lg:mt-0" style={{ animationDelay: '0.3s' }}>
               <div className="relative">
                 {/* Múltiplos círculos de luz atrás do mascote */}
                 <div className="absolute inset-0 flex items-center justify-center">
