@@ -74,11 +74,11 @@ const PricingSection = () => {
           className="rounded-xl p-5 mb-6"
           style={{ background: '#1a1a1a' }}
         >
-          <p className="text-[#ccc] m-0 text-[0.95rem]">POR APENAS 7X DE</p>
+          <p className="text-[#ccc] m-0 text-[0.95rem]">POR APENAS 12X DE</p>
           <h3 className="text-[2.05rem] sm:text-[2.45rem] font-bold m-2" style={{ color: '#ff2b2b' }}>
-            R$5,07
+            R$5,47
           </h3>
-          <p className="text-[#ccc] m-0 text-[0.95rem]">OU R$29,90 À VISTA</p>
+          <p className="text-[#ccc] m-0 text-[0.95rem]">OU R$47,90 À VISTA</p>
         </div>
 
         {/* Botão CTA */}
