@@ -83,7 +83,7 @@ const PricingSection = () => {
 
         {/* Botão CTA */}
         <a 
-          href="https://pay.cakto.com.br/iznqnt9"
+          href="https://wa.me/?text=ol%C3%A1%2C%20quero%20adquirir%20meu%20acesso%20a%20rise%20community"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block font-bold px-7 sm:px-9 py-3 sm:py-4 rounded-[10px] text-white no-underline text-[1.05rem] sm:text-[1.18rem] transition-all duration-200 hover:-translate-y-0.5"

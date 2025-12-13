@@ -73,32 +73,26 @@ const Navigation = () => {
             >
               FAQ
             </button>
-            <button
-              onClick={() => {
-                const pricingSection = document.querySelector('[class*="pricing"]');
-                if (pricingSection) {
-                  pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }}
-              className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-bold transition-all duration-200 hover:scale-105"
+            <a
+              href="https://wa.me/?text=ol%C3%A1%2C%20quero%20adquirir%20meu%20acesso%20a%20rise%20community"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-bold transition-all duration-200 hover:scale-105 inline-block"
             >
               COMEÇAR AGORA
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button
-              onClick={() => {
-                const pricingSection = document.querySelector('[class*="pricing"]');
-                if (pricingSection) {
-                  pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }}
-              className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all duration-200"
+            <a
+              href="https://wa.me/?text=ol%C3%A1%2C%20quero%20adquirir%20meu%20acesso%20a%20rise%20community"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all duration-200 inline-block"
             >
               COMEÇAR
-            </button>
+            </a>
           </div>
         </div>
       </div>
