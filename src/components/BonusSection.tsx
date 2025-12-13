@@ -1,36 +1,54 @@
-import { Users, Bot, Search as SearchIcon, Package } from "lucide-react";
+import { Users, Bot, Search as SearchIcon, Package, Check } from "lucide-react";
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 
 const BonusSection = () => {
   const bonuses = [
     {
       icon: Package,
       title: "Fornecedores de Rateio",
-      description: "Após anos guardando a 7 chaves, liberamos acesso aos principais fornecedores utilizados atualmente pela comunidade.",
-      originalPrice: "R$ 67,00"
+      subtitle: "Acesso Exclusivo",
+      description: "A lista secreta de fornecedores que os gurus usam. Economize até 90% em ferramentas e serviços essenciais.",
+      originalPrice: "R$ 67,00",
+      color: "text-blue-400",
+      bg: "bg-blue-500/10",
+      border: "border-blue-500/20"
     },
     {
       icon: SearchIcon,
       title: "Puxador de Dados Vitalício",
-      description: "Tenha acesso ao nosso Puxador de Dados exclusivo da Rise Community, funcionando 24/7, com puxadas ilimitadas e acesso vitalício garantido.",
-      originalPrice: "R$ 97,00"
+      subtitle: "Ferramenta Premium",
+      description: "Consultas ilimitadas 24/7. CPF, CNPJ, Veículos e muito mais. Acesso vitalício garantido sem mensalidades.",
+      originalPrice: "R$ 97,00",
+      color: "text-purple-400",
+      bg: "bg-purple-500/10",
+      border: "border-purple-500/20"
     },
     {
       icon: Bot,
       title: "Agentes de IA Exclusivos",
-      description: "Ferramentas inteligentes criadas para turbinar seus estudos, negócios e automações.",
-      originalPrice: "R$ 197,00"
+      subtitle: "Automação Avançada",
+      description: "Bots treinados para copywriting, suporte e vendas. Multiplique sua produtividade com inteligência artificial.",
+      originalPrice: "R$ 197,00",
+      color: "text-amber-400",
+      bg: "bg-amber-500/10",
+      border: "border-amber-500/20"
     },
     {
       icon: Users,
-      title: "Grupos de Networking no WhatsApp",
-      description: "Acesso a grupos ativos com membros que compartilham estratégias, conteúdo, oportunidades e bastidores do digital.",
-      originalPrice: "R$ 97,00"
+      title: "Networking de Elite",
+      subtitle: "Comunidade VIP",
+      description: "Entre para grupos de WhatsApp e Discord com players que realmente faturam. Troque experiências e faça negócios.",
+      originalPrice: "R$ 97,00",
+      color: "text-green-400",
+      bg: "bg-green-500/10",
+      border: "border-green-500/20"
     }
   ];
 
   return (
     <section className="w-full py-6 md:py-8 px-4 md:px-6 bg-background">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Título */}
         <div className="text-center mb-6 md:mb-8 space-y-2">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
@@ -42,43 +60,66 @@ const BonusSection = () => {
         </div>
 
         {/* Grid de Bônus */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {bonuses.map((bonus, index) => {
             const Icon = bonus.icon;
             return (
-              <div
+              <motion.div
                 key={index}
-                className="group relative bg-card p-4 md:p-6 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
               >
-                {/* Icon */}
-                <div className="flex items-start gap-3 mb-2.5">
-                  <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#FF0000]/10 flex-shrink-0 group-hover:bg-[#FF0000]/20 transition-colors">
-                    <Icon className="w-4 h-4 text-[#FF0000]" />
+                <div 
+                  className="group relative h-full flex flex-col bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 p-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300"
+                >
+                  {/* Top Highlight Line */}
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  
+                  {/* Header Card */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div className={`p-3 rounded-2xl ${bonus.bg} ${bonus.border} border`}>
+                      <Icon className={`w-6 h-6 ${bonus.color}`} />
+                    </div>
+                    <Badge variant="secondary" className="bg-white/5 text-gray-400 border-white/10 font-normal text-xs">
+                      {bonus.subtitle}
+                    </Badge>
                   </div>
-                  <h3 className="text-base md:text-lg font-bold text-foreground flex-1 leading-tight pt-0.5">
-                    {bonus.title}
-                  </h3>
+
+                  {/* Content */}
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">
+                      {bonus.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed mb-6">
+                      {bonus.description}
+                    </p>
+                  </div>
+
+                  {/* Pricing Footer */}
+                  <div className="pt-6 border-t border-white/5 mt-auto">
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-col">
+                        <span className="text-xs text-gray-500">Valor real</span>
+                        <span className="text-sm font-medium text-gray-400 line-through decoration-red-500/50">
+                          {bonus.originalPrice}
+                        </span>
+                      </div>
+                      <div className="flex flex-col items-end">
+                        <span className="text-xs text-red-400 font-bold uppercase tracking-wider mb-1">
+                          Grátis
+                        </span>
+                        <span className="flex items-center gap-1 text-green-400 text-xs bg-green-500/10 px-2 py-1 rounded-md border border-green-500/20">
+                          <Check className="w-3 h-3" />
+                          Incluso
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                {/* Description */}
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed mb-4">
-                  {bonus.description}
-                </p>
-
-                {/* Price and Badge */}
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="text-xs text-[#999999] mr-0.5">De</span>
-                  <span className="text-sm md:text-base font-medium text-[#666666] line-through">
-                    {bonus.originalPrice}
-                  </span>
-                  <span className="bg-[#00FF00] text-black px-2 py-1 md:px-2.5 md:py-1 rounded text-[10px] md:text-[11px] font-bold uppercase tracking-wide whitespace-nowrap">
-                    NESSA OFERTA: GRÁTIS
-                  </span>
-                </div>
-
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 rounded-lg bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              </div>
+              </motion.div>
             );
           })}
         </div>
