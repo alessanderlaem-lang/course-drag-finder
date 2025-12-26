@@ -25,7 +25,7 @@ const Index = () => {
       {/* Hero Section - Full Design from SVG */}
       <section className="relative min-h-screen bg-black overflow-hidden">
         {/* Background com o design completo */}
-        <div className="absolute inset-0 w-full h-full flex items-start lg:items-center justify-center -mt-[26%] lg:mt-0">
+        <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-start lg:justify-center -mt-[26%] lg:mt-0">
           <img 
             src="/images/hero-background.svg" 
             alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
@@ -33,6 +33,16 @@ const Index = () => {
             loading="eager"
             fetchPriority="high"
           />
+          {/* Texto abaixo da imagem - mobile only */}
+          <div className="lg:hidden flex flex-col items-center text-center mt-4 px-4">
+            <p className="text-[#E53935] text-xs tracking-[0.2em] font-medium mb-3">
+              ACESSO VITALÍCIO + ATUALIZAÇÕES
+            </p>
+            <h1 className="text-white text-2xl font-bold leading-tight">
+              Maior comunidade de Marketing Digital<br />
+              e Networking do Brasil
+            </h1>
+          </div>
         </div>
       </section>
 
