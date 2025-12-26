@@ -63,13 +63,16 @@ const Index = () => {
                 className="relative -mt-40 w-64 cursor-pointer hover:scale-105 transition-transform group"
                 onClick={scrollToNextSection}
               >
-                {/* Brilho girando */}
-                <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-75 blur-sm animate-spin-slow" />
-                <div className="absolute -inset-0.5 rounded-lg bg-gradient-conic from-transparent via-white/40 to-transparent opacity-60 animate-spin-slow" />
+                {/* Borda com brilho correndo */}
+                <div className="absolute -inset-[2px] rounded-lg overflow-hidden">
+                  <div className="absolute inset-0 animate-border-glow">
+                    <div className="absolute w-8 h-full bg-gradient-to-r from-transparent via-white/80 to-transparent blur-[2px]" />
+                  </div>
+                </div>
                 <img
                   src={ctaButton}
                   alt="Quero saber mais"
-                  className="relative w-full"
+                  className="relative w-full rounded-lg"
                 />
               </div>
             </div>
