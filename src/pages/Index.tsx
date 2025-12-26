@@ -25,7 +25,7 @@ const Index = () => {
       {/* Hero Section - Full Design from SVG */}
       <section className="relative min-h-screen bg-black overflow-hidden">
         {/* Background com o design completo */}
-        <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+        <div className="absolute inset-0 w-full h-full flex items-start justify-center pt-[30%]">
           <img 
             src="/images/hero-background.svg" 
             alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
