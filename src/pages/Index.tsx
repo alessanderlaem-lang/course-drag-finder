@@ -63,21 +63,23 @@ const Index = () => {
                 className="relative -mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
                 onClick={scrollToNextSection}
               >
-                {/* Borda com brilho correndo */}
-                <div className="absolute -inset-[2px] rounded-lg overflow-hidden pointer-events-none">
-                  <div 
-                    className="absolute inset-[-100%] animate-spin-slow"
+                {/* Linha de luz correndo somente na borda */}
+                <div className="absolute -inset-[2px] rounded-lg p-[2px] pointer-events-none">
+                  <div
+                    className="absolute inset-0 rounded-lg animate-spin-slow"
                     style={{
-                      background: 'conic-gradient(from 0deg, transparent 0deg, transparent 340deg, white 350deg, transparent 360deg)',
+                      background:
+                        "conic-gradient(from 0deg, transparent 0deg 330deg, hsl(var(--foreground) / 0.9) 345deg, transparent 360deg)",
                     }}
                   />
+                  {/* mascara o centro, deixando só a borda visível */}
+                  <div className="absolute inset-[2px] rounded-[calc(var(--radius)-2px)] bg-black" />
                 </div>
-                {/* Fundo preto para cobrir o centro */}
-                <div className="absolute inset-0 rounded-lg bg-black" />
+
                 <img
                   src={ctaButton}
                   alt="Quero saber mais"
-                  className="relative w-full rounded-lg"
+                  className="relative z-10 w-full rounded-lg"
                 />
               </div>
             </div>
