@@ -23,7 +23,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section - Full Design from SVG */}
-      <section className="relative min-h-screen bg-black overflow-hidden">
+      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-hidden">
         {/* Background com o design completo */}
         <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-start lg:justify-center -mt-[12%] lg:mt-0">
           <img 
@@ -34,7 +34,7 @@ const Index = () => {
             fetchPriority="high"
           />
           {/* Texto abaixo da imagem - mobile only */}
-          <div className="lg:hidden flex flex-col items-center text-center absolute bottom-[-1vh] px-4">
+          <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+10px)] px-4">
             <p className="text-[#FF0000] text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
               PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
             </p>
