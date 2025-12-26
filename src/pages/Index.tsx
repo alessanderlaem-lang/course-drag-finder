@@ -34,15 +34,9 @@ const Index = () => {
             fetchPriority="high"
           />
           {/* Texto abaixo da imagem - mobile only */}
-          <div className="lg:hidden flex flex-col items-center text-center mt-4 px-4">
-            <p className="text-[#E53935] text-xs tracking-[0.2em] font-medium mb-3">
-              ACESSO VITALÍCIO + ATUALIZAÇÕES
-            </p>
-            <h1 className="text-white text-2xl font-bold leading-tight">
-              Maior comunidade de Marketing Digital<br />
-              e Networking do Brasil
-            </h1>
-          </div>
+          <h1 className="lg:hidden text-white text-xl font-bold text-center mt-4">
+            Maior comunidade de Marketing Digital
+          </h1>
         </div>
       </section>
 
