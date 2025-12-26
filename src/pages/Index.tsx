@@ -32,18 +32,15 @@ const Index = () => {
             Mobile: trava o layout num "quadro" 9:16 (mesma proporção do SVG) e
             posiciona o texto por porcentagem para ficar igual em iPhone/Android.
           */}
-          <div className="relative mx-auto h-[100svh] w-full max-w-[calc(100svh*9/16)] -translate-y-[12%] lg:translate-y-0 lg:w-full lg:h-full lg:max-w-none">
+          <div className="relative mx-auto h-[100svh] w-full translate-y-0 lg:translate-y-0 lg:w-full lg:h-full lg:max-w-none">
             <img
               src="/images/hero-background.svg"
               alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-              className="w-full h-full max-w-none object-contain object-center"
+              className="block w-full h-full max-w-none object-cover object-center lg:object-contain"
               loading="eager"
               fetchPriority="high"
             />
 
-            {/* Cobre linhas da arte do SVG que aparecem em alguns dispositivos */}
-            <div className="lg:hidden pointer-events-none absolute inset-x-0 top-[9%] h-2 bg-black" />
-            <div className="lg:hidden pointer-events-none absolute inset-x-0 bottom-[7%] h-2 bg-black" />
             {/* Texto abaixo da imagem - mobile only */}
             <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
               <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
