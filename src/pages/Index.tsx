@@ -44,8 +44,8 @@ const Index = () => {
             <h1 className="text-white text-xl font-bold whitespace-nowrap mb-3">
               e Networking do Brasil
             </h1>
-            <p className="text-white/80 text-[10px] leading-relaxed max-w-[280px] text-center mx-auto">
-              Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos exclusivos e uma comunidade ativa com +9.000 membros
+            <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
+              Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos
             </p>
           </div>
         </div>
