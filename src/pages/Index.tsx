@@ -47,6 +47,9 @@ const Index = () => {
             <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
               Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos
             </p>
+            <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
+              exclusivos e uma comunidade ativa com +9.000 membros
+            </p>
           </div>
         </div>
       </section>
