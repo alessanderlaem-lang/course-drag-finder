@@ -24,6 +24,8 @@ const Index = () => {
     <div className="min-h-screen bg-black">
       {/* Hero Section - Full Design from SVG */}
       <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-hidden">
+        {/* Fundo preto para cobrir qualquer gap */}
+        <div className="absolute inset-0 bg-black" />
         {/* Background com o design completo */}
         <div className="absolute inset-0 w-full h-full flex items-center justify-center">
           {/*
