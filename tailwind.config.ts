@@ -116,6 +116,10 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -127,6 +131,7 @@ export default {
         "pulse-slow": "pulse-slow 4s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.8s ease-out",
         "fade-in": "fade-in 1s ease-out",
+        "spin-slow": "spin-slow 3s linear infinite",
       },
     },
   },

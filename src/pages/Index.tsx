@@ -59,12 +59,19 @@ const Index = () => {
                 exclusivos e uma comunidade ativa com +9.000 membros
               </p>
 
-              <img
-                src={ctaButton}
-                alt="Quero saber mais"
+              <div 
+                className="relative -mt-40 w-64 cursor-pointer hover:scale-105 transition-transform group"
                 onClick={scrollToNextSection}
-                className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
-              />
+              >
+                {/* Brilho girando */}
+                <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-75 blur-sm animate-spin-slow" />
+                <div className="absolute -inset-0.5 rounded-lg bg-gradient-conic from-transparent via-white/40 to-transparent opacity-60 animate-spin-slow" />
+                <img
+                  src={ctaButton}
+                  alt="Quero saber mais"
+                  className="relative w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
