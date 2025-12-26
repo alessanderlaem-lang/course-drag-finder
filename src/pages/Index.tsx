@@ -24,7 +24,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section - Full Design from SVG */}
-      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-hidden">
+      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-visible">
         {/* Fundo preto para cobrir qualquer gap */}
         <div className="absolute inset-0 bg-black" />
         {/* Background com o design completo */}
@@ -43,7 +43,7 @@ const Index = () => {
             />
 
             {/* Texto abaixo da imagem - mobile only */}
-            <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
+            <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] z-20">
               <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
                 PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
               </p>
