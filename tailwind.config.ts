@@ -15,6 +15,7 @@ export default {
     extend: {
       colors: {
         red: {
+          400: "hsl(var(--red-highlight))",
           500: "hsl(var(--primary))",
           600: "hsl(var(--primary))",
           900: "hsl(0 100% 30%)",

@@ -27,6 +27,10 @@ All colors MUST be HSL.
     --muted-foreground: 0 0% 60%;
 
     --accent: 0 100% 50%;
+    
+    /* Vermelho secundário - tom mais vivo para destaques */
+    --red-highlight: 0 100% 60%;
+    --red-glow: 0 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 100% 50%;
