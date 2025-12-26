@@ -70,7 +70,7 @@ const Index = () => {
               <img
                 src={discordPreview}
                 alt="Discord Rise Community Preview"
-                className="-mt-48 w-[22rem] rounded-lg shadow-lg"
+                className="-mt-48 w-[28rem] rounded-lg shadow-lg"
               />
             </div>
           </div>
