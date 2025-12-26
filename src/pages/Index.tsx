@@ -59,29 +59,12 @@ const Index = () => {
                 exclusivos e uma comunidade ativa com +9.000 membros
               </p>
 
-              <div 
-                className="relative -mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
+              <img
+                src={ctaButton}
+                alt="Quero saber mais"
                 onClick={scrollToNextSection}
-              >
-                {/* Linha de luz correndo somente na borda */}
-                <div className="absolute -inset-[2px] rounded-lg p-[2px] pointer-events-none">
-                  <div
-                    className="absolute inset-0 rounded-lg animate-spin-slow"
-                    style={{
-                      background:
-                        "conic-gradient(from 0deg, transparent 0deg 330deg, hsl(var(--foreground) / 0.9) 345deg, transparent 360deg)",
-                    }}
-                  />
-                  {/* mascara o centro, deixando só a borda visível */}
-                  <div className="absolute inset-[2px] rounded-[calc(var(--radius)-2px)] bg-black" />
-                </div>
-
-                <img
-                  src={ctaButton}
-                  alt="Quero saber mais"
-                  className="relative z-10 w-full rounded-lg"
-                />
-              </div>
+                className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
+              />
             </div>
           </div>
         </div>
