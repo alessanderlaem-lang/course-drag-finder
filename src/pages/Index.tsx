@@ -34,7 +34,7 @@ const Index = () => {
             fetchPriority="high"
           />
           {/* Texto abaixo da imagem - mobile only */}
-          <div className="lg:hidden flex flex-col items-center text-center absolute bottom-[-8vh] px-4">
+          <div className="lg:hidden flex flex-col items-center text-center absolute bottom-[-15vh] px-4">
             <p className="text-[#FF0000] text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
               PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
             </p>
@@ -54,7 +54,7 @@ const Index = () => {
               src={ctaButton}
               alt="Quero saber mais"
               onClick={scrollToNextSection}
-              className="mt-2 w-48 cursor-pointer hover:scale-105 transition-transform"
+              className="mt-1 w-48 cursor-pointer hover:scale-105 transition-transform"
             />
           </div>
         </div>
