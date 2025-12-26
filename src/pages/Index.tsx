@@ -34,7 +34,7 @@ const Index = () => {
             fetchPriority="high"
           />
           {/* Texto abaixo da imagem - mobile only */}
-          <div className="lg:hidden flex flex-col items-center text-center -mt-[19rem]">
+          <div className="lg:hidden flex flex-col items-center text-center -mt-[19.5rem]">
             <p className="text-[#FF0000] text-[8px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
               PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
             </p>
