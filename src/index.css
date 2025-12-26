@@ -138,46 +138,4 @@ All colors MUST be HSL.
       background-position: 200% center;
     }
   }
-  
-  /* Rotating glow effect for CTA button */
-  .rotating-glow {
-    position: relative;
-  }
-  
-  .rotating-glow::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    background: conic-gradient(
-      from var(--glow-angle, 0deg),
-      hsl(0 100% 60%) 0deg,
-      hsl(0 100% 50% / 0.2) 60deg,
-      hsl(0 100% 60%) 120deg,
-      hsl(0 100% 50% / 0.2) 180deg,
-      hsl(0 100% 60%) 240deg,
-      hsl(0 100% 50% / 0.2) 300deg,
-      hsl(0 100% 60%) 360deg
-    );
-    border-radius: 16px;
-    animation: rotate-glow 2s linear infinite;
-    z-index: -1;
-    filter: blur(8px);
-  }
-  
-  @keyframes rotate-glow {
-    0% {
-      --glow-angle: 0deg;
-      transform: rotate(0deg);
-    }
-    100% {
-      --glow-angle: 360deg;
-      transform: rotate(360deg);
-    }
-  }
-  
-  @property --glow-angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-  }
 }

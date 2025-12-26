@@ -59,14 +59,12 @@ const Index = () => {
                 exclusivos e uma comunidade ativa com +9.000 membros
               </p>
 
-              <div className="rotating-glow -mt-40">
-                <img
-                  src={ctaButton}
-                  alt="Quero saber mais"
-                  onClick={scrollToNextSection}
-                  className="w-64 cursor-pointer hover:scale-105 transition-transform relative z-10"
-                />
-              </div>
+              <img
+                src={ctaButton}
+                alt="Quero saber mais"
+                onClick={scrollToNextSection}
+                className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
+              />
             </div>
           </div>
         </div>
