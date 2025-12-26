@@ -41,6 +41,8 @@ const Index = () => {
               fetchPriority="high"
             />
 
+            {/* Cobre a linha fina que aparece em alguns Android (arte do SVG) */}
+            <div className="lg:hidden pointer-events-none absolute inset-x-0 top-[9%] h-2 bg-black" />
             {/* Texto abaixo da imagem - mobile only */}
             <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
               <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
