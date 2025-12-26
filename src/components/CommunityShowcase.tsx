@@ -198,7 +198,7 @@ const CommunityShowcase = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative pt-80 sm:pt-20 lg:pt-24 pb-2 sm:pb-20 lg:pb-24 px-2 sm:px-4 bg-black overflow-x-hidden"
+      className="relative pt-[28rem] sm:pt-20 lg:pt-24 pb-2 sm:pb-20 lg:pb-24 px-2 sm:px-4 bg-black overflow-x-hidden"
     >
       {/* Gradiente sutil de fundo */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
