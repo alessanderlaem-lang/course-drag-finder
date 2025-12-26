@@ -25,11 +25,11 @@ const Index = () => {
       {/* Hero Section - Full Design from SVG */}
       <section className="relative min-h-screen bg-black overflow-hidden">
         {/* Background com o design completo */}
-        <div className="absolute inset-0 w-full h-full flex items-start justify-center pt-[10%]">
+        <div className="absolute inset-0 w-full h-full flex items-start lg:items-center justify-center pt-[10%] lg:pt-0">
           <img 
             src="/images/hero-background.svg" 
             alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-            className="w-[90%] h-[90%] max-w-none object-contain object-center"
+            className="w-[90%] h-[90%] lg:w-full lg:h-full max-w-none object-contain object-center"
             loading="eager"
             fetchPriority="high"
           />
