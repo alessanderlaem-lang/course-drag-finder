@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
-
+import ctaButton from "@/assets/cta-button.png";
 const Index = () => {
   const scrollToNextSection = () => {
     const topicsSection = document.querySelector('#topics-section');
@@ -50,16 +50,12 @@ const Index = () => {
             <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
               exclusivos e uma comunidade ativa com +9.000 membros
             </p>
-            <button 
+            <img 
+              src={ctaButton}
+              alt="Quero saber mais"
               onClick={scrollToNextSection}
-              className="mt-4 flex items-center gap-2 px-6 py-3 bg-gradient-to-b from-[#ff3333] to-[#cc0000] text-white font-semibold text-sm rounded-xl shadow-lg hover:from-[#ff4444] hover:to-[#dd0000] transition-all"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
-              </svg>
-              Quero saber mais
-            </button>
+              className="mt-4 w-48 cursor-pointer hover:scale-105 transition-transform"
+            />
           </div>
         </div>
       </section>
