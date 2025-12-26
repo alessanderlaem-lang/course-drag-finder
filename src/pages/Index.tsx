@@ -60,15 +60,20 @@ const Index = () => {
               </p>
 
               <div 
-                className="relative -mt-40 w-64 cursor-pointer hover:scale-105 transition-transform group"
+                className="relative -mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
                 onClick={scrollToNextSection}
               >
                 {/* Borda com brilho correndo */}
-                <div className="absolute -inset-[2px] rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 animate-border-glow">
-                    <div className="absolute w-8 h-full bg-gradient-to-r from-transparent via-white/80 to-transparent blur-[2px]" />
-                  </div>
+                <div className="absolute -inset-[2px] rounded-lg overflow-hidden pointer-events-none">
+                  <div 
+                    className="absolute inset-[-100%] animate-spin-slow"
+                    style={{
+                      background: 'conic-gradient(from 0deg, transparent 0deg, transparent 340deg, white 350deg, transparent 360deg)',
+                    }}
+                  />
                 </div>
+                {/* Fundo preto para cobrir o centro */}
+                <div className="absolute inset-0 rounded-lg bg-black" />
                 <img
                   src={ctaButton}
                   alt="Quero saber mais"
