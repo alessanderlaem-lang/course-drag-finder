@@ -63,7 +63,7 @@ const Index = () => {
                 src={ctaButton}
                 alt="Quero saber mais"
                 onClick={scrollToNextSection}
-                className="-mt-24 w-64 cursor-pointer hover:scale-105 transition-transform"
+                className="-mt-32 w-64 cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
           </div>
