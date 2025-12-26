@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
+import ctaButton from "@/assets/cta-button.svg";
 
 const Index = () => {
   const scrollToNextSection = () => {
@@ -50,6 +51,11 @@ const Index = () => {
             <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
               exclusivos e uma comunidade ativa com +9.000 membros
             </p>
+            <img 
+              src={ctaButton} 
+              alt="Quero entrar na Rise" 
+              className="w-48 mt-4 cursor-pointer hover:scale-105 transition-transform"
+            />
           </div>
         </div>
       </section>
