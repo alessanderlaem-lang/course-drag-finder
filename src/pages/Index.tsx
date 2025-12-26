@@ -24,7 +24,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section - Full Design from SVG */}
-      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-visible">
+      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-visible z-30">
         {/* Fundo preto para cobrir qualquer gap */}
         <div className="absolute inset-0 bg-black" />
         {/* Background com o design completo */}
@@ -78,7 +78,7 @@ const Index = () => {
       </section>
 
       {/* Community Showcase Section */}
-      <div id="topics-section">
+      <div id="topics-section" className="relative z-0">
         <CommunityShowcase />
       </div>
 
