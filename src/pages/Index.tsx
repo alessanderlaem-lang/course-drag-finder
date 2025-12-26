@@ -47,7 +47,7 @@ const Index = () => {
                 PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
               </p>
 
-              <h1 className="text-white text-2xl font-bold leading-tight mb-3">
+              <h1 className="text-white text-xl font-bold leading-tight mb-3">
                 <span className="block whitespace-nowrap">Maior comunidade de Marketing Digital</span>
                 <span className="block whitespace-nowrap">e Networking do Brasil</span>
               </h1>
