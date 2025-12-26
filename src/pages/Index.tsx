@@ -25,37 +25,45 @@ const Index = () => {
       {/* Hero Section - Full Design from SVG */}
       <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-hidden">
         {/* Background com o design completo */}
-        <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-start lg:justify-center -mt-[12%] lg:mt-0">
-          <img 
-            src="/images/hero-background.svg" 
-            alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-            className="w-full h-full lg:w-full lg:h-full max-w-none object-contain object-center"
-            loading="eager"
-            fetchPriority="high"
-          />
-          {/* Texto abaixo da imagem - mobile only */}
-          <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 bottom-[calc(env(safe-area-inset-bottom)+10px)] px-4">
-            <p className="text-[#FF0000] text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
-              PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
-            </p>
-            <h1 className="text-white text-2xl font-bold whitespace-nowrap">
-              Maior comunidade de Marketing Digital
-            </h1>
-            <h1 className="text-white text-2xl font-bold whitespace-nowrap mb-3">
-              e Networking do Brasil
-            </h1>
-            <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
-              Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos
-            </p>
-            <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
-              exclusivos e uma comunidade ativa com +9.000 membros
-            </p>
-            <img 
-              src={ctaButton}
-              alt="Quero saber mais"
-              onClick={scrollToNextSection}
-              className="-mt-24 w-48 cursor-pointer hover:scale-105 transition-transform"
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+          {/*
+            Mobile: trava o layout num "quadro" 9:16 (mesma proporção do SVG) e
+            posiciona o texto por porcentagem para ficar igual em iPhone/Android.
+          */}
+          <div className="relative mx-auto h-[100svh] w-full max-w-[calc(100svh*9/16)] -translate-y-[12%] lg:translate-y-0 lg:w-full lg:h-full lg:max-w-none">
+            <img
+              src="/images/hero-background.svg"
+              alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
+              className="w-full h-full max-w-none object-contain object-center"
+              loading="eager"
+              fetchPriority="high"
             />
+
+            {/* Texto abaixo da imagem - mobile only */}
+            <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[58%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
+              <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
+                PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
+              </p>
+
+              <h1 className="text-white text-2xl font-bold leading-tight mb-3">
+                <span className="block whitespace-nowrap">Maior comunidade de Marketing Digital</span>
+                <span className="block whitespace-nowrap">e Networking do Brasil</span>
+              </h1>
+
+              <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
+                Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos
+              </p>
+              <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
+                exclusivos e uma comunidade ativa com +9.000 membros
+              </p>
+
+              <img
+                src={ctaButton}
+                alt="Quero saber mais"
+                onClick={scrollToNextSection}
+                className="-mt-24 w-48 cursor-pointer hover:scale-105 transition-transform"
+              />
+            </div>
           </div>
         </div>
       </section>
