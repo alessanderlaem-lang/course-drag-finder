@@ -34,16 +34,19 @@ const Index = () => {
             fetchPriority="high"
           />
           {/* Texto abaixo da imagem - mobile only */}
-          <div className="lg:hidden flex flex-col items-center text-center absolute bottom-[37vh]">
+          <div className="lg:hidden flex flex-col items-center text-center absolute bottom-[37vh] px-4">
             <p className="text-[#FF0000] text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
               PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
             </p>
             <h1 className="text-white text-xl font-bold whitespace-nowrap">
               Maior comunidade de Marketing Digital
             </h1>
-            <h1 className="text-white text-xl font-bold whitespace-nowrap">
+            <h1 className="text-white text-xl font-bold whitespace-nowrap mb-3">
               e Networking do Brasil
             </h1>
+            <p className="text-white/80 text-xs leading-relaxed max-w-[320px]">
+              Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos exclusivos e uma comunidade ativa com +9.000 membros
+            </p>
           </div>
         </div>
       </section>
