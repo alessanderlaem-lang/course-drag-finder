@@ -35,13 +35,13 @@ const Index = () => {
           />
           {/* Texto abaixo da imagem - mobile only */}
           <div className="lg:hidden flex flex-col items-center text-center -mt-[22rem]">
-            <p className="text-[#FF0000] text-sm font-medium tracking-[0.15em] mb-3 whitespace-nowrap">
+            <p className="text-[#FF0000] text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
               PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
             </p>
-            <h1 className="text-white text-3xl font-bold whitespace-nowrap">
+            <h1 className="text-white text-xl font-bold whitespace-nowrap">
               Maior comunidade de Marketing Digital
             </h1>
-            <h1 className="text-white text-3xl font-bold whitespace-nowrap">
+            <h1 className="text-white text-xl font-bold whitespace-nowrap">
               e Networking do Brasil
             </h1>
           </div>
