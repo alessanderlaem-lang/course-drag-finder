@@ -34,7 +34,7 @@ const Index = () => {
             fetchPriority="high"
           />
           {/* Texto abaixo da imagem - mobile only */}
-          <h1 className="lg:hidden text-white text-xl font-bold text-center mt-4">
+          <h1 className="lg:hidden text-white text-base font-bold text-center mt-4 whitespace-nowrap">
             Maior comunidade de Marketing Digital
           </h1>
         </div>
