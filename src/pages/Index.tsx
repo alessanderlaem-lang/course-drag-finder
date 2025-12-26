@@ -68,6 +68,8 @@ const Index = () => {
                 className="-mt-24 w-48 cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
+            {/* Cobre linha branca que aparece embaixo do botão em alguns dispositivos */}
+            <div className="lg:hidden pointer-events-none absolute inset-x-0 bottom-0 h-4 bg-black" />
           </div>
         </div>
       </section>
