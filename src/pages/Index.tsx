@@ -41,8 +41,9 @@ const Index = () => {
               fetchPriority="high"
             />
 
-            {/* Cobre a linha fina que aparece em alguns Android (arte do SVG) */}
+            {/* Cobre linhas da arte do SVG que aparecem em alguns dispositivos */}
             <div className="lg:hidden pointer-events-none absolute inset-x-0 top-[9%] h-2 bg-black" />
+            <div className="lg:hidden pointer-events-none absolute inset-x-0 bottom-[7%] h-2 bg-black" />
             {/* Texto abaixo da imagem - mobile only */}
             <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
               <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
@@ -68,8 +69,6 @@ const Index = () => {
                 className="-mt-24 w-48 cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
-            {/* Cobre linha branca que aparece embaixo do botão em alguns dispositivos */}
-            <div className="lg:hidden pointer-events-none absolute inset-x-0 bottom-0 h-4 bg-black" />
           </div>
         </div>
       </section>
