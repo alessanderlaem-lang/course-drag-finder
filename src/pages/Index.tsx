@@ -23,50 +23,42 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section - Full Design from SVG */}
-      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-hidden">
-        {/* Fundo preto para cobrir qualquer gap */}
-        <div className="absolute inset-0 bg-black" />
-        {/* Background com o design completo */}
-        <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-          {/*
-            Mobile: trava o layout num "quadro" 9:16 (mesma proporção do SVG) e
-            posiciona o texto por porcentagem para ficar igual em iPhone/Android.
-          */}
-          <div className="relative mx-auto h-[100svh] w-full translate-y-0 lg:translate-y-0 lg:w-full lg:h-full lg:max-w-none">
-            <img
-              src="/images/hero-background.svg"
-              alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-              className="block w-full h-full max-w-none object-cover object-center lg:object-contain"
-              loading="eager"
-              fetchPriority="high"
-            />
+      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-hidden flex flex-col">
+        {/* Imagem de fundo - ocupa o espaço disponível */}
+        <div className="flex-1 relative w-full">
+          <img
+            src="/images/hero-background.svg"
+            alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
+            className="absolute inset-0 w-full h-full object-cover object-top lg:object-contain lg:object-center"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
 
-            {/* Texto abaixo da imagem - mobile only */}
-            <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
-              <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
-                PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
-              </p>
+        {/* Texto fixo na parte inferior - mobile only */}
+        <div className="lg:hidden flex flex-col items-center text-center px-4 pb-[calc(env(safe-area-inset-bottom)+16px)] pt-4 bg-black">
+          <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
+            PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
+          </p>
 
-              <h1 className="text-white text-2xl font-bold leading-tight mb-3">
-                <span className="block whitespace-nowrap">Maior comunidade de Marketing Digital</span>
-                <span className="block whitespace-nowrap">e Networking do Brasil</span>
-              </h1>
+          <h1 className="text-white text-2xl font-bold leading-tight mb-3">
+            <span className="block whitespace-nowrap">Maior comunidade de Marketing Digital</span>
+            <span className="block whitespace-nowrap">e Networking do Brasil</span>
+          </h1>
 
-              <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
-                Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos
-              </p>
-              <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
-                exclusivos e uma comunidade ativa com +9.000 membros
-              </p>
+          <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap">
+            Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos
+          </p>
+          <p className="text-white/80 text-[10px] leading-relaxed whitespace-nowrap mb-4">
+            exclusivos e uma comunidade ativa com +9.000 membros
+          </p>
 
-              <img
-                src={ctaButton}
-                alt="Quero saber mais"
-                onClick={scrollToNextSection}
-                className="-mt-24 w-48 cursor-pointer hover:scale-105 transition-transform"
-              />
-            </div>
-          </div>
+          <img
+            src={ctaButton}
+            alt="Quero saber mais"
+            onClick={scrollToNextSection}
+            className="w-48 cursor-pointer hover:scale-105 transition-transform"
+          />
         </div>
       </section>
 
