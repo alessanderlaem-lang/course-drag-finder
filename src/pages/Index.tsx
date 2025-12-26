@@ -12,6 +12,7 @@ import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 import ctaButton from "@/assets/cta-button.png";
+import discordPreview from "@/assets/discord-preview.jpg";
 const Index = () => {
   const scrollToNextSection = () => {
     const topicsSection = document.querySelector('#topics-section');
@@ -64,6 +65,12 @@ const Index = () => {
                 alt="Quero saber mais"
                 onClick={scrollToNextSection}
                 className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
+              />
+
+              <img
+                src={discordPreview}
+                alt="Discord Rise Community Preview"
+                className="mt-4 w-72 rounded-lg shadow-lg"
               />
             </div>
           </div>
