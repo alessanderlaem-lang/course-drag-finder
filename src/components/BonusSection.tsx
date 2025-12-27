@@ -79,7 +79,7 @@ const BonusSection = () => {
                 alt="Bônus 2" 
                 className="w-full h-auto object-contain -mt-4 translate-y-12"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-28">
+              <div className="w-full text-left -ml-6 mt-6 translate-y-16">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 2</span>
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">RiseOffers - Ofertas</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
