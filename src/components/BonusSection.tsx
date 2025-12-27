@@ -49,7 +49,7 @@ const BonusSection = () => {
   return (
     <>
       {/* Título com fundo preto */}
-      <div className="w-full pt-[35rem] md:pt-16 pb-6 md:pb-8 px-4 md:px-6 bg-black">
+      <div className="w-full pt-[35rem] md:pt-16 pb-2 px-4 md:px-6 bg-black">
         <div className="max-w-7xl mx-auto text-center space-y-2">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
             Bônus exclusivos da <span className="text-primary">Rise Community</span>
