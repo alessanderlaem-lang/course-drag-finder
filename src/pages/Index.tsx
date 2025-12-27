@@ -80,9 +80,8 @@ const Index = () => {
                   <p className="text-white/90 text-sm font-medium whitespace-nowrap">
                     Acesso ao <span className="text-red-600 font-bold">maior acervo</span> de rateio do Brasil
                   </p>
-                  <p className="text-white/70 text-[10px] font-light mt-1 text-center leading-relaxed">
-                    Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de<br />
-                    recursos organizados por categoria. Tudo atualizado semanalmente.
+                  <p className="text-white/70 text-[10px] font-light mt-1 text-center">
+                    Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de
                   </p>
                 </div>
               </div>
