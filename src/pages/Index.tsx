@@ -91,56 +91,6 @@ const Index = () => {
 
 
 
-              <div className="relative mt-8">
-                <img
-                  src={discordPreview}
-                  alt="Discord Rise Community Preview"
-                  className="w-[36rem] rounded-lg shadow-lg"
-                />
-                <div className="absolute top-72 left-1/2 -translate-x-1/2 text-center z-10">
-                  <p className="text-white text-2xl font-bold whitespace-nowrap">
-                    Acesso ao <span className="text-red-600 font-extrabold">maior acervo</span> de rateio do Brasil
-                  </p>
-                  <p className="text-white/70 text-[10px] font-light mt-1 whitespace-nowrap w-max max-w-none mx-auto">
-                    Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalicio a centenas de
-                  </p>
-                  <p className="text-white/70 text-[10px] font-light whitespace-nowrap w-max max-w-none mx-auto">
-                    recursos organizados por segmento e área. Tudo atualizado semanalmente.
-                  </p>
-                  
-                  {/* Category Images Row 1 - Scroll Left */}
-                  <div className="-mt-16 overflow-hidden w-full">
-                    <div className="flex flex-nowrap gap-0 animate-scroll-left w-max">
-                      {[...categoryImages, ...categoryImages, ...categoryImages, ...categoryImages].map((img, idx) => (
-                        <img
-                          key={idx}
-                          src={img}
-                          alt={`Imagem de categoria ${(idx % 8) + 1}`}
-                          className="w-56 h-56 object-contain flex-shrink-0"
-                          loading="lazy"
-                          draggable={false}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Category Images Row 2 - Scroll Right */}
-                  <div className="-mt-40 overflow-hidden w-full">
-                    <div className="flex flex-nowrap gap-0 animate-scroll-right w-max">
-                      {[...categoryImages2, ...categoryImages2, ...categoryImages2, ...categoryImages2].map((img, idx) => (
-                        <img
-                          key={idx}
-                          src={img}
-                          alt={`Imagem de categoria ${(idx % 8) + 9}`}
-                          className="w-56 h-56 object-contain flex-shrink-0"
-                          loading="lazy"
-                          draggable={false}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -152,10 +102,66 @@ const Index = () => {
       {/* Topics Section anchor */}
       <div id="topics-section" />
 
-      {/* Bonus Section */}
-      <div id="bonus-section" className="mt-[40rem]">
+      {/* Bonus Section - Agora vem primeiro */}
+      <div id="bonus-section" className="mt-[20rem]">
         <BonusSection />
       </div>
+
+      {/* Discord Preview Section - Agora vem depois dos bônus */}
+      <section className="relative bg-background py-16 overflow-hidden">
+        <div className="flex flex-col items-center text-center px-4">
+          <div className="relative">
+            <img
+              src={discordPreview}
+              alt="Discord Rise Community Preview"
+              className="w-[36rem] rounded-lg shadow-lg"
+            />
+            <div className="absolute top-72 left-1/2 -translate-x-1/2 text-center z-10">
+              <p className="text-white text-2xl font-bold whitespace-nowrap">
+                Acesso ao <span className="text-red-600 font-extrabold">maior acervo</span> de rateio do Brasil
+              </p>
+              <p className="text-white/70 text-[10px] font-light mt-1 whitespace-nowrap w-max max-w-none mx-auto">
+                Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalicio a centenas de
+              </p>
+              <p className="text-white/70 text-[10px] font-light whitespace-nowrap w-max max-w-none mx-auto">
+                recursos organizados por segmento e área. Tudo atualizado semanalmente.
+              </p>
+              
+              {/* Category Images Row 1 - Scroll Left */}
+              <div className="-mt-16 overflow-hidden w-full">
+                <div className="flex flex-nowrap gap-0 animate-scroll-left w-max">
+                  {[...categoryImages, ...categoryImages, ...categoryImages, ...categoryImages].map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={`Imagem de categoria ${(idx % 8) + 1}`}
+                      className="w-56 h-56 object-contain flex-shrink-0"
+                      loading="lazy"
+                      draggable={false}
+                    />
+                  ))}
+                </div>
+              </div>
+              
+              {/* Category Images Row 2 - Scroll Right */}
+              <div className="-mt-40 overflow-hidden w-full">
+                <div className="flex flex-nowrap gap-0 animate-scroll-right w-max">
+                  {[...categoryImages2, ...categoryImages2, ...categoryImages2, ...categoryImages2].map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={`Imagem de categoria ${(idx % 8) + 9}`}
+                      className="w-56 h-56 object-contain flex-shrink-0"
+                      loading="lazy"
+                      draggable={false}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Carousel */}
       <TestimonialsCarousel />
