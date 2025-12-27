@@ -97,14 +97,14 @@ const Index = () => {
                     recursos organizados por segmento e área. Tudo atualizado semanalmente.
                   </p>
                   
-                  {/* Category Images - 8 lado a lado */}
-                  <div className="-mt-16 px-4 overflow-x-auto">
-                    <div className="flex flex-nowrap justify-center gap-2 w-max mx-auto">
-                      {categoryImages.map((img, idx) => (
+                  {/* Category Images - Infinite scroll */}
+                  <div className="-mt-16 px-4 overflow-hidden">
+                    <div className="flex flex-nowrap gap-2 animate-scroll-left">
+                      {[...categoryImages, ...categoryImages].map((img, idx) => (
                         <img
                           key={idx}
                           src={img}
-                          alt={`Imagem de categoria ${idx + 1}`}
+                          alt={`Imagem de categoria ${(idx % 8) + 1}`}
                           className="w-56 h-56 object-contain flex-none"
                           loading="lazy"
                           draggable={false}
