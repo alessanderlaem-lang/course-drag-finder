@@ -98,14 +98,14 @@ const Index = () => {
                   </p>
                   
                   {/* Category Images - Infinite scroll */}
-                  <div className="-mt-16 px-4 overflow-hidden">
-                    <div className="flex flex-nowrap gap-2 animate-scroll-left">
-                      {[...categoryImages, ...categoryImages].map((img, idx) => (
+                  <div className="-mt-16 overflow-hidden w-full">
+                    <div className="flex flex-nowrap gap-0 animate-scroll-left w-max">
+                      {[...categoryImages, ...categoryImages, ...categoryImages, ...categoryImages].map((img, idx) => (
                         <img
                           key={idx}
                           src={img}
                           alt={`Imagem de categoria ${(idx % 8) + 1}`}
-                          className="w-56 h-56 object-contain flex-none"
+                          className="w-56 h-56 object-contain flex-shrink-0"
                           loading="lazy"
                           draggable={false}
                         />
