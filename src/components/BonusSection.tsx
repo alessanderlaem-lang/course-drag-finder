@@ -54,7 +54,7 @@ const BonusSection = () => {
                   />
                   <div className="w-full text-left -ml-6 mt-6 translate-y-4">
                     <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
-                    <p className="text-foreground font-bold text-2xl mt-2">Afiliação a comunidade</p>
+                    <p className="text-foreground font-bold text-3xl mt-2">Afiliação a comunidade</p>
                     <p className="text-muted-foreground font-light text-[10px] mt-3 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
                     <p className="text-muted-foreground font-light text-[10px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
                     <p className="text-foreground font-light text-sm mt-3">De <span className="line-through">R$ 497,00</span></p>
