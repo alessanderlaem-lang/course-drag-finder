@@ -58,7 +58,7 @@ const BonusSection = () => {
                     <p className="text-muted-foreground font-light text-[10px] mt-3 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
                     <p className="text-muted-foreground font-light text-[10px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
                     <p className="text-foreground font-light text-sm mt-3">De <span className="line-through">R$ 497,00</span></p>
-                    <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-10 mt-2" />
+                    <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-20 mt-2" />
                   </div>
                 </div>
               </motion.div>
