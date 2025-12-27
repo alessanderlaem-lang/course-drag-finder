@@ -55,6 +55,7 @@ const BonusSection = () => {
                     <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
                     <p className="text-foreground font-bold text-base mt-2">Afiliação a comunidade</p>
                     <p className="text-muted-foreground font-light text-[10px] mt-1 whitespace-nowrap">Seja afiliado da maior comunidade de todas, uma com estrutura</p>
+                    <p className="text-muted-foreground font-light text-[10px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
                   </div>
                 </div>
               </motion.div>
