@@ -52,7 +52,7 @@ const BonusSection = () => {
                     alt="Bônus Métodos" 
                     className="w-full h-auto object-contain -mt-4 translate-y-4"
                   />
-                  <div className="w-full text-left -ml-6 mt-6 translate-y-32">
+                  <div className="w-full text-left -ml-6 mt-6 translate-y-28">
                     <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
                     <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Afiliação a comunidade</p>
                     <p className="text-muted-foreground font-light text-[16px] mt-3 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
