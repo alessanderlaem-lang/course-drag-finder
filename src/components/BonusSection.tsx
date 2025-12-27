@@ -45,7 +45,7 @@ const BonusSection = () => {
                 whileHover={{ y: -5 }}
               >
                 <div 
-                  className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[500px] w-full max-w-lg mx-auto"
+                  className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-4 pb-4 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[380px] w-full max-w-sm mx-auto"
                 >
                   <img 
                     src={bonusMetodos} 
