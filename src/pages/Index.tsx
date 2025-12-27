@@ -89,12 +89,7 @@ const Index = () => {
                 className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
               />
 
-              {/* Card com borda cinza arredondada */}
-              <div className="-mt-36 w-[90%] max-w-[22rem] border border-gray-600 rounded-2xl p-6 bg-transparent">
-                <p className="text-white/80 text-xs leading-relaxed text-center">
-                  Junte-se a mais de <span className="text-red-500 font-bold">+9.000 membros</span> que já estão transformando suas carreiras com acesso exclusivo aos melhores recursos de marketing digital.
-                </p>
-              </div>
+
 
               <div className="relative mt-8">
                 <img
