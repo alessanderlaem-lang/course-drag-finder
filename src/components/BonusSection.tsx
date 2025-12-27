@@ -84,8 +84,8 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">RiseOffers - Ofertas</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
                 <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
-                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 497,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+                <p className="text-foreground font-light text-2xl mt-12">De <span className="line-through">R$ 497,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] mt-2" />
               </div>
             </div>
           </motion.div>
