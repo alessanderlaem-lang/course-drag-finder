@@ -158,7 +158,7 @@ const Index = () => {
       <div id="topics-section" />
 
       {/* Bonus Section */}
-      <div id="bonus-section">
+      <div id="bonus-section" className="mt-[40rem]">
         <BonusSection />
       </div>
 
