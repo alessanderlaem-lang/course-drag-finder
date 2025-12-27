@@ -51,6 +51,9 @@ const BonusSection = () => {
                     alt="Bônus Métodos" 
                     className="w-full h-auto object-contain -mt-4"
                   />
+                  <div className="w-full text-left px-2 mt-4">
+                    <span className="text-primary font-bold text-lg">#BÔNUS 1</span>
+                  </div>
                 </div>
               </motion.div>
             );
