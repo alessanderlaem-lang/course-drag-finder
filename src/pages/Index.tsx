@@ -98,13 +98,13 @@ const Index = () => {
                   </p>
                   
                   {/* Category Images - 8 lado a lado */}
-                  <div className="flex justify-center gap-2 mt-4 px-2">
+                  <div className="flex flex-wrap justify-center gap-1.5 mt-4 px-4 max-w-[320px] mx-auto">
                     {categoryImages.map((img, idx) => (
                       <img
                         key={idx}
                         src={img}
                         alt={`Categoria ${idx + 1}`}
-                        className="w-10 h-10 object-contain rounded"
+                        className="w-8 h-8 object-contain"
                       />
                     ))}
                   </div>
