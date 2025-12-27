@@ -77,6 +77,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Black spacer to cover any gray gaps */}
+      <div className="bg-black h-32 lg:hidden" />
+
       {/* Topics Section anchor */}
       <div id="topics-section" />
 
