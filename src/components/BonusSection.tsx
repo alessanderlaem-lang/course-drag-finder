@@ -2,6 +2,7 @@ import { Users, Bot, Search as SearchIcon, Package, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import bonusMetodos from "@/assets/bonus-metodos.png";
+import nessaOfertaGratis from "@/assets/nessa-oferta-gratis.png";
 
 const BonusSection = () => {
   const bonuses = [
@@ -57,6 +58,7 @@ const BonusSection = () => {
                     <p className="text-muted-foreground font-light text-[10px] mt-3 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
                     <p className="text-muted-foreground font-light text-[10px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
                     <p className="text-foreground font-light text-sm mt-3">De <span className="line-through">R$ 497,00</span></p>
+                    <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-5 mt-2" />
                   </div>
                 </div>
               </motion.div>
