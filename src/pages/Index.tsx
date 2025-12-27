@@ -76,7 +76,7 @@ const Index = () => {
                   alt="Discord Rise Community Preview"
                   className="-mt-48 w-[36rem] rounded-lg shadow-lg"
                 />
-                <p className="absolute top-4 left-1/2 -translate-x-1/2 text-white/90 text-sm font-medium text-center z-10">
+                <p className="absolute top-4 left-1/2 -translate-x-1/2 text-white/90 text-sm font-medium text-center z-10 whitespace-nowrap">
                   Acesso ao <span className="text-red-600 font-bold">maior acervo</span> de rateio do Brasil
                 </p>
               </div>
