@@ -96,14 +96,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Spacer para cobrir qualquer gap */}
-      <div className="bg-background h-32 lg:hidden" />
-
       {/* Topics Section anchor */}
       <div id="topics-section" />
 
       {/* Bonus Section - Agora vem primeiro */}
-      <div id="bonus-section" className="mt-8">
+      <div id="bonus-section" className="-mt-40 lg:mt-0">
         <BonusSection />
       </div>
 
