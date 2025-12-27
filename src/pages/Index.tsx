@@ -105,7 +105,7 @@ const Index = () => {
                           key={idx}
                           src={img}
                           alt={`Imagem de categoria ${idx + 1}`}
-                          className="w-48 h-48 object-contain flex-none"
+                          className="w-56 h-56 object-contain flex-none"
                           loading="lazy"
                           draggable={false}
                         />
