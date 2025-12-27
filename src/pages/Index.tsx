@@ -13,6 +13,16 @@ import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 import ctaButton from "@/assets/cta-button.png";
 import discordPreview from "@/assets/discord-preview.jpg";
+import cat1 from "@/assets/categories/1.png";
+import cat2 from "@/assets/categories/2.png";
+import cat3 from "@/assets/categories/3.png";
+import cat4 from "@/assets/categories/4.png";
+import cat5 from "@/assets/categories/5.png";
+import cat6 from "@/assets/categories/6.png";
+import cat7 from "@/assets/categories/7.png";
+import cat8 from "@/assets/categories/8.png";
+
+const categoryImages = [cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8];
 const Index = () => {
   const scrollToNextSection = () => {
     const topicsSection = document.querySelector('#topics-section');
@@ -86,6 +96,18 @@ const Index = () => {
                   <p className="text-white/70 text-[10px] font-light whitespace-nowrap w-max max-w-none mx-auto">
                     recursos organizados por segmento e área. Tudo atualizado semanalmente.
                   </p>
+                  
+                  {/* Category Images - 8 lado a lado */}
+                  <div className="flex justify-center gap-2 mt-4 px-2">
+                    {categoryImages.map((img, idx) => (
+                      <img
+                        key={idx}
+                        src={img}
+                        alt={`Categoria ${idx + 1}`}
+                        className="w-10 h-10 object-contain rounded"
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
