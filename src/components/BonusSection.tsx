@@ -93,7 +93,7 @@ const BonusSection = () => {
         </div>
 
         {/* Card Bônus 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -114,6 +114,35 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Consulta de dados via</p>
                 <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Telegram</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Puxada de dados exclusiva, própria da comunidade</p>
+                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 97,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Card Bônus 4 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            whileHover={{ y: -5 }}
+          >
+            <div 
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-20 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+            >
+              <img 
+                src={bonus2} 
+                alt="Bônus 4" 
+                className="w-3/4 h-auto object-contain -mt-4 translate-y-16"
+              />
+              <div className="w-full text-left -ml-6 mt-6 translate-y-24">
+                <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 4</span>
+                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Título do Bônus 4</p>
+                <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Subtítulo</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Descrição do bônus 4</p>
                 <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 97,00</span></p>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
               </div>
