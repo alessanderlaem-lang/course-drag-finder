@@ -70,15 +70,16 @@ const Index = () => {
                 className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
               />
 
-              <p className="text-white/90 text-sm font-medium text-center mb-2">
-                Acesso ao <span className="text-red-600 font-bold">maior acervo</span> de rateio do Brasil
-              </p>
-
-              <img
-                src={discordPreview}
-                alt="Discord Rise Community Preview"
-                className="-mt-48 w-[36rem] rounded-lg shadow-lg relative z-50"
-              />
+              <div className="relative">
+                <img
+                  src={discordPreview}
+                  alt="Discord Rise Community Preview"
+                  className="-mt-48 w-[36rem] rounded-lg shadow-lg"
+                />
+                <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/90 text-sm font-medium text-center z-10">
+                  Acesso ao <span className="text-red-600 font-bold">maior acervo</span> de rateio do Brasil
+                </p>
+              </div>
             </div>
           </div>
         </div>
