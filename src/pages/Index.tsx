@@ -103,7 +103,7 @@ const Index = () => {
       <div id="topics-section" />
 
       {/* Bonus Section - Agora vem primeiro */}
-      <div id="bonus-section" className="-mt-96">
+      <div id="bonus-section" className="-mt-96 relative z-40">
         <BonusSection />
       </div>
 
