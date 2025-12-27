@@ -51,7 +51,7 @@ const BonusSection = () => {
                     alt="Bônus Métodos" 
                     className="w-full h-auto object-contain -mt-4"
                   />
-                  <div className="w-full text-left px-4 mt-1">
+                  <div className="w-full text-left pl-6 mt-1">
                     <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
                   </div>
                 </div>
