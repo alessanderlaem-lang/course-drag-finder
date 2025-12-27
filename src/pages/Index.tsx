@@ -83,6 +83,9 @@ const Index = () => {
                   <p className="text-white/70 text-[10px] font-light mt-1 whitespace-nowrap w-max max-w-none mx-auto">
                     Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalicio a centenas de
                   </p>
+                  <p className="text-white/70 text-[10px] font-light whitespace-nowrap w-max max-w-none mx-auto">
+                    recursos organizados por categoria. Tudo atualizado semanalmente.
+                  </p>
                 </div>
               </div>
             </div>
