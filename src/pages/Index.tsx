@@ -89,14 +89,12 @@ const Index = () => {
                 className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
               />
 
-              {/* Container com borda cinza */}
-              <div className="rounded-2xl border border-gray-700/50 p-4 bg-background/50 backdrop-blur-sm">
-                <div className="relative">
-                  <img
-                    src={discordPreview}
-                    alt="Discord Rise Community Preview"
-                    className="-mt-48 w-[36rem] rounded-lg shadow-lg"
-                  />
+              <div className="relative">
+                <img
+                  src={discordPreview}
+                  alt="Discord Rise Community Preview"
+                  className="-mt-48 w-[36rem] rounded-lg shadow-lg"
+                />
                 <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center z-10">
                   <p className="text-white text-2xl font-bold whitespace-nowrap">
                     Acesso ao <span className="text-red-600 font-extrabold">maior acervo</span> de rateio do Brasil
@@ -140,7 +138,6 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-              </div>
               </div>
             </div>
           </div>
