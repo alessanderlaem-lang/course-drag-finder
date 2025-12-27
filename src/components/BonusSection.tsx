@@ -44,14 +44,14 @@ const BonusSection = () => {
                 whileHover={{ y: -5 }}
               >
                 <div 
-                  className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/10 pt-0 px-6 pb-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[500px] w-full max-w-lg mx-auto"
+                  className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/20 pt-0 px-6 pb-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[500px] w-full max-w-lg mx-auto"
                 >
                   <img 
                     src={bonusMetodos} 
                     alt="Bônus Métodos" 
                     className="w-full h-auto object-contain -mt-4"
                   />
-                  <div className="w-full text-left -ml-5 mt-1">
+                  <div className="w-full text-left -ml-6 mt-1">
                     <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
                   </div>
                 </div>
