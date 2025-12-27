@@ -98,7 +98,7 @@ const Index = () => {
                   </p>
                   
                   {/* Category Images - 8 lado a lado */}
-                  <div className="-mt-8 px-4 overflow-x-auto">
+                  <div className="-mt-16 px-4 overflow-x-auto">
                     <div className="flex flex-nowrap justify-center gap-2 w-max mx-auto">
                       {categoryImages.map((img, idx) => (
                         <img
