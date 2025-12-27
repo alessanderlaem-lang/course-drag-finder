@@ -2,6 +2,7 @@ import { Users, Bot, Search as SearchIcon, Package, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import bonusMetodos from "@/assets/bonus-metodos.png";
+import bonus2 from "@/assets/bonus-2.jpeg";
 import nessaOfertaGratis from "@/assets/nessa-oferta-gratis.png";
 
 const BonusSection = () => {
@@ -73,8 +74,8 @@ const BonusSection = () => {
               className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
             >
               <img 
-                src={bonusMetodos} 
-                alt="Bônus Métodos" 
+                src={bonus2} 
+                alt="Bônus 2" 
                 className="w-full h-auto object-contain -mt-4 translate-y-12"
               />
               <div className="w-full text-left -ml-6 mt-6 translate-y-28">
