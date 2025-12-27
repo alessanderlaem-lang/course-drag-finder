@@ -89,11 +89,18 @@ const Index = () => {
                 className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
               />
 
-              <div className="relative">
+              {/* Card com borda cinza arredondada */}
+              <div className="-mt-36 w-[90%] max-w-[22rem] border border-gray-600 rounded-2xl p-6 bg-transparent">
+                <p className="text-white/80 text-xs leading-relaxed text-center">
+                  Junte-se a mais de <span className="text-red-500 font-bold">+9.000 membros</span> que já estão transformando suas carreiras com acesso exclusivo aos melhores recursos de marketing digital.
+                </p>
+              </div>
+
+              <div className="relative mt-8">
                 <img
                   src={discordPreview}
                   alt="Discord Rise Community Preview"
-                  className="-mt-48 w-[36rem] rounded-lg shadow-lg"
+                  className="w-[36rem] rounded-lg shadow-lg"
                 />
                 <div className="absolute top-16 left-1/2 -translate-x-1/2 text-center z-10">
                   <p className="text-white text-2xl font-bold whitespace-nowrap">
