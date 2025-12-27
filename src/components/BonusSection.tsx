@@ -45,7 +45,7 @@ const BonusSection = () => {
                 whileHover={{ y: -5 }}
               >
                 <div 
-                  className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[260px] w-full max-w-lg mx-auto"
+                  className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[220px] w-full max-w-lg mx-auto"
                 >
                   <img 
                     src={bonusMetodos} 
@@ -58,7 +58,7 @@ const BonusSection = () => {
                     <p className="text-muted-foreground font-light text-[10px] mt-3 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
                     <p className="text-muted-foreground font-light text-[10px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
                     <p className="text-foreground font-light text-sm mt-3">De <span className="line-through">R$ 497,00</span></p>
-                    <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-20 mt-8 translate-y-8" />
+                    <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-20 mt-8 translate-y-2" />
                   </div>
                 </div>
               </motion.div>
