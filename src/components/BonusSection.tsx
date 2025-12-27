@@ -49,7 +49,7 @@ const BonusSection = () => {
                   <img 
                     src={bonusMetodos} 
                     alt="Bônus Métodos" 
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain -mt-4"
                   />
                 </div>
               </motion.div>
