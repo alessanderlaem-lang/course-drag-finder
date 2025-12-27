@@ -145,7 +145,7 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Rateio</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Acesso a milhares de fornecedores</p>
                 <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">ferramentas e materiais do digital</p>
-                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 97,00</span></p>
+                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 197,00</span></p>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
               </div>
             </div>
