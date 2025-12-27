@@ -12,7 +12,7 @@ import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 import ctaButton from "@/assets/cta-button.png";
-import discordPreview from "@/assets/discord-preview.jpg";
+import discordPreview from "@/assets/discord-preview.png";
 const Index = () => {
   const scrollToNextSection = () => {
     const topicsSection = document.querySelector('#topics-section');
