@@ -73,51 +73,8 @@ const BonusSection = () => {
                 whileHover={{ y: -5 }}
               >
                 <div 
-                  className="group relative h-full flex flex-col bg-background border border-white/10 p-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300"
+                  className="group relative h-full flex flex-col bg-background border border-white/10 p-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[200px]"
                 >
-                  {/* Top Highlight Line */}
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  
-                  {/* Header Card */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className={`p-3 rounded-2xl ${bonus.bg} ${bonus.border} border`}>
-                      <Icon className={`w-6 h-6 ${bonus.color}`} />
-                    </div>
-                    <Badge variant="secondary" className="bg-white/5 text-gray-400 border-white/10 font-normal text-xs">
-                      {bonus.subtitle}
-                    </Badge>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">
-                      {bonus.title}
-                    </h3>
-                    <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                      {bonus.description}
-                    </p>
-                  </div>
-
-                  {/* Pricing Footer */}
-                  <div className="pt-6 border-t border-white/5 mt-auto">
-                    <div className="flex items-center justify-between">
-                      <div className="flex flex-col">
-                        <span className="text-xs text-gray-500">Valor real</span>
-                        <span className="text-sm font-medium text-gray-400 line-through decoration-red-500/50">
-                          {bonus.originalPrice}
-                        </span>
-                      </div>
-                      <div className="flex flex-col items-end">
-                        <span className="text-xs text-red-400 font-bold uppercase tracking-wider mb-1">
-                          Grátis
-                        </span>
-                        <span className="flex items-center gap-1 text-green-400 text-xs bg-green-500/10 px-2 py-1 rounded-md border border-green-500/20">
-                          <Check className="w-3 h-3" />
-                          Incluso
-                        </span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </motion.div>
             );
