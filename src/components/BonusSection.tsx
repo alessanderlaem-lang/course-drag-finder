@@ -1,6 +1,7 @@
 import { Users, Bot, Search as SearchIcon, Package, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import bonusMetodos from "@/assets/bonus-metodos.svg";
 
 const BonusSection = () => {
   const bonuses = [
@@ -43,8 +44,13 @@ const BonusSection = () => {
                 whileHover={{ y: -5 }}
               >
                 <div 
-                  className="group relative h-full flex flex-col bg-background border border-white/10 p-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[500px] w-full max-w-lg mx-auto"
+                  className="group relative h-full flex flex-col items-center justify-center bg-background border border-white/10 p-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[500px] w-full max-w-lg mx-auto"
                 >
+                  <img 
+                    src={bonusMetodos} 
+                    alt="Bônus Métodos" 
+                    className="w-full h-auto object-contain"
+                  />
                 </div>
               </motion.div>
             );
