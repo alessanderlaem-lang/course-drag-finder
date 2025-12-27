@@ -108,7 +108,7 @@ const BonusSection = () => {
                 alt="Bônus 3" 
                 className="w-3/4 h-auto object-contain -mt-4 translate-y-12"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-28">
+              <div className="w-full text-left -ml-6 mt-6 translate-y-24">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 3</span>
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Consulta de dados via</p>
                 <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Telegram</p>
