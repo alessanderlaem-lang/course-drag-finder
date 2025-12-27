@@ -54,6 +54,7 @@ const BonusSection = () => {
                   <div className="w-full text-left -ml-6 mt-1">
                     <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
                     <p className="text-foreground font-bold text-base mt-2">Afiliação a</p>
+                    <p className="text-foreground font-bold text-base">comunidade</p>
                   </div>
                 </div>
               </motion.div>
