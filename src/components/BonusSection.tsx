@@ -52,7 +52,7 @@ const BonusSection = () => {
                     className="w-full h-auto object-contain -mt-4"
                   />
                   <div className="w-full text-left px-2 mt-4">
-                    <span className="text-primary font-light text-sm tracking-wide">#BÔNUS 1</span>
+                    <span className="text-primary font-light text-sm tracking-[0.2em]">#BÔNUS 1</span>
                   </div>
                 </div>
               </motion.div>
