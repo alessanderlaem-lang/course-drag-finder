@@ -1,7 +1,7 @@
 import { Users, Bot, Search as SearchIcon, Package, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import bonusMetodos from "@/assets/bonus-metodos.svg";
+import bonusMetodos from "@/assets/bonus-metodos.png";
 
 const BonusSection = () => {
   const bonuses = [
