@@ -77,7 +77,7 @@ const Index = () => {
                   className="-mt-48 w-[36rem] rounded-lg shadow-lg"
                 />
                 <div className="absolute top-4 left-1/2 -translate-x-1/2 text-center z-10">
-                  <p className="text-white text-xl font-bold whitespace-nowrap">
+                  <p className="text-white text-2xl font-bold whitespace-nowrap">
                     Acesso ao <span className="text-red-600 font-extrabold">maior acervo</span> de rateio do Brasil
                   </p>
                   <p className="text-white/70 text-[10px] font-light mt-1 whitespace-nowrap w-max max-w-none mx-auto">
