@@ -13,36 +13,6 @@ const BonusSection = () => {
       color: "text-blue-400",
       bg: "bg-blue-500/10",
       border: "border-blue-500/20"
-    },
-    {
-      icon: SearchIcon,
-      title: "Puxador de Dados Vitalício",
-      subtitle: "Ferramenta Premium",
-      description: "Consultas ilimitadas 24/7. CPF, CNPJ, Veículos e muito mais. Acesso vitalício garantido sem mensalidades.",
-      originalPrice: "R$ 97,00",
-      color: "text-purple-400",
-      bg: "bg-purple-500/10",
-      border: "border-purple-500/20"
-    },
-    {
-      icon: Bot,
-      title: "Agentes de IA Exclusivos",
-      subtitle: "Automação Avançada",
-      description: "Bots treinados para copywriting, suporte e vendas. Multiplique sua produtividade com inteligência artificial.",
-      originalPrice: "R$ 197,00",
-      color: "text-amber-400",
-      bg: "bg-amber-500/10",
-      border: "border-amber-500/20"
-    },
-    {
-      icon: Users,
-      title: "Networking de Elite",
-      subtitle: "Comunidade VIP",
-      description: "Entre para grupos de WhatsApp e Discord com players que realmente faturam. Troque experiências e faça negócios.",
-      originalPrice: "R$ 97,00",
-      color: "text-green-400",
-      bg: "bg-green-500/10",
-      border: "border-green-500/20"
     }
   ];
 
