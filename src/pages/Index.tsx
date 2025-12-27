@@ -75,6 +75,10 @@ const Index = () => {
                 alt="Discord Rise Community Preview"
                 className="-mt-48 w-[36rem] rounded-lg shadow-lg relative z-50"
               />
+
+              <p className="mt-4 text-white/90 text-sm font-medium text-center">
+                Acesso ao maior acervo de rateio do Brasil
+              </p>
             </div>
           </div>
         </div>
