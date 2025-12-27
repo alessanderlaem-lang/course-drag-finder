@@ -47,7 +47,7 @@ const BonusSection = () => {
   ];
 
   return (
-    <section className="w-full pt-[8rem] md:pt-16 pb-6 md:pb-8 px-4 md:px-6 bg-[#0a0a0a]">
+    <section className="w-full pt-[8rem] md:pt-16 pb-6 md:pb-8 px-4 md:px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Título */}
         <div className="text-center mb-6 md:mb-8 space-y-2">
@@ -73,7 +73,7 @@ const BonusSection = () => {
                 whileHover={{ y: -5 }}
               >
                 <div 
-                  className="group relative h-full flex flex-col bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 p-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300"
+                  className="group relative h-full flex flex-col bg-background border border-white/10 p-6 rounded-3xl overflow-hidden hover:border-red-500/30 transition-all duration-300"
                 >
                   {/* Top Highlight Line */}
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

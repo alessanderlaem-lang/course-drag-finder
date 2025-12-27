@@ -22,11 +22,11 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-background">
       {/* Hero Section - Full Design from SVG */}
-      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-visible z-30">
+      <section className="relative min-h-[100svh] lg:min-h-screen bg-background overflow-visible z-30">
         {/* Fundo preto para cobrir qualquer gap */}
-        <div className="absolute inset-0 bg-black" />
+        <div className="absolute inset-0 bg-background" />
         {/* Background com o design completo */}
         <div className="absolute inset-0 w-full h-full flex items-center justify-center">
           {/*
@@ -42,8 +42,8 @@ const Index = () => {
               fetchPriority="high"
             />
 
-            {/* Black backdrop under the Discord preview (prevents gray from showing behind it) */}
-            <div className="lg:hidden absolute inset-x-0 bottom-[-12rem] h-[28rem] bg-black pointer-events-none" />
+            {/* Backdrop sob a preview do Discord (evita qualquer fundo cinza) */}
+            <div className="lg:hidden absolute inset-x-0 bottom-[-12rem] h-[28rem] bg-background pointer-events-none" />
 
             {/* Texto abaixo da imagem - mobile only */}
             <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
@@ -80,8 +80,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Black spacer to cover any gray gaps */}
-      <div className="bg-black h-32 lg:hidden" />
+      {/* Spacer para cobrir qualquer gap */}
+      <div className="bg-background h-32 lg:hidden" />
 
       {/* Topics Section anchor */}
       <div id="topics-section" />
