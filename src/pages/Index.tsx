@@ -21,8 +21,17 @@ import cat5 from "@/assets/categories/5.png";
 import cat6 from "@/assets/categories/6.png";
 import cat7 from "@/assets/categories/7.png";
 import cat8 from "@/assets/categories/8.png";
+import cat9 from "@/assets/categories/9.png";
+import cat10 from "@/assets/categories/10.png";
+import cat11 from "@/assets/categories/11.png";
+import cat12 from "@/assets/categories/12.png";
+import cat13 from "@/assets/categories/13.png";
+import cat14 from "@/assets/categories/14.png";
+import cat15 from "@/assets/categories/15.png";
+import cat16 from "@/assets/categories/16.png";
 
 const categoryImages = [cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8];
+const categoryImages2 = [cat9, cat10, cat11, cat12, cat13, cat14, cat15, cat16];
 const Index = () => {
   const scrollToNextSection = () => {
     const topicsSection = document.querySelector('#topics-section');
@@ -97,7 +106,7 @@ const Index = () => {
                     recursos organizados por segmento e área. Tudo atualizado semanalmente.
                   </p>
                   
-                  {/* Category Images - Infinite scroll */}
+                  {/* Category Images Row 1 - Scroll Left */}
                   <div className="-mt-16 overflow-hidden w-full">
                     <div className="flex flex-nowrap gap-0 animate-scroll-left w-max">
                       {[...categoryImages, ...categoryImages, ...categoryImages, ...categoryImages].map((img, idx) => (
@@ -105,6 +114,22 @@ const Index = () => {
                           key={idx}
                           src={img}
                           alt={`Imagem de categoria ${(idx % 8) + 1}`}
+                          className="w-56 h-56 object-contain flex-shrink-0"
+                          loading="lazy"
+                          draggable={false}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Category Images Row 2 - Scroll Right */}
+                  <div className="-mt-40 overflow-hidden w-full">
+                    <div className="flex flex-nowrap gap-0 animate-scroll-right w-max">
+                      {[...categoryImages2, ...categoryImages2, ...categoryImages2, ...categoryImages2].map((img, idx) => (
+                        <img
+                          key={idx}
+                          src={img}
+                          alt={`Imagem de categoria ${(idx % 8) + 9}`}
                           className="w-56 h-56 object-contain flex-shrink-0"
                           loading="lazy"
                           draggable={false}
