@@ -31,39 +31,62 @@ const BonusSection = () => {
           </p>
         </div>
 
-        {/* Grid de Bônus */}
+        {/* Card Bônus 1 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            whileHover={{ y: -5 }}
+          >
+            <div 
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+            >
+              <img 
+                src={bonusMetodos} 
+                alt="Bônus Métodos" 
+                className="w-full h-auto object-contain -mt-4 translate-y-12"
+              />
+              <div className="w-full text-left -ml-6 mt-6 translate-y-28">
+                <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
+                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Afiliação a comunidade</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
+                <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
+                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 497,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Card Bônus 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {bonuses.map((bonus, index) => {
-            const Icon = bonus.icon;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <div 
-                  className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
-                >
-                  <img 
-                    src={bonusMetodos} 
-                    alt="Bônus Métodos" 
-                    className="w-full h-auto object-contain -mt-4 translate-y-12"
-                  />
-                  <div className="w-full text-left -ml-6 mt-6 translate-y-28">
-                    <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
-                    <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Afiliação a comunidade</p>
-                    <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
-                    <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
-                    <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 497,00</span></p>
-                    <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            whileHover={{ y: -5 }}
+          >
+            <div 
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+            >
+              <img 
+                src={bonusMetodos} 
+                alt="Bônus Métodos" 
+                className="w-full h-auto object-contain -mt-4 translate-y-12"
+              />
+              <div className="w-full text-left -ml-6 mt-6 translate-y-28">
+                <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 2</span>
+                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Afiliação a comunidade</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
+                <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
+                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 497,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
