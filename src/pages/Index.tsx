@@ -76,9 +76,14 @@ const Index = () => {
                   alt="Discord Rise Community Preview"
                   className="-mt-48 w-[36rem] rounded-lg shadow-lg"
                 />
-                <p className="absolute top-4 left-1/2 -translate-x-1/2 text-white/90 text-sm font-medium text-center z-10 whitespace-nowrap">
-                  Acesso ao <span className="text-red-600 font-bold">maior acervo</span> de rateio do Brasil
-                </p>
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 text-center z-10">
+                  <p className="text-white/90 text-sm font-medium whitespace-nowrap">
+                    Acesso ao <span className="text-red-600 font-bold">maior acervo</span> de rateio do Brasil
+                  </p>
+                  <p className="text-white/70 text-[10px] font-light mt-1 whitespace-nowrap">
+                    Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalício a centenas de recursos organizados por categoria. Tudo atualizado semanalmente.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
