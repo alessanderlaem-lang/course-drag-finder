@@ -82,6 +82,7 @@ const BonusSection = () => {
               <div className="w-full text-left -ml-6 mt-6 translate-y-16">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 2</span>
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">RiseOffers - Ofertas</p>
+                <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Escaladas</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Ofertas diárias e organizadas para aplicar e escalar.</p>
                 <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">Tudo organizado em um só lugar.</p>
                 <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 67,00</span></p>
