@@ -12,7 +12,7 @@ import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
 import mascotLogo from "@/assets/mascot-logo.png";
 import ctaButton from "@/assets/cta-button.png";
-import discordPreview from "@/assets/discord-preview.png";
+import discordPreview from "@/assets/discord-preview.jpg";
 const Index = () => {
   const scrollToNextSection = () => {
     const topicsSection = document.querySelector('#topics-section');
@@ -24,7 +24,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section - Full Design from SVG */}
-      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-visible z-30">
+      <section className="relative min-h-[100svh] lg:min-h-screen bg-black overflow-hidden">
         {/* Fundo preto para cobrir qualquer gap */}
         <div className="absolute inset-0 bg-black" />
         {/* Background com o design completo */}
@@ -43,7 +43,7 @@ const Index = () => {
             />
 
             {/* Texto abaixo da imagem - mobile only */}
-            <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] z-20">
+            <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
               <p className="text-red-500 text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
                 PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
               </p>
@@ -70,7 +70,7 @@ const Index = () => {
               <img
                 src={discordPreview}
                 alt="Discord Rise Community Preview"
-                className="-mt-48 w-[36rem] rounded-lg shadow-lg relative z-50"
+                className="-mt-48 w-[36rem] rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -78,7 +78,7 @@ const Index = () => {
       </section>
 
       {/* Community Showcase Section */}
-      <div id="topics-section" className="relative z-0">
+      <div id="topics-section">
         <CommunityShowcase />
       </div>
 
