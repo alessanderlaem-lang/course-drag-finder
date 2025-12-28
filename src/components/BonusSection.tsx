@@ -163,14 +163,14 @@ const BonusSection = () => {
             whileHover={{ y: -5 }}
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-12 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-8 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
             >
               <img 
                 src={bonusNetworking} 
                 alt="Bônus 5" 
-                className="w-[85%] h-auto object-contain -mt-4 translate-y-12"
+                className="w-[85%] h-auto object-contain -mt-4 translate-y-8"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-16">
+              <div className="w-full text-left -ml-6 mt-6 translate-y-12">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 5</span>
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Grupos de networking</p>
                 <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">no WhatsApp</p>
