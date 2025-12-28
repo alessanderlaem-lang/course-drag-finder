@@ -105,7 +105,7 @@ const Index = () => {
       </div>
 
       {/* Discord Preview Section - Agora vem depois dos bônus */}
-      <section className="relative bg-background pt-32 pb-16 overflow-hidden">
+      <section className="relative bg-background pt-32 pb-32 overflow-visible">
         <div className="flex flex-col items-center text-center px-4">
           <div className="relative">
             <img
@@ -141,7 +141,7 @@ const Index = () => {
               </div>
               
               {/* Category Images Row 2 - Scroll Right */}
-              <div className="-mt-20 md:-mt-40 overflow-hidden w-full relative z-50">
+              <div className="mt-6 md:-mt-40 overflow-hidden w-full relative z-50">
                 <div className="flex flex-nowrap gap-0 animate-scroll-right w-max">
                   {[...categoryImages2, ...categoryImages2, ...categoryImages2, ...categoryImages2].map((img, idx) => (
                     <img
