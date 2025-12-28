@@ -6,6 +6,7 @@ import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
 import nessaOfertaGratis from "@/assets/nessa-oferta-gratis.png";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
+import bonusNetworking from "@/assets/bonus-networking.jpg";
 
 const BonusSection = () => {
   const bonuses = [
@@ -165,7 +166,7 @@ const BonusSection = () => {
               className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-16 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
             >
               <img 
-                src={bonusFornecedores} 
+                src={bonusNetworking} 
                 alt="Bônus 5" 
                 className="w-[85%] h-auto object-contain -mt-4 translate-y-16"
               />
