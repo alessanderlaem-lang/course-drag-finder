@@ -105,7 +105,7 @@ const Index = () => {
       </div>
 
       {/* Discord Preview Section - Agora vem depois dos bônus */}
-      <section className="relative bg-background pt-32 pb-16 overflow-x-hidden overflow-y-visible">
+      <section className="relative bg-background pt-32 pb-16 overflow-hidden">
         <div className="flex flex-col items-center text-center px-4">
           <div className="relative">
             <img
