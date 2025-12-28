@@ -174,7 +174,8 @@ const BonusSection = () => {
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 5</span>
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Grupos de networking</p>
                 <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">no WhatsApp</p>
-                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Descrição do bônus 5</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Acesso a grupos ativos no WhatsApp com membros que trocam</p>
+                <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">experiências, estratégias e oportunidades todos os dias...</p>
                 <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 97,00</span></p>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
               </div>
