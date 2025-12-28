@@ -141,7 +141,7 @@ const Index = () => {
               </div>
               
               {/* Category Images Row 2 - Scroll Right */}
-              <div className="-mt-40 md:-mt-40 overflow-hidden w-full relative z-50">
+              <div className="-mt-44 md:-mt-40 overflow-hidden w-full relative z-50">
                 <div className="flex flex-nowrap gap-0 animate-scroll-right w-max">
                   {[...categoryImages2, ...categoryImages2, ...categoryImages2, ...categoryImages2].map((img, idx) => (
                     <img
