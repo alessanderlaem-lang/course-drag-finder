@@ -52,7 +52,7 @@ const Index = () => {
             Mobile: trava o layout num "quadro" 9:16 (mesma proporção do SVG) e
             posiciona o texto por porcentagem para ficar igual em iPhone/Android.
           */}
-          <div className="relative mx-auto h-[100svh] w-full translate-y-0 lg:translate-y-0 lg:w-[55%] lg:h-full lg:max-w-none">
+          <div className="relative mx-auto h-[100svh] w-full translate-y-0 lg:translate-y-0 lg:w-[40%] lg:h-full lg:max-w-none">
             <img
               src="/images/hero-background.svg"
               alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
