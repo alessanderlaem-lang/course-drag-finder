@@ -52,14 +52,23 @@ const Index = () => {
             Mobile: trava o layout num "quadro" 9:16 (mesma proporção do SVG) e
             posiciona o texto por porcentagem para ficar igual em iPhone/Android.
           */}
-          <div className="relative mx-auto h-[100svh] w-full translate-y-0 min-[900px]:h-full min-[900px]:w-full min-[900px]:max-w-[520px] min-[1200px]:max-w-[560px] min-[1440px]:max-w-[600px] min-[900px]:overflow-hidden">
+          <div className="relative mx-auto h-[100svh] w-full translate-y-0 min-[900px]:h-full min-[900px]:w-auto min-[900px]:flex min-[900px]:items-center min-[900px]:gap-8">
             <img
               src="/images/hero-background.jpg"
               alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-              className="block w-full h-full max-w-none object-cover object-center min-[900px]:object-contain min-[900px]:scale-[0.7] min-[900px]:origin-center min-[900px]:translate-x-32 min-[900px]:-translate-y-12 transition-transform"
+              className="block w-full h-full max-w-none object-cover object-center min-[900px]:object-contain min-[900px]:h-[70vh] min-[900px]:w-auto transition-transform"
               loading="eager"
               fetchPriority="high"
             />
+
+            {/* Texto ao lado da imagem - desktop only */}
+            <div className="hidden min-[900px]:flex flex-col">
+              <h1 className="text-white text-4xl min-[1200px]:text-5xl font-bold leading-tight">
+                <span className="block">Maior comunidade de</span>
+                <span className="block">Marketing digital e</span>
+                <span className="block">Networking do Brasil</span>
+              </h1>
+            </div>
 
             {/* Backdrop sob a preview do Discord (evita qualquer fundo cinza) */}
             <div className="lg:hidden absolute inset-x-0 bottom-[-12rem] h-[28rem] bg-background pointer-events-none" />
@@ -88,9 +97,6 @@ const Index = () => {
                 onClick={scrollToNextSection}
                 className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
               />
-
-
-
             </div>
           </div>
         </div>
