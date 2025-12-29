@@ -46,12 +46,12 @@ const BonusSection = () => {
             className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-10 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[320px] w-full gap-8"
+              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 pr-10 py-10 pl-0 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[320px] w-full gap-8"
             >
               <img 
                 src={bonusMetodos} 
                 alt="Bônus Métodos" 
-                className="w-[280px] h-auto object-contain flex-shrink-0"
+                className="w-[280px] h-auto object-contain flex-shrink-0 -ml-4"
               />
               <div className="flex flex-col text-left ml-24">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
