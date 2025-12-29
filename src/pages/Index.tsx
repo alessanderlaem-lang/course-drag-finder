@@ -68,6 +68,11 @@ const Index = () => {
                 <span className="block">Marketing digital e</span>
                 <span className="block">Networking do Brasil</span>
               </h1>
+              <p className="text-white/80 text-lg min-[1200px]:text-xl min-[1440px]:text-2xl font-light leading-relaxed mt-4">
+                <span className="block">Tenha o mesmo acesso que os grandes players têm,</span>
+                <span className="block">Networking poderoso, recursos exclusivos e uma comunidade</span>
+                <span className="block">ativa com +9,000 membros</span>
+              </p>
             </div>
 
             {/* Backdrop sob a preview do Discord (evita qualquer fundo cinza) */}
