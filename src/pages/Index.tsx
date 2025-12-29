@@ -5,7 +5,7 @@ import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import MembersCounter from "@/components/MembersCounter";
 import GuaranteeSection from "@/components/GuaranteeSection";
-
+import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 
 import FloatingParticles from "@/components/FloatingParticles";
@@ -169,6 +169,8 @@ const Index = () => {
       {/* Guarantee Section */}
       <GuaranteeSection />
 
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Footer */}
       <Footer />
