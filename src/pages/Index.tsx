@@ -56,7 +56,7 @@ const Index = () => {
             <img
               src="/images/hero-background.svg"
               alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-              className="block w-full h-full max-w-none object-cover object-center lg:object-contain"
+              className="block w-full h-full max-w-none object-cover object-center lg:object-contain lg:scale-90"
               loading="eager"
               fetchPriority="high"
             />
