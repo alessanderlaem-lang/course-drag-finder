@@ -63,7 +63,7 @@ const Index = () => {
 
             {/* Texto ao lado da imagem - desktop only */}
             <div className="hidden min-[900px]:flex flex-col -mt-32">
-              <h1 className="text-white text-4xl min-[1200px]:text-5xl font-bold leading-tight">
+              <h1 className="text-white text-5xl min-[1200px]:text-6xl min-[1440px]:text-7xl font-bold leading-tight">
                 <span className="block">Maior comunidade de</span>
                 <span className="block">Marketing digital e</span>
                 <span className="block">Networking do Brasil</span>
