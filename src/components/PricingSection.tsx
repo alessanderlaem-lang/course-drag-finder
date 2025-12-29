@@ -2,7 +2,7 @@ import pricingImage from "@/assets/pricing-section.jpg";
 
 const PricingSection = () => {
   return (
-    <section className="w-full py-4 md:py-6 px-4 md:px-6 bg-background -mt-16">
+    <section className="w-full py-4 md:py-6 px-4 md:px-6 bg-background -mt-32">
       <div className="w-full max-w-none mx-auto flex justify-center">
         <img 
           src={pricingImage} 
