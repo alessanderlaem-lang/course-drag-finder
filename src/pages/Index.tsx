@@ -56,7 +56,7 @@ const Index = () => {
             <img
               src="/images/hero-background.jpg"
               alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-              className="block w-full h-full max-w-none object-cover object-center min-[900px]:object-contain min-[900px]:scale-[0.7] min-[900px]:origin-center min-[900px]:translate-x-8 min-[900px]:-translate-y-12 transition-transform"
+              className="block w-full h-full max-w-none object-cover object-center min-[900px]:object-contain min-[900px]:scale-[0.7] min-[900px]:origin-center min-[900px]:translate-x-32 min-[900px]:-translate-y-12 transition-transform"
               loading="eager"
               fetchPriority="high"
             />
