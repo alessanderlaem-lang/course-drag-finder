@@ -52,7 +52,7 @@ const Index = () => {
             Mobile: trava o layout num "quadro" 9:16 (mesma proporção do SVG) e
             posiciona o texto por porcentagem para ficar igual em iPhone/Android.
           */}
-          <div className="relative mx-auto h-[100svh] w-full translate-y-0 min-[900px]:h-full min-[900px]:w-auto min-[900px]:flex min-[900px]:flex-row-reverse min-[900px]:items-center min-[900px]:gap-8">
+          <div className="relative mx-auto h-[100svh] w-full translate-y-0 min-[900px]:h-full min-[900px]:w-auto min-[900px]:flex min-[900px]:flex-row-reverse min-[900px]:items-start min-[900px]:gap-8">
             <img
               src="/images/hero-background.jpg"
               alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
@@ -62,8 +62,8 @@ const Index = () => {
             />
 
             {/* Texto ao lado da imagem - desktop only */}
-            <div className="hidden min-[900px]:flex flex-col -mt-40">
-              <h1 className="text-white text-4xl min-[1200px]:text-5xl min-[1440px]:text-6xl font-bold leading-tight mt-32">
+            <div className="hidden min-[900px]:flex flex-col pt-[35vh]">
+              <h1 className="text-white text-4xl min-[1200px]:text-5xl min-[1440px]:text-6xl font-bold leading-tight">
                 <span className="block">Maior comunidade de</span>
                 <span className="block">Marketing digital e</span>
                 <span className="block">Networking do Brasil</span>
