@@ -45,7 +45,7 @@ const BonusSection = () => {
             whileHover={{ y: -5 }}
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
             >
               <img 
                 src={bonusMetodos} 
@@ -74,7 +74,7 @@ const BonusSection = () => {
             whileHover={{ y: -5 }}
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-12 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-12 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
             >
               <img 
                 src={bonusOfertas} 
@@ -104,7 +104,7 @@ const BonusSection = () => {
             whileHover={{ y: -5 }}
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-20 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-20 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
             >
               <img 
                 src={bonus2} 
@@ -133,7 +133,7 @@ const BonusSection = () => {
             whileHover={{ y: -5 }}
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-16 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-16 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
             >
               <img 
                 src={bonusFornecedores} 
@@ -163,7 +163,7 @@ const BonusSection = () => {
             whileHover={{ y: -5 }}
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 px-6 pb-8 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg mx-auto"
+              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-8 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
             >
               <img 
                 src={bonusNetworking} 
