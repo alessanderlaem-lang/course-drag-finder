@@ -43,7 +43,7 @@ const BonusSection = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -5 }}
-            className="w-full max-w-2xl"
+            className="w-full max-w-4xl"
           >
             <div 
               className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full"
