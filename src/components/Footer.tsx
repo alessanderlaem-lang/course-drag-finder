@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-background">
       {/* FAQ Section */}
       <section className="pt-64 pb-8 md:pt-80 md:pb-10 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
