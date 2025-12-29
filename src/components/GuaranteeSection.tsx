@@ -7,7 +7,7 @@ const GuaranteeSection = () => {
         <img 
           src={garantiaImage} 
           alt="7 Dias de Garantia - Não gostou? Todo seu dinheiro de volta." 
-          className="w-full max-w-4xl h-auto rounded-3xl"
+          className="w-full max-w-5xl h-auto rounded-3xl"
         />
       </div>
     </section>
