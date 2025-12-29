@@ -63,12 +63,12 @@ const Index = () => {
 
             {/* Texto ao lado da imagem - desktop only */}
             <div className="hidden min-[900px]:flex flex-col -mt-72">
-              <h1 className="text-white text-5xl min-[1200px]:text-6xl min-[1440px]:text-7xl font-bold leading-tight">
+              <h1 className="text-white text-4xl min-[1200px]:text-5xl min-[1440px]:text-6xl font-bold leading-tight">
                 <span className="block">Maior comunidade de</span>
                 <span className="block">Marketing digital e</span>
                 <span className="block">Networking do Brasil</span>
               </h1>
-              <p className="text-white/80 text-lg min-[1200px]:text-xl min-[1440px]:text-2xl font-light leading-relaxed mt-4">
+              <p className="text-white/80 text-base min-[1200px]:text-lg min-[1440px]:text-xl font-light leading-relaxed mt-4">
                 <span className="block">Tenha o mesmo acesso que os grandes players têm,</span>
                 <span className="block">Networking poderoso, recursos exclusivos e uma comunidade</span>
                 <span className="block">ativa com +9,000 membros</span>
