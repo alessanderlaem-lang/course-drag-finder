@@ -46,20 +46,19 @@ const BonusSection = () => {
             className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-24 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full"
+              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full gap-8"
             >
               <img 
                 src={bonusMetodos} 
                 alt="Bônus Métodos" 
-                className="w-1/3 h-auto object-contain -mt-4 translate-y-12 -translate-x-80"
+                className="w-[280px] h-auto object-contain flex-shrink-0"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-28">
+              <div className="flex flex-col text-left">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
-                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Afiliação a comunidade</p>
-                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Seja afiliado da maior comunidade de todas, com uma estrutura</p>
-                <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">completa, suporte e direcionamento para começar do jeito certo.</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Afiliação a comunidade</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
                 <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 497,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[4rem] -mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
