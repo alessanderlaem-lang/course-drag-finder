@@ -3,11 +3,11 @@ import pricingImage from "@/assets/pricing-section.jpg";
 const PricingSection = () => {
   return (
     <section className="w-full py-4 md:py-6 px-4 md:px-6 bg-background -mt-16">
-      <div className="max-w-4xl mx-auto flex justify-center">
+      <div className="w-full max-w-none mx-auto flex justify-center">
         <img 
           src={pricingImage} 
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista" 
-          className="w-full max-w-7xl h-auto rounded-3xl"
+          className="w-full max-w-[90rem] h-auto rounded-3xl"
         />
       </div>
     </section>
