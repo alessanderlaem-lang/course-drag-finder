@@ -53,7 +53,7 @@ const BonusSection = () => {
                 alt="Bônus Métodos" 
                 className="w-[280px] h-auto object-contain flex-shrink-0"
               />
-              <div className="flex flex-col text-left">
+              <div className="flex flex-col text-left ml-12">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
                 <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Afiliação a comunidade</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
