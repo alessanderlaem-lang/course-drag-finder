@@ -46,20 +46,20 @@ const BonusSection = () => {
             className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 pr-10 py-10 pl-0 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[320px] w-full gap-8"
+              className="group relative h-full flex flex-row items-center justify-between bg-background border border-white/30 pl-10 py-10 pr-0 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[320px] w-full"
             >
-              <img 
-                src={bonusMetodos} 
-                alt="Bônus Métodos" 
-                className="w-[280px] h-auto object-contain flex-shrink-0 -ml-4"
-              />
-              <div className="flex flex-col text-left ml-24">
+              <div className="flex flex-col text-left">
                 <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 1</span>
                 <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Afiliação a comunidade</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
                 <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 497,00</span></p>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[4rem] -mt-2 w-fit" />
               </div>
+              <img 
+                src={bonusMetodos} 
+                alt="Bônus Métodos" 
+                className="w-[280px] h-auto object-contain flex-shrink-0 -mr-4"
+              />
             </div>
           </motion.div>
         </div>
