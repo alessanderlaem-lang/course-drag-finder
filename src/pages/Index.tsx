@@ -73,6 +73,12 @@ const Index = () => {
                 <span className="block">Networking poderoso, recursos exclusivos e uma comunidade</span>
                 <span className="block">ativa com +9,000 membros</span>
               </p>
+              <img
+                src={ctaButton}
+                alt="Quero saber mais"
+                onClick={scrollToNextSection}
+                className="mt-6 w-72 cursor-pointer hover:scale-105 transition-transform"
+              />
             </div>
 
             {/* Backdrop sob a preview do Discord (evita qualquer fundo cinza) */}
