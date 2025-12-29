@@ -62,7 +62,7 @@ const Index = () => {
             />
 
             {/* Texto ao lado da imagem - desktop only */}
-            <div className="hidden min-[900px]:flex flex-col pt-[25vh]">
+            <div className="hidden min-[900px]:flex flex-col pt-[20vh]">
               <p className="text-red-500 text-xs min-[1200px]:text-sm font-medium tracking-[0.15em] mb-4">
                 PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
               </p>
