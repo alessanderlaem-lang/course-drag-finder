@@ -192,7 +192,9 @@ const Index = () => {
 
 
       {/* Pricing Section */}
-      <PricingSection />
+      <div className="relative z-20">
+        <PricingSection />
+      </div>
 
       {/* Footer */}
       <Footer />
