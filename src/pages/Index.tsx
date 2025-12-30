@@ -145,7 +145,7 @@ const Index = () => {
               </p>
               
               {/* Category Images Row 1 - Scroll Left */}
-              <div className="-mt-14 overflow-hidden relative z-50 w-screen left-1/2 -translate-x-1/2">
+              <div className="-mt-20 md:-mt-14 overflow-hidden relative z-50 w-screen left-1/2 -translate-x-1/2">
                 <div className="hidden md:block absolute left-0 top-0 bottom-0 w-80 bg-gradient-to-r from-black via-black to-transparent z-20 pointer-events-none" />
                 <div className="hidden md:block absolute right-0 top-0 bottom-0 w-80 bg-gradient-to-l from-black via-black to-transparent z-20 pointer-events-none" />
                 <div className="flex flex-nowrap gap-0 animate-scroll-left w-max">
