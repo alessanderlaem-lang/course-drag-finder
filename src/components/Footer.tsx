@@ -22,7 +22,7 @@ const Footer = () => {
           <Accordion type="single" collapsible className="w-full space-y-4">
             <AccordionItem value="item-1" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
-                <span className="text-destructive">?</span> Como acesso a comunidade?
+                <span className="text-destructive mr-2">?</span> Como acesso a comunidade?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
                 → Assim que o pagamento for confirmado, você receberá por e-mail os links para entrar na comunidade (Discord e Telegram).
@@ -31,7 +31,7 @@ const Footer = () => {
 
             <AccordionItem value="item-2" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
-                <span className="text-destructive">?</span> É seguro?
+                <span className="text-destructive mr-2">?</span> É seguro?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
                 → Sim! Você tem 7 dias de garantia. Se não ficar satisfeito, devolvemos 100% do valor sem complicação.
@@ -40,7 +40,7 @@ const Footer = () => {
 
             <AccordionItem value="item-3" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
-                <span className="text-destructive">?</span> O acesso é vitalício?
+                <span className="text-destructive mr-2">?</span> O acesso é vitalício?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
                 → Sim, o pagamento é único e o acesso é vitalício.
@@ -49,7 +49,7 @@ const Footer = () => {
 
             <AccordionItem value="item-4" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
-                <span className="text-destructive">?</span> Como funciona o suporte?
+                <span className="text-destructive mr-2">?</span> Como funciona o suporte?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
                 → Nosso suporte está disponível via WhatsApp, e-mail e Discord para tirar qualquer dúvida.
@@ -58,7 +58,7 @@ const Footer = () => {
 
             <AccordionItem value="item-5" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
-                <span className="text-destructive">?</span> O que é rateio?
+                <span className="text-destructive mr-2">?</span> O que é rateio?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
                 → O rateio é uma forma colaborativa onde várias pessoas compartilham o custo de cursos, aplicativos, packs e outros conteúdos premium, tornando o acesso muito mais acessível e vantajoso.
@@ -67,7 +67,7 @@ const Footer = () => {
 
             <AccordionItem value="item-6" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
-                <span className="text-destructive">?</span> O conteúdo é sempre atualizado?
+                <span className="text-destructive mr-2">?</span> O conteúdo é sempre atualizado?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
                 → Sim! Nosso acervo é constantemente renovado — toda semana novos materiais são adicionados, e você recebe tudo automaticamente, sem precisar pagar nada a mais por isso.
@@ -76,7 +76,7 @@ const Footer = () => {
 
             <AccordionItem value="item-7" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
-                <span className="text-destructive">?</span> É seguro usar?
+                <span className="text-destructive mr-2">?</span> É seguro usar?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
                 → Fique tranquilo! A Rise Community é uma comunidade fechada e segura, onde os membros compartilham conteúdos de forma organizada e privada. Você acessa tudo com total suporte e sem nenhum risco pro usuário final.
