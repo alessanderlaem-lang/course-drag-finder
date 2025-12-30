@@ -36,7 +36,7 @@ const BonusSection = () => {
         </div>
 
         {/* Card Bônus 1 */}
-        <div className="flex mb-8">
+        <div className="flex mb-8 justify-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
