@@ -9,7 +9,7 @@ const GuaranteeSection = () => {
         <img 
           src={garantiaMobile} 
           alt="7 Dias de Garantia - Não gostou? Todo seu dinheiro de volta." 
-          className="md:hidden w-full max-w-5xl h-auto rounded-3xl"
+          className="md:hidden w-full max-w-[26rem] h-auto rounded-3xl"
         />
         {/* Desktop image */}
         <img 
