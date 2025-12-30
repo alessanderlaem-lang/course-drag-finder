@@ -5,82 +5,83 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown } from "lucide-react";
-
-const faqItems = [
-  {
-    question: "O que é rateio?",
-    answer: "O rateio é uma forma colaborativa onde várias pessoas compartilham o custo de cursos, aplicativos, packs e outros conteúdos premium, tornando o acesso muito mais acessível e vantajoso."
-  },
-  {
-    question: "Como recebo o acesso?",
-    answer: "Assim que o pagamento for confirmado, você receberá por e-mail os links para entrar na comunidade (Discord e Telegram)."
-  },
-  {
-    question: "Demora quanto tempo pra liberar?",
-    answer: "O acesso é liberado imediatamente após a confirmação do pagamento. No caso de PIX ou cartão, é instantâneo!"
-  },
-  {
-    question: "É só esse valor mesmo? Tem mensalidade depois?",
-    answer: "Sim, o pagamento é único e o acesso é vitalício. Sem mensalidades, sem taxas escondidas."
-  },
-  {
-    question: "Consigo acessar pelo celular?",
-    answer: "Sim! Você pode acessar de qualquer dispositivo: celular, tablet ou computador."
-  },
-  {
-    question: "O conteúdo é atualizado?",
-    answer: "Sim! Nosso acervo é constantemente renovado — toda semana novos materiais são adicionados, e você recebe tudo automaticamente."
-  },
-  {
-    question: "Não gostei. Posso pedir reembolso?",
-    answer: "Sim! Você tem 7 dias de garantia. Se não ficar satisfeito, devolvemos 100% do valor sem complicação."
-  },
-  {
-    question: "O que exatamente eu vou acessar?",
-    answer: "Você terá acesso a mais de 150TB de conteúdo: cursos, softwares, packs, templates e muito mais."
-  },
-  {
-    question: "É legal usar isso? Não vou ter problema?",
-    answer: "Fique tranquilo! A Rise Community é uma comunidade fechada e segura, onde os membros compartilham conteúdos de forma organizada e privada."
-  },
-  {
-    question: "Preciso baixar algo pra acessar?",
-    answer: "Não! Você acessa tudo pelo navegador ou pelos apps Discord e Telegram, sem precisar baixar nada adicional."
-  }
-];
 
 const Footer = () => {
   return (
     <footer className="bg-background">
       {/* FAQ Section */}
       <section className="pt-64 pb-8 md:pt-80 md:pb-10 px-4 bg-background">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-foreground mb-12 tracking-wider uppercase">
-            FAQ — Perguntas Essenciais
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-foreground mb-3">
+            ❓ FAQ — Dúvidas Frequentes
           </h2>
+          <p className="text-center text-muted-foreground mb-6 md:mb-8">
+            Tire suas principais dúvidas sobre a Rise Community
+          </p>
           
-          <Accordion type="single" collapsible className="w-full space-y-0">
-            {faqItems.map((item, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`} 
-                className="border-0 border-b border-border/20"
-              >
-                <AccordionTrigger className="text-left font-normal hover:no-underline py-5 group [&>svg]:hidden">
-                  <span className="flex items-center gap-3 flex-1">
-                    <span className="text-primary font-bold text-lg">?</span>
-                    <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-medium">
-                      {item.question}
-                    </span>
-                  </span>
-                  <ChevronDown className="h-4 w-4 text-muted-foreground shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-5 pl-8">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                1. Como acesso a comunidade?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                → Assim que o pagamento for confirmado, você receberá por e-mail os links para entrar na comunidade (Discord e Telegram).
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                2. É seguro?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                → Sim! Você tem 7 dias de garantia. Se não ficar satisfeito, devolvemos 100% do valor sem complicação.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                3. O acesso é vitalício?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                → Sim, o pagamento é único e o acesso é vitalício.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                4. Como funciona o suporte?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                → Nosso suporte está disponível via WhatsApp, e-mail e Discord para tirar qualquer dúvida.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                5. O que é rateio?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                → O rateio é uma forma colaborativa onde várias pessoas compartilham o custo de cursos, aplicativos, packs e outros conteúdos premium, tornando o acesso muito mais acessível e vantajoso.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                6. O conteúdo é sempre atualizado?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                → Sim! Nosso acervo é constantemente renovado — toda semana novos materiais são adicionados, e você recebe tudo automaticamente, sem precisar pagar nada a mais por isso.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="border border-border rounded-lg px-6 bg-card">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                7. É seguro usar?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                → Fique tranquilo! A Rise Community é uma comunidade fechada e segura, onde os membros compartilham conteúdos de forma organizada e privada. Você acessa tudo com total suporte e sem nenhum risco pro usuário final.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
