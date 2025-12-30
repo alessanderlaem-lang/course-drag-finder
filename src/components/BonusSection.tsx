@@ -46,7 +46,7 @@ const BonusSection = () => {
             className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-10 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[380px] w-full gap-8"
+              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-8"
             >
               <img 
                 src={bonusMetodos} 
