@@ -143,7 +143,7 @@ const BonusSection = () => {
                 alt="Bônus Fornecedores" 
                 className="w-[310px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-115 origin-center"
               />
-              <div className="flex flex-col text-left ml-[18.5rem] md:-translate-x-11">
+              <div className="flex flex-col text-left ml-[17rem] md:-translate-x-14">
                 <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 4</span>
                 <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Fornecedores de</p>
                 <p className="text-foreground font-bold text-3xl md:text-4xl">Rateio</p>
