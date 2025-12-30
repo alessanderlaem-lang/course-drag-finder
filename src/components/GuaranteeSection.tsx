@@ -4,7 +4,7 @@ import garantiaDesktop from "@/assets/garantia-desktop.jpg";
 const GuaranteeSection = () => {
   return (
     <section className="w-full py-8 md:py-10 px-4 md:px-6 bg-background">
-      <div className="max-w-4xl mx-auto flex justify-center">
+      <div className="max-w-4xl md:max-w-6xl mx-auto flex justify-center">
         {/* Mobile image */}
         <img 
           src={garantiaMobile} 
@@ -15,7 +15,7 @@ const GuaranteeSection = () => {
         <img 
           src={garantiaDesktop} 
           alt="7 Dias de Garantia - Não gostou? Todo seu dinheiro de volta." 
-          className="hidden md:block w-full max-w-5xl h-auto rounded-3xl"
+          className="hidden md:block w-full max-w-6xl h-auto rounded-xl"
         />
       </div>
     </section>
