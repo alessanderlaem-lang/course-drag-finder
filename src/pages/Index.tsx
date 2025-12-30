@@ -134,13 +134,13 @@ const Index = () => {
               className="w-[52rem] rounded-lg shadow-lg"
             />
             <div className="absolute top-[19rem] md:top-[30rem] left-1/2 -translate-x-1/2 text-center z-10">
-              <p className="text-white text-3xl md:text-4xl font-bold whitespace-nowrap">
+              <p className="text-white text-xl md:text-4xl font-bold whitespace-nowrap">
                 Acesso ao <span className="text-red-600 font-extrabold">maior acervo</span> de rateio do Brasil
               </p>
-              <p className="text-white/70 text-sm font-light mt-2 whitespace-nowrap w-max max-w-none mx-auto">
+              <p className="text-white/70 text-xs md:text-sm font-light mt-2 whitespace-nowrap w-max max-w-none mx-auto">
                 Além de todo o conteúdo exclusivo da comunidade, você tem acesso vitalicio a centenas de
               </p>
-              <p className="text-white/70 text-sm font-light whitespace-nowrap w-max max-w-none mx-auto">
+              <p className="text-white/70 text-xs md:text-sm font-light whitespace-nowrap w-max max-w-none mx-auto">
                 recursos organizados por segmento e área. Tudo atualizado semanalmente.
               </p>
               
