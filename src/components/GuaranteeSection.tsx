@@ -1,4 +1,4 @@
-import garantiaMobile from "@/assets/garantia-7-dias.jpg";
+import garantiaMobile from "@/assets/garantia-7-dias-new.png";
 import garantiaDesktop from "@/assets/garantia-desktop.jpg";
 
 const GuaranteeSection = () => {
