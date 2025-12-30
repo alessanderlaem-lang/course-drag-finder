@@ -20,7 +20,7 @@ const Footer = () => {
           </p>
           
           <Accordion type="single" collapsible className="w-full space-y-4">
-            <AccordionItem value="item-1" className="border-0 px-6">
+            <AccordionItem value="item-1" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                 1. Como acesso a comunidade?
               </AccordionTrigger>
@@ -29,7 +29,7 @@ const Footer = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-2" className="border-0 px-6">
+            <AccordionItem value="item-2" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                 2. É seguro?
               </AccordionTrigger>
@@ -38,7 +38,7 @@ const Footer = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3" className="border-0 px-6">
+            <AccordionItem value="item-3" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                 3. O acesso é vitalício?
               </AccordionTrigger>
@@ -47,7 +47,7 @@ const Footer = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="border-0 px-6">
+            <AccordionItem value="item-4" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                 4. Como funciona o suporte?
               </AccordionTrigger>
@@ -56,7 +56,7 @@ const Footer = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5" className="border-0 px-6">
+            <AccordionItem value="item-5" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                 5. O que é rateio?
               </AccordionTrigger>
@@ -65,7 +65,7 @@ const Footer = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-6" className="border-0 px-6">
+            <AccordionItem value="item-6" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                 6. O conteúdo é sempre atualizado?
               </AccordionTrigger>
@@ -74,7 +74,7 @@ const Footer = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-7" className="border-0 px-6">
+            <AccordionItem value="item-7" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
                 7. É seguro usar?
               </AccordionTrigger>
