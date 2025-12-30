@@ -115,8 +115,8 @@ const BonusSection = () => {
               />
               <div className="flex flex-col text-left ml-64 md:-translate-x-16">
                 <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 3</span>
-                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Consulta de dados via</p>
-                <p className="text-foreground font-bold text-3xl md:text-4xl">Telegram</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Consulta de dados</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl">via Telegram</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2 translate-y-2">Puxada de dados exclusiva, própria da comunidade</p>
                 <p className="text-foreground font-light text-3xl mt-6">De <span className="line-through">R$ 97,00</span></p>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6rem] -mt-2 w-fit" />
