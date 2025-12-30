@@ -146,6 +146,8 @@ const Index = () => {
               
               {/* Category Images Row 1 - Scroll Left */}
               <div className="-mt-14 overflow-hidden w-full relative z-50">
+                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
                 <div className="flex flex-nowrap gap-0 animate-scroll-left w-max">
                   {[...categoryImages, ...categoryImages, ...categoryImages, ...categoryImages].map((img, idx) => (
                     <img
@@ -162,6 +164,8 @@ const Index = () => {
               
               {/* Category Images Row 2 - Scroll Right */}
               <div className="-mt-44 md:-mt-40 overflow-hidden w-full relative z-50">
+                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
                 <div className="flex flex-nowrap gap-0 animate-scroll-right w-max">
                   {[...categoryImages2, ...categoryImages2, ...categoryImages2, ...categoryImages2].map((img, idx) => (
                     <img
