@@ -21,7 +21,7 @@ const Footer = () => {
           
           <Accordion type="single" collapsible className="w-full space-y-4">
             <AccordionItem value="item-1" className="border-0 border-b border-border/50 px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
+              <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> Como acesso a comunidade?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
@@ -30,7 +30,7 @@ const Footer = () => {
             </AccordionItem>
 
             <AccordionItem value="item-2" className="border-0 border-b border-border/50 px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
+              <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> É seguro?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
@@ -39,7 +39,7 @@ const Footer = () => {
             </AccordionItem>
 
             <AccordionItem value="item-3" className="border-0 border-b border-border/50 px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
+              <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> O acesso é vitalício?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
@@ -48,7 +48,7 @@ const Footer = () => {
             </AccordionItem>
 
             <AccordionItem value="item-4" className="border-0 border-b border-border/50 px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
+              <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> Como funciona o suporte?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
@@ -57,7 +57,7 @@ const Footer = () => {
             </AccordionItem>
 
             <AccordionItem value="item-5" className="border-0 border-b border-border/50 px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
+              <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> O que é rateio?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
@@ -66,7 +66,7 @@ const Footer = () => {
             </AccordionItem>
 
             <AccordionItem value="item-6" className="border-0 border-b border-border/50 px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
+              <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> O conteúdo é sempre atualizado?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
@@ -75,7 +75,7 @@ const Footer = () => {
             </AccordionItem>
 
             <AccordionItem value="item-7" className="border-0 border-b border-border/50 px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-foreground/80 justify-start">
+              <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> É seguro usar?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed text-left">
