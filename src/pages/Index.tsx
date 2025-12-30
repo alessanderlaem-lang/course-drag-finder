@@ -187,11 +187,11 @@ const Index = () => {
       {/* Testimonials Carousel */}
       <TestimonialsCarousel />
 
-      {/* Members Counter */}
-      <MembersCounter />
-
       {/* Guarantee Section */}
       <GuaranteeSection />
+
+      {/* Members Counter */}
+      <MembersCounter />
 
       {/* Pricing Section */}
       <PricingSection />
