@@ -58,8 +58,8 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-2xl md:text-5xl mt-2">Afiliação a</p>
                 <p className="text-foreground font-bold text-2xl md:text-5xl">Comunidade</p>
                 <p className="text-muted-foreground font-light text-sm md:text-[16px] mt-2">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
-                <p className="text-foreground font-light text-xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 497,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[3.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
+                <p className="text-foreground font-light text-2xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 497,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[4.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
@@ -88,8 +88,8 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-2xl md:text-4xl mt-2">RiseOffers - Ofertas</p>
                 <p className="text-foreground font-bold text-2xl md:text-4xl">Escaladas</p>
                 <p className="text-muted-foreground font-light text-sm md:text-[16px] mt-2">Ofertas diárias e organizadas para aplicar e escalar. Tudo organizado em um só lugar.</p>
-                <p className="text-foreground font-light text-xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 67,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[3.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
+                <p className="text-foreground font-light text-2xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 67,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[4.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
@@ -118,8 +118,8 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-2xl md:text-4xl mt-2">Consulta de dados</p>
                 <p className="text-foreground font-bold text-2xl md:text-4xl">via Telegram</p>
                 <p className="text-muted-foreground font-light text-sm md:text-[16px] mt-2">Puxada de dados exclusiva, própria da comunidade</p>
-                <p className="text-foreground font-light text-xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[3.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
+                <p className="text-foreground font-light text-2xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[4.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
@@ -148,8 +148,8 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-2xl md:text-4xl mt-2">Fornecedores de</p>
                 <p className="text-foreground font-bold text-2xl md:text-4xl">Rateio</p>
                 <p className="text-muted-foreground font-light text-sm md:text-[16px] mt-2">Acesso a milhares de fornecedores ferramentas e materiais do digital</p>
-                <p className="text-foreground font-light text-xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 197,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[3.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
+                <p className="text-foreground font-light text-2xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 197,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[4.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
@@ -178,8 +178,8 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-2xl md:text-3xl mt-2">Grupos de Networking</p>
                 <p className="text-foreground font-bold text-2xl md:text-3xl">no WhatsApp</p>
                 <p className="text-muted-foreground font-light text-sm md:text-[16px] mt-2">Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...</p>
-                <p className="text-foreground font-light text-xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[3.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
+                <p className="text-foreground font-light text-2xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[4.5rem] md:h-[6rem] -mt-1 md:-mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
