@@ -85,8 +85,8 @@ const BonusSection = () => {
               />
               <div className="flex flex-col text-left ml-64 md:-translate-x-16">
                 <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 2</span>
-                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2">RiseOffers - Ofertas</p>
-                <p className="text-foreground font-bold text-4xl md:text-5xl">Escaladas</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">RiseOffers - Ofertas</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl">Escaladas</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2 translate-y-2">Ofertas diárias e organizadas para aplicar e escalar.<br/>Tudo organizado em um só lugar.</p>
                 <p className="text-foreground font-light text-3xl mt-6">De <span className="line-through">R$ 67,00</span></p>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6rem] -mt-2 w-fit" />
