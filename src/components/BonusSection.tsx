@@ -58,7 +58,7 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-4xl md:text-5xl mt-2">Afiliação a</p>
                 <p className="text-foreground font-bold text-4xl md:text-5xl">Comunidade</p>
                 <p className="text-muted-foreground font-light text-[16px] mt-2">Seja afiliado da maior comunidade de todas,<br/>com uma estrutura completa,<br/>suporte e direcionamento para começar do jeito certo.</p>
-                <p className="text-foreground font-light text-3xl mt-14">De <span className="line-through">R$ 497,00</span></p>
+                <p className="text-foreground font-light text-3xl mt-6">De <span className="line-through">R$ 497,00</span></p>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6rem] -mt-2 w-fit" />
               </div>
             </div>
