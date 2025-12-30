@@ -111,7 +111,7 @@ const BonusSection = () => {
               <img 
                 src={bonus2} 
                 alt="Bônus Telegram" 
-                className="w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
+                className="w-[280px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-110 origin-center"
               />
               <div className="flex flex-col text-left ml-64 md:-translate-x-16">
                 <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 3</span>
