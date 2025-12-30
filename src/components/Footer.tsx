@@ -19,7 +19,7 @@ const Footer = () => {
             Tire suas principais dúvidas sobre a Rise Community
           </p>
           
-          <Accordion type="single" collapsible className="w-full space-y-4 pl-4 md:pl-8">
+          <Accordion type="single" collapsible className="w-full space-y-4 pl-8 md:pl-16 lg:pl-24">
             <AccordionItem value="item-1" className="border-0 border-b border-border/50 px-6">
               <AccordionTrigger className="text-left font-normal text-foreground hover:text-foreground/80 justify-start">
                 <span className="text-destructive mr-2">?</span> Como acesso a comunidade?
