@@ -51,7 +51,7 @@ const BonusSection = () => {
               <img 
                 src={bonusMetodos} 
                 alt="Bônus Métodos" 
-                className="hidden md:block w-[280px] h-auto object-contain flex-shrink-0 ml-32"
+                className="w-[280px] h-auto object-contain flex-shrink-0"
               />
               <div className="flex flex-col text-left ml-64">
                 <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 1</span>
