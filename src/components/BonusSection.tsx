@@ -66,30 +66,30 @@ const BonusSection = () => {
         </div>
 
         {/* Card Bônus 2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="flex mb-8 justify-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -5 }}
+            className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-12 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
+              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-8"
             >
               <img 
                 src={bonusOfertas} 
-                alt="Bônus 2" 
-                className="w-full h-auto object-contain -mt-4 translate-y-12"
+                alt="Bônus Ofertas" 
+                className="w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-16">
-                <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 2</span>
-                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">RiseOffers - Ofertas</p>
-                <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Escaladas</p>
-                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Ofertas diárias e organizadas para aplicar e escalar.</p>
-                <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">Tudo organizado em um só lugar.</p>
-                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 67,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+              <div className="flex flex-col text-left ml-64 md:-translate-x-16">
+                <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 2</span>
+                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2">RiseOffers - Ofertas</p>
+                <p className="text-foreground font-bold text-4xl md:text-5xl">Escaladas</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 translate-y-2">Ofertas diárias e organizadas para aplicar e escalar.<br/>Tudo organizado em um só lugar.</p>
+                <p className="text-foreground font-light text-3xl mt-6">De <span className="line-through">R$ 67,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6rem] -mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
