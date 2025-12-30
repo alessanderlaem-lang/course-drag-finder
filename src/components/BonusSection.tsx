@@ -171,9 +171,9 @@ const BonusSection = () => {
               <img 
                 src={bonusNetworking} 
                 alt="Bônus Networking" 
-                className="w-[280px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-110 origin-center"
+                className="w-[320px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-115 origin-center"
               />
-              <div className="flex flex-col text-left ml-[18.5rem] md:-translate-x-11">
+              <div className="flex flex-col text-left ml-[17rem] md:-translate-x-14">
                 <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 5</span>
                 <p className="text-foreground font-bold text-2xl md:text-3xl mt-2">Grupos de Networking</p>
                 <p className="text-foreground font-bold text-2xl md:text-3xl">no WhatsApp</p>
