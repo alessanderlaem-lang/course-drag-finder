@@ -96,89 +96,90 @@ const BonusSection = () => {
         </div>
 
         {/* Card Bônus 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="flex mb-8 justify-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -5 }}
+            className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-20 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
+              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-8"
             >
               <img 
                 src={bonus2} 
-                alt="Bônus 3" 
-                className="w-3/4 h-auto object-contain -mt-4 translate-y-16"
+                alt="Bônus Telegram" 
+                className="w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-24">
-                <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 3</span>
-                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Consulta de dados via</p>
-                <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Telegram</p>
-                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Puxada de dados exclusiva, própria da comunidade</p>
-                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 97,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+              <div className="flex flex-col text-left ml-64 md:-translate-x-16">
+                <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 3</span>
+                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Consulta de dados via</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl">Telegram</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 translate-y-2">Puxada de dados exclusiva, própria da comunidade</p>
+                <p className="text-foreground font-light text-3xl mt-6">De <span className="line-through">R$ 97,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6rem] -mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
         </div>
 
         {/* Card Bônus 4 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="flex mb-8 justify-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -5 }}
+            className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-16 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
+              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-8"
             >
               <img 
                 src={bonusFornecedores} 
-                alt="Bônus 4" 
-                className="w-[85%] h-auto object-contain -mt-4 translate-y-16"
+                alt="Bônus Fornecedores" 
+                className="w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-20">
-                <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 4</span>
-                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Fornecedores de</p>
-                <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">Rateio</p>
-                <p className="text-muted-foreground font-light text-[16px] mt-2 whitespace-nowrap">Acesso a milhares de fornecedores</p>
-                <p className="text-muted-foreground font-light text-[16px] whitespace-nowrap">ferramentas e materiais do digital</p>
-                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 197,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+              <div className="flex flex-col text-left ml-64 md:-translate-x-16">
+                <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 4</span>
+                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Fornecedores de</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl">Rateio</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 translate-y-2">Acesso a milhares de fornecedores<br/>ferramentas e materiais do digital</p>
+                <p className="text-foreground font-light text-3xl mt-6">De <span className="line-through">R$ 197,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6rem] -mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
         </div>
 
         {/* Card Bônus 5 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex mb-8 justify-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -5 }}
+            className="w-full max-w-5xl"
           >
             <div 
-              className="group relative h-full flex flex-col items-center justify-start bg-background border border-white/30 pt-0 pl-6 pr-0 pb-8 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 min-h-[140px] w-full max-w-lg"
+              className="group relative h-full flex flex-row items-center justify-start bg-background border border-white/30 p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-8"
             >
               <img 
                 src={bonusNetworking} 
-                alt="Bônus 5" 
-                className="w-[85%] h-auto object-contain -mt-4 translate-y-8"
+                alt="Bônus Networking" 
+                className="w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
               />
-              <div className="w-full text-left -ml-6 mt-6 translate-y-12">
-                <span className="text-primary font-light text-[10px] tracking-[0.2em]">#BÔNUS 5</span>
-                <p className="text-foreground font-bold text-4xl md:text-5xl mt-2 whitespace-nowrap">Grupos de networking</p>
-                <p className="text-foreground font-bold text-4xl md:text-5xl whitespace-nowrap">no WhatsApp</p>
-                <p className="text-muted-foreground font-light text-[14px] mt-2 whitespace-nowrap">Acesso a grupos ativos no WhatsApp com membros que trocam</p>
-                <p className="text-muted-foreground font-light text-[14px] whitespace-nowrap">experiências, estratégias e oportunidades todos os dias...</p>
-                <p className="text-foreground font-light text-2xl mt-6">De <span className="line-through">R$ 97,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6.5rem] -mt-2" />
+              <div className="flex flex-col text-left ml-64 md:-translate-x-16">
+                <span className="text-primary font-light text-sm md:text-base tracking-[0.2em]">#BÔNUS 5</span>
+                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Grupos de networking</p>
+                <p className="text-foreground font-bold text-3xl md:text-4xl">no WhatsApp</p>
+                <p className="text-muted-foreground font-light text-[16px] mt-2 translate-y-2">Acesso a grupos ativos no WhatsApp com membros que trocam<br/>experiências, estratégias e oportunidades todos os dias...</p>
+                <p className="text-foreground font-light text-3xl mt-6">De <span className="line-through">R$ 97,00</span></p>
+                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[6rem] -mt-2 w-fit" />
               </div>
             </div>
           </motion.div>
