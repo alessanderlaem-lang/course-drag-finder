@@ -53,12 +53,14 @@ const BonusSection = () => {
                 alt="Bônus Métodos" 
                 className="w-[280px] md:w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
               />
-              <div className="flex flex-col text-left w-full translate-y-6 md:translate-y-0 md:ml-64 md:-translate-x-16">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 1</span>
-                <p className="text-foreground font-bold text-3xl md:text-5xl mt-2">Afiliação a</p>
-                <p className="text-foreground font-bold text-3xl md:text-5xl">Comunidade</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 497,00</span></p>
+              <div className="flex flex-col text-left w-full md:ml-64 md:-translate-x-16">
+                <div className="translate-y-3 md:translate-y-0">
+                  <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 1</span>
+                  <p className="text-foreground font-bold text-3xl md:text-5xl mt-2">Afiliação a</p>
+                  <p className="text-foreground font-bold text-3xl md:text-5xl">Comunidade</p>
+                  <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
+                  <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 497,00</span></p>
+                </div>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[7rem] md:h-[6rem] mt-2 md:-mt-2 w-fit" />
               </div>
             </div>
@@ -83,12 +85,14 @@ const BonusSection = () => {
                 alt="Bônus Ofertas" 
                 className="w-[280px] md:w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
               />
-              <div className="flex flex-col text-left w-full translate-y-6 md:translate-y-0 md:ml-64 md:-translate-x-16">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 2</span>
-                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">RiseOffers - Ofertas</p>
-                <p className="text-foreground font-bold text-3xl md:text-4xl">Escaladas</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Ofertas diárias e organizadas para aplicar e escalar. Tudo organizado em um só lugar.</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 67,00</span></p>
+              <div className="flex flex-col text-left w-full md:ml-64 md:-translate-x-16">
+                <div className="translate-y-3 md:translate-y-0">
+                  <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 2</span>
+                  <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">RiseOffers - Ofertas</p>
+                  <p className="text-foreground font-bold text-3xl md:text-4xl">Escaladas</p>
+                  <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Ofertas diárias e organizadas para aplicar e escalar. Tudo organizado em um só lugar.</p>
+                  <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 67,00</span></p>
+                </div>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[7rem] md:h-[6rem] mt-2 md:-mt-2 w-fit" />
               </div>
             </div>
@@ -113,12 +117,14 @@ const BonusSection = () => {
                 alt="Bônus Telegram" 
                 className="w-[280px] md:w-[280px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-110 origin-center"
               />
-              <div className="flex flex-col text-left w-full translate-y-6 md:translate-y-0 md:ml-[18.5rem] md:-translate-x-11">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 3</span>
-                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Consulta de dados</p>
-                <p className="text-foreground font-bold text-3xl md:text-4xl">via Telegram</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Puxada de dados exclusiva, própria da comunidade</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
+              <div className="flex flex-col text-left w-full md:ml-[18.5rem] md:-translate-x-11">
+                <div className="translate-y-3 md:translate-y-0">
+                  <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 3</span>
+                  <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Consulta de dados</p>
+                  <p className="text-foreground font-bold text-3xl md:text-4xl">via Telegram</p>
+                  <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Puxada de dados exclusiva, própria da comunidade</p>
+                  <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
+                </div>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[7rem] md:h-[6rem] mt-2 md:-mt-2 w-fit" />
               </div>
             </div>
@@ -143,12 +149,14 @@ const BonusSection = () => {
                 alt="Bônus Fornecedores" 
                 className="w-[280px] md:w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:translate-y-2 md:scale-125 origin-center"
               />
-              <div className="flex flex-col text-left w-full translate-y-6 md:translate-y-0 md:ml-64 md:-translate-x-16">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 4</span>
-                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Fornecedores de</p>
-                <p className="text-foreground font-bold text-3xl md:text-4xl">Rateio</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Acesso a milhares de fornecedores ferramentas e materiais do digital</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 197,00</span></p>
+              <div className="flex flex-col text-left w-full md:ml-64 md:-translate-x-16">
+                <div className="translate-y-3 md:translate-y-0">
+                  <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 4</span>
+                  <p className="text-foreground font-bold text-3xl md:text-4xl mt-2">Fornecedores de</p>
+                  <p className="text-foreground font-bold text-3xl md:text-4xl">Rateio</p>
+                  <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Acesso a milhares de fornecedores ferramentas e materiais do digital</p>
+                  <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 197,00</span></p>
+                </div>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[7rem] md:h-[6rem] mt-2 md:-mt-2 w-fit" />
               </div>
             </div>
@@ -173,12 +181,14 @@ const BonusSection = () => {
                 alt="Bônus Networking" 
                 className="w-[280px] md:w-[320px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-115 origin-center"
               />
-              <div className="flex flex-col text-left w-full translate-y-6 md:translate-y-0 md:ml-[17rem] md:-translate-x-14">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 5</span>
-                <p className="text-foreground font-bold text-2xl md:text-3xl mt-2">Grupos de Networking</p>
-                <p className="text-foreground font-bold text-2xl md:text-3xl">no WhatsApp</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
+              <div className="flex flex-col text-left w-full md:ml-[17rem] md:-translate-x-14">
+                <div className="translate-y-3 md:translate-y-0">
+                  <span className="text-primary font-light text-base md:text-base tracking-[0.2em]">#BÔNUS 5</span>
+                  <p className="text-foreground font-bold text-2xl md:text-3xl mt-2">Grupos de Networking</p>
+                  <p className="text-foreground font-bold text-2xl md:text-3xl">no WhatsApp</p>
+                  <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2">Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...</p>
+                  <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6">De <span className="line-through">R$ 97,00</span></p>
+                </div>
                 <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[7rem] md:h-[6rem] mt-2 md:-mt-2 w-fit" />
               </div>
             </div>
