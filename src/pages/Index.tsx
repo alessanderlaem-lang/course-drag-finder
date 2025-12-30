@@ -190,8 +190,6 @@ const Index = () => {
       {/* Guarantee Section */}
       <GuaranteeSection />
 
-      {/* Members Counter */}
-      <MembersCounter />
 
       {/* Pricing Section */}
       <PricingSection />
