@@ -8,11 +8,11 @@ const PricingSection = () => {
   return (
     <Section id="pricing" spacing="sm">
       {/* Mobile: full-bleed */}
-      <div className="md:hidden w-full px-2">
+      <div className="md:hidden w-full">
         <FullBleedImage
           src={pricingImageMobile}
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 9x de R$7,04 ou 49,90 à vista"
-          className="max-w-[95%] mx-auto"
+          className="w-full"
         />
       </div>
 
