@@ -5,6 +5,8 @@ import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import DiscordPreviewSection from "@/components/sections/DiscordPreviewSection";
+import EcosystemSection from "@/components/sections/EcosystemSection";
+import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
 
 const Index = () => {
   const scrollToNextSection = () => {
@@ -21,6 +23,12 @@ const Index = () => {
 
       {/* Topics Section anchor */}
       <div id="topics-section" />
+
+      {/* Ecosystem Section - Parte 1: 4 Pilares */}
+      <EcosystemSection />
+
+      {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
+      <DiferenciaisCriticosSection />
 
       {/* Bonus Section */}
       <div id="bonus-section" className="-mt-40 lg:mt-0">
