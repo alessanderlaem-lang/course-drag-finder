@@ -5,12 +5,12 @@ import Container from "@/components/layout/Container";
 const PricingSection = () => {
   return (
     <Section spacing="sm">
-      {/* Mobile: full-bleed escalado para compensar bordas internas do asset */}
-      <div className="md:hidden w-full overflow-hidden">
+      {/* Mobile: full-bleed */}
+      <div className="md:hidden w-full">
         <img
           src={pricingImage}
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista"
-          className="w-full h-auto scale-[1.15] origin-center"
+          className="w-full h-auto"
         />
       </div>
       
