@@ -7,12 +7,12 @@ import FullBleedImage from "@/components/layout/FullBleedImage";
 const PricingSection = () => {
   return (
     <Section id="pricing" spacing="sm">
-      {/* Mobile: full-bleed + recorte lateral (remove gutters invisíveis do asset) */}
-      <div className="md:hidden w-full">
+      {/* Mobile: full-bleed */}
+      <div className="md:hidden w-full px-2">
         <FullBleedImage
           src={pricingImageMobile}
-          alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista"
-          cropXPercent={8}
+          alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 9x de R$7,04 ou 49,90 à vista"
+          className="max-w-[95%] mx-auto"
         />
       </div>
 
