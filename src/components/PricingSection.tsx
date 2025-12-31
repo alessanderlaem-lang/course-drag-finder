@@ -1,14 +1,15 @@
 import pricingImage from "@/assets/pricing-section.jpg";
+import pricingImageMobile from "@/assets/pricing-section-mobile.jpg";
 import Section from "@/components/layout/Section";
 import Container from "@/components/layout/Container";
 
 const PricingSection = () => {
   return (
     <Section spacing="sm">
-      {/* Mobile: full-bleed */}
+      {/* Mobile: versão otimizada sem bordas laterais */}
       <div className="md:hidden w-full">
         <img
-          src={pricingImage}
+          src={pricingImageMobile}
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista"
           className="w-full h-auto"
         />
