@@ -1,5 +1,5 @@
 import pricingImage from "@/assets/pricing-section.jpg";
-import pricingImageMobile from "@/assets/pricing-section-mobile-tight.jpg";
+import pricingImageMobile from "@/assets/pricing-section-mobile-new.jpg";
 import Section from "@/components/layout/Section";
 import Container from "@/components/layout/Container";
 import FullBleedImage from "@/components/layout/FullBleedImage";
