@@ -2,25 +2,27 @@ import pricingImage from "@/assets/pricing-section.jpg";
 import pricingImageMobile from "@/assets/pricing-section-mobile-tight.jpg";
 import Section from "@/components/layout/Section";
 import Container from "@/components/layout/Container";
+import FullBleedImage from "@/components/layout/FullBleedImage";
 
 const PricingSection = () => {
   return (
-    <Section spacing="sm">
-      {/* Mobile: versão otimizada sem bordas laterais */}
+    <Section id="pricing" spacing="sm">
+      {/* Mobile: full-bleed + recorte lateral (remove gutters invisíveis do asset) */}
       <div className="md:hidden w-full">
-        <img
+        <FullBleedImage
           src={pricingImageMobile}
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista"
-          className="w-full h-auto"
+          cropXPercent={8}
         />
       </div>
-      
-      {/* Tablet/Desktop: full-bleed (sem padding e sem max-width) */}
+
+      {/* Tablet/Desktop: full-bleed (sem padding e sem max-width) + recorte lateral */}
       <Container size="full" noPadding className="hidden md:block">
-        <img
+        <FullBleedImage
           src={pricingImage}
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista"
-          className="w-full h-auto rounded-2xl lg:rounded-3xl"
+          cropXPercent={4}
+          className="rounded-2xl lg:rounded-3xl"
         />
       </Container>
     </Section>
