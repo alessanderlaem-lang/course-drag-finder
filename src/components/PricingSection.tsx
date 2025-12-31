@@ -15,8 +15,8 @@ const PricingSection = () => {
         />
       </div>
       
-      {/* Tablet/Desktop: com container responsivo */}
-      <Container size="wide" className="hidden md:block">
+      {/* Tablet/Desktop: full-bleed (sem padding e sem max-width) */}
+      <Container size="full" noPadding className="hidden md:block">
         <img
           src={pricingImage}
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista"
