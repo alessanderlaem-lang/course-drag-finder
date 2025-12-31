@@ -10,7 +10,7 @@ const PricingSection = () => {
         <img
           src={pricingImage}
           alt="Rise Community - Quanto custa ter acesso a tudo isso? Por apenas 12x de R$4,15 ou 49,90 à vista"
-          className="w-[115%] h-auto -ml-[7.5%]"
+          className="w-full h-auto scale-[1.15] origin-center"
         />
       </div>
       
