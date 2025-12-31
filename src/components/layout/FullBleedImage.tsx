@@ -21,34 +21,13 @@ const FullBleedImage = ({
   style,
   ...props
 }: FullBleedImageProps) => {
-  const crop = clamp(cropXPercent, 0, 25);
-  
-  // Scale factor: if crop is 8%, we need to scale by 1/(1 - 0.16) ≈ 1.19
-  // This makes the "visible" content fill 100% width
-  const scaleFactor = crop > 0 ? 1 / (1 - (crop * 2) / 100) : 1;
-
-  if (crop === 0) {
-    return (
-      <img
-        {...props}
-        className={cn("block w-full h-auto", className)}
-        style={style}
-      />
-    );
-  }
-
+  // Simple image component - no transforms that distort the image
   return (
-    <div className="w-full overflow-hidden">
-      <img
-        {...props}
-        className={cn("block w-full h-auto", className)}
-        style={{
-          ...style,
-          transform: `scaleX(${scaleFactor})`,
-          transformOrigin: "center",
-        }}
-      />
-    </div>
+    <img
+      {...props}
+      className={cn("block w-full h-auto", className)}
+      style={style}
+    />
   );
 };
 
