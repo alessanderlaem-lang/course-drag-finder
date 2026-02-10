@@ -39,7 +39,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-4 pt-24 pb-12 max-w-[900px] mx-auto">
+        <div className="relative z-10 flex flex-col items-center text-center px-4 pt-32 md:pt-40 pb-12 max-w-[900px] mx-auto">
           {/* Rise Community Badge */}
           <div
             className="inline-flex items-center px-6 py-2.5 rounded-full border mb-8"
@@ -109,9 +109,9 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             {/* CTA Button */}
             <button
               onClick={onCtaClick}
-              className="group flex items-center gap-3 px-12 md:px-16 py-5 rounded-full text-white text-lg font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(97,206,112,0.4)]"
+              className="group flex items-center gap-3 px-12 md:px-16 py-5 rounded-full text-white text-lg font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,0,0,0.4)]"
               style={{
-                backgroundColor: "rgb(97, 206, 112)",
+                backgroundColor: "rgb(255, 0, 0)",
                 fontFamily: "'Articulat CF', sans-serif",
               }}
             >
