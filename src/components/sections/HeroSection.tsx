@@ -214,7 +214,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
       >
         {/* Blur/Glass container */}
         <div
-          className="max-w-[1140px] mx-auto rounded-[12px] p-5 md:p-6"
+          className="max-w-[1140px] mx-auto rounded-[12px] p-4 md:p-5"
           style={{
             background: "rgba(40, 40, 40, 0.4)",
             backdropFilter: "blur(10px)",
@@ -222,7 +222,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             border: "1px solid rgba(255, 255, 255, 0.03)",
           }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Card 1 */}
             <div
               className="relative rounded-[15px] p-[44px] md:p-[50px_44px] flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1"
