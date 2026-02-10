@@ -214,12 +214,12 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
       >
         {/* Blur/Glass container */}
         <div
-          className="max-w-[1140px] mx-auto rounded-[20px] p-8 md:p-12"
+          className="max-w-[1140px] mx-auto rounded-[16px] p-6 md:p-8"
           style={{
-            background: "rgba(20, 20, 20, 0.6)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
-            border: "1px solid rgba(255, 255, 255, 0.05)",
+            background: "rgba(30, 30, 30, 0.5)",
+            backdropFilter: "blur(15px)",
+            WebkitBackdropFilter: "blur(15px)",
+            border: "1px solid rgba(255, 255, 255, 0.08)",
           }}
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
