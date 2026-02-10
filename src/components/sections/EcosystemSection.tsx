@@ -29,7 +29,7 @@ const EcosystemSection = () => {
     <section className="w-full -mt-14 pb-16 md:-mt-20 md:pb-24 px-4 md:px-6 bg-background relative z-50">
       <div className="max-w-7xl mx-auto relative z-50">
         {/* Título */}
-        <div className="text-center mb-10 md:mb-16 space-y-1 md:space-y-4 relative z-50">
+        <div className="text-center mb-10 md:mb-16 space-y-0 md:space-y-4 relative z-50">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Mais que uma Comunidade, um <span className="text-primary">Ecossistema</span>
           </h2>
