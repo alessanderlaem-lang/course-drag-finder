@@ -43,7 +43,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
           style={{
             paddingTop: "clamp(200px, 42vh, 480px)",
-            paddingBottom: "60px",
+            paddingBottom: "140px",
           }}
         >
           {/* Rise Community Badge - bg vermelho 20%, borderRadius 22px, texto rosa */}
@@ -200,7 +200,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
       {/* ===== MARQUEE SCROLL SECTION ===== */}
       <div
         className="relative w-full overflow-hidden py-5"
-        style={{ backgroundColor: "rgb(10, 10, 10)" }}
+        style={{ backgroundColor: "rgb(10, 10, 10)", marginTop: "0px" }}
       >
         <div
           ref={marqueeRef}
