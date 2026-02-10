@@ -39,7 +39,7 @@ const Index = () => {
       <DiferenciaisCriticosSection />
 
       {/* Bonus Section */}
-      <div id="bonus-section" className="-mt-40 lg:mt-0">
+      <div id="bonus-section" className="mt-16 lg:mt-0">
         <BonusSection />
       </div>
 
