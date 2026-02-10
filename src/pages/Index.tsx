@@ -38,9 +38,11 @@ const Index = () => {
       </div>
 
       {/* Imagem Discord Laptop - Mobile */}
-      <div className="block md:hidden w-full px-4 -mt-16 mb-0 relative z-[100] overflow-visible flex justify-center">
+      <div className="block md:hidden w-full -mt-16 mb-0 relative z-[100] overflow-visible">
         <img src={glowRed} alt="" className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto z-0 pointer-events-none scale-[2]" />
-        <img src={discordLaptop} alt="Discord Rise Community" className="w-[200%] h-auto relative z-10" />
+        <div className="flex justify-center overflow-visible">
+          <img src={discordLaptop} alt="Discord Rise Community" className="w-[130vw] max-w-none h-auto relative z-10" />
+        </div>
       </div>
 
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
