@@ -30,7 +30,7 @@ const Index = () => {
       <EcosystemSection />
 
       {/* Imagem Discord Laptop - Mobile */}
-      <div className="block md:hidden w-full px-4 mt-16 mb-0 relative z-[100] overflow-visible">
+      <div className="block md:hidden w-full px-4 -mt-16 mb-0 relative z-[100] overflow-visible">
         <img src={glowRed} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320%] h-auto z-0 pointer-events-none" />
         <img src={discordLaptop} alt="Discord Rise Community" className="w-full h-auto relative z-10" />
       </div>
