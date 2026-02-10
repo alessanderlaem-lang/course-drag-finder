@@ -33,7 +33,7 @@ const EcosystemSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Mais que uma Comunidade, um <span className="text-primary">Ecossistema</span>
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-foreground/80 max-w-4xl mx-auto leading-snug md:leading-relaxed">
             Chega de gastar fortunas com cursos caros, ferramentas premium e produtos. 
             Aqui você tem <span className="text-primary font-semibold">TUDO</span> que precisa em um só lugar. 
             Todo o caminho completo do zero ao lucro. Sem precisar comprar mais nada.
