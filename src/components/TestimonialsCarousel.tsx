@@ -12,7 +12,12 @@ const TestimonialsCarousel = () => {
     <section className="w-full -mt-16 md:-mt-8 pb-6 md:pb-8 bg-background relative z-30">
       <div className="text-center mb-6 md:mb-8 px-4">
         <h2 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-          O que nossos membros estão falando
+          O que nossos{" "}
+          <span className="relative inline-block overflow-hidden">
+            <span className="text-primary">membros</span>
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shimmer_2.5s_ease-in-out_infinite] pointer-events-none" />
+          </span>
+          {" "}estão falando
         </h2>
       </div>
 
