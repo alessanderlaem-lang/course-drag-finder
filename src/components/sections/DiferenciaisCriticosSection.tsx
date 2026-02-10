@@ -67,7 +67,7 @@ const DiferenciaisCriticosSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`w-full ${(index === 1 || index === 2) ? 'hidden' : ''}`}
+              className={`w-full ${(index === 1 || index === 2 || index === 4) ? 'hidden' : ''}`}
             >
               <div 
                 className="group relative h-full flex flex-col md:flex-row items-center md:items-center justify-start bg-background border border-white/20 p-4 md:p-6 rounded-xl overflow-hidden hover:border-red-500/40 transition-all duration-300 w-full gap-4 md:gap-8"
