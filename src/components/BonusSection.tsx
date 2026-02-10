@@ -26,7 +26,7 @@ const BonusSection = () => {
     <section className="w-full pt-[6rem] md:pt-8 pb-6 md:pb-8 px-4 md:px-6 bg-background relative z-50">
       <div className="max-w-7xl mx-auto relative z-50">
         {/* Título */}
-        <div className="text-center mb-6 md:mb-8 space-y-2 relative z-50">
+        <div className="text-center mb-10 md:mb-8 space-y-2 relative z-50">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
             Bônus exclusivos da <span className="text-primary">Rise Community</span>
           </h2>
