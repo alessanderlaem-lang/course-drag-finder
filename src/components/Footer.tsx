@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-background">
       {/* FAQ Section */}
-      <section className="pt-44 pb-8 md:pt-80 md:pb-10 px-4 bg-background">
+      <section className="pt-24 pb-8 md:pt-80 md:pb-10 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-foreground mb-3">
             FAQ — PERGUNTAS ESSENCIAIS
