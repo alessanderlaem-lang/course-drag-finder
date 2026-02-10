@@ -41,7 +41,7 @@ const EcosystemSection = () => {
         </div>
 
         {/* Grid de Pilares */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}
