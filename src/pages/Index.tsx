@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -20,14 +21,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navbar */}
+      <Navbar />
+
       {/* Hero Section */}
-      <HeroSection onCtaClick={scrollToNextSection} />
+      <div id="hero">
+        <HeroSection onCtaClick={scrollToNextSection} />
+      </div>
 
       {/* Topics Section anchor */}
       <div id="topics-section" />
 
       {/* Ecosystem Section - Parte 1: 4 Pilares */}
-      <EcosystemSection />
+      <div id="comunidade">
+        <EcosystemSection />
+      </div>
 
       {/* Imagem Discord Laptop - Mobile */}
       <div className="block md:hidden w-full px-4 -mt-8 mb-0 relative z-[100]">
@@ -43,6 +51,9 @@ const Index = () => {
         <BonusSection />
       </div>
 
+      {/* Sobre nós Section - Placeholder */}
+      <div id="sobre" />
+
       {/* Discord Preview Section */}
       <DiscordPreviewSection />
 
@@ -53,9 +64,12 @@ const Index = () => {
       <GuaranteeSection />
 
       {/* Pricing Section */}
-      <div className="relative z-20">
+      <div id="pricing" className="relative z-20">
         <PricingSection />
       </div>
+
+      {/* FAQ Section - Placeholder */}
+      <div id="faq" />
 
       {/* Footer */}
       <Footer />
