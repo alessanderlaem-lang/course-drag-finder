@@ -209,11 +209,19 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
       {/* ===== 3 CARDS SECTION ===== */}
       <section
-        className="relative w-full py-12 md:py-16 px-4 z-10"
-        style={{ backgroundColor: "rgb(0, 0, 0)" }}
+        className="relative w-full px-4 -mt-32 md:-mt-24 z-20"
+        style={{ backgroundColor: "transparent" }}
       >
         {/* Blur/Glass container */}
-        <div className="max-w-[1140px] mx-auto">
+        <div
+          className="max-w-[1140px] mx-auto rounded-[20px] p-8 md:p-12"
+          style={{
+            background: "rgba(20, 20, 20, 0.6)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            border: "1px solid rgba(255, 255, 255, 0.05)",
+          }}
+        >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1 */}
             <div
