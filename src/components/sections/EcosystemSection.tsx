@@ -26,7 +26,7 @@ const EcosystemSection = () => {
   ];
 
   return (
-    <section className="w-full -mt-14 pb-16 md:-mt-20 md:pb-24 px-4 md:px-6 bg-background relative z-50">
+    <section className="w-full -mt-14 pb-16 md:-mt-20 md:pb-24 px-4 md:px-6 bg-background relative z-50 hidden">
       <div className="max-w-7xl mx-auto relative z-50">
         {/* Título */}
         <div className="text-center mb-10 md:mb-16 space-y-4 relative z-50">
