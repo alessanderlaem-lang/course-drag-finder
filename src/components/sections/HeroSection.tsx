@@ -209,17 +209,17 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
       {/* ===== 3 CARDS SECTION ===== */}
       <section
-        className="relative w-full px-4 -mt-32 md:-mt-24 z-20"
+        className="relative w-full px-4 -mt-40 md:-mt-32 z-20"
         style={{ backgroundColor: "transparent" }}
       >
         {/* Blur/Glass container */}
         <div
-          className="max-w-[1140px] mx-auto rounded-[16px] p-6 md:p-8"
+          className="max-w-[1140px] mx-auto rounded-[12px] p-5 md:p-6"
           style={{
-            background: "rgba(30, 30, 30, 0.5)",
-            backdropFilter: "blur(15px)",
-            WebkitBackdropFilter: "blur(15px)",
-            border: "1px solid rgba(255, 255, 255, 0.08)",
+            background: "rgba(40, 40, 40, 0.4)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
+            border: "1px solid rgba(255, 255, 255, 0.03)",
           }}
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -228,7 +228,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               className="relative rounded-[15px] p-[44px] md:p-[50px_44px] flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1"
               style={{
                 backgroundColor: "rgb(0, 0, 0)",
-                border: "1px solid rgba(51, 33, 33, 1)",
+                border: "1px solid rgba(51, 33, 33, 0.5)",
                 minHeight: "330px",
               }}
             >
@@ -313,7 +313,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               className="relative rounded-[15px] p-[44px] md:p-[50px_44px] flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1"
               style={{
                 backgroundColor: "rgb(0, 0, 0)",
-                border: "1px solid rgba(51, 33, 33, 1)",
+                border: "1px solid rgba(51, 33, 33, 0.5)",
                 minHeight: "330px",
               }}
             >
@@ -398,7 +398,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               className="relative rounded-[15px] p-[44px] md:p-[50px_44px] flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1"
               style={{
                 backgroundColor: "rgb(0, 0, 0)",
-                border: "1px solid rgba(51, 33, 33, 1)",
+                border: "1px solid rgba(51, 33, 33, 0.5)",
                 minHeight: "330px",
               }}
             >
