@@ -13,7 +13,6 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   const marqueeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Ensure marquee animation runs smoothly
     const marquee = marqueeRef.current;
     if (marquee) {
       marquee.style.animationPlayState = "running";
@@ -27,55 +26,62 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
     <>
       {/* ===== HERO SECTION ===== */}
       <section
-        className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        className="relative w-full flex flex-col items-center justify-end overflow-hidden"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
+          minHeight: "100vh",
         }}
       >
-        {/* Dark overlay for better text readability */}
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-4 pt-32 md:pt-40 pb-12 w-full max-w-[1140px] mx-auto">
-          {/* Rise Community Badge */}
+        {/* Hero Content - posicionado mais abaixo, como na referência */}
+        <div
+          className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
+          style={{
+            paddingTop: "clamp(200px, 42vh, 480px)",
+            paddingBottom: "60px",
+          }}
+        >
+          {/* Rise Community Badge - bg vermelho 20%, borderRadius 22px, texto rosa */}
           <div
-            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full mb-6"
+            className="inline-flex items-center justify-center mb-4"
             style={{
               backgroundColor: "rgba(255, 57, 57, 0.2)",
+              borderRadius: "22px",
+              padding: "12px 36px",
               minWidth: "208px",
               height: "42px",
             }}
           >
             <span
-              className="text-base font-normal"
               style={{
-                color: "rgb(255, 255, 255)",
+                color: "rgb(255, 160, 160)",
                 fontFamily: "'Articulat CF', sans-serif",
+                fontSize: "18px",
+                fontWeight: 500,
               }}
             >
               Rise Community:
             </span>
           </div>
 
-          {/* Main Title - 56px, max-width 1060px para ficar em 2 linhas */}
+          {/* Main Title - 56px, BRANCO PURO (sem gradient transparente), max-width 1060px */}
           <h1
-            className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-semibold leading-[1.1] mb-5 w-full"
+            className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-semibold mb-4 w-full"
             style={{
               fontFamily: "'Articulat CF', sans-serif",
               maxWidth: "1060px",
+              lineHeight: "1.1",
+              textAlign: "center",
             }}
           >
             <span
-              className="hero-title-gradient"
               style={{
-                background:
-                  "linear-gradient(90deg, rgba(255,255,255,0.4) -8.64%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 73.91%, rgba(255,255,255,0.4) 94.55%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
+                color: "rgb(255, 255, 255)",
               }}
             >
               O lugar certo pra quem quer começar no marketing digital{" "}
@@ -95,11 +101,13 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
           {/* Subtitle - 20px, max-width 726px, cor rgb(220,207,207) */}
           <p
-            className="text-base sm:text-lg md:text-xl leading-[1.3] mb-8"
+            className="text-base sm:text-lg md:text-xl mb-7"
             style={{
               color: "rgb(220, 207, 207)",
               fontFamily: "'Articulat CF', sans-serif",
               maxWidth: "726px",
+              lineHeight: "1.3",
+              textAlign: "center",
             }}
           >
             Uma comunidade completa que te dá direção,{" "}
@@ -109,14 +117,14 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             mesmo que você ainda não tenha resultado nenhum no digital.
           </p>
 
-          {/* CTA + Social Proof Row - flex row, center, gap 20px */}
+          {/* CTA + Social Proof Row */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            {/* CTA Button - verde rgb(97,206,112), padding 26px 70px, border-radius 9000px */}
+            {/* CTA Button - VERMELHO como o usuário pediu */}
             <button
               onClick={onCtaClick}
-              className="group flex items-center gap-3 rounded-full text-white text-lg font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(97,206,112,0.4)]"
+              className="group flex items-center gap-3 text-white font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,0,0,0.4)]"
               style={{
-                backgroundColor: "rgb(97, 206, 112)",
+                backgroundColor: "rgb(255, 0, 0)",
                 fontFamily: "'Articulat CF', sans-serif",
                 padding: "26px 70px",
                 borderRadius: "9000px",
@@ -149,7 +157,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               </svg>
             </button>
 
-            {/* Social Proof - ao lado do CTA */}
+            {/* Social Proof */}
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
                 <img
@@ -174,10 +182,11 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 />
               </div>
               <p
-                className="text-xs max-w-[140px] leading-[1.3]"
+                className="text-xs max-w-[140px]"
                 style={{
                   fontFamily: "'Articulat CF', sans-serif",
                   color: "rgb(215, 215, 215)",
+                  lineHeight: "1.3",
                 }}
               >
                 Milhares de empresários{" "}
@@ -243,80 +252,28 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 minHeight: "330px",
               }}
             >
-              {/* Arrow Icon */}
               <div className="w-10 h-10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                >
-                  <rect
-                    width="39.6667"
-                    height="39.6667"
-                    rx="3"
-                    fill="url(#card1_grad)"
-                  />
-                  <path
-                    d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z"
-                    fill="white"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect width="39.6667" height="39.6667" rx="3" fill="url(#card1_grad)" />
+                  <path d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z" fill="white" />
                   <defs>
-                    <linearGradient
-                      id="card1_grad"
-                      x1="0"
-                      y1="19.8333"
-                      x2="39.6667"
-                      y2="19.8333"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#FF1300" />
-                      <stop offset="1" stopColor="#992016" />
+                    <linearGradient id="card1_grad" x1="0" y1="19.8333" x2="39.6667" y2="19.8333" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#FF1300" /><stop offset="1" stopColor="#992016" />
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
-              {/* Title */}
-              <h3
-                className="text-[22px] font-semibold leading-[1.2] text-white"
-                style={{ fontFamily: "'Articulat CF', sans-serif" }}
-              >
+              <h3 className="text-[22px] font-semibold leading-[1.2] text-white" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
                 Tudo o que você precisa no digital,{" "}
-                <span
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
+                <span style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                   em um só lugar
                 </span>
               </h3>
-              {/* Description */}
-              <p
-                className="text-base leading-[1.3]"
-                style={{
-                  color: "rgb(171, 171, 171)",
-                  fontFamily: "'Articulat CF', sans-serif",
-                }}
-              >
-                Marketing digital sem bagunça: estratégias, oportunidades,
-                ferramentas, networking e caminhos claros para sair do zero.
+              <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
+                Marketing digital sem bagunça: estratégias, oportunidades, ferramentas, networking e caminhos claros para sair do zero.
               </p>
-              {/* Decorative dots */}
-              <img
-                src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg"
-                alt=""
-                className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40"
-              />
-              <img
-                src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg"
-                alt=""
-                className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40"
-              />
+              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg" alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
+              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg" alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
             </div>
 
             {/* Card 2 */}
@@ -328,80 +285,28 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 minHeight: "330px",
               }}
             >
-              {/* Arrow Icon */}
               <div className="w-10 h-10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                >
-                  <rect
-                    width="39.6667"
-                    height="39.6667"
-                    rx="3"
-                    fill="url(#card2_grad)"
-                  />
-                  <path
-                    d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z"
-                    fill="white"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect width="39.6667" height="39.6667" rx="3" fill="url(#card2_grad)" />
+                  <path d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z" fill="white" />
                   <defs>
-                    <linearGradient
-                      id="card2_grad"
-                      x1="0"
-                      y1="19.8333"
-                      x2="39.6667"
-                      y2="19.8333"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#FF1300" />
-                      <stop offset="1" stopColor="#992016" />
+                    <linearGradient id="card2_grad" x1="0" y1="19.8333" x2="39.6667" y2="19.8333" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#FF1300" /><stop offset="1" stopColor="#992016" />
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
-              {/* Title */}
-              <h3
-                className="text-[22px] font-semibold leading-[1.2] text-white"
-                style={{ fontFamily: "'Articulat CF', sans-serif" }}
-              >
+              <h3 className="text-[22px] font-semibold leading-[1.2] text-white" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
                 Pagamento único,{" "}
-                <span
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
+                <span style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                   sem mensalidade
                 </span>
               </h3>
-              {/* Description */}
-              <p
-                className="text-base leading-[1.3]"
-                style={{
-                  color: "rgb(171, 171, 171)",
-                  fontFamily: "'Articulat CF', sans-serif",
-                }}
-              >
-                Você entra uma vez só. Sem planos escondidos, sem renovação
-                automática, sem pegadinha.
+              <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
+                Você entra uma vez só. Sem planos escondidos, sem renovação automática, sem pegadinha.
               </p>
-              {/* Decorative dots */}
-              <img
-                src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg"
-                alt=""
-                className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40"
-              />
-              <img
-                src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg"
-                alt=""
-                className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40"
-              />
+              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg" alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
+              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg" alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
             </div>
 
             {/* Card 3 */}
@@ -413,80 +318,28 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 minHeight: "330px",
               }}
             >
-              {/* Arrow Icon */}
               <div className="w-10 h-10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                >
-                  <rect
-                    width="39.6667"
-                    height="39.6667"
-                    rx="3"
-                    fill="url(#card3_grad)"
-                  />
-                  <path
-                    d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z"
-                    fill="white"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <rect width="39.6667" height="39.6667" rx="3" fill="url(#card3_grad)" />
+                  <path d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z" fill="white" />
                   <defs>
-                    <linearGradient
-                      id="card3_grad"
-                      x1="0"
-                      y1="19.8333"
-                      x2="39.6667"
-                      y2="19.8333"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#FF1300" />
-                      <stop offset="1" stopColor="#992016" />
+                    <linearGradient id="card3_grad" x1="0" y1="19.8333" x2="39.6667" y2="19.8333" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#FF1300" /><stop offset="1" stopColor="#992016" />
                     </linearGradient>
                   </defs>
                 </svg>
               </div>
-              {/* Title */}
-              <h3
-                className="text-[22px] font-semibold leading-[1.2] text-white"
-                style={{ fontFamily: "'Articulat CF', sans-serif" }}
-              >
+              <h3 className="text-[22px] font-semibold leading-[1.2] text-white" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
                 Comunidade ativa{" "}
-                <span
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
+                <span style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                   e networking real
                 </span>
               </h3>
-              {/* Description */}
-              <p
-                className="text-base leading-[1.3]"
-                style={{
-                  color: "rgb(171, 171, 171)",
-                  fontFamily: "'Articulat CF', sans-serif",
-                }}
-              >
-                Aqui você não anda sozinho. Grupos ativos, troca de networking
-                diária e pessoas no mesmo nível que você.
+              <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
+                Aqui você não anda sozinho. Grupos ativos, troca de networking diária e pessoas no mesmo nível que você.
               </p>
-              {/* Decorative dots */}
-              <img
-                src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg"
-                alt=""
-                className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40"
-              />
-              <img
-                src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg"
-                alt=""
-                className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40"
-              />
+              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg" alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
+              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg" alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
             </div>
           </div>
         </div>
