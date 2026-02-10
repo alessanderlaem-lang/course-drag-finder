@@ -13,10 +13,16 @@ const TestimonialsCarousel = () => {
       <div className="text-center mb-6 md:mb-8 px-4">
         <h2 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
           O que nossos{" "}
-          <span className="relative inline-block overflow-hidden">
-            <span className="text-primary">membros</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shimmer_2.5s_ease-in-out_infinite] pointer-events-none" />
-          </span>
+          <span
+            className="inline-block animate-[shimmer_2.5s_ease-in-out_infinite]"
+            style={{
+              background: "linear-gradient(90deg, hsl(0 100% 50%) 0%, hsl(0 100% 50%) 40%, #fff 50%, hsl(0 100% 50%) 60%, hsl(0 100% 50%) 100%)",
+              backgroundSize: "200% 100%",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >membros</span>
           {" "}estão falando
         </h2>
       </div>
