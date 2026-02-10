@@ -14,7 +14,7 @@ const TestimonialsCarousel = () => {
         <h2 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
           O que nossos{" "}
           <span
-            className="inline-block animate-[shimmer_6s_ease-in-out_infinite]"
+            className="inline-block animate-[shimmer_10s_ease-in-out_infinite]"
             style={{
               background: "linear-gradient(90deg, hsl(0 100% 50%) 0%, hsl(0 100% 50%) 40%, #fff 50%, hsl(0 100% 50%) 60%, hsl(0 100% 50%) 100%)",
               backgroundSize: "200% 100%",
