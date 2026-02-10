@@ -8,10 +8,24 @@ interface NavbarProps {
 const Navbar = ({ onLoginClick }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Detectar seção ativa
+      const sections = ['hero', 'comunidade', 'sobre', 'pricing', 'faq'];
+      for (const id of sections.reverse()) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 120) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -21,7 +35,7 @@ const Navbar = ({ onLoginClick }: NavbarProps) => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // Altura da navbar
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({
         top: elementPosition,
@@ -44,11 +58,11 @@ const Navbar = ({ onLoginClick }: NavbarProps) => {
       className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/95 backdrop-blur-md shadow-lg' 
-          : 'bg-black/80 backdrop-blur-sm'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[80px]">
           {/* Logo */}
           <button 
             onClick={() => scrollToSection('hero')}
@@ -57,28 +71,47 @@ const Navbar = ({ onLoginClick }: NavbarProps) => {
             <img 
               src="https://risecommunity.com.br/wp-content/uploads/2026/01/Logo.svg" 
               alt="Rise Community" 
-              className="h-10 w-auto"
+              className="h-[45px] w-auto"
             />
           </button>
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8">
-            {menuItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-white hover:text-primary transition-colors font-medium text-[15px]"
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
+          {/* Desktop Menu - dentro de container arredondado escuro */}
+          <div className="hidden md:flex items-center">
+            <ul 
+              className="flex items-center gap-1.5 px-2 py-2 rounded-full"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.06)',
+              }}
+            >
+              {menuItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className={`px-5 py-2 rounded-full text-[15px] font-medium transition-all duration-200 ${
+                      activeSection === item.id
+                        ? 'bg-white/10 text-white'
+                        : 'text-white/70 hover:text-white hover:bg-white/5'
+                    }`}
+                    style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Login Button - Desktop */}
           <button
             onClick={onLoginClick}
-            className="hidden md:block bg-white text-black px-10 py-4 rounded-full font-medium text-[15px] hover:scale-105 hover:shadow-xl transition-all duration-300"
+            className="hidden md:block bg-white text-black rounded-full font-medium text-[15px] hover:scale-105 hover:shadow-xl transition-all duration-300"
+            style={{
+              padding: '16px 41px',
+              borderRadius: '49px',
+              fontFamily: "'Articulat CF', sans-serif",
+            }}
           >
             Login
           </button>
@@ -103,25 +136,38 @@ const Navbar = ({ onLoginClick }: NavbarProps) => {
             isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="py-4 border-t border-white/10">
-            <ul className="space-y-4">
+          <div 
+            className="py-4 rounded-2xl mb-4 px-4"
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.85)',
+              backdropFilter: 'blur(15px)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+            }}
+          >
+            <ul className="space-y-1">
               {menuItems.map((item) => (
                 <li key={item.id}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="block w-full text-left text-white hover:text-primary transition-colors py-2 px-2 rounded hover:bg-white/5"
+                    className={`block w-full text-left transition-colors py-3 px-4 rounded-xl text-[15px] ${
+                      activeSection === item.id
+                        ? 'text-white bg-white/10'
+                        : 'text-white/70 hover:text-white hover:bg-white/5'
+                    }`}
+                    style={{ fontFamily: "'Articulat CF', sans-serif" }}
                   >
                     {item.label}
                   </button>
                 </li>
               ))}
-              <li className="pt-2">
+              <li className="pt-3">
                 <button
                   onClick={() => {
                     onLoginClick?.();
                     setIsMobileMenuOpen(false);
                   }}
-                  className="w-full bg-white text-black px-6 py-3 rounded-full font-medium hover:scale-105 transition-transform"
+                  className="w-full bg-white text-black px-6 py-3.5 rounded-full font-medium hover:scale-[1.02] transition-transform text-[15px]"
+                  style={{ fontFamily: "'Articulat CF', sans-serif" }}
                 >
                   Login
                 </button>

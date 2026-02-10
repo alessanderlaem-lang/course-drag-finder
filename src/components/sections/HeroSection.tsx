@@ -39,19 +39,20 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-4 pt-32 md:pt-40 pb-12 max-w-[900px] mx-auto">
+        <div className="relative z-10 flex flex-col items-center text-center px-4 pt-32 md:pt-40 pb-12 w-full max-w-[1140px] mx-auto">
           {/* Rise Community Badge */}
           <div
-            className="inline-flex items-center px-6 py-2.5 rounded-full border mb-8"
+            className="inline-flex items-center justify-center px-7 py-2.5 rounded-full mb-6"
             style={{
-              borderColor: "rgba(255, 160, 160, 0.3)",
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
+              backgroundColor: "rgba(255, 57, 57, 0.2)",
+              minWidth: "208px",
+              height: "42px",
             }}
           >
             <span
-              className="text-lg font-medium"
+              className="text-base font-normal"
               style={{
-                color: "rgb(255, 160, 160)",
+                color: "rgb(255, 255, 255)",
                 fontFamily: "'Articulat CF', sans-serif",
               }}
             >
@@ -59,10 +60,13 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             </span>
           </div>
 
-          {/* Main Title */}
+          {/* Main Title - 56px, max-width 1060px para ficar em 2 linhas */}
           <h1
-            className="text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.1] mb-6"
-            style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-semibold leading-[1.1] mb-5 w-full"
+            style={{
+              fontFamily: "'Articulat CF', sans-serif",
+              maxWidth: "1060px",
+            }}
           >
             <span
               className="hero-title-gradient"
@@ -89,30 +93,34 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             </span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - 20px, max-width 726px, cor rgb(220,207,207) */}
           <p
-            className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]"
+            className="text-base sm:text-lg md:text-xl leading-[1.3] mb-8"
             style={{
               color: "rgb(220, 207, 207)",
               fontFamily: "'Articulat CF', sans-serif",
+              maxWidth: "726px",
             }}
           >
             Uma comunidade completa que te dá direção,{" "}
-            <span className="font-semibold text-white">
+            <span style={{ fontWeight: 600, color: "white" }}>
               oportunidades reais e networking,
             </span>{" "}
             mesmo que você ainda não tenha resultado nenhum no digital.
           </p>
 
-          {/* CTA + Social Proof Row */}
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            {/* CTA Button */}
+          {/* CTA + Social Proof Row - flex row, center, gap 20px */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            {/* CTA Button - verde rgb(97,206,112), padding 26px 70px, border-radius 9000px */}
             <button
               onClick={onCtaClick}
-              className="group flex items-center gap-3 px-12 md:px-16 py-5 rounded-full text-white text-lg font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,0,0,0.4)]"
+              className="group flex items-center gap-3 rounded-full text-white text-lg font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(97,206,112,0.4)]"
               style={{
-                backgroundColor: "rgb(255, 0, 0)",
+                backgroundColor: "rgb(97, 206, 112)",
                 fontFamily: "'Articulat CF', sans-serif",
+                padding: "26px 70px",
+                borderRadius: "9000px",
+                fontSize: "18px",
               }}
             >
               Quero entrar na Rise Community
@@ -141,7 +149,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               </svg>
             </button>
 
-            {/* Social Proof */}
+            {/* Social Proof - ao lado do CTA */}
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
                 <img
@@ -166,8 +174,11 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 />
               </div>
               <p
-                className="text-sm text-white/80 max-w-[140px] leading-tight"
-                style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                className="text-xs max-w-[140px] leading-[1.3]"
+                style={{
+                  fontFamily: "'Articulat CF', sans-serif",
+                  color: "rgb(215, 215, 215)",
+                }}
               >
                 Milhares de empresários{" "}
                 <b className="text-white">escalaram sua empresa!</b>
