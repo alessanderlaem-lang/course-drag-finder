@@ -7,6 +7,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import DiscordPreviewSection from "@/components/sections/DiscordPreviewSection";
 import EcosystemSection from "@/components/sections/EcosystemSection";
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
+import discordLaptop from "@/assets/discord-laptop.png";
 
 const Index = () => {
   const scrollToNextSection = () => {
@@ -26,6 +27,11 @@ const Index = () => {
 
       {/* Ecosystem Section - Parte 1: 4 Pilares */}
       <EcosystemSection />
+
+      {/* Imagem Discord Laptop - Mobile */}
+      <div className="block md:hidden w-full px-4 -mt-8 mb-0">
+        <img src={discordLaptop} alt="Discord Rise Community" className="w-full h-auto" />
+      </div>
 
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
       <DiferenciaisCriticosSection />
