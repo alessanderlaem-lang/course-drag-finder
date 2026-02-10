@@ -1,80 +1,478 @@
-import ctaButton from "@/assets/cta-button.png";
+import { useEffect, useRef } from "react";
+import heroBg from "@/assets/hero/Camada-4-11.jpg";
+import avatarCarlos from "@/assets/hero/Carlos.png";
+import avatarMateus from "@/assets/hero/Mateus.png";
+import avatarWaleska from "@/assets/hero/Waleska.png";
+import avatarIsrael from "@/assets/hero/Israel.png";
 
 interface HeroSectionProps {
   onCtaClick: () => void;
 }
 
 const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
-  return (
-    <section className="relative min-h-[100svh] lg:min-h-screen bg-background overflow-visible z-30">
-      {/* Fundo preto para cobrir qualquer gap */}
-      <div className="absolute inset-0 bg-background" />
-      
-      {/* Background com o design completo */}
-      <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-        <div className="relative mx-auto h-[100svh] w-full translate-y-0 min-[900px]:h-full min-[900px]:w-auto min-[900px]:flex min-[900px]:flex-row-reverse min-[900px]:items-start min-[900px]:gap-8">
-          <img
-            src="/images/hero-background.jpg"
-            alt="Rise Community - Maior comunidade de Marketing Digital e Networking do Brasil"
-            className="block w-full h-full max-w-none object-cover object-center -translate-y-28 min-[900px]:translate-y-0 min-[900px]:object-contain min-[900px]:h-[85vh] min-[900px]:w-auto min-[900px]:mt-20 transition-transform"
-            loading="eager"
-            fetchPriority="high"
-          />
+  const marqueeRef = useRef<HTMLDivElement>(null);
 
-          {/* Texto ao lado da imagem - desktop only */}
-          <div className="hidden min-[900px]:flex flex-col pt-[20vh]">
-            <p className="text-primary text-xs min-[1200px]:text-sm font-medium tracking-[0.15em] mb-4">
-              PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
-            </p>
-            <h1 className="text-foreground text-4xl min-[1200px]:text-5xl min-[1440px]:text-6xl font-bold leading-tight">
-              <span className="block">Maior comunidade de</span>
-              <span className="block">Marketing digital e</span>
-              <span className="block">Networking do Brasil</span>
-            </h1>
-            <p className="text-foreground/80 text-base min-[1200px]:text-lg min-[1440px]:text-xl font-light leading-relaxed mt-4">
-              <span className="block">Tenha o mesmo acesso que os grandes players têm,</span>
-              <span className="block">Networking poderoso, recursos exclusivos e uma comunidade</span>
-              <span className="block">ativa com +9,000 membros</span>
-            </p>
-            <img
-              src={ctaButton}
-              alt="Quero saber mais"
-              onClick={onCtaClick}
-              className="-mt-36 w-72 cursor-pointer hover:scale-105 transition-transform"
-            />
+  useEffect(() => {
+    // Ensure marquee animation runs smoothly
+    const marquee = marqueeRef.current;
+    if (marquee) {
+      marquee.style.animationPlayState = "running";
+    }
+  }, []);
+
+  const marqueeText =
+    "Rise Community   •   Networking   •   Ferramentas   •   Comunidade   •   Marketing Digital   •   ";
+
+  return (
+    <>
+      {/* ===== HERO SECTION ===== */}
+      <section
+        className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-center text-center px-4 pt-24 pb-12 max-w-[900px] mx-auto">
+          {/* Rise Community Badge */}
+          <div
+            className="inline-flex items-center px-6 py-2.5 rounded-full border mb-8"
+            style={{
+              borderColor: "rgba(255, 160, 160, 0.3)",
+              backgroundColor: "rgba(0, 0, 0, 0.4)",
+            }}
+          >
+            <span
+              className="text-lg font-medium"
+              style={{
+                color: "rgb(255, 160, 160)",
+                fontFamily: "'Articulat CF', sans-serif",
+              }}
+            >
+              Rise Community:
+            </span>
           </div>
 
-          {/* Backdrop sob a preview do Discord (evita qualquer fundo cinza) */}
-          <div className="lg:hidden absolute inset-x-0 bottom-[-12rem] h-[28rem] bg-background pointer-events-none" />
+          {/* Main Title */}
+          <h1
+            className="text-4xl md:text-5xl lg:text-[56px] font-semibold leading-[1.1] mb-6"
+            style={{ fontFamily: "'Articulat CF', sans-serif" }}
+          >
+            <span
+              className="hero-title-gradient"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(255,255,255,0.4) -8.64%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 73.91%, rgba(255,255,255,0.4) 94.55%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              O lugar certo pra quem quer começar no marketing digital{" "}
+            </span>
+            <span
+              style={{
+                background:
+                  "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              sem ficar perdido
+            </span>
+          </h1>
 
-          {/* Texto abaixo da imagem - mobile only */}
-          <div className="lg:hidden flex flex-col items-center text-center absolute inset-x-0 top-[62%] px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
-            <p className="text-primary text-[10px] font-medium tracking-[0.15em] mb-2 whitespace-nowrap">
-              PAGAMENTO ÚNICO + ATUALIZAÇÕES SEMANAIS
-            </p>
+          {/* Subtitle */}
+          <p
+            className="text-lg md:text-xl leading-relaxed mb-8 max-w-[700px]"
+            style={{
+              color: "rgb(220, 207, 207)",
+              fontFamily: "'Articulat CF', sans-serif",
+            }}
+          >
+            Uma comunidade completa que te dá direção,{" "}
+            <span className="font-semibold text-white">
+              oportunidades reais e networking,
+            </span>{" "}
+            mesmo que você ainda não tenha resultado nenhum no digital.
+          </p>
 
-            <h1 className="text-foreground text-xl font-bold leading-tight mb-3">
-              <span className="block whitespace-nowrap">Maior comunidade de Marketing Digital</span>
-              <span className="block whitespace-nowrap">e Networking do Brasil</span>
-            </h1>
-
-            <p className="text-foreground/80 text-[10px] leading-relaxed whitespace-nowrap">
-              Tenha o mesmo acesso que os grandes players têm, Networking poderoso, recursos
-            </p>
-            <p className="text-foreground/80 text-[10px] leading-relaxed whitespace-nowrap">
-              exclusivos e uma comunidade ativa com +9.000 membros
-            </p>
-
-            <img
-              src={ctaButton}
-              alt="Quero saber mais"
+          {/* CTA + Social Proof Row */}
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            {/* CTA Button */}
+            <button
               onClick={onCtaClick}
-              className="-mt-40 w-64 cursor-pointer hover:scale-105 transition-transform"
-            />
+              className="group flex items-center gap-3 px-12 md:px-16 py-5 rounded-full text-white text-lg font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(97,206,112,0.4)]"
+              style={{
+                backgroundColor: "rgb(97, 206, 112)",
+                fontFamily: "'Articulat CF', sans-serif",
+              }}
+            >
+              Quero entrar na Rise Community
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                className="transition-transform group-hover:translate-x-1"
+              >
+                <path
+                  d="M8.9375 8.9375V6.90625C8.9375 6.36753 9.15151 5.85087 9.53244 5.46994C9.91337 5.08901 10.43 4.875 10.9688 4.875H21.5312C22.07 4.875 22.5866 5.08901 22.9676 5.46994C23.3485 5.85087 23.5625 6.36753 23.5625 6.90625V19.0938C23.5625 19.6325 23.3485 20.1491 22.9676 20.5301C22.5866 20.911 22.07 21.125 21.5312 21.125H10.9688C10.43 21.125 9.91337 20.911 9.53244 20.5301C9.15151 20.1491 8.9375 19.6325 8.9375 19.0938V17.0625"
+                  stroke="white"
+                  strokeWidth="1.625"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M13.8125 17.0625L17.875 13L13.8125 8.9375M2.4375 13H17.0625"
+                  stroke="white"
+                  strokeWidth="1.625"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            {/* Social Proof */}
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                <img
+                  src={avatarCarlos}
+                  alt="Carlos"
+                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                />
+                <img
+                  src={avatarMateus}
+                  alt="Mateus"
+                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                />
+                <img
+                  src={avatarWaleska}
+                  alt="Waleska"
+                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                />
+                <img
+                  src={avatarIsrael}
+                  alt="Israel"
+                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                />
+              </div>
+              <p
+                className="text-sm text-white/80 max-w-[140px] leading-tight"
+                style={{ fontFamily: "'Articulat CF', sans-serif" }}
+              >
+                Milhares de empresários{" "}
+                <b className="text-white">escalaram sua empresa!</b>
+              </p>
+            </div>
           </div>
         </div>
+      </section>
+
+      {/* ===== MARQUEE SCROLL SECTION ===== */}
+      <div
+        className="relative w-full overflow-hidden py-5"
+        style={{ backgroundColor: "rgb(10, 10, 10)" }}
+      >
+        <div
+          ref={marqueeRef}
+          className="marquee-track flex whitespace-nowrap"
+        >
+          <span
+            className="marquee-text text-lg font-medium inline-block"
+            style={{
+              color: "rgb(255, 160, 160)",
+              fontFamily: "'Articulat CF', sans-serif",
+            }}
+          >
+            {marqueeText.repeat(12)}
+          </span>
+          <span
+            className="marquee-text text-lg font-medium inline-block"
+            style={{
+              color: "rgb(255, 160, 160)",
+              fontFamily: "'Articulat CF', sans-serif",
+            }}
+          >
+            {marqueeText.repeat(12)}
+          </span>
+        </div>
       </div>
-    </section>
+
+      {/* ===== 3 CARDS SECTION ===== */}
+      <section
+        className="relative w-full py-16 px-4"
+        style={{ backgroundColor: "rgb(10, 10, 10)" }}
+      >
+        {/* Blur/Glass container */}
+        <div className="max-w-[1140px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div
+              className="relative rounded-[15px] p-[44px] md:p-[50px_44px] flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1"
+              style={{
+                backgroundColor: "rgb(0, 0, 0)",
+                border: "1px solid rgba(51, 33, 33, 1)",
+                minHeight: "330px",
+              }}
+            >
+              {/* Arrow Icon */}
+              <div className="w-10 h-10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <rect
+                    width="39.6667"
+                    height="39.6667"
+                    rx="3"
+                    fill="url(#card1_grad)"
+                  />
+                  <path
+                    d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="card1_grad"
+                      x1="0"
+                      y1="19.8333"
+                      x2="39.6667"
+                      y2="19.8333"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#FF1300" />
+                      <stop offset="1" stopColor="#992016" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              {/* Title */}
+              <h3
+                className="text-[22px] font-semibold leading-[1.2] text-white"
+                style={{ fontFamily: "'Articulat CF', sans-serif" }}
+              >
+                Tudo o que você precisa no digital,{" "}
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  em um só lugar
+                </span>
+              </h3>
+              {/* Description */}
+              <p
+                className="text-base leading-[1.3]"
+                style={{
+                  color: "rgb(171, 171, 171)",
+                  fontFamily: "'Articulat CF', sans-serif",
+                }}
+              >
+                Marketing digital sem bagunça: estratégias, oportunidades,
+                ferramentas, networking e caminhos claros para sair do zero.
+              </p>
+              {/* Decorative dots */}
+              <img
+                src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg"
+                alt=""
+                className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40"
+              />
+              <img
+                src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg"
+                alt=""
+                className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40"
+              />
+            </div>
+
+            {/* Card 2 */}
+            <div
+              className="relative rounded-[15px] p-[44px] md:p-[50px_44px] flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1"
+              style={{
+                backgroundColor: "rgb(0, 0, 0)",
+                border: "1px solid rgba(51, 33, 33, 1)",
+                minHeight: "330px",
+              }}
+            >
+              {/* Arrow Icon */}
+              <div className="w-10 h-10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <rect
+                    width="39.6667"
+                    height="39.6667"
+                    rx="3"
+                    fill="url(#card2_grad)"
+                  />
+                  <path
+                    d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="card2_grad"
+                      x1="0"
+                      y1="19.8333"
+                      x2="39.6667"
+                      y2="19.8333"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#FF1300" />
+                      <stop offset="1" stopColor="#992016" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              {/* Title */}
+              <h3
+                className="text-[22px] font-semibold leading-[1.2] text-white"
+                style={{ fontFamily: "'Articulat CF', sans-serif" }}
+              >
+                Pagamento único,{" "}
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  sem mensalidade
+                </span>
+              </h3>
+              {/* Description */}
+              <p
+                className="text-base leading-[1.3]"
+                style={{
+                  color: "rgb(171, 171, 171)",
+                  fontFamily: "'Articulat CF', sans-serif",
+                }}
+              >
+                Você entra uma vez só. Sem planos escondidos, sem renovação
+                automática, sem pegadinha.
+              </p>
+              {/* Decorative dots */}
+              <img
+                src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg"
+                alt=""
+                className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40"
+              />
+              <img
+                src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg"
+                alt=""
+                className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40"
+              />
+            </div>
+
+            {/* Card 3 */}
+            <div
+              className="relative rounded-[15px] p-[44px] md:p-[50px_44px] flex flex-col gap-5 transition-all duration-300 hover:-translate-y-1"
+              style={{
+                backgroundColor: "rgb(0, 0, 0)",
+                border: "1px solid rgba(51, 33, 33, 1)",
+                minHeight: "330px",
+              }}
+            >
+              {/* Arrow Icon */}
+              <div className="w-10 h-10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  <rect
+                    width="39.6667"
+                    height="39.6667"
+                    rx="3"
+                    fill="url(#card3_grad)"
+                  />
+                  <path
+                    d="M24.3528 16.9074L14.6536 26.6066L13.0602 25.0131L22.7582 15.314H14.2107V13.0602H26.6066V25.456H24.3528V16.9074Z"
+                    fill="white"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="card3_grad"
+                      x1="0"
+                      y1="19.8333"
+                      x2="39.6667"
+                      y2="19.8333"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#FF1300" />
+                      <stop offset="1" stopColor="#992016" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              {/* Title */}
+              <h3
+                className="text-[22px] font-semibold leading-[1.2] text-white"
+                style={{ fontFamily: "'Articulat CF', sans-serif" }}
+              >
+                Comunidade ativa{" "}
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  e networking real
+                </span>
+              </h3>
+              {/* Description */}
+              <p
+                className="text-base leading-[1.3]"
+                style={{
+                  color: "rgb(171, 171, 171)",
+                  fontFamily: "'Articulat CF', sans-serif",
+                }}
+              >
+                Aqui você não anda sozinho. Grupos ativos, troca de networking
+                diária e pessoas no mesmo nível que você.
+              </p>
+              {/* Decorative dots */}
+              <img
+                src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg"
+                alt=""
+                className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40"
+              />
+              <img
+                src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg"
+                alt=""
+                className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
