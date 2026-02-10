@@ -43,7 +43,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
           style={{
             paddingTop: "clamp(200px, 42vh, 480px)",
-            paddingBottom: "60px",
+            paddingBottom: "clamp(120px, 15vh, 200px)",
           }}
         >
           {/* Rise Community Badge - bg vermelho 20%, borderRadius 22px, texto rosa */}
@@ -229,7 +229,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
       {/* ===== 3 CARDS SECTION ===== */}
       <section
-        className="relative w-full px-4 -mt-40 md:-mt-32 z-20"
+        className="relative w-full px-4 mt-0 z-20"
         style={{ backgroundColor: "transparent" }}
       >
         {/* Blur/Glass container */}
