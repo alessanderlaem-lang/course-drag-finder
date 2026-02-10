@@ -8,6 +8,7 @@ import DiscordPreviewSection from "@/components/sections/DiscordPreviewSection";
 import EcosystemSection from "@/components/sections/EcosystemSection";
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
 import discordLaptop from "@/assets/discord-laptop.png";
+import glowRed from "@/assets/glow-red.png";
 
 const Index = () => {
   const scrollToNextSection = () => {
@@ -30,7 +31,8 @@ const Index = () => {
 
       {/* Imagem Discord Laptop - Mobile */}
       <div className="block md:hidden w-full px-4 -mt-8 mb-0 relative z-[100]">
-        <img src={discordLaptop} alt="Discord Rise Community" className="w-full h-auto" />
+        <img src={glowRed} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-auto z-0 pointer-events-none" />
+        <img src={discordLaptop} alt="Discord Rise Community" className="w-full h-auto relative z-10" />
       </div>
 
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
