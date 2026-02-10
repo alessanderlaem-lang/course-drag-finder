@@ -56,7 +56,7 @@ const DiferenciaisCriticosSection = () => {
   ];
 
   return (
-    <section className="w-full py-8 md:py-12 px-4 md:px-6 bg-background relative z-50">
+    <section className="w-full py-8 md:py-12 px-4 md:px-6 bg-background relative z-50 hidden">
       <div className="max-w-5xl mx-auto relative z-50">
         {/* Cards de Diferenciais */}
         <div className="space-y-6 md:space-y-8">
