@@ -3,7 +3,7 @@ import bonusMetodos from "@/assets/bonus-metodos.png";
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
 import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
-import bonusNetworking from "@/assets/bonus-networking.jpg";
+import bonusNetworking from "@/assets/bonus-networking-new.webp";
 
 interface BonusItem {
   number: number;
