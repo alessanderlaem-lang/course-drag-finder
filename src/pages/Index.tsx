@@ -7,7 +7,7 @@ import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import DiscordPreviewSection from "@/components/sections/DiscordPreviewSection";
+
 
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
 import AboutSection from "@/components/sections/AboutSection";
@@ -69,8 +69,6 @@ const Index = () => {
       {/* Sobre nós Section - Placeholder */}
       <div id="sobre" />
 
-      {/* Discord Preview Section */}
-      <DiscordPreviewSection />
 
       {/* Testimonials Carousel */}
       <TestimonialsCarousel />
