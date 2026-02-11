@@ -11,6 +11,7 @@ import DiscordPreviewSection from "@/components/sections/DiscordPreviewSection";
 import EcosystemSection from "@/components/sections/EcosystemSection";
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
 import AboutSection from "@/components/sections/AboutSection";
+import HowAccessWorks from "@/components/HowAccessWorks";
 import discordLaptop from "@/assets/discord-laptop.png";
 import glowRed from "@/assets/glow-red.png";
 import notebookBg from "@/assets/notebook-background.webp";
@@ -76,6 +77,9 @@ const Index = () => {
 
       {/* Discord Preview Section */}
       <DiscordPreviewSection />
+
+      {/* How Access Works Section */}
+      <HowAccessWorks />
 
       {/* Testimonials Carousel */}
       <TestimonialsCarousel />
