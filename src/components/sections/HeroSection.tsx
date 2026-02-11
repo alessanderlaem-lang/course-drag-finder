@@ -42,7 +42,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         <div
           className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
           style={{
-            paddingTop: "clamp(280px, 52vh, 560px)",
+            paddingTop: "clamp(360px, 58vh, 640px)",
             paddingBottom: "140px",
           }}
         >
