@@ -1,27 +1,15 @@
 
 
-## Mover "Como Funciona o Acesso?" para acima dos Bônus
+## Corrigir seção "Como Funciona o Acesso"
 
-Vou reposicionar a seção `<HowAccessWorks />` no arquivo `src/pages/Index.tsx`, movendo-a de depois do `<DiscordPreviewSection />` para antes da seção de bônus (`#bonus-section`).
+Remover a imagem do laptop Discord que foi adicionada por engano e restaurar o placeholder original do banner.
 
-### Detalhes Tecnicos
+### Alteracoes
 
-**Arquivo:** `src/pages/Index.tsx`
+**Arquivo: `src/components/HowAccessWorks.tsx`**
 
-- Remover `<HowAccessWorks />` da posicao atual (apos `DiscordPreviewSection`)
-- Inserir `<HowAccessWorks />` imediatamente antes do `div#bonus-section`
-- Manter todos os espacamentos e margens existentes
+1. Remover os imports de `discordLaptop` e `glowRed`
+2. Substituir o bloco da imagem do laptop pelo placeholder original com borda tracejada e texto "Espaco reservado para banner - Em breve"
 
-A ordem final das secoes ficara:
-1. HeroSection
-2. AboutSection
-3. Discord Laptop (mobile)
-4. DiferenciaisCriticosSection
-5. **HowAccessWorks** (movida para ca)
-6. BonusSection
-7. DiscordPreviewSection
-8. TestimonialsCarousel
-9. GuaranteeSection
-10. PricingSection
-11. Footer
+O resultado final sera a secao voltando ao estado anterior, com o placeholder do banner no lugar correto entre o subtitulo e os passos.
 
