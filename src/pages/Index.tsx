@@ -10,6 +10,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import DiscordPreviewSection from "@/components/sections/DiscordPreviewSection";
 import EcosystemSection from "@/components/sections/EcosystemSection";
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
+import AboutSection from "@/components/sections/AboutSection";
 import discordLaptop from "@/assets/discord-laptop.png";
 import glowRed from "@/assets/glow-red.png";
 
@@ -38,6 +39,9 @@ const Index = () => {
 
       {/* Topics Section anchor */}
       <div id="topics-section" />
+
+      {/* About Section - O Que é a Rise Community? */}
+      <AboutSection />
 
       {/* Ecosystem Section - Parte 1: 4 Pilares */}
       <div id="comunidade">
