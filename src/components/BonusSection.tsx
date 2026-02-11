@@ -58,35 +58,22 @@ const bonusItems: BonusItem[] = [
 {/* Badge verde "NESSA OFERTA: GRÁTIS" — réplica exata do ratoflix */}
 const NessaOfertaGratis = () => (
   <div
-    className="inline-flex items-center gap-2 w-fit mt-5"
+    className="inline-flex items-center gap-1.5 w-fit mt-5"
     style={{
       backgroundColor: "#0F6F1C",
       borderRadius: "10px",
-      padding: "6px 14px 6px 8px",
+      padding: "6px 14px",
     }}
   >
-    {/* Checkmark SVG com fundo verde arredondado */}
+    {/* Check-circle SVG pequeno — 16px, idêntico ao fa-check-circle do ratoflix */}
     <svg
-      className="w-7 h-7 flex-shrink-0"
-      viewBox="0 0 48 48"
-      fill="none"
+      className="flex-shrink-0"
+      style={{ width: "16px", height: "16px" }}
+      viewBox="0 0 512 512"
+      fill="#E2EBFF"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <defs>
-        <linearGradient id="greenBg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#2ecc2e" />
-          <stop offset="100%" stopColor="#1a9e1a" />
-        </linearGradient>
-      </defs>
-      <rect width="48" height="48" rx="10" fill="url(#greenBg)" />
-      <path
-        d="M13 24.5L21 32.5L35 16.5"
-        stroke="white"
-        strokeWidth="5.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        filter="drop-shadow(0 1px 2px rgba(0,0,0,0.15))"
-      />
+      <path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z" />
     </svg>
     <span
       className="text-white font-bold text-[15px] md:text-base tracking-wide"
