@@ -5,10 +5,11 @@ const CHECKOUT_URL = "https://wa.me/?text=ol%C3%A1%2C%20quero%20adquirir%20meu%2
 
 const PricingSection = () => {
   const benefits = [
-    "Conteúdos atualizado semanalmente",
+    "Comunidade fechada e exclusiva no Discord",
+    "Conteúdos atualizado diariamente",
     "Suporte direto para tirar todas as dúvidas",
-    "Afiliação a nossa comunidade",
     "Pagamento único & acesso vitalício",
+    "Rise Offers — ofertas diárias",
     "Fornecedores de rateio",
     "Consulta de dados via Telegram",
     "Grupos de networking ativos",
@@ -22,19 +23,31 @@ const PricingSection = () => {
           <div className="bg-black border border-gray-800 rounded-3xl p-8 md:p-12">
             {/* Logo */}
             <div className="text-center mb-8">
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="font-bold leading-none" style={{ fontFamily: "'League Spartan', sans-serif" }}>
                 <span
                   style={{
+                    fontSize: "62px",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
+                    display: "block",
+                    lineHeight: "1",
                   }}
                 >
                   RISE
                 </span>
-                <br />
-                <span className="text-white">COMMUNITY</span>
+                <span
+                  className="text-white"
+                  style={{
+                    fontSize: "50.2px",
+                    display: "block",
+                    lineHeight: "1",
+                    marginTop: "-8px",
+                  }}
+                >
+                  COMMUNITY
+                </span>
               </h2>
             </div>
 
