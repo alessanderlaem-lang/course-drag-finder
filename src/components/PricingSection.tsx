@@ -21,7 +21,7 @@ const PricingSection = () => {
             href={CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute bottom-[15%] left-1/2 -translate-x-1/2 z-10 bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap"
+            className="absolute bottom-[8%] left-1/2 -translate-x-1/2 z-10 bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap"
           >
             GARANTIR MINHA VAGA
           </a>
@@ -42,7 +42,7 @@ const PricingSection = () => {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute bottom-[15%] left-1/2 -translate-x-1/2 z-10 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap"
+              className="absolute bottom-[8%] left-1/2 -translate-x-1/2 z-10 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg hover:scale-105 transition-all duration-300 whitespace-nowrap"
             >
               GARANTIR MINHA VAGA
             </a>
