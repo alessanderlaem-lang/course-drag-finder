@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -12,6 +13,11 @@ import discordLaptop from "@/assets/discord-laptop.png";
 import glowRed from "@/assets/glow-red.png";
 
 const Index = () => {
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  }, []);
+
   const scrollToNextSection = () => {
     const topicsSection = document.querySelector('#topics-section');
     if (topicsSection) {
