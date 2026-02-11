@@ -60,7 +60,16 @@ const AboutSection = () => {
           {/* Título Principal */}
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
             <span className="text-white">O Que é a </span>
-            <span className="text-red-500">Rise Community</span>
+            <span
+              style={{
+                background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Rise Community
+            </span>
             <span className="text-white">?</span>
           </h3>
 
