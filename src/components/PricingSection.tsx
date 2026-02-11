@@ -17,10 +17,10 @@ const PricingSection = () => {
 
   return (
     <Section id="pricing" spacing="lg">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-1 md:px-4">
         <div className="max-w-2xl mx-auto">
           {/* Card de Preço */}
-          <div className="bg-black border border-gray-800 rounded-3xl p-8 md:p-12">
+          <div className="bg-black border border-gray-800 rounded-3xl p-4 px-3 md:p-12">
             {/* Logo */}
             <div className="text-center mb-8">
               <h2 className="font-bold leading-none" style={{ fontFamily: "'League Spartan', sans-serif" }}>
