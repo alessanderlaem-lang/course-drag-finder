@@ -9,7 +9,7 @@ const feedbacks = [feedback1, feedback2, feedback3, feedback4, feedback5, feedba
 
 const TestimonialsCarousel = () => {
   return (
-    <section className="w-full -mt-16 md:-mt-8 pb-6 md:pb-8 bg-background relative z-30">
+    <section className="w-full mt-8 md:-mt-8 pb-6 md:pb-8 bg-background relative z-30">
       <div className="text-center mb-6 md:mb-8 px-4">
         <h2 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto uppercase" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
           O que nossos{" "}
