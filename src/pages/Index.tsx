@@ -46,7 +46,7 @@ const Index = () => {
       <AboutSection />
 
       {/* Ecosystem Section - Parte 1: 4 Pilares */}
-      <div id="comunidade">
+      <div id="comunidade" className="hidden md:block">
         <EcosystemSection />
       </div>
 
@@ -62,7 +62,7 @@ const Index = () => {
       <DiferenciaisCriticosSection />
 
       {/* Imagem Ecossistema - Desktop only */}
-      <div className="hidden lg:flex justify-center w-full -mt-56 relative z-30">
+      <div className="hidden md:flex justify-center w-full -mt-56 relative z-30">
         <img src={notebookBg} alt="" className="absolute top-1/2 left-1/2 -translate-x-[48.5%] -translate-y-[40%] w-[1400px] max-w-none h-auto z-0 pointer-events-none" />
         <img src={ecosystemDesktop} alt="Ecossistema Rise Community" className="max-w-4xl w-full h-auto relative z-10" />
       </div>
