@@ -10,9 +10,17 @@ import bonusNetworking from "@/assets/bonus-networking.jpg";
 const NessaOfertaGratis = () => (
   <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-[2px] mt-[1.2rem] md:-mt-2 w-fit"
     style={{ background: 'linear-gradient(135deg, #00d103 0%, #009220 100%)' }}>
-    <svg className="w-[18px] h-[18px] md:w-5 md:h-5" viewBox="0 0 24 24" fill="none">
-      <rect width="24" height="24" rx="3" fill="white" />
-      <path d="M6 12.5L10 16.5L18 8" stroke="#009220" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+    <svg className="w-[22px] h-[22px] md:w-6 md:h-6" viewBox="0 0 48 48" fill="none">
+      <defs>
+        <linearGradient id="greenBg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#5aea5a" />
+          <stop offset="100%" stopColor="#2ecc2e" />
+        </linearGradient>
+      </defs>
+      <rect width="48" height="48" rx="10" fill="url(#greenBg)" />
+      <rect y="2" width="48" height="46" rx="10" fill="url(#greenBg)" />
+      <rect width="48" height="46" rx="10" fill="url(#greenBg)" />
+      <path d="M13 24.5L21 32.5L35 16.5" stroke="white" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.15))" />
     </svg>
     <span className="text-white font-bold text-sm md:text-base tracking-wide">NESSA OFERTA: <span className="font-extrabold">GRÁTIS</span></span>
   </div>
