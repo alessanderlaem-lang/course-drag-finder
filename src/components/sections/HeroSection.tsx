@@ -237,7 +237,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
       {/* ===== 3 CARDS SECTION ===== */}
       <section
-        className="relative w-full px-4 mt-0 md:-mt-32 z-20"
+        className="relative w-full px-2 md:px-4 mt-0 md:-mt-32 z-20"
         style={{ backgroundColor: "transparent" }}
       >
         {/* Blur/Glass container */}
