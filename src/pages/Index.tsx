@@ -67,7 +67,7 @@ const Index = () => {
       </div>
 
       {/* Bonus Section */}
-      <div id="bonus-section" className="-mt-32 lg:mt-0">
+      <div id="bonus-section" className="-mt-44 lg:mt-0">
         <BonusSection />
       </div>
 
