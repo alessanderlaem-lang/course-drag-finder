@@ -1,6 +1,8 @@
 import iconEmail from "@/assets/icon-email.png";
 import iconLogin from "@/assets/icon-login.png";
 import iconStart from "@/assets/icon-start.png";
+import discordLaptop from "@/assets/discord-laptop.png";
+import glowRed from "@/assets/glow-red.png";
 
 const HowAccessWorks = () => {
   const steps = [
@@ -51,9 +53,10 @@ const HowAccessWorks = () => {
           </p>
         </div>
 
-        {/* Banner Placeholder - substituir por banner real em breve */}
-        <div className="max-w-5xl mx-auto mb-12 rounded-2xl border-2 border-dashed border-gray-700 bg-gray-900/50 flex items-center justify-center py-16 px-6">
-          <p className="text-gray-500 text-lg font-medium tracking-wide uppercase">🎯 Espaço reservado para banner — Em breve</p>
+        {/* Discord Laptop Image */}
+        <div className="max-w-5xl mx-auto mb-12 relative overflow-visible flex justify-center">
+          <img src={glowRed} alt="" className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto z-0 pointer-events-none scale-[2]" />
+          <img src={discordLaptop} alt="Discord Rise Community" className="w-[80%] md:w-[52rem] max-w-none h-auto relative z-10" />
         </div>
 
         {/* Steps */}
