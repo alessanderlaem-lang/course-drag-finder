@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import ecosystemDesktop from "@/assets/ecosystem-desktop.webp";
+
 import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -8,13 +8,13 @@ import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import DiscordPreviewSection from "@/components/sections/DiscordPreviewSection";
-import EcosystemSection from "@/components/sections/EcosystemSection";
+
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
 import AboutSection from "@/components/sections/AboutSection";
 import HowAccessWorks from "@/components/HowAccessWorks";
 import discordLaptop from "@/assets/discord-laptop.png";
 import glowRed from "@/assets/glow-red.png";
-import notebookBg from "@/assets/notebook-background.webp";
+
 
 const Index = () => {
   useEffect(() => {
@@ -45,11 +45,7 @@ const Index = () => {
       {/* About Section - O Que é a Rise Community? */}
       <AboutSection />
 
-      {/* Ecosystem Section - Parte 1: 4 Pilares */}
-      <div id="comunidade" className="hidden md:block">
-        <EcosystemSection />
-      </div>
-
+      <div id="comunidade" />
       {/* Imagem Discord Laptop - Mobile */}
       <div className="block md:hidden w-full -mt-36 mb-0 relative z-[100] overflow-visible">
         <img src={glowRed} alt="" className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto z-0 pointer-events-none scale-[2]" />
@@ -61,11 +57,6 @@ const Index = () => {
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
       <DiferenciaisCriticosSection />
 
-      {/* Imagem Ecossistema - Desktop only */}
-      <div className="hidden md:flex justify-center w-full -mt-56 relative z-30">
-        <img src={notebookBg} alt="" className="absolute top-1/2 left-1/2 -translate-x-[48.5%] -translate-y-[40%] w-[1400px] max-w-none h-auto z-0 pointer-events-none" />
-        <img src={ecosystemDesktop} alt="Ecossistema Rise Community" className="max-w-4xl w-full h-auto relative z-10" />
-      </div>
 
       {/* Bonus Section */}
       <div id="bonus-section" className="-mt-32 lg:-mt-20">
