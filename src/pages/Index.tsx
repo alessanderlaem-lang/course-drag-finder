@@ -56,7 +56,7 @@ const Index = () => {
       <DiferenciaisCriticosSection />
 
       {/* Imagem Ecossistema - Desktop only */}
-      <div className="hidden lg:flex justify-center w-full -mt-56">
+      <div className="hidden lg:flex justify-center w-full -mt-56 relative z-30">
         <img src={ecosystemDesktop} alt="Ecossistema Rise Community" className="max-w-4xl w-full h-auto" />
       </div>
 
