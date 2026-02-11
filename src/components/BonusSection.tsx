@@ -13,8 +13,8 @@ const NessaOfertaGratis = () => (
     <svg className="w-[22px] h-[22px] md:w-6 md:h-6" viewBox="0 0 48 48" fill="none">
       <defs>
         <linearGradient id="greenBg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#5aea5a" />
-          <stop offset="100%" stopColor="#2ecc2e" />
+          <stop offset="0%" stopColor="#2ecc2e" />
+          <stop offset="100%" stopColor="#1a9e1a" />
         </linearGradient>
       </defs>
       <rect width="48" height="48" rx="10" fill="url(#greenBg)" />
