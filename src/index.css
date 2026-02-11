@@ -130,6 +130,30 @@ All colors MUST be HSL.
     display: none;
   }
   
+  /* Custom red scrollbar - like risecommunity.com.br */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+  }
+  
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ff0000 #1a1a1a;
+  }
+  
   /* Smooth scrolling */
   .overflow-x-auto {
     scroll-behavior: smooth;
