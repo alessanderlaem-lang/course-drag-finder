@@ -20,7 +20,7 @@ const TestimonialsCarousel = () => {
     },
     [
       Autoplay({
-        delay: 1,
+        delay: 3000,
         stopOnInteraction: false,
         stopOnMouseEnter: false,
       }),
