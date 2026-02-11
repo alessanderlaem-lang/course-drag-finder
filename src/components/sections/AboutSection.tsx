@@ -57,30 +57,6 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         {/* Cabeçalho */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
-            A Rise nasce pra resolver exatamente isso:
-          </h2>
-          
-          {/* Badge Rise Community */}
-          <div className="inline-block mb-8">
-            <div
-              className="px-7 py-2.5"
-              style={{
-                backgroundColor: "rgba(255, 57, 57, 0.2)",
-                borderRadius: "22px",
-              }}
-            >
-              <p
-                className="text-lg font-normal"
-                style={{
-                  color: "rgb(255, 160, 160)",
-                }}
-              >
-                Rise Community
-              </p>
-            </div>
-          </div>
-
           {/* Título Principal */}
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
             <span className="text-white">O Que é a </span>
