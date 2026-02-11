@@ -40,7 +40,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           @media (max-width: 768px) {
             section:has(.hero-content-mobile) {
               background-size: 140% !important;
-              background-position: center 20% !important;
+              background-position: center 12% !important;
             }
           }
         `}</style>
