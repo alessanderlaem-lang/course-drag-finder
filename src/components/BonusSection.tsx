@@ -25,9 +25,9 @@ const bonusItems: BonusItem[] = [
   {
     number: 2,
     image: bonusOfertas,
-    title: "RiseOffers - Ofertas Escaladas",
+    title: "Atualizações Semanalmente",
     description:
-      "Ofertas diárias e organizadas para aplicar e escalar. Tudo organizado em um só lugar.",
+      "Receba atualizações semanais com novos conteúdos, estratégias e materiais para se manter sempre à frente.",
     originalPrice: "R$ 67,00",
   },
   {
