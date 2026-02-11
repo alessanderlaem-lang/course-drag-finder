@@ -10,7 +10,10 @@ import bonusNetworking from "@/assets/bonus-networking.jpg";
 const NessaOfertaGratis = () => (
   <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-[2px] mt-[1.2rem] md:-mt-2 w-fit"
     style={{ background: 'linear-gradient(135deg, #00d103 0%, #009220 100%)' }}>
-    <Check className="w-[18px] h-[18px] md:w-5 md:h-5 text-white" strokeWidth={3} />
+    <svg className="w-[18px] h-[18px] md:w-5 md:h-5" viewBox="0 0 24 24" fill="none">
+      <rect width="24" height="24" rx="3" fill="white" />
+      <path d="M6 12.5L10 16.5L18 8" stroke="#009220" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
     <span className="text-white font-bold text-sm md:text-base tracking-wide">NESSA OFERTA: <span className="font-extrabold">GRÁTIS</span></span>
   </div>
 );
