@@ -1,21 +1,54 @@
-import { Mail, BookOpen, Play } from "lucide-react";
+// Icons customizados no formato quadrado com borda vermelha
+const EmailIcon = () => (
+  <svg
+    className="w-8 h-8"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <rect x="2" y="4" width="20" height="16" rx="2" className="stroke-red-600" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" className="stroke-red-600" />
+  </svg>
+);
+
+const KeyIcon = () => (
+  <svg
+    className="w-8 h-8"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <circle cx="7.5" cy="15.5" r="5.5" className="stroke-red-600" />
+    <path d="M13 17.9V16a1 1 0 0 1 1-1h6" className="stroke-red-600" />
+  </svg>
+);
+
+const PlayIcon = () => (
+  <svg
+    className="w-8 h-8"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <polygon points="5 3 19 12 5 21 5 3" className="stroke-red-600 fill-red-600" />
+  </svg>
+);
 
 interface StepProps {
-  number: string;
   title: string;
   description: string;
   icon: React.ReactNode;
 }
 
-const StepCard = ({ number, title, description, icon }: StepProps) => {
+const StepCard = ({ title, description, icon }: StepProps) => {
   return (
     <div className="flex flex-col gap-4">
-      {/* Number and Icon */}
-      <div className="flex items-center gap-4">
-        <div className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
-          <span className="text-white font-bold text-lg">{number}</span>
-        </div>
-        <div className="text-red-600">{icon}</div>
+      {/* Icon in bordered square */}
+      <div className="w-16 h-16 rounded-lg border-2 border-red-600 flex items-center justify-center flex-shrink-0">
+        {icon}
       </div>
 
       {/* Content */}
@@ -30,25 +63,22 @@ const StepCard = ({ number, title, description, icon }: StepProps) => {
 const HowAccessWorks = () => {
   const steps = [
     {
-      number: "01",
       title: "Receba seu acesso",
       description:
         "Após a confirmação da compra, você receberá imediatamente um e-mail com o link de acesso à sua área de membros.",
-      icon: <Mail className="w-6 h-6" />,
+      icon: <EmailIcon />,
     },
     {
-      number: "02",
       title: "Acesse a área de membros",
       description:
         "Faça login na plataforma exclusiva. Você encontrará todos os tutoriais, recursos e links para acessar a comunidade do Discord.",
-      icon: <BookOpen className="w-6 h-6" />,
+      icon: <KeyIcon />,
     },
     {
-      number: "03",
       title: "Pronto, agora é só começar",
       description:
         "Explore tudo que a Rise Community oferece. Acesse os conteúdos, participe da comunidade e comece a aplicar.",
-      icon: <Play className="w-6 h-6" />,
+      icon: <PlayIcon />,
     },
   ];
 
@@ -71,7 +101,6 @@ const HowAccessWorks = () => {
           {steps.map((step, index) => (
             <StepCard
               key={index}
-              number={step.number}
               title={step.title}
               description={step.description}
               icon={step.icon}
