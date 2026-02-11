@@ -8,7 +8,7 @@ import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
 import bonusNetworking from "@/assets/bonus-networking.jpg";
 
 const NessaOfertaGratis = () => (
-  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-5 md:py-2.5 rounded-sm mt-[1.65rem] md:-mt-2 w-fit"
+  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 md:px-5 md:py-2.5 rounded-[2px] mt-[1.65rem] md:-mt-2 w-fit"
     style={{ background: 'linear-gradient(135deg, #22c55e 0%, #15803d 100%)' }}>
     <Check className="w-4 h-4 md:w-5 md:h-5 text-white" strokeWidth={3} />
     <span className="text-white font-bold text-xs md:text-base tracking-wide">NESSA OFERTA: <span className="font-extrabold">GRÁTIS</span></span>
