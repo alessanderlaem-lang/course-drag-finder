@@ -13,6 +13,7 @@ import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriti
 import AboutSection from "@/components/sections/AboutSection";
 import discordLaptop from "@/assets/discord-laptop.png";
 import glowRed from "@/assets/glow-red.png";
+import notebookBg from "@/assets/notebook-background.webp";
 
 const Index = () => {
   useEffect(() => {
@@ -61,7 +62,8 @@ const Index = () => {
 
       {/* Imagem Ecossistema - Desktop only */}
       <div className="hidden lg:flex justify-center w-full -mt-56 relative z-30">
-        <img src={ecosystemDesktop} alt="Ecossistema Rise Community" className="max-w-4xl w-full h-auto" />
+        <img src={notebookBg} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] max-w-none h-auto z-0 pointer-events-none" />
+        <img src={ecosystemDesktop} alt="Ecossistema Rise Community" className="max-w-4xl w-full h-auto relative z-10" />
       </div>
 
       {/* Bonus Section */}
