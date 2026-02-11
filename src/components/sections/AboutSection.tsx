@@ -1,62 +1,133 @@
-import { Briefcase, Target, TrendingUp, Users } from 'lucide-react';
+import icon001 from "@/assets/icon-001.png";
+import icon002 from "@/assets/icon-002.png";
+import icon003 from "@/assets/icon-003.png";
+import icon004 from "@/assets/icon-004.png";
 
 const AboutSection = () => {
-  const features = [
+  const cards = [
     {
-      icon: <Target className="w-8 h-8 text-red-500" />,
-      title: "Para quem quer começar do jeito certo",
-      description: "Se você ainda não sabe por onde entrar no marketing digital, aqui você encontra direção, clareza e um caminho organizado desde o início.",
+      icon: icon001,
+      title: (
+        <>
+          <span className="text-white">Para quem </span>
+          <span className="text-white">quer começar</span>
+          <span className="text-white"> do jeito certo</span>
+        </>
+      ),
+      description:
+        "Se você ainda não sabe por onde entrar no marketing digital, aqui você encontra direção, clareza e um caminho organizado desde o início.",
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-red-500" />,
-      title: "Para quem já começou, mas não teve resultados",
-      description: "Ideal pra quem já tentou, estudou, aplicou um pouco… mas ainda não conseguiu ganhar dinheiro de verdade.",
+      icon: icon002,
+      title: (
+        <>
+          <span className="text-white">Para quem já começou, </span>
+          <span className="text-white">mas não teve resultados</span>
+        </>
+      ),
+      description:
+        "Ideal pra quem já tentou, estudou, aplicou um pouco… mas ainda não conseguiu ganhar dinheiro de verdade.",
     },
     {
-      icon: <Briefcase className="w-8 h-8 text-red-500" />,
-      title: "Para quem busca oportunidades reais",
-      description: "Acesso a produtos, ferramentas e modelos que podem ser usados e revendidos, sem promessas irreais ou atalhos suspeitos.",
+      icon: icon003,
+      title: (
+        <>
+          <span className="text-white">Para quem busca </span>
+          <span className="text-white">oportunidades reais</span>
+        </>
+      ),
+      description:
+        "Acesso a produtos, ferramentas e modelos que podem ser usados e revendidos, sem promessas irreais ou atalhos suspeitos.",
     },
     {
-      icon: <Users className="w-8 h-8 text-red-500" />,
-      title: "Para quem quer aprender, aplicar e vender",
-      description: "Nada de só teoria. Aqui você aprende, coloca em prática e entende como transformar conhecimento em oportunidade.",
+      icon: icon004,
+      title: (
+        <>
+          <span className="text-white">Para quem quer aprender, </span>
+          <span className="text-white">aplicar e vender</span>
+        </>
+      ),
+      description:
+        "Nada de só teoria. Aqui você aprende, coloca em prática e entende como transformar conhecimento em oportunidade.",
     },
   ];
 
   return (
-    <section id="about" className="py-20 sm:py-32">
+    <section className="py-20 sm:py-32 bg-black">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        {/* Cabeçalho */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
             A Rise nasce pra resolver exatamente isso:
           </h2>
-          <div className="mt-6">
-            <div className="inline-flex items-center justify-center mb-4" style={{ backgroundColor: "rgba(255, 57, 57, 0.2)", borderRadius: "22px", padding: "10px 28px" }}>
-              <span className="text-sm font-medium" style={{ color: "rgb(255, 160, 160)" }}>
+          
+          {/* Badge Rise Community */}
+          <div className="inline-block mb-8">
+            <div
+              className="px-7 py-2.5"
+              style={{
+                backgroundColor: "rgba(255, 57, 57, 0.2)",
+                borderRadius: "22px",
+              }}
+            >
+              <p
+                className="text-lg font-normal"
+                style={{
+                  color: "rgb(255, 160, 160)",
+                }}
+              >
                 Rise Community
-              </span>
+              </p>
             </div>
           </div>
-          <h3 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            O Que é a <span className="text-red-500">Rise Community</span>?
+
+          {/* Título Principal */}
+          <h3 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
+            <span className="text-white">O Que é a </span>
+            <span className="text-red-500">Rise Community</span>
+            <span className="text-white">?</span>
           </h3>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            A Rise Community é uma comunidade completa de marketing digital e networking, criada para pessoas que
+
+          {/* Subtítulo */}
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            A Rise Community é uma{" "}
+            <strong>comunidade completa de marketing digital e networking</strong>
+            , criada para pessoas que
           </p>
         </div>
-        <div className="mt-20">
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature) => (
-              <div key={feature.title} className="text-center">
-                <div className="flex items-center justify-center w-16 h-16 mx-auto bg-gray-800 rounded-lg">
-                  {feature.icon}
+
+        {/* Cards */}
+        <div className="max-w-5xl mx-auto space-y-8">
+          {cards.map((card, index) => (
+            <div key={index}>
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                {/* Ícone */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={card.icon}
+                    alt=""
+                    className="w-24 h-24 md:w-28 md:h-28"
+                    loading="lazy"
+                  />
                 </div>
-                <h4 className="mt-6 text-lg font-medium leading-6 text-white">{feature.title}</h4>
-                <p className="mt-2 text-base leading-6 text-gray-400">{feature.description}</p>
+
+                {/* Conteúdo */}
+                <div className="flex-1">
+                  <h4 className="text-2xl md:text-3xl font-medium mb-3">
+                    {card.title}
+                  </h4>
+                  <p className="text-base md:text-lg text-gray-400">
+                    {card.description}
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
+
+              {/* Divider - não mostrar após o último card */}
+              {index < cards.length - 1 && (
+                <div className="mt-8 border-t border-gray-800"></div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
