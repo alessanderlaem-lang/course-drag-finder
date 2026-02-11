@@ -1,206 +1,174 @@
-import { Users, Bot, Search as SearchIcon, Package, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { motion } from "framer-motion";
-import { Badge } from "@/components/ui/badge";
 import bonusMetodos from "@/assets/bonus-metodos.png";
-import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
+import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
 import bonusNetworking from "@/assets/bonus-networking.jpg";
 
-const NessaOfertaGratis = () => (
-  <div className="inline-flex items-center gap-2 px-3 py-2 md:px-5 md:py-2.5 rounded-[4px] mt-[1.2rem] md:-mt-2 w-fit justify-start"
-    style={{ background: 'linear-gradient(135deg, #00d103 0%, #009220 100%)' }}>
-    <svg className="w-[24px] h-[24px] md:w-7 md:h-7" viewBox="0 0 48 48" fill="none">
-      <defs>
-        <linearGradient id="greenBg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#2ecc2e" />
-          <stop offset="100%" stopColor="#1a9e1a" />
-        </linearGradient>
-      </defs>
-      <rect width="48" height="48" rx="10" fill="url(#greenBg)" />
-      <rect y="2" width="48" height="46" rx="10" fill="url(#greenBg)" />
-      <rect width="48" height="46" rx="10" fill="url(#greenBg)" />
-      <path d="M13 24.5L21 32.5L35 16.5" stroke="white" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.15))" />
-    </svg>
-    <span className="text-white font-bold text-sm md:text-base tracking-wide">NESSA OFERTA: <span className="font-extrabold">GRÁTIS</span></span>
-  </div>
-);
+interface BonusItem {
+  number: number;
+  image: string;
+  title: string;
+  description: string;
+  originalPrice: string;
+}
+
+const bonusItems: BonusItem[] = [
+  {
+    number: 1,
+    image: bonusMetodos,
+    title: "Afiliação a Comunidade",
+    description:
+      "Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.",
+    originalPrice: "R$ 497,00",
+  },
+  {
+    number: 2,
+    image: bonusOfertas,
+    title: "RiseOffers - Ofertas Escaladas",
+    description:
+      "Ofertas diárias e organizadas para aplicar e escalar. Tudo organizado em um só lugar.",
+    originalPrice: "R$ 67,00",
+  },
+  {
+    number: 3,
+    image: bonus2,
+    title: "Consulta de dados via Telegram",
+    description: "Puxada de dados exclusiva, própria da comunidade",
+    originalPrice: "R$ 97,00",
+  },
+  {
+    number: 4,
+    image: bonusFornecedores,
+    title: "Fornecedores de Rateio",
+    description:
+      "Acesso direto a fornecedores de cursos, ferramentas e materiais do digital",
+    originalPrice: "R$ 197,00",
+  },
+  {
+    number: 5,
+    image: bonusNetworking,
+    title: "Grupos de Networking no WhatsApp",
+    description:
+      "Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...",
+    originalPrice: "R$ 97,00",
+  },
+];
+
+const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+      className="w-full max-w-[1060px] mx-auto"
+    >
+      <div className="group relative rounded-2xl overflow-hidden border border-[#1f1f1f] bg-[#0d0d0d] hover:border-red-500/25 transition-all duration-500">
+        {/* Subtle glow on hover */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500/0 via-red-500/0 to-red-500/0 group-hover:from-red-500/[0.02] group-hover:via-transparent group-hover:to-red-500/[0.02] transition-all duration-500 pointer-events-none" />
+
+        {/* Card content - horizontal layout */}
+        <div className="relative flex flex-col md:flex-row items-center">
+          {/* Image container */}
+          <div className="relative w-full md:w-[380px] lg:w-[420px] flex-shrink-0 flex items-center justify-center p-6 md:p-8">
+            {/* Subtle background for image area */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#111111] to-[#0a0a0a]" />
+            <img
+              src={bonus.image}
+              alt={bonus.title}
+              className="relative z-10 w-[240px] md:w-[280px] lg:w-[320px] h-auto object-contain drop-shadow-2xl"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col justify-center px-6 pb-6 md:px-10 md:py-10 lg:px-12 lg:py-12 w-full">
+            {/* Bonus badge */}
+            <span
+              className="text-[#FF0000] font-medium text-sm md:text-[15px] tracking-[0.25em] uppercase mb-3"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              #BÔNUS {bonus.number}
+            </span>
+
+            {/* Title */}
+            <h3
+              className="text-white font-bold text-2xl md:text-3xl lg:text-[2.5rem] leading-[1.15] mb-4"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              {bonus.title}
+            </h3>
+
+            {/* Description */}
+            <p
+              className="text-[#999999] text-sm md:text-base leading-relaxed mb-6 max-w-[480px]"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              {bonus.description}
+            </p>
+
+            {/* Price */}
+            <p
+              className="text-white/90 text-xl md:text-2xl font-light mb-4"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              De{" "}
+              <span className="line-through text-white/60">
+                {bonus.originalPrice}
+              </span>
+            </p>
+
+            {/* Free badge - styled like the reference */}
+            <div className="inline-flex items-center gap-2.5 bg-[#16a34a] rounded-lg px-5 py-2.5 w-fit shadow-lg shadow-green-500/20">
+              <Check className="w-5 h-5 text-white" strokeWidth={3} />
+              <span
+                className="text-white font-bold text-sm md:text-[15px] tracking-wide uppercase"
+                style={{ fontFamily: "'Articulat CF', sans-serif" }}
+              >
+                Nessa oferta: Grátis
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const BonusSection = () => {
-  const bonuses = [
-    {
-      icon: Package,
-      title: "Fornecedores de Rateio",
-      subtitle: "Acesso Exclusivo",
-      description: "A lista secreta de fornecedores que os gurus usam. Economize até 90% em ferramentas e serviços essenciais.",
-      originalPrice: "R$ 67,00",
-      color: "text-blue-400",
-      bg: "bg-blue-500/10",
-      border: "border-blue-500/20"
-    }
-  ];
-
   return (
-    <section className="w-full pt-[8rem] md:pt-8 pb-6 md:pb-8 px-4 md:px-6 bg-background relative z-50">
+    <section className="w-full pt-[8rem] md:pt-8 pb-10 md:pb-16 px-4 md:px-6 bg-background relative z-50">
       <div className="max-w-7xl mx-auto relative z-50">
-        {/* Título */}
-        <div className="text-center mb-10 md:mb-8 space-y-2 relative z-50">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
-            Bônus exclusivos da <span className="text-primary">Rise Community</span>
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12 md:mb-14"
+        >
+          <h2
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground"
+            style={{ fontFamily: "'Articulat CF', sans-serif" }}
+          >
+            Bônus exclusivos da{" "}
+            <span className="text-primary">Rise Community</span>
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Só esses diferenciais já valeriam o investimento, mas você leva tudo incluso no acesso vitalício.
+          <p
+            className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto mt-3"
+            style={{ fontFamily: "'Articulat CF', sans-serif" }}
+          >
+            Só esses diferenciais já valeriam o investimento, mas você leva tudo
+            incluso no acesso vitalício.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Card Bônus 1 */}
-        <div className="flex mb-8 justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ y: -5 }}
-            className="w-full max-w-5xl"
-          >
-            <div 
-              className="group relative h-full flex flex-col md:flex-row items-center md:items-center justify-start bg-background border border-white/30 p-4 pb-10 -mb-6 md:mb-0 md:pb-6 md:p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-2 md:gap-8"
-            >
-              <img 
-                src={bonusMetodos} 
-                alt="Bônus Métodos" 
-                className="w-[280px] md:w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
-              />
-              <div className="flex flex-col text-left w-full md:ml-64 md:-translate-x-16">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em] translate-y-3 md:translate-y-0">#BÔNUS 1</span>
-                <p className="text-foreground font-bold text-3xl md:text-5xl mt-2 translate-y-3 md:translate-y-0">Afiliação a</p>
-                <p className="text-foreground font-bold text-3xl md:text-5xl translate-y-3 md:translate-y-0">Comunidade</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 497,00</span></p>
-                <NessaOfertaGratis />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Card Bônus 2 */}
-        <div className="flex mb-8 justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ y: -5 }}
-            className="w-full max-w-5xl"
-          >
-            <div 
-              className="group relative h-full flex flex-col md:flex-row items-center md:items-center justify-start bg-background border border-white/30 p-4 pb-10 -mb-6 md:mb-0 md:pb-6 md:p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-2 md:gap-8"
-            >
-              <img 
-                src={bonusOfertas} 
-                alt="Bônus Ofertas" 
-                className="w-[280px] md:w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-125 origin-center"
-              />
-              <div className="flex flex-col text-left w-full md:ml-64 md:-translate-x-16">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em] translate-y-3 md:translate-y-0">#BÔNUS 2</span>
-                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2 translate-y-3 md:translate-y-0">RiseOffers - Ofertas</p>
-                <p className="text-foreground font-bold text-3xl md:text-4xl translate-y-3 md:translate-y-0">Escaladas</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Ofertas diárias e organizadas para aplicar e escalar. Tudo organizado em um só lugar.</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 67,00</span></p>
-                <NessaOfertaGratis />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Card Bônus 3 */}
-        <div className="flex mb-8 justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ y: -5 }}
-            className="w-full max-w-5xl"
-          >
-            <div 
-              className="group relative h-full flex flex-col md:flex-row items-center md:items-center justify-start bg-background border border-white/30 p-4 pb-10 -mb-6 md:mb-0 md:pb-6 md:p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-2 md:gap-8"
-            >
-              <img 
-                src={bonus2} 
-                alt="Bônus Telegram" 
-                className="w-[280px] md:w-[280px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-110 origin-center"
-              />
-              <div className="flex flex-col text-left w-full md:ml-[18.5rem] md:-translate-x-11">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em] translate-y-3 md:translate-y-0">#BÔNUS 3</span>
-                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2 translate-y-3 md:translate-y-0">Consulta de dados</p>
-                <p className="text-foreground font-bold text-3xl md:text-4xl translate-y-3 md:translate-y-0">via Telegram</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Puxada de dados exclusiva, própria da comunidade</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 97,00</span></p>
-                <NessaOfertaGratis />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Card Bônus 4 */}
-        <div className="flex mb-8 justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ y: -5 }}
-            className="w-full max-w-5xl"
-          >
-            <div 
-              className="group relative h-full flex flex-col md:flex-row items-center md:items-center justify-start bg-background border border-white/30 p-4 pb-10 -mb-6 md:mb-0 md:pb-6 md:p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-2 md:gap-8"
-            >
-              <img 
-                src={bonusFornecedores} 
-                alt="Bônus Fornecedores" 
-                className="w-[280px] md:w-[340px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:translate-y-2 md:scale-125 origin-center"
-              />
-              <div className="flex flex-col text-left w-full md:ml-64 md:-translate-x-16">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em] translate-y-3 md:translate-y-0">#BÔNUS 4</span>
-                <p className="text-foreground font-bold text-3xl md:text-4xl mt-2 translate-y-3 md:translate-y-0">Fornecedores de</p>
-                <p className="text-foreground font-bold text-3xl md:text-4xl translate-y-3 md:translate-y-0">Rateio</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Acesso a milhares de fornecedores ferramentas e materiais do digital</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 197,00</span></p>
-                <NessaOfertaGratis />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Card Bônus 5 */}
-        <div className="flex mb-8 justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            whileHover={{ y: -5 }}
-            className="w-full max-w-5xl"
-          >
-            <div 
-              className="group relative h-full flex flex-col md:flex-row items-center md:items-center justify-start bg-background border border-white/30 p-4 pb-10 -mb-6 md:mb-0 md:pb-6 md:p-6 rounded-xl overflow-hidden hover:border-red-500/30 transition-all duration-300 w-full gap-2 md:gap-8"
-            >
-              <img 
-                src={bonusNetworking} 
-                alt="Bônus Networking" 
-                className="w-[280px] md:w-[320px] h-auto object-contain flex-shrink-0 md:translate-x-24 md:scale-115 origin-center"
-              />
-              <div className="flex flex-col text-left w-full md:ml-[17rem] md:-translate-x-14">
-                <span className="text-primary font-light text-base md:text-base tracking-[0.2em] translate-y-3 md:translate-y-0">#BÔNUS 5</span>
-                <p className="text-foreground font-bold text-2xl md:text-3xl mt-2 translate-y-3 md:translate-y-0">Grupos de Networking</p>
-                <p className="text-foreground font-bold text-2xl md:text-3xl translate-y-3 md:translate-y-0">no WhatsApp</p>
-                <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...</p>
-                <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 97,00</span></p>
-                <NessaOfertaGratis />
-              </div>
-            </div>
-          </motion.div>
+        {/* Bonus cards */}
+        <div className="flex flex-col gap-6 md:gap-8">
+          {bonusItems.map((bonus, index) => (
+            <BonusCard key={bonus.number} bonus={bonus} index={index} />
+          ))}
         </div>
       </div>
     </section>
