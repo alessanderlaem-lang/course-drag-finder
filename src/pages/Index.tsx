@@ -58,6 +58,9 @@ const Index = () => {
       <DiferenciaisCriticosSection />
 
 
+      {/* How Access Works Section */}
+      <HowAccessWorks />
+
       {/* Bonus Section */}
       <div id="bonus-section" className="-mt-32 lg:-mt-20">
         <BonusSection />
@@ -68,9 +71,6 @@ const Index = () => {
 
       {/* Discord Preview Section */}
       <DiscordPreviewSection />
-
-      {/* How Access Works Section */}
-      <HowAccessWorks />
 
       {/* Testimonials Carousel */}
       <TestimonialsCarousel />
