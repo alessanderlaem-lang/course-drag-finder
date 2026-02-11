@@ -29,18 +29,29 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         className="relative w-full flex flex-col items-center justify-end overflow-hidden"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
+          backgroundSize: "cover", // Desktop: cover
+          backgroundPosition: "center top", // Desktop: center top
           backgroundRepeat: "no-repeat",
           minHeight: "100vh",
         }}
       >
+        {/* Mobile-specific background adjustment */}
+        <style>{`
+          @media (max-width: 768px) {
+            section:has(.hero-content-mobile) {
+              background-size: 140% !important;
+              background-position: center 20% !important;
+            }
+          }
+        `}</style>
+        
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
         {/* Hero Content - responsivo mobile e desktop */}
         <div
-          className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
+          className="hero-content-mobile relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
+
           style={{
             paddingTop: "clamp(180px, 48vh, 640px)", // Mobile: 180px, Desktop: 58vh/640px
             paddingBottom: "clamp(80px, 12vh, 140px)", // Mobile: 80px, Desktop: 140px
