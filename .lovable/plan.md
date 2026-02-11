@@ -1,86 +1,69 @@
 
+## Carrossel com drag infinito no mobile
 
-## Analise de Solucoes - Carrossel de Depoimentos Infinito
+### O que muda
 
-### Problema raiz
+O carrossel atual usa apenas animacao CSS (`translateX`) para scroll automatico. Isso nao permite interacao de toque/drag. Para atender ao requisito de drag infinito no mobile, precisamos de uma abordagem hibrida.
 
-A implementacao atual usa `translateX(-25%)` com 4 copias das imagens em um unico `flex` com `gap-4`. O problema e que `translateX(-25%)` e calculado sobre a largura total do container (incluindo todos os gaps de 16px entre 24 itens = 368px de gaps). Isso faz com que o ponto de reset da animacao NAO coincida com o inicio da segunda copia, causando um salto visivel (o "flash preto"). Alem disso, a velocidade de 20s para o ciclo completo ainda e lenta no mobile.
+### Analise de Solucoes
 
----
+#### Solucao A: Embla Carousel com loop infinito + autoplay
 
-### Solucao A: Dual-div CSS Marquee (padrao classico da industria)
+Usa a biblioteca `embla-carousel-react` (ja instalada no projeto) com o plugin `embla-carousel-autoplay` (tambem ja instalado). Embla suporta nativamente `loop: true` para scroll infinito e tem suporte completo a touch/drag no mobile.
 
-Duas divs identicas lado a lado, cada uma contendo as 6 imagens com gap interno. A div pai anima com `translateX(-50%)`, que matematicamente equivale a exatamente uma copia. O loop e perfeito porque ao resetar, a segunda copia esta exatamente na posicao da primeira.
-
-- Manuteniblidade: 10/10 - Padrao reconhecido universalmente, qualquer dev entende
-- Zero DT: 10/10 - Solucao definitiva, sem ajustes futuros
-- Arquitetura: 9/10 - Pure CSS, sem dependencias externas, mas usa duplicacao de DOM
-- Escalabilidade: 9/10 - Facil adicionar/remover imagens, basta alterar o array
-- Seguranca: 10/10 - Nenhuma superficie de ataque
-- **NOTA FINAL: 9.7/10**
-
-### Solucao B: JavaScript com requestAnimationFrame
-
-Controle pixel-a-pixel via JS. Mede a largura real do container, move via `transform` a cada frame, reseta quando atinge a largura de uma copia.
-
-- Manuteniblidade: 7/10 - Requer entendimento de rAF, refs, cleanup, resize listeners
-- Zero DT: 9/10 - Robusto, mas requer testes em edge cases (tab inativo, resize)
-- Arquitetura: 8/10 - Usa hooks React corretamente, mas adiciona complexidade desnecessaria para um scroll simples
-- Escalabilidade: 8/10 - Funciona, mas cada mudanca requer entender a logica JS
+- Manuteniblidade: 10/10 - Biblioteca madura, API declarativa, ja presente no projeto
+- Zero DT: 10/10 - Solucao definitiva usando ferramenta especializada para o problema
+- Arquitetura: 10/10 - Usa dependencia ja existente, sem codigo custom de touch handling
+- Escalabilidade: 10/10 - Adicionar/remover imagens e apenas alterar o array
 - Seguranca: 10/10 - Sem impacto
-- **NOTA FINAL: 8.2/10**
+- **NOTA FINAL: 10.0/10**
 
-### Solucao C: Correcao da porcentagem atual (patch)
+#### Solucao B: Touch handlers custom com requestAnimationFrame
 
-Manter a estrutura atual mas ajustar de 4 copias para 2 e mudar para `-50%`.
+Implementar manualmente `onTouchStart`, `onTouchMove`, `onTouchEnd` com logica de momentum, loop infinito via clonagem de DOM, e auto-scroll via rAF.
 
-- Manuteniblidade: 6/10 - O gap ainda causa micro-desalinhamento que cresce com mais itens
-- Zero DT: 5/10 - O `gap` no flex pai continua contaminando o calculo de porcentagem
-- Arquitetura: 5/10 - Nao resolve a causa raiz, apenas reduz o sintoma
-- Escalabilidade: 5/10 - Ao adicionar mais imagens, o desalinhamento muda
+- Manuteniblidade: 5/10 - Centenas de linhas de logica custom de touch, momentum, boundaries
+- Zero DT: 6/10 - Edge cases em diferentes dispositivos e navegadores
+- Arquitetura: 4/10 - Reinventa a roda quando a solucao ja existe no projeto
+- Escalabilidade: 6/10 - Cada mudanca requer entender toda a logica de touch
 - Seguranca: 10/10 - Sem impacto
 - **NOTA FINAL: 5.8/10**
 
-### DECISAO: Solucao A (Nota 9.7)
+#### Solucao C: CSS scroll-snap com duplicacao
 
-A Solucao B e robusta mas adiciona complexidade JS desnecessaria para um problema que o CSS resolve perfeitamente. A Solucao C e um patch que nao resolve a causa raiz (o `gap` contamina o calculo de porcentagem).
+Usa `scroll-snap-type` nativo com `overflow-x: scroll` e JavaScript para reposicionar ao final.
+
+- Manuteniblidade: 7/10 - Relativamente simples mas requer JS para o loop
+- Zero DT: 6/10 - `scroll-snap` tem inconsistencias entre navegadores mobile
+- Arquitetura: 7/10 - Mistura CSS nativo com JS para compensar limitacoes
+- Escalabilidade: 7/10 - Razoavel
+- Seguranca: 10/10 - Sem impacto
+- **NOTA FINAL: 7.2/10**
+
+### DECISAO: Solucao A (Nota 10.0)
+
+As bibliotecas `embla-carousel-react` e `embla-carousel-autoplay` ja estao instaladas no projeto. Usar touch handlers custom seria reinventar uma solucao inferior ao que ja temos disponivel.
 
 ---
 
-## Plano de implementacao
+### Plano de implementacao
 
-### Arquivo 1: `src/components/TestimonialsCarousel.tsx`
+**Arquivo: `src/components/TestimonialsCarousel.tsx`**
 
-Reestruturar o HTML do carrossel:
+Reescrever o carrossel para usar Embla Carousel com as seguintes configuracoes:
 
-**Estrutura atual (problematica):**
-```text
-div.flex.gap-4.animate-scroll-left.w-max
-  img img img img img img img img img img img img img img img img img img img img img img img img
-  (24 imagens soltas com gap entre todas)
-```
+1. **`loop: true`** - Garante o comportamento infinito (apos a ultima imagem, volta para a primeira sem interrupcao)
+2. **`dragFree: true`** - Permite drag livre no mobile (o usuario arrasta a vontade, com momentum natural)
+3. **`align: "start"`** - Alinha as imagens ao inicio do viewport
+4. **Plugin autoplay** - Mantem o scroll automatico quando o usuario nao esta interagindo
+   - `delay: 0` com `stopOnInteraction: false` para scroll continuo
+   - Pausa durante o drag e retoma automaticamente
 
-**Nova estrutura (correta):**
-```text
-div.flex.animate-scroll-left (SEM gap, SEM w-max)
-  div.flex.gap-4.shrink-0  -->  6 imagens (copia 1)
-  div.flex.gap-4.shrink-0  -->  6 imagens (copia 2, identica)
-```
+5. Cada slide contem uma imagem com os mesmos estilos visuais atuais (altura, bordas, sombra, rounded)
+6. Manter os gradientes de fade nas bordas laterais
+7. Manter o titulo e toda a estrutura visual atual
+8. Comportamento: no desktop, auto-scroll continuo. No mobile, auto-scroll + drag habilitado
 
-A chave e que o `gap-4` fica DENTRO de cada copia, nao no container animado. Assim, `translateX(-50%)` = exatamente a largura de uma copia (imagens + gaps internos).
+**Arquivo: `tailwind.config.ts`**
 
-Cada copia sera renderizada como uma div separada contendo as 6 imagens com gap entre elas. Isso garante que -50% do container pai (que contem exatamente 2 copias identicas sem espaco entre elas) equivale precisamente a uma copia.
-
-### Arquivo 2: `tailwind.config.ts`
-
-1. Alterar o keyframe `scroll-left` de `translateX(-25%)` para `translateX(-50%)`
-2. Reduzir a duracao da animacao de `20s` para `15s` para uma velocidade mais adequada no mobile
-
-### Por que isso resolve definitivamente
-
-- O `translateX(-50%)` e calculado sobre o container pai que contem exatamente 2 filhos identicos sem gap entre eles
-- 50% do container = 100% de uma copia = posicao perfeita de reset
-- Nao ha micro-desalinhamento causado por gaps
-- O loop e matematicamente perfeito: frame final = frame inicial visualmente
-- Zero flash preto, zero salto, zero dependencia JS
-
+Nenhuma alteracao necessaria. A animacao CSS `scroll-left` deixa de ser usada neste componente (pode ser mantida no config para outros usos futuros).
