@@ -8,7 +8,7 @@ import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
 import bonusNetworking from "@/assets/bonus-networking.jpg";
 
 const NessaOfertaGratis = () => (
-  <div className="inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-[2px] mt-[1.2rem] md:-mt-2 w-fit"
+  <div className="inline-flex items-center justify-start gap-2 px-4 pr-8 py-2 md:px-5 md:pr-10 md:py-2.5 rounded-[2px] mt-[1.2rem] md:-mt-2 w-fit"
     style={{ background: 'linear-gradient(135deg, #00d103 0%, #009220 100%)' }}>
     <svg className="w-[22px] h-[22px] md:w-6 md:h-6" viewBox="0 0 48 48" fill="none">
       <defs>
