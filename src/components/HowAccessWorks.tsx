@@ -51,6 +51,11 @@ const HowAccessWorks = () => {
           </p>
         </div>
 
+        {/* Banner Placeholder - substituir por banner real em breve */}
+        <div className="max-w-5xl mx-auto mb-12 rounded-2xl border-2 border-dashed border-gray-700 bg-gray-900/50 flex items-center justify-center py-16 px-6">
+          <p className="text-gray-500 text-lg font-medium tracking-wide uppercase">🎯 Espaço reservado para banner — Em breve</p>
+        </div>
+
         {/* Steps */}
         <div className="max-w-5xl mx-auto space-y-8">
           {steps.map((step, index) => (
