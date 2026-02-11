@@ -50,7 +50,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
         {/* Hero Content - responsivo mobile e desktop */}
         <div
-          className="hero-content-mobile relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto pt-[180px] md:pt-[320px] lg:pt-[420px] xl:pt-[520px] pb-20 md:pb-32 lg:pb-36"
+          className="hero-content-mobile relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto pt-[180px] md:pt-[360px] lg:pt-[480px] xl:pt-[580px] pb-20 md:pb-32 lg:pb-36"
         >
           {/* Rise Community Badge - responsivo */}
           <div
