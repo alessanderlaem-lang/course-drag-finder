@@ -89,7 +89,7 @@ const Footer = () => {
       {/* WhatsApp Section */}
       <section className="py-6 md:py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="border-2 border-[#25D366] rounded-2xl p-6 md:p-8 text-center bg-background/50">
+          <div className="border-2 border-[#25D366] rounded-2xl p-6 md:p-8 text-center bg-background">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Ficou com alguma dúvida?
             </h2>
@@ -110,7 +110,7 @@ const Footer = () => {
       </section>
 
       {/* Disclaimer Section */}
-      <section className="py-6 px-4 bg-card border-t border-border">
+      <section className="py-6 px-4 bg-background border-t border-border/30">
         <div className="max-w-4xl mx-auto text-center space-y-4">
           <p className="text-sm text-foreground">
             © 2025 <span className="font-bold">Rise Community</span> — Todos os direitos reservados.
