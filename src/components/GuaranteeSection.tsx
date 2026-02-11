@@ -140,18 +140,6 @@ const GuaranteeSection = () => {
             <GuaranteeBadge />
           </div>
 
-          {/* Textos */}
-          <h2 className="text-2xl md:text-4xl font-bold text-white mb-2">
-            Invista sem risco.
-          </h2>
-
-          <h3 className="text-3xl md:text-5xl font-bold text-red-500 mb-6">
-            Garantia de 07 dias.
-          </h3>
-
-          <p className="max-w-2xl text-base md:text-lg text-gray-300 leading-relaxed">
-            Você ainda conta com garantia total, conforme o Código de Defesa do Consumidor. Isso significa que, se dentro do prazo legal você entender que o conteúdo não faz sentido para o seu momento, pode solicitar o cancelamento e o reembolso, sem burocracia e sem questionamentos desnecessários.
-          </p>
         </div>
       </Container>
     </Section>
