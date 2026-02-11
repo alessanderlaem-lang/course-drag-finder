@@ -53,7 +53,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className="hero-content-mobile relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
 
           style={{
-            paddingTop: "clamp(180px, 35vh, 360px)", // Mobile: 180px, Desktop: 35vh/360px (descido mais)
+            paddingTop: "clamp(180px, 22vh, 260px)", // Mobile: 180px, Desktop: 22vh/260px (muito mais abaixo)
             paddingBottom: "clamp(80px, 12vh, 140px)", // Mobile: 80px, Desktop: 140px
           }}
         >
