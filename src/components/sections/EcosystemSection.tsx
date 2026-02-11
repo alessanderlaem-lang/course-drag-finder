@@ -40,34 +40,6 @@ const EcosystemSection = () => {
           </p>
         </div>
 
-        {/* Grid de Pilares */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {pillars.map((pillar, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group relative h-full flex flex-col bg-background border border-white/20 p-6 md:p-8 rounded-xl hover:border-red-500/40 transition-all duration-300"
-            >
-              {/* Ícone */}
-              <div className="mb-5">
-                <pillar.icon className="w-12 h-12 md:w-14 md:h-14 text-primary" strokeWidth={1.5} />
-              </div>
-
-              {/* Título */}
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-                {pillar.title}
-              </h3>
-
-              {/* Descrição */}
-              <p className="text-sm md:text-base text-muted-foreground font-light leading-relaxed">
-                {pillar.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
