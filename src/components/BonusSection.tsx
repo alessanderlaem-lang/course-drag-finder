@@ -113,7 +113,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
           border: "1px solid #464646",
           borderRadius: "20px",
           padding: "25px",
-          background: "transparent",
+          background: "#1a1a1a",
         }}
       >
         {/* Card content — flex row on desktop, column on mobile */}
