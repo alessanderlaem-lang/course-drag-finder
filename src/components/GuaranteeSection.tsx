@@ -123,7 +123,7 @@ const GuaranteeBadge = () => {
 
 const GuaranteeSection = () => {
   return (
-    <Section id="guarantee" spacing="lg" className="py-12 md:hidden">
+    <Section id="guarantee" spacing="none" className="py-4 md:hidden">
       <Container>
         <div className="flex flex-col items-center justify-center text-center">
           {/* Mobile view - image */}
