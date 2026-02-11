@@ -38,30 +38,30 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
-        {/* Hero Content - posicionado mais abaixo, como na referência */}
+        {/* Hero Content - responsivo mobile e desktop */}
         <div
           className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1140px] mx-auto"
           style={{
-            paddingTop: "clamp(360px, 58vh, 640px)",
-            paddingBottom: "140px",
+            paddingTop: "clamp(180px, 48vh, 640px)", // Mobile: 180px, Desktop: 58vh/640px
+            paddingBottom: "clamp(80px, 12vh, 140px)", // Mobile: 80px, Desktop: 140px
           }}
         >
-          {/* Rise Community Badge - bg vermelho 20%, borderRadius 22px, texto rosa */}
+          {/* Rise Community Badge - responsivo */}
           <div
-            className="inline-flex items-center justify-center mb-4"
+            className="inline-flex items-center justify-center mb-3 md:mb-4"
             style={{
               backgroundColor: "rgba(255, 57, 57, 0.2)",
               borderRadius: "22px",
-              padding: "12px 36px",
-              minWidth: "208px",
-              height: "42px",
+              padding: "10px 28px", // Mobile menor
+              minWidth: "auto",
+              height: "auto",
             }}
           >
             <span
+              className="text-sm md:text-lg"
               style={{
                 color: "rgb(255, 160, 160)",
                 fontFamily: "'Articulat CF', sans-serif",
-                fontSize: "18px",
                 fontWeight: 500,
               }}
             >
@@ -69,9 +69,9 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             </span>
           </div>
 
-          {/* Main Title - 56px, BRANCO PURO (sem gradient transparente), max-width 1060px */}
+          {/* Main Title - responsivo mobile (menor) */}
           <h1
-            className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-semibold mb-4 w-full"
+            className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-semibold mb-3 md:mb-4 w-full"
             style={{
               fontFamily: "'Articulat CF', sans-serif",
               maxWidth: "1060px",
@@ -99,9 +99,9 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             </span>
           </h1>
 
-          {/* Subtitle - 20px, max-width 726px, cor rgb(220,207,207) */}
+          {/* Subtitle - responsivo mobile (menor) */}
           <p
-            className="text-base sm:text-lg md:text-xl mb-7"
+            className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-7"
             style={{
               color: "rgb(220, 207, 207)",
               fontFamily: "'Articulat CF', sans-serif",
@@ -117,28 +117,30 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             mesmo que você ainda não tenha resultado nenhum no digital.
           </p>
 
-          {/* CTA + Social Proof Row */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            {/* CTA Button - VERMELHO como o usuário pediu */}
+          {/* CTA + Social Proof - mobile: coluna, desktop: linha */}
+          <div className="flex flex-col items-center justify-center gap-4 md:gap-5 w-full">
+            {/* CTA Button - responsivo mobile (menor padding) */}
             <button
               onClick={onCtaClick}
-              className="group flex items-center gap-3 text-white font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,0,0,0.4)]"
+              className="group flex items-center justify-center gap-2 md:gap-3 text-white font-normal transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,0,0,0.4)] w-full max-w-[340px] md:max-w-none md:w-auto"
               style={{
                 backgroundColor: "rgb(255, 0, 0)",
                 fontFamily: "'Articulat CF', sans-serif",
-                padding: "26px 70px",
+                padding: "18px 40px", // Mobile: menor
                 borderRadius: "9000px",
-                fontSize: "18px",
+                fontSize: "16px", // Mobile: 16px
               }}
             >
-              Quero entrar na Rise Community
+              <span className="text-[15px] md:text-[18px]">
+                Quero entrar na Rise Community
+              </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
+                width="22"
+                height="22"
                 viewBox="0 0 26 26"
                 fill="none"
-                className="transition-transform group-hover:translate-x-1"
+                className="transition-transform group-hover:translate-x-1 flex-shrink-0"
               >
                 <path
                   d="M8.9375 8.9375V6.90625C8.9375 6.36753 9.15151 5.85087 9.53244 5.46994C9.91337 5.08901 10.43 4.875 10.9688 4.875H21.5312C22.07 4.875 22.5866 5.08901 22.9676 5.46994C23.3485 5.85087 23.5625 6.36753 23.5625 6.90625V19.0938C23.5625 19.6325 23.3485 20.1491 22.9676 20.5301C22.5866 20.911 22.07 21.125 21.5312 21.125H10.9688C10.43 21.125 9.91337 20.911 9.53244 20.5301C9.15151 20.1491 8.9375 19.6325 8.9375 19.0938V17.0625"
@@ -157,28 +159,28 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               </svg>
             </button>
 
-            {/* Social Proof */}
+            {/* Social Proof - fica abaixo do CTA no mobile */}
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
                 <img
                   src={avatarCarlos}
                   alt="Carlos"
-                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                  className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
                 />
                 <img
                   src={avatarMateus}
                   alt="Mateus"
-                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                  className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
                 />
                 <img
                   src={avatarWaleska}
                   alt="Waleska"
-                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                  className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
                 />
                 <img
                   src={avatarIsrael}
                   alt="Israel"
-                  className="w-[38px] h-[38px] rounded-full border-2 border-black"
+                  className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
                 />
               </div>
               <p
@@ -197,9 +199,9 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         </div>
       </section>
 
-      {/* ===== MARQUEE SCROLL SECTION ===== */}
+      {/* ===== MARQUEE SCROLL SECTION - OCULTA NO MOBILE ===== */}
       <div
-        className="relative w-full overflow-hidden py-5"
+        className="hidden md:block relative w-full overflow-hidden py-5"
         style={{ backgroundColor: "rgb(10, 10, 10)", marginTop: "0px" }}
       >
         <div
@@ -229,7 +231,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
       {/* ===== 3 CARDS SECTION ===== */}
       <section
-        className="relative w-full px-4 -mt-40 md:-mt-32 z-20"
+        className="relative w-full px-4 mt-0 md:-mt-32 z-20"
         style={{ backgroundColor: "transparent" }}
       >
         {/* Blur/Glass container */}
@@ -330,9 +332,9 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 </svg>
               </div>
               <h3 className="text-[22px] font-semibold leading-[1.2] text-white" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
-                Comunidade ativa{" "}
+                Comunidade ativa e{" "}
                 <span style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                  e networking real
+                  networking real
                 </span>
               </h3>
               <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
