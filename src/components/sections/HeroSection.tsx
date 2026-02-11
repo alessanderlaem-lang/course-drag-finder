@@ -124,7 +124,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           </p>
 
           {/* CTA + Social Proof - mobile: coluna, desktop: linha */}
-          <div className="flex flex-col items-center justify-center gap-4 md:gap-5 w-full">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 w-full">
             {/* CTA Button - responsivo mobile (menor padding) */}
             <button
               onClick={onCtaClick}
