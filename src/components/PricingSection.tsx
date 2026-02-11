@@ -16,7 +16,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <Section id="pricing" spacing="lg" className="!pb-4 md:!pb-auto">
+    <Section id="pricing" spacing="lg" className="!pb-4 !pt-4 md:!pt-auto md:!pb-auto">
       <div className="container mx-auto px-1 md:px-4">
         <div className="max-w-2xl mx-auto">
           {/* Card de Preço */}
