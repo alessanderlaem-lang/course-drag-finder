@@ -1,110 +1,87 @@
-// Icons customizados no formato quadrado com borda vermelha
-const EmailIcon = () => (
-  <svg
-    className="w-8 h-8"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <rect x="2" y="4" width="20" height="16" rx="2" className="stroke-red-600" />
-    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" className="stroke-red-600" />
-  </svg>
-);
-
-const KeyIcon = () => (
-  <svg
-    className="w-8 h-8"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <circle cx="7.5" cy="15.5" r="5.5" className="stroke-red-600" />
-    <path d="M13 17.9V16a1 1 0 0 1 1-1h6" className="stroke-red-600" />
-  </svg>
-);
-
-const PlayIcon = () => (
-  <svg
-    className="w-8 h-8"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <polygon points="5 3 19 12 5 21 5 3" className="stroke-red-600 fill-red-600" />
-  </svg>
-);
-
-interface StepProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
-
-const StepCard = ({ title, description, icon }: StepProps) => {
-  return (
-    <div className="flex flex-col gap-4">
-      {/* Icon in bordered square */}
-      <div className="w-16 h-16 rounded-lg border-2 border-red-600 flex items-center justify-center flex-shrink-0">
-        {icon}
-      </div>
-
-      {/* Content */}
-      <div>
-        <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
-        <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
-      </div>
-    </div>
-  );
-};
+import iconEmail from "@/assets/icon-email.png";
+import iconLogin from "@/assets/icon-login.png";
+import iconStart from "@/assets/icon-start.png";
 
 const HowAccessWorks = () => {
   const steps = [
     {
+      icon: iconEmail,
       title: "Receba seu acesso",
       description:
         "Após a confirmação da compra, você receberá imediatamente um e-mail com o link de acesso à sua área de membros.",
-      icon: <EmailIcon />,
     },
     {
+      icon: iconLogin,
       title: "Acesse a área de membros",
       description:
         "Faça login na plataforma exclusiva. Você encontrará todos os tutoriais, recursos e links para acessar a comunidade do Discord.",
-      icon: <KeyIcon />,
     },
     {
+      icon: iconStart,
       title: "Pronto, agora é só começar",
       description:
-        "Explore tudo que a Rise Community oferece. Acesse os conteúdos, participe da comunidade e comece a aplicar.",
-      icon: <PlayIcon />,
+        "Explore tudo o que a Rise Community oferece. Acesse os conteúdos, participe da comunidade e comece a aplicar.",
     },
   ];
 
   return (
-    <section className="w-full py-16 md:py-20 bg-black">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+    <section className="py-20 sm:py-32 bg-black">
+      <div className="container mx-auto px-4">
+        {/* Cabeçalho */}
+        <div className="text-center mb-16">
+          {/* Título Principal */}
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
             <span className="text-white">Como Funciona </span>
-            <span className="text-red-600">o Acesso?</span>
+            <span
+              style={{
+                background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              o Acesso?
+            </span>
           </h2>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl">
-            Siga o passo a passo abaixo e faça como as mais de 9 mil pessoas que já fazem parte da plataforma.
+
+          {/* Subtítulo */}
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Siga o passo a passo abaixo e faça como as mais de{" "}
+            <strong>9 mil pessoas</strong> que já fazem parte da plataforma.
           </p>
         </div>
 
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-5xl">
+        {/* Steps */}
+        <div className="max-w-5xl mx-auto space-y-8">
           {steps.map((step, index) => (
-            <StepCard
-              key={index}
-              title={step.title}
-              description={step.description}
-              icon={step.icon}
-            />
+            <div key={index}>
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                {/* Ícone */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={step.icon}
+                    alt=""
+                    className="w-24 h-24 md:w-28 md:h-28"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Conteúdo */}
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-medium text-white mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-400">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Divider - não mostrar após o último step */}
+              {index < steps.length - 1 && (
+                <div className="mt-8 border-t border-gray-800"></div>
+              )}
+            </div>
           ))}
         </div>
       </div>
