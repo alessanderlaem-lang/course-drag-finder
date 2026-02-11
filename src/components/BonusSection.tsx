@@ -4,9 +4,16 @@ import { Badge } from "@/components/ui/badge";
 import bonusMetodos from "@/assets/bonus-metodos.png";
 import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
-import nessaOfertaGratis from "@/assets/nessa-oferta-gratis.png";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
 import bonusNetworking from "@/assets/bonus-networking.jpg";
+
+const NessaOfertaGratis = () => (
+  <div className="inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 rounded-md mt-[1.65rem] md:-mt-2"
+    style={{ background: 'linear-gradient(135deg, #22c55e 0%, #15803d 100%)' }}>
+    <Check className="w-5 h-5 md:w-6 md:h-6 text-white" strokeWidth={3} />
+    <span className="text-white font-bold text-sm md:text-lg tracking-wide">NESSA OFERTA: <span className="font-extrabold">GRÁTIS</span></span>
+  </div>
+);
 
 const BonusSection = () => {
   const bonuses = [
@@ -59,7 +66,7 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-3xl md:text-5xl translate-y-3 md:translate-y-0">Comunidade</p>
                 <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.</p>
                 <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 497,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[2.8rem] md:h-[6rem] mt-[1.65rem] md:-mt-2 w-fit -translate-y-3 md:translate-y-0" />
+                <NessaOfertaGratis />
               </div>
             </div>
           </motion.div>
@@ -89,7 +96,7 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-3xl md:text-4xl translate-y-3 md:translate-y-0">Escaladas</p>
                 <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Ofertas diárias e organizadas para aplicar e escalar. Tudo organizado em um só lugar.</p>
                 <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 67,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[2.8rem] md:h-[6rem] mt-[1.65rem] md:-mt-2 w-fit -translate-y-3 md:translate-y-0" />
+                <NessaOfertaGratis />
               </div>
             </div>
           </motion.div>
@@ -119,7 +126,7 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-3xl md:text-4xl translate-y-3 md:translate-y-0">via Telegram</p>
                 <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Puxada de dados exclusiva, própria da comunidade</p>
                 <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 97,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[2.8rem] md:h-[6rem] mt-[1.65rem] md:-mt-2 w-fit -translate-y-3 md:translate-y-0" />
+                <NessaOfertaGratis />
               </div>
             </div>
           </motion.div>
@@ -149,7 +156,7 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-3xl md:text-4xl translate-y-3 md:translate-y-0">Rateio</p>
                 <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Acesso a milhares de fornecedores ferramentas e materiais do digital</p>
                 <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 197,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[2.8rem] md:h-[6rem] mt-[1.65rem] md:-mt-2 w-fit -translate-y-3 md:translate-y-0" />
+                <NessaOfertaGratis />
               </div>
             </div>
           </motion.div>
@@ -179,7 +186,7 @@ const BonusSection = () => {
                 <p className="text-foreground font-bold text-2xl md:text-3xl translate-y-3 md:translate-y-0">no WhatsApp</p>
                 <p className="text-muted-foreground font-light text-base md:text-[16px] mt-2 translate-y-3 md:translate-y-0">Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...</p>
                 <p className="text-foreground font-light text-3xl md:text-3xl mt-4 md:mt-6 translate-y-3 md:translate-y-0">De <span className="line-through">R$ 97,00</span></p>
-                <img src={nessaOfertaGratis} alt="Nessa oferta: Grátis" className="h-[2.8rem] md:h-[6rem] mt-[1.65rem] md:-mt-2 w-fit -translate-y-3 md:translate-y-0" />
+                <NessaOfertaGratis />
               </div>
             </div>
           </motion.div>
