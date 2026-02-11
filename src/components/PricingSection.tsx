@@ -1,7 +1,7 @@
 import Section from "@/components/layout/Section";
 import { Check } from "lucide-react";
 
-const CHECKOUT_URL = "https://wa.me/?text=ol%C3%A1%2C%20quero%20adquirir%20meu%20acesso%20a%20rise%20community";
+const CHECKOUT_URL = "https://risecheckout.com/c/b0a5e71_943557";
 
 const PricingSection = () => {
   const benefits = [
