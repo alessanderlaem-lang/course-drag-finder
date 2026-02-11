@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import ecosystemDesktop from "@/assets/ecosystem-desktop.webp";
 import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -54,8 +55,13 @@ const Index = () => {
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
       <DiferenciaisCriticosSection />
 
+      {/* Imagem Ecossistema - Desktop only */}
+      <div className="hidden lg:flex justify-center w-full py-16">
+        <img src={ecosystemDesktop} alt="Ecossistema Rise Community" className="max-w-4xl w-full h-auto" />
+      </div>
+
       {/* Bonus Section */}
-      <div id="bonus-section" className="-mt-32 lg:mt-[28rem]">
+      <div id="bonus-section" className="-mt-32 lg:mt-0">
         <BonusSection />
       </div>
 
