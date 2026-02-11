@@ -135,9 +135,13 @@ const GuaranteeSection = () => {
             />
           </div>
 
-          {/* Desktop view - animated badge */}
+          {/* Desktop view - static image */}
           <div className="hidden md:block">
-            <GuaranteeBadge />
+            <img 
+              src={garantiaMobile} 
+              alt="7 Dias de Garantia" 
+              className="w-full max-w-[30rem] h-auto rounded-3xl"
+            />
           </div>
 
         </div>
