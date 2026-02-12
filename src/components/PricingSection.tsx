@@ -7,10 +7,9 @@ const CHECKOUT_URL = "https://risecheckout.com/c/b0a5e71_943557";
 const PricingSection = () => {
   const benefits = [
     "Comunidade fechada e exclusiva no Discord",
-    "Conteúdos atualizado diariamente",
+    "Conteúdos atualizado semanalmente",
     "Suporte direto para tirar todas as dúvidas",
     "Pagamento único & acesso vitalício",
-    "Rise Offers — ofertas diárias",
     "Fornecedores de rateio",
     "Consulta de dados via Telegram",
     "Grupos de networking ativos",
