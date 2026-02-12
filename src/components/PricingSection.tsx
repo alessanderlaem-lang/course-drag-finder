@@ -23,7 +23,7 @@ const PricingSection = () => {
           {/* Card de Preço */}
           <div className="bg-black border border-gray-600 rounded-3xl p-4 px-3 md:p-12">
             {/* Logo */}
-            <div className="text-center mb-8">
+             <div className="text-center mb-8 pt-6">
               <h2 className="font-bold leading-none" style={{ fontFamily: "'League Spartan', sans-serif" }}>
                 <span
                   style={{
@@ -45,7 +45,7 @@ const PricingSection = () => {
                     fontSize: "50.2px",
                     display: "block",
                     lineHeight: "1",
-                    marginTop: "4px",
+                    marginTop: "-8px",
                   }}
                 >
                   COMMUNITY
