@@ -54,7 +54,7 @@ const PricingSection = () => {
                     backgroundColor: "rgba(0,0,0,1)",
                     width: "28%",
                     borderRadius: "50%",
-                    filter: "blur(14px)",
+                    filter: "blur(12px)",
                     pointerEvents: "none",
                   }}
                 />
