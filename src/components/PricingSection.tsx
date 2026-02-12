@@ -48,14 +48,13 @@ const PricingSection = () => {
                     display: "block",
                     position: "relative" as const,
                     zIndex: 2,
-                    height: "35px",
-                    marginTop: "-22px",
-                    marginBottom: "-30px",
-                    background: "radial-gradient(ellipse 100% 100% at center, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0) 65%)",
-                    width: "32%",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    pointerEvents: "none",
+                    height: "18px",
+                    marginTop: "-18px",
+                    marginBottom: "-25px",
+                    backgroundColor: "rgba(0,0,0,0.9)",
+                    width: "22%",
+                    borderRadius: "50%",
+                    filter: "blur(12px)",
                   }}
                 />
                 <span
