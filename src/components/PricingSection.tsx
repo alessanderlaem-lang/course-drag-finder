@@ -42,19 +42,20 @@ const PricingSection = () => {
                 >
                   RISE
                 </span>
-                {/* Sombra escura entre RISE e COMMUNITY */}
+                {/* Sombra escura sobre o topo do COMMUNITY */}
                 <span
                   style={{
-                    display: "block",
-                    position: "relative" as const,
+                    position: "absolute" as const,
+                    left: "50%",
+                    transform: "translateX(-50%)",
                     zIndex: 2,
                     height: "30px",
-                    marginTop: "-15px",
-                    marginBottom: "-30px",
+                    top: "85px",
                     backgroundColor: "rgba(0,0,0,1)",
                     width: "28%",
                     borderRadius: "50%",
-                    filter: "blur(18px)",
+                    filter: "blur(14px)",
+                    pointerEvents: "none",
                   }}
                 />
                 <span
