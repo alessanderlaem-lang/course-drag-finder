@@ -43,8 +43,8 @@ const AboutSection = () => {
       icon: icon004,
       title: (
         <>
-          <span className="text-white">Para quem quer aprender, </span>
-          <span className="text-white">aplicar e vender</span>
+          <span className="text-white">Para quem quer </span>
+          <span className="text-white">vender todos os dias</span>
         </>
       ),
       description:
