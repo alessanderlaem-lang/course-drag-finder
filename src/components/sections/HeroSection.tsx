@@ -122,7 +122,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             <span style={{ fontWeight: 600, color: "white" }}>
               oportunidades reais e networking,
             </span>{" "}
-            mesmo que você ainda não tenha resultado nenhum no digital.
+            para você dominar o mercado digital.
           </p>
 
           {/* CTA + Social Proof - mobile: coluna, desktop: linha */}
