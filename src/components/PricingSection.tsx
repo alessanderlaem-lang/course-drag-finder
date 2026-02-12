@@ -45,7 +45,7 @@ const PricingSection = () => {
                     fontSize: "50.2px",
                     display: "block",
                     lineHeight: "1",
-                    marginTop: "-8px",
+                    marginTop: "4px",
                   }}
                 >
                   COMMUNITY
