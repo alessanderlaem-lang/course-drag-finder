@@ -52,7 +52,7 @@ const PricingSection = () => {
                     marginTop: "-20px",
                     marginBottom: "-25px",
                     background: "radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 80%)",
-                    width: "70%",
+                    width: "40%",
                     marginLeft: "auto",
                     marginRight: "auto",
                     pointerEvents: "none",
