@@ -21,7 +21,7 @@ const PricingSection = () => {
       <div className="container mx-auto px-1 md:px-4">
         <div className="max-w-2xl mx-auto">
           {/* Card de Preço */}
-          <div className="bg-black border border-gray-600 rounded-3xl p-4 px-3 md:p-12">
+          <div className="bg-black border rounded-3xl p-4 px-3 md:p-12" style={{ borderColor: '#808080' }}>
             {/* Logo */}
              <div className="text-center mb-8 pt-6">
               <h2 className="font-bold leading-none" style={{ fontFamily: "'League Spartan', sans-serif" }}>
