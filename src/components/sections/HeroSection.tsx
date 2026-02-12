@@ -92,7 +92,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 color: "rgb(255, 255, 255)",
               }}
             >
-              O lugar certo pra quem quer começar no marketing digital{" "}
+              O lugar certo pra quem quer crescer no digital{" "}
             </span>
             <span
               style={{
@@ -103,7 +103,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 backgroundClip: "text",
               }}
             >
-              sem ficar perdido
+              tendo acesso a tudo o que precisa
             </span>
           </h1>
 
