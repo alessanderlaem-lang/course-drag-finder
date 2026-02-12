@@ -75,9 +75,9 @@ const AboutSection = () => {
 
           {/* Subtítulo */}
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            A Rise Community é uma{" "}
-            <strong>comunidade completa de marketing digital e networking</strong>
-            , criada para pessoas que
+            A Rise Community é o{" "}
+            <strong>ecossistema definitivo de marketing digital e networking</strong>
+            , desenhado estrategicamente para...
           </p>
         </div>
 
