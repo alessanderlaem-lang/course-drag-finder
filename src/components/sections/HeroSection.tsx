@@ -92,7 +92,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 color: "rgb(255, 255, 255)",
               }}
             >
-              O lugar certo pra quem quer{" "}
+              O lugar certo pra quem quer transformar esforço em{" "}
             </span>
             <span
               style={{
@@ -103,7 +103,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 backgroundClip: "text",
               }}
             >
-              transformar esforço em resultado consistente.
+              resultado consistente.
             </span>
           </h1>
 
