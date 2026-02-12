@@ -9,9 +9,9 @@ const AboutSection = () => {
       icon: icon001,
       title: (
         <>
-          <span className="text-white">Para quem </span>
-          <span className="text-white">quer começar</span>
-          <span className="text-white"> do jeito certo</span>
+          <span className="text-white">Para quem quer </span>
+          <span className="text-white">deixar o amadorismo</span>
+          <span className="text-white"> para trás</span>
         </>
       ),
       description:
