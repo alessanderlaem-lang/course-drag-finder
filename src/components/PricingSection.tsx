@@ -33,6 +33,8 @@ const PricingSection = () => {
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                     display: "block",
+                    position: "relative" as const,
+                    zIndex: 2,
                     lineHeight: "1",
                     paddingTop: "24px",
                     marginBottom: "-38px",
