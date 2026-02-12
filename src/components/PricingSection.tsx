@@ -88,7 +88,7 @@ const PricingSection = () => {
                     lineHeight: "1",
                   }}
                 >
-                  7,04
+                  8,37
                 </span>
               </div>
               <p className="text-gray-300 text-lg">OU 29,90 À VISTA</p>
