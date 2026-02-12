@@ -1,6 +1,7 @@
 import iconEmail from "@/assets/icon-email.png";
 import iconLogin from "@/assets/icon-login.png";
 import iconStart from "@/assets/icon-start.png";
+import bannerAcesso from "@/assets/banner-acesso.webp";
 
 const HowAccessWorks = () => {
   const steps = [
@@ -52,8 +53,13 @@ const HowAccessWorks = () => {
         </div>
 
         {/* Placeholder para banner futuro */}
-        <div className="max-w-5xl mx-auto mb-12 border-2 border-dashed border-gray-700 rounded-xl bg-gray-900/50 flex items-center justify-center py-16">
-          <p className="text-gray-500 text-lg">🎯 Espaço reservado para banner — Em breve</p>
+        <div className="max-w-2xl mx-auto mb-12">
+          <img
+            src={bannerAcesso}
+            alt="Rise Community - Acesso à plataforma"
+            className="w-full rounded-xl"
+            loading="lazy"
+          />
         </div>
 
         {/* Steps */}
