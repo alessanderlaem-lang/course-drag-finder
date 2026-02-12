@@ -32,8 +32,8 @@ const AboutSection = () => {
       icon: icon003,
       title: (
         <>
-          <span className="text-white">Para quem busca </span>
-          <span className="text-white">oportunidades reais</span>
+          <span className="text-white">Para quem cansou de </span>
+          <span className="text-white">bater cabeça sozinho</span>
         </>
       ),
       description:
