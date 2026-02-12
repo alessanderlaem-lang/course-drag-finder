@@ -34,6 +34,7 @@ const PricingSection = () => {
                     backgroundClip: "text",
                     display: "block",
                     lineHeight: "1",
+                    paddingTop: "8px",
                   }}
                 >
                   RISE
