@@ -91,7 +91,7 @@ const PricingSection = () => {
                   8
                 </span>
                 <span
-                  className="font-light relative left-2"
+                  className="font-normal relative left-2"
                   style={{
                     fontSize: "clamp(70px, 16vw, 120px)",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
