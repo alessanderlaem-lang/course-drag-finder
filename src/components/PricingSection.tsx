@@ -127,7 +127,7 @@ const PricingSection = () => {
                   ,
                 </span>
                 <span
-                  className="font-semibold relative -top-2 left-1.5"
+                  className="font-semibold relative -top-4 left-1.5"
                   style={{
                     fontSize: "clamp(55px, 12vw, 95px)",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
