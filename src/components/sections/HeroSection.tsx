@@ -313,7 +313,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 </span>
               </h3>
               <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
-                Você entra uma vez só. Sem planos escondidos, sem renovação automática, sem pegadinha.
+                Acesso vitalício com atualizações semanais garantidas. O acervo cresce constantemente e você nunca paga um centavo a mais por isso.
               </p>
               <img src={btSvg} alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
               <img src={tpSvg} alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
