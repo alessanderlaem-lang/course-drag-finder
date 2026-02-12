@@ -78,7 +78,7 @@ const PricingSection = () => {
               <div className="mb-4 flex items-baseline justify-center">
                 <span className="text-3xl md:text-4xl font-semibold relative -top-4" style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>R$ </span>
                 <span
-                  className="font-semibold relative left-2"
+                  className="font-semibold relative left-2.5"
                   style={{
                     fontSize: "clamp(100px, 22vw, 170px)",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
