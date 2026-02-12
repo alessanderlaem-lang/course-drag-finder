@@ -1,5 +1,6 @@
 import Section from "@/components/layout/Section";
 import { Check } from "lucide-react";
+import paymentMethods from "@/assets/payment-methods.webp";
 
 const CHECKOUT_URL = "https://risecheckout.com/c/b0a5e71_943557";
 
@@ -102,11 +103,8 @@ const PricingSection = () => {
             </a>
 
             {/* Ícones de Pagamento */}
-            <div className="flex justify-center items-center gap-4 mt-8 opacity-70">
-              <span className="text-gray-400 text-sm">MasterCard</span>
-              <span className="text-gray-400 text-sm">VISA</span>
-              <span className="text-gray-400 text-sm">BOLETO</span>
-              <span className="text-gray-400 text-sm">PayPal</span>
+            <div className="flex justify-center items-center mt-8">
+              <img src={paymentMethods} alt="MasterCard, VISA, Boleto, PayPal" className="h-8 md:h-10 opacity-70" />
             </div>
           </div>
         </div>
