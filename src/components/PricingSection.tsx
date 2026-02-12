@@ -64,7 +64,7 @@ const PricingSection = () => {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-3 p-4 border border-gray-800 rounded-xl"
+                  className="flex items-start gap-3 p-4 border border-gray-700 rounded-xl"
                 >
                   <Check className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <span className="text-white text-base md:text-lg">{benefit}</span>
