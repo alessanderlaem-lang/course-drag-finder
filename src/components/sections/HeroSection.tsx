@@ -4,6 +4,8 @@ import avatarCarlos from "@/assets/hero/Carlos.png";
 import avatarMateus from "@/assets/hero/Mateus.png";
 import avatarWaleska from "@/assets/hero/Waleska.png";
 import avatarIsrael from "@/assets/hero/Israel.png";
+import btSvg from "@/assets/hero/bt.svg";
+import tpSvg from "@/assets/hero/tp.svg";
 
 interface HeroSectionProps {
   onCtaClick: () => void;
@@ -280,8 +282,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
                 Marketing digital sem bagunça: estratégias, oportunidades, ferramentas, networking e caminhos claros para sair do zero.
               </p>
-              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg" alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
-              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg" alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
+              <img src={btSvg} alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
+              <img src={tpSvg} alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
             </div>
 
             {/* Card 2 */}
@@ -313,8 +315,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
                 Você entra uma vez só. Sem planos escondidos, sem renovação automática, sem pegadinha.
               </p>
-              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg" alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
-              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg" alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
+              <img src={btSvg} alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
+              <img src={tpSvg} alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
             </div>
 
             {/* Card 3 */}
@@ -346,8 +348,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
                 Aqui você não anda sozinho. Grupos ativos, troca de networking diária e pessoas no mesmo nível que você.
               </p>
-              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/bt.svg" alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
-              <img src="https://risecommunity.com.br/wp-content/uploads/2026/01/tp.svg" alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
+              <img src={btSvg} alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
+              <img src={tpSvg} alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
             </div>
           </div>
         </div>
