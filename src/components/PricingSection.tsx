@@ -45,11 +45,12 @@ const PricingSection = () => {
                   <span
                     style={{
                       position: "absolute",
-                      bottom: "-18px",
-                      left: 0,
-                      right: 0,
-                      height: "30px",
-                      background: "linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 100%)",
+                      bottom: "-22px",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      width: "70%",
+                      height: "25px",
+                      background: "radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 80%)",
                       zIndex: 1,
                       pointerEvents: "none",
                     }}
