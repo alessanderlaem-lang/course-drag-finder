@@ -50,7 +50,7 @@ const PricingSection = () => {
                     transform: "translateX(-50%)",
                     zIndex: 2,
                     height: "50px",
-                    top: "55px",
+                    top: "42px",
                     backgroundColor: "rgba(0,0,0,1)",
                     width: "28%",
                     borderRadius: "50%",
