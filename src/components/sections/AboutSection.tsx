@@ -37,7 +37,7 @@ const AboutSection = () => {
         </>
       ),
       description:
-        "Acesso a produtos, ferramentas e modelos que podem ser usados e revendidos, sem promessas irreais ou atalhos suspeitos.",
+        "Tentar resolver tudo sozinho custa caro e demora. Tenha acesso a soluções já validadas por quem errou antes de você, para que o seu único trabalho seja acertar.",
     },
     {
       icon: icon004,
