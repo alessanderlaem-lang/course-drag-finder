@@ -27,7 +27,7 @@ const PricingSection = () => {
               <h2 className="font-bold leading-none" style={{ fontFamily: "'League Spartan', sans-serif" }}>
                 <span
                   style={{
-                    fontSize: "62px",
+                    fontSize: "78px",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -42,7 +42,7 @@ const PricingSection = () => {
                 <span
                   className="text-white"
                   style={{
-                    fontSize: "50.2px",
+                    fontSize: "63px",
                     display: "block",
                     lineHeight: "1",
                     marginTop: "-8px",
