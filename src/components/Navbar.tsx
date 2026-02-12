@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logoSvg from '@/assets/hero/Logo.svg';
 
 interface NavbarProps {
   onLoginClick?: () => void;
@@ -69,7 +70,7 @@ const Navbar = ({ onLoginClick }: NavbarProps) => {
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
             <img 
-              src="https://risecommunity.com.br/wp-content/uploads/2026/01/Logo.svg" 
+              src={logoSvg} 
               alt="Rise Community" 
               className="h-[45px] w-auto"
             />
