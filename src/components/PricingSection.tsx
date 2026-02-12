@@ -99,11 +99,11 @@ const PricingSection = () => {
             <div className="text-center mb-8">
               <p className="text-white text-lg mb-4">POR APENAS 4X DE</p>
               <div className="mb-4 flex items-baseline justify-center">
-                <span className="text-3xl md:text-4xl font-semibold relative -top-10 left-2" style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>R$ </span>
+                <span className="text-4xl md:text-5xl font-semibold relative -top-10 left-2" style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>R$ </span>
                 <span
                   className="font-semibold relative left-2.5"
                   style={{
-                    fontSize: "clamp(100px, 22vw, 170px)",
+                    fontSize: "clamp(120px, 26vw, 200px)",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -116,7 +116,7 @@ const PricingSection = () => {
                 <span
                   className="font-normal relative left-2"
                   style={{
-                    fontSize: "clamp(70px, 16vw, 120px)",
+                    fontSize: "clamp(85px, 19vw, 145px)",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -129,7 +129,7 @@ const PricingSection = () => {
                 <span
                   className="font-semibold relative -top-4 left-1.5"
                   style={{
-                    fontSize: "clamp(55px, 12vw, 95px)",
+                    fontSize: "clamp(65px, 14vw, 115px)",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
