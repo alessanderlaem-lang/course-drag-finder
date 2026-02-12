@@ -280,7 +280,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 </span>
               </h3>
               <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
-                Marketing digital sem bagunça: estratégias, oportunidades, ferramentas, networking e caminhos claros para sair do zero.
+                Marketing digital sem bagunça: estratégias, oportunidades, ferramentas, networking e caminhos claros para turbinar seus resultados.
               </p>
               <img src={btSvg} alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
               <img src={tpSvg} alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
