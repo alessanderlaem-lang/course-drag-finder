@@ -97,7 +97,7 @@ const PricingSection = () => {
 
             {/* Preço */}
             <div className="text-center mb-8">
-              <p className="text-gray-300 text-lg mb-4">POR APENAS 4X DE</p>
+              <p className="text-white text-lg mb-4">POR APENAS 4X DE</p>
               <div className="mb-4 flex items-baseline justify-center">
                 <span className="text-3xl md:text-4xl font-semibold relative -top-4 left-2" style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>R$ </span>
                 <span
