@@ -24,7 +24,7 @@ const PricingSection = () => {
           <div className="bg-black border rounded-3xl p-4 px-3 md:p-12" style={{ borderColor: '#808080' }}>
             {/* Logo */}
              <div className="text-center mb-8 pt-6">
-              <h2 className="font-bold leading-none" style={{ fontFamily: "'League Spartan', sans-serif" }}>
+              <h2 className="font-bold leading-none" style={{ fontFamily: "'League Spartan', sans-serif", position: "relative" }}>
                 <span
                   style={{
                     fontSize: "78px",
@@ -34,28 +34,30 @@ const PricingSection = () => {
                     backgroundClip: "text",
                     display: "block",
                     position: "relative" as const,
-                    zIndex: 2,
+                    zIndex: 3,
                     lineHeight: "1",
                     paddingTop: "24px",
                     marginBottom: "-38px",
                   }}
                 >
                   RISE
-                  {/* Sombra escura abaixo do RISE */}
-                  <span
-                    style={{
-                      position: "absolute",
-                      bottom: "18px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      width: "70%",
-                      height: "25px",
-                      background: "radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 80%)",
-                      zIndex: 1,
-                      pointerEvents: "none",
-                    }}
-                  />
                 </span>
+                {/* Sombra escura entre RISE e COMMUNITY */}
+                <span
+                  style={{
+                    display: "block",
+                    position: "relative" as const,
+                    zIndex: 2,
+                    height: "25px",
+                    marginTop: "-20px",
+                    marginBottom: "-25px",
+                    background: "radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 80%)",
+                    width: "70%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    pointerEvents: "none",
+                  }}
+                />
                 <span
                   className="text-white"
                   style={{
@@ -63,6 +65,8 @@ const PricingSection = () => {
                     display: "block",
                     lineHeight: "1",
                     marginTop: "-8px",
+                    position: "relative" as const,
+                    zIndex: 1,
                   }}
                 >
                   COMMUNITY
