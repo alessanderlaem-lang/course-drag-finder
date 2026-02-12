@@ -45,7 +45,7 @@ const PricingSection = () => {
                   <span
                     style={{
                       position: "absolute",
-                      bottom: "-22px",
+                      bottom: "-8px",
                       left: "50%",
                       transform: "translateX(-50%)",
                       width: "70%",
