@@ -15,7 +15,7 @@ const AboutSection = () => {
         </>
       ),
       description:
-        "Se você ainda não sabe por onde entrar no marketing digital, aqui você encontra direção, clareza e um caminho organizado desde o início.",
+        "Você já tem a vontade, agora tenha o acesso. Ferramentas e direção certa para quem cansou de improvisar e quer resultados reais.",
     },
     {
       icon: icon002,
