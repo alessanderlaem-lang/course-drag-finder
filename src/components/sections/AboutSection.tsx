@@ -48,7 +48,7 @@ const AboutSection = () => {
         </>
       ),
       description:
-        "Nada de só teoria. Aqui você aprende, coloca em prática e entende como transformar conhecimento em oportunidade.",
+        "Pare de viver de picos de venda e sorte. Aprenda a estruturar uma operação sólida que vende todos os dias, com previsibilidade e segurança.",
     },
   ];
 
