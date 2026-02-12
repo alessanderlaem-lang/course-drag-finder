@@ -21,12 +21,12 @@ const AboutSection = () => {
       icon: icon002,
       title: (
         <>
-          <span className="text-white">Para quem já começou, </span>
-          <span className="text-white">mas não teve resultados</span>
+          <span className="text-white">Para quem quer </span>
+          <span className="text-white">destravar a operação</span>
         </>
       ),
       description:
-        "Ideal pra quem já tentou, estudou, aplicou um pouco… mas ainda não conseguiu ganhar dinheiro de verdade.",
+        "Você já tem a estratégia, mas falta a ferramenta ou o recurso premium. Quebre a barreira de entrada e acesse o que antes era restrito a quem tinha muito caixa.",
     },
     {
       icon: icon003,
