@@ -140,7 +140,7 @@ const PricingSection = () => {
                   37
                 </span>
               </div>
-              <p className="text-gray-300 text-lg">OU 29,90 À VISTA</p>
+              <p className="text-white text-lg">OU 29,90 À VISTA</p>
             </div>
 
             {/* Botão CTA */}
