@@ -88,7 +88,20 @@ const PricingSection = () => {
                     lineHeight: "1",
                   }}
                 >
-                  8,37
+                  8,
+                </span>
+                <span
+                  className="font-semibold"
+                  style={{
+                    fontSize: "clamp(55px, 12vw, 95px)",
+                    background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    lineHeight: "1",
+                  }}
+                >
+                  37
                 </span>
               </div>
               <p className="text-gray-300 text-lg">OU 29,90 À VISTA</p>
