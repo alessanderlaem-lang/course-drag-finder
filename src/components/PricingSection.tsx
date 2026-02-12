@@ -126,7 +126,8 @@ const PricingSection = () => {
               href={CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full md:w-full mx-auto bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-4 px-8 rounded-full transition-all duration-200 text-center hover:scale-105 max-w-[85%] md:max-w-none"
+              className="block w-full md:w-full mx-auto text-white font-bold text-lg py-4 px-8 rounded-full transition-all duration-200 text-center hover:scale-105 max-w-[85%] md:max-w-none"
+              style={{ background: "linear-gradient(90deg, #FF0000 0%, #8B0000 100%)" }}
             >
               GARANTIR MINHA VAGA
             </a>
