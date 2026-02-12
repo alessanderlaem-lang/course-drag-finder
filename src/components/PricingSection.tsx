@@ -51,7 +51,7 @@ const PricingSection = () => {
                     height: "25px",
                     marginTop: "-20px",
                     marginBottom: "-25px",
-                    background: "radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 80%)",
+                    background: "radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.95) 50%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0) 100%)",
                     width: "28%",
                     marginLeft: "auto",
                     marginRight: "auto",
