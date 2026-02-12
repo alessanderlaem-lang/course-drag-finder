@@ -99,7 +99,7 @@ const PricingSection = () => {
             <div className="text-center mb-8">
               <p className="text-white text-lg mb-4">POR APENAS 4X DE</p>
               <div className="mb-4 flex items-baseline justify-center">
-                <span className="text-3xl md:text-4xl font-semibold relative -top-8 left-2" style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>R$ </span>
+                <span className="text-3xl md:text-4xl font-semibold relative -top-9 left-2" style={{ background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>R$ </span>
                 <span
                   className="font-semibold relative left-2.5"
                   style={{
