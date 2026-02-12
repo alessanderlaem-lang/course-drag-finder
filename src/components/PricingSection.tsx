@@ -80,7 +80,7 @@ const PricingSection = () => {
                 <span
                   className="font-semibold relative left-2"
                   style={{
-                    fontSize: "clamp(80px, 18vw, 140px)",
+                    fontSize: "clamp(100px, 22vw, 170px)",
                     background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
