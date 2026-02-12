@@ -35,7 +35,7 @@ const PricingSection = () => {
                     display: "block",
                     lineHeight: "1",
                     paddingTop: "24px",
-                    marginBottom: "-28px",
+                    marginBottom: "-38px",
                   }}
                 >
                   RISE
