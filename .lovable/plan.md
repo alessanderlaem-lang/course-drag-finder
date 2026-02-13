@@ -1,18 +1,21 @@
 
 
-## Substituir placeholder pelo banner na seção "Como Funciona o Acesso?"
+## Bloquear Clique Direito e Seleção de Texto
 
-### O que sera feito
-Substituir o placeholder (borda tracejada com texto "Espaco reservado para banner") pela imagem enviada do Rise Community (mockup com notebook e celular), em tamanho controlado para nao ficar muito grande.
+Vou adicionar proteções para dificultar a cópia do conteúdo da página:
 
-### Alteracoes
+### O que será feito:
 
-**1. Copiar a imagem para o projeto**
-- Copiar `user-uploads://Cópia-de-Cópia-de-Cópia-de-NITRO-_9.webp` para `src/assets/banner-acesso.webp`
+1. **Bloquear clique com botão direito** - Desabilitar o menu de contexto em toda a página
+2. **Bloquear seleção de texto** - Impedir que o usuário selecione e copie textos
+3. **Bloquear arrastar elementos** - Impedir que imagens e outros elementos sejam arrastados
+4. **Bloquear atalhos de teclado** - Desabilitar Ctrl+C, Ctrl+U (ver código fonte), Ctrl+S, F12
 
-**2. Arquivo: `src/components/HowAccessWorks.tsx`**
-- Importar a imagem: `import bannerAcesso from "@/assets/banner-acesso.webp"`
-- Substituir o `div` placeholder (linhas 55-57) por uma tag `img` com a imagem importada
-- Aplicar `max-w-2xl` (ou `max-w-3xl`) para limitar o tamanho, `mx-auto` para centralizar, e `rounded-xl` para manter o visual consistente
-- Manter a margem inferior `mb-12` para o espacamento com os steps
+### Detalhes Técnicos
+
+- Criar um hook `useContentProtection` em `src/hooks/use-content-protection.ts` que adiciona event listeners para `contextmenu`, `selectstart`, `dragstart` e `keydown`
+- Adicionar CSS `user-select: none` globalmente no `src/index.css`
+- Ativar o hook no componente principal `App.tsx`
+
+**Observação importante:** Essas medidas dificultam a cópia casual, mas não impedem completamente alguém com conhecimento técnico. Ainda assim, são eficazes contra a maioria dos usuários.
 
