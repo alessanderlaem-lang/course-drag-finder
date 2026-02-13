@@ -69,12 +69,15 @@ const HowAccessWorks = () => {
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                 {/* Ícone */}
                 <div className="flex-shrink-0">
-                  <img
-                    src={step.icon}
-                    alt=""
-                    className="w-24 h-24 md:w-28 md:h-28"
-                    loading="lazy"
-                  />
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={step.icon}
+                      alt=""
+                      className="w-24 h-24 md:w-28 md:h-28"
+                      loading="lazy"
+                    />
+                    <div className="absolute bottom-0 right-0 w-3 h-3 bg-black" />
+                  </div>
                 </div>
 
                 {/* Conteúdo */}
