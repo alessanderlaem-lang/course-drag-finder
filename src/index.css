@@ -110,6 +110,10 @@ All colors MUST be HSL.
     overflow-x: hidden;
     position: relative;
     width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
   
   html {
