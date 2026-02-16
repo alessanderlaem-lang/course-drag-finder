@@ -112,10 +112,11 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
             style={{
               position: "absolute",
               top: 0,
-              left: "-100%",
-              width: "60%",
+              left: "-50%",
+              width: "30%",
               height: "100%",
-              background: "linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.04) 35%, rgba(255,220,220,0.07) 50%, rgba(255,255,255,0.04) 65%, transparent 100%)",
+              background: "linear-gradient(105deg, transparent 0%, rgba(255,240,240,0.03) 20%, rgba(255,255,255,0.06) 50%, rgba(255,240,240,0.03) 80%, transparent 100%)",
+              filter: "blur(8px)",
               animation: "light-sweep 5s linear infinite",
             }}
           />

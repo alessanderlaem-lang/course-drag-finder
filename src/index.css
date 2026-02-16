@@ -228,5 +228,5 @@ All colors MUST be HSL.
 /* Light sweep effect for bonus cards */
 @keyframes light-sweep {
   0% { transform: translateX(0); }
-  100% { transform: translateX(430%); }
+  100% { transform: translateX(700%); }
 }
