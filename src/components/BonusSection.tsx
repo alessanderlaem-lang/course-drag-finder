@@ -53,14 +53,6 @@ const bonusItems: BonusItem[] = [
       "Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...",
     originalPrice: "R$ 97,00",
   },
-  {
-    number: 6,
-    image: bonusMetodos,
-    title: "Produtos para Revenda",
-    description:
-      "Produtos digitais validados e prontos para você revender pelo preço que quiser. PLRs, e-books, templates, scripts e muito mais. Você não precisa criar nada. Pega, revende e lucra.",
-    originalPrice: "R$ 297,00",
-  },
 ];
 
 {/* Badge verde "NESSA OFERTA: GRÁTIS" — réplica exata do ratoflix */}
