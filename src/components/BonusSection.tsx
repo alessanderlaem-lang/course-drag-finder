@@ -99,9 +99,8 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
         className="relative"
         style={{
           borderRadius: "22px",
-          padding: "1.5px",
-          background: "linear-gradient(180deg, hsl(0 100% 50% / 0.25) 0%, hsl(0 100% 50% / 0.08) 25%, transparent 45%, transparent 55%, hsl(0 100% 50% / 0.08) 75%, hsl(0 100% 50% / 0.25) 100%)",
-          boxShadow: "0 -15px 30px hsl(0 100% 50% / 0.06), 0 15px 30px hsl(0 100% 50% / 0.06)",
+          padding: "1px",
+          background: "#464646",
         }}
       >
       <div
