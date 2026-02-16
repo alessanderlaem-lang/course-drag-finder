@@ -164,7 +164,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
           <div className="flex flex-col justify-center w-full">
             {/* Bonus number badge — vermelho, tracking largo */}
             <span
-              className="text-[#FF0000] font-medium text-sm md:text-[15px] tracking-[0.25em] uppercase"
+              className="text-[#FF0000] font-light text-sm md:text-[15px] tracking-[0.25em] uppercase"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               #BÔNUS {bonus.number}
