@@ -111,13 +111,14 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
           <div
             style={{
               position: "absolute",
-              top: 0,
-              left: "-50%",
-              width: "30%",
-              height: "100%",
-              background: "linear-gradient(105deg, transparent 0%, rgba(255,240,240,0.03) 20%, rgba(255,255,255,0.06) 50%, rgba(255,240,240,0.03) 80%, transparent 100%)",
-              filter: "blur(8px)",
-              animation: "light-sweep 5s linear infinite",
+              top: "-20%",
+              left: "-40%",
+              width: "25%",
+              height: "140%",
+              background: "radial-gradient(ellipse at center, rgba(255,255,255,0.07) 0%, rgba(255,240,240,0.04) 30%, rgba(255,255,255,0.015) 55%, transparent 75%)",
+              filter: "blur(15px)",
+              animation: "light-sweep 6s linear infinite",
+              transform: "rotate(15deg)",
             }}
           />
         </div>
