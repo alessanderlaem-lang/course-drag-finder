@@ -94,10 +94,19 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
       className="w-full max-w-[1060px] mx-auto"
     >
       {/* Card — border #464646, border-radius 20px, padding 25px, gap 20px */}
+      {/* Outer glow wrapper */}
       <div
-        className="group relative overflow-hidden transition-all duration-500 hover:border-[#666666]"
+        className="relative"
         style={{
-          border: "1px solid #464646",
+          borderRadius: "22px",
+          padding: "1px",
+          background: "linear-gradient(180deg, hsl(0 100% 50% / 0.7) 0%, hsl(0 100% 45% / 0.3) 30%, hsl(0 0% 0% / 0) 70%)",
+          boxShadow: "0 0 25px hsl(0 100% 50% / 0.12), 0 0 60px hsl(0 100% 50% / 0.06)",
+        }}
+      >
+      <div
+        className="group relative overflow-hidden transition-all duration-500"
+        style={{
           borderRadius: "20px",
           padding: "25px",
           background: "#1a1a1a",
@@ -199,7 +208,8 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
             {/* Badge verde */}
             <NessaOfertaGratis />
           </div>
-        </div>
+      </div>
+      </div>
       </div>
     </motion.div>
   );
