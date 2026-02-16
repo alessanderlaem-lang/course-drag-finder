@@ -224,3 +224,9 @@ All colors MUST be HSL.
 .marquee-track:hover {
   animation-play-state: paused;
 }
+
+/* Light sweep effect for bonus cards */
+@keyframes light-sweep {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

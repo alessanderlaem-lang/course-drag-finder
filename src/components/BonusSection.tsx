@@ -103,6 +103,16 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
           background: "#1a1a1a",
         }}
       >
+        {/* Light sweep shimmer effect */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 45%, rgba(255,200,200,0.12) 50%, rgba(255,255,255,0.08) 55%, transparent 60%)",
+            backgroundSize: "200% 100%",
+            animation: "light-sweep 4s ease-in-out infinite",
+            borderRadius: "20px",
+          }}
+        />
         {/* Card content — flex row on desktop, column on mobile */}
         <div className="flex flex-col md:flex-row items-center" style={{ gap: "20px" }}>
           {/* Image container */}
