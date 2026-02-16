@@ -17,7 +17,7 @@ const bonusItems: BonusItem[] = [
   {
     number: 1,
     image: bonusMetodos,
-    title: "Afiliação a Comunidade",
+    title: "Recupere seu investimento",
     description:
       "Seja afiliado da maior comunidade de todas, com uma estrutura completa, suporte e direcionamento para começar do jeito certo.",
     originalPrice: "R$ 497,00",
