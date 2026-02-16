@@ -100,7 +100,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
         style={{
           borderRadius: "20px",
           padding: "25px",
-          background: "#1a1a1a",
+          background: "#111111",
           border: "1px solid #464646",
         }}
       >
