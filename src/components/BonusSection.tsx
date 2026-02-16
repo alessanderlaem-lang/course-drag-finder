@@ -105,10 +105,9 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
       >
         {/* Red LED glow bar at top */}
         <div
-          className="absolute pointer-events-none"
+          className="absolute pointer-events-none left-[25%] md:left-[10%]"
           style={{
             top: "-1px",
-            left: "10%",
             width: "18%",
             height: "3px",
             borderRadius: "2px",
@@ -118,10 +117,9 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
         />
         {/* Glow layer — wider, softer, no dark edges */}
         <div
-          className="absolute pointer-events-none"
+          className="absolute pointer-events-none left-[20%] md:left-[5%]"
           style={{
             top: "-4px",
-            left: "5%",
             width: "28%",
             height: "10px",
             borderRadius: "50%",
