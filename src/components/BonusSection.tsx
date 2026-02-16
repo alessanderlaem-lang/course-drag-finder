@@ -172,7 +172,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
 
             {/* Title — branco, bold, grande */}
             <h3
-              className="text-white font-bold text-2xl md:text-[2rem] lg:text-[2.4rem] leading-[1.15] mt-3"
+              className="text-white font-bold text-2xl md:text-[2rem] lg:text-[2.4rem] leading-[1.15] mt-3 uppercase"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               {bonus.title}
