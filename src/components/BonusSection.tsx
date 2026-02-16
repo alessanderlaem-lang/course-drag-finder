@@ -110,7 +110,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
             top: "0px",
             left: "30%",
             transform: "translateX(-50%)",
-            width: "40%",
+            width: "25%",
             height: "3px",
             borderRadius: "2px",
             background: "linear-gradient(90deg, transparent 0%, hsl(0 100% 50%) 20%, hsl(0 100% 60%) 50%, hsl(0 100% 50%) 80%, transparent 100%)",
