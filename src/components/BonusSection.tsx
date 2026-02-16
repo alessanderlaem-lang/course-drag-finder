@@ -202,7 +202,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
               De{" "}
               <span className="relative inline-block text-white/70">
                 {bonus.originalPrice}
-                <span className="absolute left-0 right-0 h-[2px] bg-red-600/50" style={{ top: '40%' }} />
+                <span className="absolute left-0 right-0 h-[2px] bg-white/50" style={{ top: '40%' }} />
               </span>
             </p>
 
