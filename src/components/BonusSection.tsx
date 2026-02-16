@@ -100,8 +100,8 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
         style={{
           borderRadius: "22px",
           padding: "1px",
-          background: "linear-gradient(180deg, hsl(0 100% 50% / 0.7) 0%, hsl(0 100% 45% / 0.3) 30%, hsl(0 0% 0% / 0) 70%)",
-          boxShadow: "0 0 25px hsl(0 100% 50% / 0.12), 0 0 60px hsl(0 100% 50% / 0.06)",
+          background: "linear-gradient(180deg, hsl(0 100% 50% / 0.25) 0%, hsl(0 100% 50% / 0.08) 25%, transparent 45%, transparent 55%, hsl(0 100% 50% / 0.08) 75%, hsl(0 100% 50% / 0.25) 100%)",
+          boxShadow: "0 -15px 30px hsl(0 100% 50% / 0.06), 0 15px 30px hsl(0 100% 50% / 0.06)",
         }}
       >
       <div
