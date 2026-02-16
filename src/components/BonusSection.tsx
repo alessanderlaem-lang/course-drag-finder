@@ -200,7 +200,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               De{" "}
-              <span className="line-through text-white/70">
+              <span className="line-through text-white/70" style={{ textDecorationColor: '#FF0000' }}>
                 {bonus.originalPrice}
               </span>
             </p>
