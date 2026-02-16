@@ -108,7 +108,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
           className="absolute pointer-events-none left-[16%] md:left-[10%]"
           style={{
             top: "-1px",
-            width: "18%",
+            width: "22%",
             height: "3px",
             borderRadius: "2px",
             background: "linear-gradient(90deg, transparent 0%, hsl(0 100% 55%) 25%, hsl(0 100% 60%) 50%, hsl(0 100% 55%) 75%, transparent 100%)",
