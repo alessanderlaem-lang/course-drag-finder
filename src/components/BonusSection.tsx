@@ -107,9 +107,9 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 45%, rgba(255,200,200,0.12) 50%, rgba(255,255,255,0.08) 55%, transparent 60%)",
+            background: "linear-gradient(105deg, transparent 45%, rgba(255,255,255,0.04) 48%, rgba(255,220,220,0.07) 50%, rgba(255,255,255,0.04) 52%, transparent 55%)",
             backgroundSize: "200% 100%",
-            animation: "light-sweep 4s ease-in-out infinite",
+            animation: "light-sweep 7s ease-in-out infinite",
             borderRadius: "20px",
           }}
         />
