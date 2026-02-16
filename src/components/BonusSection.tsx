@@ -107,16 +107,27 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
         <div
           className="absolute pointer-events-none"
           style={{
-            top: "0px",
-            left: "18%",
-            transform: "translateX(-50%)",
+            top: "-1px",
+            left: "10%",
             width: "18%",
-            height: "3px",
+            height: "2px",
             borderRadius: "2px",
-            background: "linear-gradient(90deg, transparent 0%, hsl(0 100% 50%) 20%, hsl(0 100% 60%) 50%, hsl(0 100% 50%) 80%, transparent 100%)",
-            boxShadow: "0 0 8px 2px hsl(0 100% 50% / 0.4), 0 0 20px 4px hsl(0 100% 50% / 0.2), 0 2px 12px 2px hsl(0 100% 50% / 0.15)",
-            opacity: 0.85,
+            background: "linear-gradient(90deg, transparent 0%, hsl(0 100% 55%) 25%, hsl(0 100% 60%) 50%, hsl(0 100% 55%) 75%, transparent 100%)",
             zIndex: 10,
+          }}
+        />
+        {/* Glow layer — wider, softer, no dark edges */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            top: "-4px",
+            left: "5%",
+            width: "28%",
+            height: "10px",
+            borderRadius: "50%",
+            background: "radial-gradient(ellipse at center, hsl(0 100% 50% / 0.35) 0%, hsl(0 100% 50% / 0.15) 40%, transparent 70%)",
+            filter: "blur(6px)",
+            zIndex: 9,
           }}
         />
 
