@@ -47,8 +47,7 @@ const HowAccessWorks = () => {
 
           {/* Subtítulo */}
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Siga o passo a passo abaixo e faça como as mais de{" "}
-            <strong>9 mil pessoas</strong> que já fazem parte da plataforma.
+            Tudo foi feito pra ser simples, rápido e direto. Em menos de 5 minutos, você já estará aproveitando tudo por dentro.
           </p>
         </div>
 
