@@ -96,19 +96,12 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
       {/* Card — border #464646, border-radius 20px, padding 25px, gap 20px */}
       {/* Outer glow wrapper */}
       <div
-        className="relative"
-        style={{
-          borderRadius: "22px",
-          padding: "1px",
-          background: "#464646",
-        }}
-      >
-      <div
         className="group relative overflow-hidden transition-all duration-500"
         style={{
           borderRadius: "20px",
           padding: "25px",
           background: "#1a1a1a",
+          border: "1px solid #464646",
         }}
       >
         {/* Red LED glow bar at top */}
@@ -208,7 +201,6 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
             {/* Badge verde */}
             <NessaOfertaGratis />
           </div>
-      </div>
       </div>
       </div>
     </motion.div>
