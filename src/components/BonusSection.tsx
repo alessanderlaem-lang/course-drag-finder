@@ -91,7 +91,7 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
-      className="w-full max-w-[1060px] mx-auto"
+      className="w-full max-w-[1060px] md:max-w-[860px] lg:max-w-[940px] mx-auto"
     >
       {/* Card — border #464646, border-radius 20px, padding 25px, gap 20px */}
       {/* Outer glow wrapper */}
