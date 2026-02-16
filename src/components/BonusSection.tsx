@@ -103,6 +103,23 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
           background: "#1a1a1a",
         }}
       >
+        {/* Red LED glow bar at top */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            top: "0px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "40%",
+            height: "3px",
+            borderRadius: "2px",
+            background: "linear-gradient(90deg, transparent 0%, hsl(0 100% 50%) 20%, hsl(0 100% 60%) 50%, hsl(0 100% 50%) 80%, transparent 100%)",
+            boxShadow: "0 0 8px 2px hsl(0 100% 50% / 0.4), 0 0 20px 4px hsl(0 100% 50% / 0.2), 0 2px 12px 2px hsl(0 100% 50% / 0.15)",
+            opacity: 0.85,
+            zIndex: 10,
+          }}
+        />
+
         {/* Light sweep shimmer effect */}
         <div
           className="absolute inset-0 pointer-events-none overflow-hidden"
