@@ -101,14 +101,14 @@ const Footer = () => {
           </div>
 
           <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-            Ainda tem <span className="text-[#25D366]">dúvidas</span>?
+            Ficou com alguma <span className="text-[#25D366]">dúvida</span>?
           </h3>
           <p className="text-muted-foreground text-base md:text-lg max-w-lg mx-auto">
             Fale diretamente com a nossa equipe pelo WhatsApp. Estamos prontos para te ajudar!
           </p>
 
           <a
-            href="https://wa.me/?text=ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20Rise%20Community"
+            href="https://wa.me/5511972734906?text=Ol%C3%A1%2C%20tenho%20algumas%20d%C3%BAvidas%20sobre%20a%20Rise%20Community%2C%20poderia%20me%20ajudar%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-[#25D366]/20"
