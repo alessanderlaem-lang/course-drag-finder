@@ -199,8 +199,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                   lineHeight: "1.3",
                 }}
               >
-                Milhares de empresários{" "}
-                <b className="text-white">escalaram sua empresa!</b>
+                Junte-se a{" "}
+                <b className="text-white">+9.000 membros na maior comunidade de rateio do Brasil.</b>
               </p>
             </div>
           </div>
