@@ -174,21 +174,25 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                   src={avatarCarlos}
                   alt="Carlos"
                   className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
+                  decoding="async"
                 />
                 <img
                   src={avatarMateus}
                   alt="Mateus"
                   className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
+                  decoding="async"
                 />
                 <img
                   src={avatarWaleska}
                   alt="Waleska"
                   className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
+                  decoding="async"
                 />
                 <img
                   src={avatarIsrael}
                   alt="Israel"
                   className="w-[34px] h-[34px] md:w-[38px] md:h-[38px] rounded-full border-2 border-black"
+                  decoding="async"
                 />
               </div>
               <p
