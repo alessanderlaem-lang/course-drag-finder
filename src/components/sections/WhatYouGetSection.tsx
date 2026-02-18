@@ -73,7 +73,7 @@ const WhatYouGetSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative overflow-hidden mb-10"
+          className="relative overflow-hidden mb-14"
           style={{
             borderRadius: "20px",
             padding: "30px 25px",
@@ -201,55 +201,120 @@ const WhatYouGetSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h3
-            className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-wide mb-3"
-            style={{ fontFamily: "'Articulat CF', sans-serif" }}
+          {/* Container with border and LED glow */}
+          <div
+            className="relative overflow-hidden"
+            style={{
+              borderRadius: "20px",
+              padding: "30px 25px",
+              background: "#111111",
+              border: "1px solid #464646",
+            }}
           >
-            Acesso Total ao Nosso{" "}
-            <span
+            {/* Red LED glow bar */}
+            <div
+              className="absolute pointer-events-none right-[10%]"
               style={{
-                background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
+                top: "-1px",
+                width: "30%",
+                height: "3px",
+                borderRadius: "2px",
+                background: "linear-gradient(90deg, transparent 0%, hsl(0 100% 55%) 25%, hsl(0 100% 60%) 50%, hsl(0 100% 55%) 75%, transparent 100%)",
+                zIndex: 10,
               }}
-            >
-              Rateio & Ferramentas
-            </span>
-          </h3>
-          <p
-            className="text-center text-sm md:text-base max-w-2xl mx-auto mb-8"
-            style={{ fontFamily: "'Articulat CF', sans-serif", color: "#FF0000" }}
-          >
-            Ferramentas premium, scripts e ativos que custam uma fortuna lá fora, liberados para você usar.
-          </p>
+            />
+            <div
+              className="absolute pointer-events-none right-[5%]"
+              style={{
+                top: "-4px",
+                width: "30%",
+                height: "10px",
+                borderRadius: "50%",
+                background: "radial-gradient(ellipse at center, hsl(0 100% 50% / 0.35) 0%, hsl(0 100% 50% / 0.15) 40%, transparent 70%)",
+                filter: "blur(6px)",
+                zIndex: 9,
+              }}
+            />
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-            {rateioItems.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.04, duration: 0.3 }}
-                className="rounded-xl border border-[#333] hover:border-[#FF0000]/40 transition-colors duration-300 p-4 md:p-5 flex flex-col items-center text-center gap-2"
-                style={{ background: "#111111" }}
+            {/* Shimmer */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ borderRadius: "20px" }}>
+              <div
+                style={{
+                  position: "absolute",
+                  top: "-30%",
+                  left: "-40%",
+                  width: "20%",
+                  height: "160%",
+                  background: "radial-gradient(ellipse at center, rgba(255,255,255,0.07) 0%, rgba(255,240,240,0.04) 30%, rgba(255,255,255,0.015) 55%, transparent 75%)",
+                  filter: "blur(15px)",
+                  animation: "light-sweep 6s linear infinite",
+                  transform: "skewX(-15deg)",
+                }}
+              />
+            </div>
+
+            <div className="relative z-10">
+              <h3
+                className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-wide mb-3"
+                style={{ fontFamily: "'Articulat CF', sans-serif" }}
               >
-                <span className="text-3xl md:text-4xl">{item.emoji}</span>
+                Acesso Total ao Nosso{" "}
                 <span
-                  className="text-white font-bold text-xs md:text-sm leading-tight"
-                  style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                  style={{
+                    background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
                 >
-                  {item.title}
+                  Rateio & Ferramentas
                 </span>
-                <span
-                  className="text-[#999] text-[11px] md:text-xs leading-snug"
-                  style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                >
-                  {item.desc}
-                </span>
-              </motion.div>
-            ))}
+              </h3>
+              <p
+                className="text-center text-sm md:text-base max-w-2xl mx-auto mb-8"
+                style={{ fontFamily: "'Articulat CF', sans-serif", color: "#FF0000" }}
+              >
+                Ferramentas premium, scripts e ativos que custam uma fortuna lá fora, liberados para você usar.
+              </p>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                {rateioItems.map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.04, duration: 0.3 }}
+                    className="rounded-xl border border-[#333] hover:border-[#FF0000]/40 transition-all duration-300 p-4 md:p-5 flex flex-col items-center text-center gap-2.5"
+                    style={{ background: "#0D0D0D" }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = "#1a1a1a";
+                      e.currentTarget.style.boxShadow = "0 0 20px rgba(255,0,0,0.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "#0D0D0D";
+                      e.currentTarget.style.boxShadow = "none";
+                    }}
+                  >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(255,0,0,0.1)" }}>
+                      <span className="text-2xl md:text-3xl">{item.emoji}</span>
+                    </div>
+                    <span
+                      className="text-white font-bold text-xs md:text-sm leading-tight"
+                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                    >
+                      {item.title}
+                    </span>
+                    <span
+                      className="text-[#999] text-[11px] md:text-xs leading-snug"
+                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                    >
+                      {item.desc}
+                    </span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
 
