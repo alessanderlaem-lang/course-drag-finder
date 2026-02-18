@@ -326,6 +326,12 @@ const WhatYouGetSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-12"
         >
+          <p
+            className="text-white/60 text-sm md:text-base italic mb-6 max-w-xl mx-auto"
+            style={{ fontFamily: "'Articulat CF', sans-serif" }}
+          >
+            Isso é menos de 5% do que tem lá dentro. Se fossemos listar tudo, essa página ficaria infinita.
+          </p>
           <button
             onClick={scrollToPricing}
             className="px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-300 hover:scale-105"
