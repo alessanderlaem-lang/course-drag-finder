@@ -1,41 +1,19 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
-// Category images
-import cat1 from "@/assets/categories/1.png";
-import cat2 from "@/assets/categories/2.png";
-import cat3 from "@/assets/categories/3.png";
-import cat4 from "@/assets/categories/4.png";
-import cat5 from "@/assets/categories/5.png";
-import cat6 from "@/assets/categories/6.png";
-import cat7 from "@/assets/categories/7.png";
-import cat8 from "@/assets/categories/8.png";
-import cat9 from "@/assets/categories/9.png";
-import cat10 from "@/assets/categories/10.png";
-import cat11 from "@/assets/categories/11.png";
-import cat12 from "@/assets/categories/12.png";
-import cat13 from "@/assets/categories/13.png";
-import cat14 from "@/assets/categories/14.png";
-import cat15 from "@/assets/categories/15.png";
-import cat16 from "@/assets/categories/16.png";
-
-const categories = [
-  { img: cat1, label: "Marketing Digital" },
-  { img: cat2, label: "Programação" },
-  { img: cat3, label: "Design & Edição" },
-  { img: cat4, label: "E-commerce" },
-  { img: cat5, label: "Dropshipping" },
-  { img: cat6, label: "Copywriting" },
-  { img: cat7, label: "Tráfego Pago" },
-  { img: cat8, label: "Redes Sociais" },
-  { img: cat9, label: "Vendas" },
-  { img: cat10, label: "Finanças" },
-  { img: cat11, label: "Desenvolvimento" },
-  { img: cat12, label: "Inteligência Artificial" },
-  { img: cat13, label: "Idiomas" },
-  { img: cat14, label: "Fotografia" },
-  { img: cat15, label: "Música & Áudio" },
-  { img: cat16, label: "E muito mais..." },
+const rateioItems = [
+  { emoji: "🛠️", title: "Source Code, SaaS & iGaming", desc: "O ativo mais valioso. Código da própria bet/software" },
+  { emoji: "💾", title: "Pack de +30k PLRs Premium", desc: "Produto pronto para venda rápida" },
+  { emoji: "🤖", title: "Robôs & Automação (Zap/Insta)", desc: "Ferramentas de eficiência" },
+  { emoji: "🕵️", title: "Puxada de Dados & Leads", desc: "Dados e leads para prospecção" },
+  { emoji: "📲", title: "APKs Mod & Apps Premium", desc: "Softwares pagos desbloqueados" },
+  { emoji: "📄", title: "Páginas de Vendas Clonadas", desc: "Modelos de alta conversão prontos" },
+  { emoji: "💬", title: "Scripts de Venda & Copy Pronta", desc: "Arquivos para copiar e colar" },
+  { emoji: "🛡️", title: "Contingência & Aquecimento de Chips", desc: "Ferramentas anti-bloqueio" },
+  { emoji: "🔔", title: "Gerador de Prova Social", desc: "Notificações que aumentam conversão" },
+  { emoji: "🧩", title: "Pack de Extensões & Plugins Pro", desc: "Elementor Pro, WP Rocket, etc." },
+  { emoji: "🎨", title: "Pack de Design & Criativos Virais", desc: "Artes editáveis para anúncios" },
+  { emoji: "🔞", title: "Nicho Black & Hot (+18)", desc: "Conteúdo underground exclusivo" },
 ];
 
 const highlights = [
@@ -216,45 +194,59 @@ const WhatYouGetSection = () => {
           </div>
         </motion.div>
 
-        {/* Categories Grid */}
+        {/* Rateio & Ferramentas */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <p
-            className="text-center text-white/60 text-sm uppercase tracking-[0.2em] mb-6"
+          <h3
+            className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-wide mb-3"
             style={{ fontFamily: "'Articulat CF', sans-serif" }}
           >
-            Algumas das categorias disponíveis
+            Acesso Total ao Nosso{" "}
+            <span
+              style={{
+                background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Rateio & Ferramentas
+            </span>
+          </h3>
+          <p
+            className="text-center text-sm md:text-base max-w-2xl mx-auto mb-8"
+            style={{ fontFamily: "'Articulat CF', sans-serif", color: "#FF0000" }}
+          >
+            Ferramentas premium, scripts e ativos que custam uma fortuna lá fora, liberados para você usar.
           </p>
-          <div className="grid grid-cols-4 md:grid-cols-8 gap-3 md:gap-4">
-            {categories.map((cat, i) => (
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {rateioItems.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.03, duration: 0.3 }}
-                className="flex flex-col items-center gap-2"
+                transition={{ delay: i * 0.04, duration: 0.3 }}
+                className="rounded-xl border border-[#333] hover:border-[#FF0000]/40 transition-colors duration-300 p-4 md:p-5 flex flex-col items-center text-center gap-2"
+                style={{ background: "#111111" }}
               >
-                <div
-                  className="w-full aspect-square rounded-xl overflow-hidden border border-[#333] hover:border-[#FF0000]/40 transition-colors duration-300"
-                  style={{ background: "#111" }}
-                >
-                  <img
-                    src={cat.img}
-                    alt={cat.label}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
+                <span className="text-3xl md:text-4xl">{item.emoji}</span>
                 <span
-                  className="text-white/70 text-[10px] md:text-xs text-center leading-tight"
+                  className="text-white font-bold text-xs md:text-sm leading-tight"
                   style={{ fontFamily: "'Articulat CF', sans-serif" }}
                 >
-                  {cat.label}
+                  {item.title}
+                </span>
+                <span
+                  className="text-[#999] text-[11px] md:text-xs leading-snug"
+                  style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                >
+                  {item.desc}
                 </span>
               </motion.div>
             ))}
