@@ -13,6 +13,7 @@ const rateioItems = [
   { emoji: "📄", title: "Páginas de Vendas Clonadas", desc: "Modelos de alta conversão prontos" },
   { emoji: "💬", title: "Scripts de Venda & Copy Pronta", desc: "Arquivos para copiar e colar" },
   { emoji: "🔔", title: "Gerador de Prova Social", desc: "Notificações que aumentam conversão" },
+  { emoji: "🎬", title: "Edição de Vídeo & VSL", desc: "Templates, presets e projetos prontos para editar" },
 ];
 
 const highlights = [
