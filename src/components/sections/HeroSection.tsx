@@ -37,8 +37,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           alt=""
           fetchPriority="high"
           decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "center top" }}
+          className="absolute inset-0 w-full h-full object-cover md:object-[center_top]"
+          style={{ objectPosition: "55% top" }}
         />
         
         {/* Dark overlay */}
