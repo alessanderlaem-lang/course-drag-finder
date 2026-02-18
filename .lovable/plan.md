@@ -1,78 +1,63 @@
 
 
-# Nova Secao: "O Que Voce Vai Receber" (Entrega do Rateio)
+# Atualizar Secao de Rateio & Ferramentas
 
-## Objetivo
-Criar uma secao de alta conversao focada na entrega principal da Rise Community: o acesso a +10.000 cursos completos via fornecedores exclusivos, com atualizacoes diarias. Posicionada entre a AboutSection e o HowAccessWorks para que o visitante veja exatamente o que recebe antes de entender como funciona o acesso.
+## O que muda
 
-## Posicao no fluxo da pagina
+A parte de baixo da secao (o grid de categorias com "Algumas das categorias disponiveis") sera transformada numa nova sub-secao dedicada ao **Rateio & Ferramentas**, com headline forte, subtitulo em vermelho e 12 cards de poder no lugar das 16 categorias genericas.
+
+## Estrutura Final
+
+A secao `WhatYouGetSection.tsx` ficara com esta sequencia:
+
 ```text
-Hero
-  |
-About (O que e a Rise Community?)
-  |
->>> NOVA SECAO: O Que Voce Vai Receber <<<
-  |
-Como Funciona o Acesso
-  |
-Bonus
-  |
-...resto
+1. Header: "O Que Voce Vai Receber" (mantem como esta)
+2. Card principal: +10.000 Cursos via Fornecedores (mantem como esta)
+3. >>> NOVA SUB-SECAO: Rateio & Ferramentas <<<
+   - Headline: "ACESSO TOTAL AO NOSSO RATEIO & FERRAMENTAS"
+   - Subtitulo em vermelho: "Ferramentas premium, scripts e ativos..."
+   - Grid 12 cards (3x4 desktop, 2x6 mobile)
+4. CTA: "Quero ter acesso agora" (mantem como esta)
 ```
 
-## Layout e Conteudo
+## Os 12 Cards
 
-A secao seguira o padrao visual do site: fundo preto, fonte Articulat CF, titulo com gradiente vermelho, e estilo limpo e profissional.
+Cada card tera um emoji como icone, titulo curto em bold e descricao pequena embaixo. Estilo visual: fundo `#111111`, borda `#333`, hover com borda vermelha (mesmo padrao atual dos cards de categoria).
 
-### Estrutura:
+| # | Emoji | Titulo | Descricao curta |
+|---|-------|--------|-----------------|
+| 1 | (ferramentas) | Source Code, SaaS e iGaming | O ativo mais valioso. Codigo da propria bet/software |
+| 2 | (disco) | Pack de +30k PLRs Premium | Produto pronto para venda rapida |
+| 3 | (robo) | Robos e Automacao (Zap/Insta) | Ferramentas de eficiencia |
+| 4 | (detetive) | Puxada de Dados e Leads | Dados e leads para prospecao |
+| 5 | (celular) | APKs Mod e Apps Premium | Softwares pagos desbloqueados |
+| 6 | (documento) | Paginas de Vendas Clonadas | Modelos de alta conversao prontos |
+| 7 | (balao) | Scripts de Venda e Copy Pronta | Arquivos para copiar e colar |
+| 8 | (escudo) | Contingencia e Aquecimento de Chips | Ferramentas anti-bloqueio |
+| 9 | (sino) | Gerador de Prova Social | Notificacoes que aumentam conversao |
+| 10 | (quebra-cabeca) | Pack de Extensoes e Plugins Pro | Elementor Pro, WP Rocket, etc. |
+| 11 | (arte) | Pack de Design e Criativos Virais | Artes editaveis para anuncios |
+| 12 | (proibido) | Nicho Black e Hot (+18) | Conteudo underground exclusivo |
 
-1. **Cabecalho da secao**
-   - Titulo: "O Que Voce Vai Receber" (com "Receber" em gradiente vermelho)
-   - Subtitulo curto reforccando a entrega massiva
+## Layout dos Cards
 
-2. **Destaque principal - Card grande**
-   - Card com borda sutil (#464646) e fundo #111111 (padrao dos bonus cards)
-   - Glow vermelho sutil no topo (mesmo efeito dos BonusCards)
-   - Titulo bold: "+10.000 Cursos Completos via Fornecedores"
-   - Descricao explicando: acesso a fornecedores exclusivos, atualizacoes diarias, todas as areas do digital
-   - Lista com checkmarks vermelhos das categorias principais (usando as 16 imagens de categorias existentes ou icones):
-     - Marketing Digital
-     - Programacao e Tecnologia
-     - Design e Edicao
-     - E-commerce e Dropshipping
-     - Vendas e Copywriting
-     - Trafego Pago
-     - Redes Sociais
-     - E mais centenas de categorias...
-
-3. **Grid de categorias visual**
-   - Grid 4x4 (ou 3-4 colunas responsivo) usando as 16 imagens de categorias ja existentes em `src/assets/categories/`
-   - Cada imagem com label da categoria
-   - Efeito visual de abundancia mostrando a variedade
-
-4. **Reforco de valor**
-   - Badge ou destaque: "Atualizacoes diarias" / "Novos cursos toda semana"
-   - Texto reforccando: "Via fornecedores exclusivos - voce nunca mais paga caro por curso"
-
-5. **CTA secundario** - botao vermelho "Quero ter acesso agora" linkando para a secao de pricing
-
-### Animacoes
-- Entrada com framer-motion (fade-in + slide-up), consistente com o resto do site
+- Grid responsivo: **2 colunas no mobile**, **3 colunas no tablet**, **4 colunas no desktop**
+- Cada card: emoji grande no topo, titulo bold branco, descricao pequena em cinza
+- Fundo `#111111`, borda `#333`, hover borda `#FF0000/40`
+- Mesmo estilo visual dos cards de categoria atuais, porem com texto ao inves de imagem
 
 ## Detalhes Tecnicos
 
-### Arquivo novo
+### Arquivo alterado
 - `src/components/sections/WhatYouGetSection.tsx`
 
-### Alteracao no Index.tsx
-- Importar e posicionar o novo componente entre `<AboutSection />` e `<HowAccessWorks />`
+### Mudancas especificas
+1. **Remover** as 16 importacoes de imagens de categoria (cat1-cat16) e o array `categories`
+2. **Adicionar** novo array `rateioItems` com os 12 cards (emoji, titulo, descricao)
+3. **Substituir** o bloco "Categories Grid" por:
+   - Nova headline "ACESSO TOTAL AO NOSSO RATEIO & FERRAMENTAS"
+   - Subtitulo em vermelho
+   - Grid de 12 cards com emoji + texto
+4. Manter animacoes framer-motion consistentes
+5. Manter toda a parte de cima (header + card principal dos cursos) intacta
 
-### Assets utilizados
-- As 16 imagens de categorias em `src/assets/categories/1.png` ate `16.png` (ja existem no projeto)
-- Mesma fonte Articulat CF
-- Mesmo esquema de cores: fundo preto, texto branco, acentos em vermelho (#FF0000 a #A70505)
-
-### Padrao visual
-- Seguir exatamente o estilo dos BonusCards: borda #464646, fundo #111111, glow vermelho no topo
-- Tipografia consistente com o resto (Articulat CF)
-- Espacamento compacto conforme preferencia do usuario
