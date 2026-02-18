@@ -39,13 +39,13 @@ const categories = [
 ];
 
 const highlights = [
-  "Marketing Digital",
-  "Programação e Tecnologia",
-  "Design e Edição de Vídeo",
-  "E-commerce e Dropshipping",
-  "Vendas e Copywriting",
-  "Tráfego Pago",
-  "Redes Sociais e Criação de Conteúdo",
+  "Tráfego Pago & Black Hat",
+  "Marketing Digital & Lançamentos",
+  "Programação & Desenvolvimento",
+  "Design, VSL & Edição de Vídeo",
+  "Dropshipping & E-commerce",
+  "Copywriting & Vendas",
+  "PLR & Infoprodutos",
   "E centenas de outras categorias...",
 ];
 
