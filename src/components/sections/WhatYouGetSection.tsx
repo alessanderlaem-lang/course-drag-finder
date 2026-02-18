@@ -326,12 +326,12 @@ const WhatYouGetSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center mt-12"
         >
-          <p
-            className="text-white text-base md:text-lg font-semibold mb-6 max-w-xl mx-auto"
+          <h3
+            className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 max-w-2xl mx-auto text-white"
             style={{ fontFamily: "'Articulat CF', sans-serif" }}
           >
             Isso é menos de <span className="text-[#FF0000]">5%</span> do que tem lá dentro. Se fossemos listar tudo, essa página ficaria <span className="text-[#FF0000]">infinita.</span>
-          </p>
+          </h3>
           <button
             onClick={scrollToPricing}
             className="px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-300 hover:scale-105"
