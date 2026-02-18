@@ -28,21 +28,25 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
     <>
       {/* ===== HERO SECTION ===== */}
       <section
-        className="relative w-full flex flex-col items-center justify-end overflow-hidden"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover", // Desktop: cover
-          backgroundPosition: "center top", // Desktop: center top
-          backgroundRepeat: "no-repeat",
-          minHeight: "100vh",
-        }}
+        className="relative w-full flex flex-col items-center justify-end overflow-hidden bg-[#0a0a0a]"
+        style={{ minHeight: "100vh" }}
       >
+        {/* Hero background as <img> for browser prioritization */}
+        <img
+          src={heroBg}
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "center top" }}
+        />
         {/* Mobile-specific background adjustment */}
         <style>{`
           @media (max-width: 768px) {
-            section:has(.hero-content-mobile) {
-              background-size: 180% !important;
-              background-position: 46% 3% !important;
+            section:has(.hero-content-mobile) > img:first-of-type {
+              object-fit: cover;
+              transform: scale(1.8);
+              transform-origin: 46% 3%;
             }
           }
         `}</style>
