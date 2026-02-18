@@ -3,17 +3,16 @@ import { Check } from "lucide-react";
 
 const rateioItems = [
   { emoji: "🛠️", title: "Source Code, SaaS & iGaming", desc: "O ativo mais valioso. Código da própria bet/software" },
+  { emoji: "🛡️", title: "Contingência & Aquecimento de Chips", desc: "Ferramentas anti-bloqueio" },
+  { emoji: "🔞", title: "Nicho Black & Hot (+18)", desc: "Conteúdo underground exclusivo" },
+  { emoji: "🎨", title: "Pack de Design & Criativos Virais", desc: "Artes editáveis para anúncios" },
+  { emoji: "🧩", title: "Pack de Extensões & Plugins Pro", desc: "Elementor Pro, WP Rocket, etc." },
+  { emoji: "📲", title: "APKs Mod & Apps Premium", desc: "Softwares pagos desbloqueados" },
   { emoji: "💾", title: "Pack de +30k PLRs Premium", desc: "Produto pronto para venda rápida" },
   { emoji: "🤖", title: "Robôs & Automação (Zap/Insta)", desc: "Ferramentas de eficiência" },
-  { emoji: "🕵️", title: "Puxada de Dados & Leads", desc: "Dados e leads para prospecção" },
-  { emoji: "📲", title: "APKs Mod & Apps Premium", desc: "Softwares pagos desbloqueados" },
   { emoji: "📄", title: "Páginas de Vendas Clonadas", desc: "Modelos de alta conversão prontos" },
   { emoji: "💬", title: "Scripts de Venda & Copy Pronta", desc: "Arquivos para copiar e colar" },
-  { emoji: "🛡️", title: "Contingência & Aquecimento de Chips", desc: "Ferramentas anti-bloqueio" },
   { emoji: "🔔", title: "Gerador de Prova Social", desc: "Notificações que aumentam conversão" },
-  { emoji: "🧩", title: "Pack de Extensões & Plugins Pro", desc: "Elementor Pro, WP Rocket, etc." },
-  { emoji: "🎨", title: "Pack de Design & Criativos Virais", desc: "Artes editáveis para anúncios" },
-  { emoji: "🔞", title: "Nicho Black & Hot (+18)", desc: "Conteúdo underground exclusivo" },
 ];
 
 const highlights = [
