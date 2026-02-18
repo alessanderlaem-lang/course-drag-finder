@@ -187,7 +187,7 @@ const WhatYouGetSection = () => {
                   className="text-white font-bold text-[13px] md:text-sm tracking-wide"
                   style={{ fontFamily: "'Articulat CF', sans-serif" }}
                 >
-                  📚 Via fornecedores exclusivos
+                  📚 Fornecedores exclusivos
                 </span>
               </div>
             </div>
