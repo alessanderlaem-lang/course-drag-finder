@@ -327,10 +327,10 @@ const WhatYouGetSection = () => {
           className="text-center mt-12"
         >
           <p
-            className="text-white/60 text-sm md:text-base italic mb-6 max-w-xl mx-auto"
+            className="text-white text-base md:text-lg font-semibold mb-6 max-w-xl mx-auto"
             style={{ fontFamily: "'Articulat CF', sans-serif" }}
           >
-            Isso é menos de 5% do que tem lá dentro. Se fossemos listar tudo, essa página ficaria infinita.
+            Isso é menos de <span className="text-[#FF0000]">5%</span> do que tem lá dentro. Se fossemos listar tudo, essa página ficaria <span className="text-[#FF0000]">infinita.</span>
           </p>
           <button
             onClick={scrollToPricing}
