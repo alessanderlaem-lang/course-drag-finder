@@ -40,16 +40,6 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: "center top" }}
         />
-        {/* Mobile-specific background adjustment */}
-        <style>{`
-          @media (max-width: 768px) {
-            section:has(.hero-content-mobile) > img:first-of-type {
-              object-fit: cover;
-              transform: scale(1.8);
-              transform-origin: 46% 3%;
-            }
-          }
-        `}</style>
         
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
