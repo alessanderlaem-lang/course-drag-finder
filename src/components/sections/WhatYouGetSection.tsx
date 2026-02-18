@@ -1,4 +1,4 @@
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const rateioItems = [
@@ -33,11 +33,10 @@ const WhatYouGetSection = () => {
   };
 
   return (
-    <LazyMotion features={domAnimation}>
     <section className="w-full py-16 md:py-24 px-4 md:px-6 bg-background">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -66,10 +65,10 @@ const WhatYouGetSection = () => {
           >
             Acesso completo a mais de 10.000 cursos via fornecedores exclusivos, com atualizações diárias em todas as áreas do digital.
           </p>
-        </m.div>
+        </motion.div>
 
         {/* Main Feature Card */}
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -193,10 +192,10 @@ const WhatYouGetSection = () => {
               </div>
             </div>
           </div>
-        </m.div>
+        </motion.div>
 
         {/* Rateio & Ferramentas */}
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -280,7 +279,7 @@ const WhatYouGetSection = () => {
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
                 {rateioItems.map((item, i) => (
-                  <m.div
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -312,15 +311,15 @@ const WhatYouGetSection = () => {
                     >
                       {item.desc}
                     </span>
-                  </m.div>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
-        </m.div>
+        </motion.div>
 
         {/* CTA */}
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -350,10 +349,9 @@ const WhatYouGetSection = () => {
           >
             Acesso vitalício · Atualizações diárias · Via fornecedores exclusivos
           </p>
-        </m.div>
+        </motion.div>
       </div>
     </section>
-    </LazyMotion>
   );
 };
 

@@ -66,8 +66,7 @@ const TestimonialsCarousel = () => {
                 src={img}
                 alt={`Feedback de membro ${(idx % feedbacks.length) + 1}`}
                 className="h-[400px] md:h-[650px] w-auto rounded-xl object-cover flex-shrink-0 shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-white/[0.06]"
-                loading="lazy"
-                decoding="async"
+                loading="eager"
                 draggable={false}
               />
             ))}

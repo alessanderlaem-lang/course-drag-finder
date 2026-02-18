@@ -1,4 +1,4 @@
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { motion } from "framer-motion";
 import bonusMetodos from "@/assets/bonus-metodos.png";
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
@@ -56,13 +56,12 @@ const DiferenciaisCriticosSection = () => {
   ];
 
   return (
-    <LazyMotion features={domAnimation}>
     <section className="w-full py-8 md:py-12 px-4 md:px-6 bg-background relative z-50 hidden">
       <div className="max-w-5xl mx-auto relative z-50">
         {/* Cards de Diferenciais */}
         <div className="space-y-6 md:space-y-8">
           {diferenciais.map((diferencial, index) => (
-            <m.div
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -79,8 +78,6 @@ const DiferenciaisCriticosSection = () => {
                     src={diferencial.image} 
                     alt={diferencial.imageAlt} 
                     className="w-[200px] md:w-[280px] h-auto object-contain"
-                    loading="lazy"
-                    decoding="async"
                   />
                 </div>
                 
@@ -103,12 +100,11 @@ const DiferenciaisCriticosSection = () => {
                   </p>
                 </div>
               </div>
-            </m.div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-    </LazyMotion>
   );
 };
 

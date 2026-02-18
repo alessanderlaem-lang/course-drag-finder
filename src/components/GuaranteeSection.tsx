@@ -132,8 +132,6 @@ const GuaranteeSection = () => {
               src={garantiaMobile} 
               alt="7 Dias de Garantia" 
               className="w-full max-w-[26rem] h-auto rounded-3xl"
-              loading="lazy"
-              decoding="async"
             />
           </div>
 
@@ -143,8 +141,6 @@ const GuaranteeSection = () => {
               src={garantiaMobile} 
               alt="7 Dias de Garantia" 
               className="w-full max-w-[30rem] h-auto rounded-3xl"
-              loading="lazy"
-              decoding="async"
             />
           </div>
 

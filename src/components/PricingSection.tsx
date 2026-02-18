@@ -155,7 +155,7 @@ const PricingSection = () => {
 
             {/* Ícones de Pagamento */}
             <div className="flex justify-center items-center mt-8">
-              <img src={paymentMethods} alt="MasterCard, VISA, Boleto, PayPal" className="h-10 md:h-12 opacity-70" loading="lazy" decoding="async" />
+              <img src={paymentMethods} alt="MasterCard, VISA, Boleto, PayPal" className="h-10 md:h-12 opacity-70" />
             </div>
           </div>
         </div>

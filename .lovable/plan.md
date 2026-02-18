@@ -1,32 +1,33 @@
 
 
-## Corrigir Zoom da Imagem da Hero no Mobile
+## Atualizar texto do social proof na Hero Section
 
-### Problema
-A otimizacao anterior converteu a imagem de `background-image` CSS para uma tag `<img>`. Porem, o bloco de CSS inline para mobile (linhas 44-52) aplica `transform: scale(1.8)` na imagem, causando um zoom excessivo que nao existia antes.
+### O que muda
+Substituir o texto atual longo por uma versão mais curta e direta que cabe perfeitamente em 2 linhas no mobile.
 
-### Solucao
-Remover o bloco `<style>` inteiro que aplica o `transform: scale(1.8)` no mobile. A tag `<img>` com `object-fit: cover` e `object-position: center top` ja cuida do posicionamento correto da imagem em todos os tamanhos de tela - nenhum transform adicional e necessario.
+### Texto atual
+> "Junte-se a +9.000 membros na maior comunidade de rateio do Brasil."
 
-### Detalhes Tecnicos
+### Novo texto
+> "Junte-se a mais de **9.000 membros**"
+
+- A palavra "9.000 membros" ficara em destaque (bold/branco)
+- Cabe em ~2 linhas dentro do container de 140px com font-size `text-xs`
+
+### Detalhes tecnicos
 
 **Arquivo:** `src/components/sections/HeroSection.tsx`
 
-Remover as linhas 43-52 (o bloco `<style>` com media query mobile):
+Alterar o conteudo do `<p>` ao lado dos avatares:
 
 ```tsx
-// REMOVER este bloco inteiro:
-{/* Mobile-specific background adjustment */}
-<style>{`
-  @media (max-width: 768px) {
-    section:has(.hero-content-mobile) > img:first-of-type {
-      object-fit: cover;
-      transform: scale(1.8);
-      transform-origin: 46% 3%;
-    }
-  }
-`}</style>
+// De:
+Junte-se a{" "}
+<b className="text-white">+9.000 membros na maior comunidade de rateio do Brasil.</b>
+
+// Para:
+Junte-se a mais de{" "}
+<b className="text-white">9.000 membros</b>
 ```
 
-A tag `<img>` existente na linha 35-42 ja possui `object-cover` e `object-position: center top`, que e suficiente para exibir a imagem corretamente tanto no desktop quanto no mobile.
-
+Nenhuma alteracao de estilo ou layout necessaria - apenas o texto muda.
