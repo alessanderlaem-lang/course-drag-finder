@@ -1,50 +1,49 @@
 
 
-# Atualizar Secao de Rateio & Ferramentas
+# Melhorias Visuais na Secao de Rateio & Ferramentas
 
-## O que muda
+## Problemas Atuais
+- Os cards estao "soltos" na pagina, sem um container que agrupe visualmente
+- Falta separacao clara entre a secao de cursos e a de rateio
+- Os cards sao simples demais comparados ao card principal dos cursos (que tem LED glow, shimmer, etc.)
+- O subtitulo vermelho fica "perdido" sem um fundo de apoio
 
-A parte de baixo da secao (o grid de categorias com "Algumas das categorias disponiveis") sera transformada numa nova sub-secao dedicada ao **Rateio & Ferramentas**, com headline forte, subtitulo em vermelho e 12 cards de poder no lugar das 16 categorias genericas.
+## Melhorias Propostas
 
-## Estrutura Final
+### 1. Container com fundo e borda (igual ao card de cursos)
+Envolver toda a sub-secao de Rateio num container escuro com borda e o mesmo efeito de LED glow vermelho no topo, criando consistencia visual com o card dos cursos acima.
 
-A secao `WhatYouGetSection.tsx` ficara com esta sequencia:
+### 2. Cards com hover mais rico
+Adicionar um sutil gradiente de fundo no hover (de `#111` para um tom levemente avermelhado) e um glow suave, dando mais vida aos cards quando o usuario passa o mouse.
+
+### 3. Linha divisoria sutil
+Adicionar um separador visual (linha fina ou espacamento maior) entre o card de cursos e a sub-secao de rateio para marcar a mudanca de assunto.
+
+### 4. Emoji maior e com fundo circular
+Colocar o emoji dentro de um circulo com fundo `rgba(255,0,0,0.1)` para dar mais destaque visual e uniformidade.
+
+## Estrutura Visual Final
 
 ```text
-1. Header: "O Que Voce Vai Receber" (mantem como esta)
-2. Card principal: +10.000 Cursos via Fornecedores (mantem como esta)
-3. >>> NOVA SUB-SECAO: Rateio & Ferramentas <<<
-   - Headline: "ACESSO TOTAL AO NOSSO RATEIO & FERRAMENTAS"
-   - Subtitulo em vermelho: "Ferramentas premium, scripts e ativos..."
-   - Grid 12 cards (3x4 desktop, 2x6 mobile)
-4. CTA: "Quero ter acesso agora" (mantem como esta)
++--------------------------------------------------+
+|  [LED GLOW BAR vermelho no topo]                  |
+|                                                    |
+|  ACESSO TOTAL AO NOSSO RATEIO & FERRAMENTAS       |
+|  Ferramentas premium, scripts e ativos...          |
+|                                                    |
+|  +--------+  +--------+  +--------+  +--------+   |
+|  | (emoji)|  | (emoji)|  | (emoji)|  | (emoji)|   |
+|  | Titulo |  | Titulo |  | Titulo |  | Titulo |   |
+|  | desc   |  | desc   |  | desc   |  | desc   |   |
+|  +--------+  +--------+  +--------+  +--------+   |
+|  +--------+  +--------+  +--------+  +--------+   |
+|  | ...    |  | ...    |  | ...    |  | ...    |   |
+|  +--------+  +--------+  +--------+  +--------+   |
+|  +--------+  +--------+  +--------+  +--------+   |
+|  | ...    |  | ...    |  | ...    |  | ...    |   |
+|  +--------+  +--------+  +--------+  +--------+   |
++--------------------------------------------------+
 ```
-
-## Os 12 Cards
-
-Cada card tera um emoji como icone, titulo curto em bold e descricao pequena embaixo. Estilo visual: fundo `#111111`, borda `#333`, hover com borda vermelha (mesmo padrao atual dos cards de categoria).
-
-| # | Emoji | Titulo | Descricao curta |
-|---|-------|--------|-----------------|
-| 1 | (ferramentas) | Source Code, SaaS e iGaming | O ativo mais valioso. Codigo da propria bet/software |
-| 2 | (disco) | Pack de +30k PLRs Premium | Produto pronto para venda rapida |
-| 3 | (robo) | Robos e Automacao (Zap/Insta) | Ferramentas de eficiencia |
-| 4 | (detetive) | Puxada de Dados e Leads | Dados e leads para prospecao |
-| 5 | (celular) | APKs Mod e Apps Premium | Softwares pagos desbloqueados |
-| 6 | (documento) | Paginas de Vendas Clonadas | Modelos de alta conversao prontos |
-| 7 | (balao) | Scripts de Venda e Copy Pronta | Arquivos para copiar e colar |
-| 8 | (escudo) | Contingencia e Aquecimento de Chips | Ferramentas anti-bloqueio |
-| 9 | (sino) | Gerador de Prova Social | Notificacoes que aumentam conversao |
-| 10 | (quebra-cabeca) | Pack de Extensoes e Plugins Pro | Elementor Pro, WP Rocket, etc. |
-| 11 | (arte) | Pack de Design e Criativos Virais | Artes editaveis para anuncios |
-| 12 | (proibido) | Nicho Black e Hot (+18) | Conteudo underground exclusivo |
-
-## Layout dos Cards
-
-- Grid responsivo: **2 colunas no mobile**, **3 colunas no tablet**, **4 colunas no desktop**
-- Cada card: emoji grande no topo, titulo bold branco, descricao pequena em cinza
-- Fundo `#111111`, borda `#333`, hover borda `#FF0000/40`
-- Mesmo estilo visual dos cards de categoria atuais, porem com texto ao inves de imagem
 
 ## Detalhes Tecnicos
 
@@ -52,12 +51,11 @@ Cada card tera um emoji como icone, titulo curto em bold e descricao pequena emb
 - `src/components/sections/WhatYouGetSection.tsx`
 
 ### Mudancas especificas
-1. **Remover** as 16 importacoes de imagens de categoria (cat1-cat16) e o array `categories`
-2. **Adicionar** novo array `rateioItems` com os 12 cards (emoji, titulo, descricao)
-3. **Substituir** o bloco "Categories Grid" por:
-   - Nova headline "ACESSO TOTAL AO NOSSO RATEIO & FERRAMENTAS"
-   - Subtitulo em vermelho
-   - Grid de 12 cards com emoji + texto
-4. Manter animacoes framer-motion consistentes
-5. Manter toda a parte de cima (header + card principal dos cursos) intacta
 
+1. **Container externo**: Envolver o bloco de Rateio (headline + subtitulo + grid) num `div` com fundo `#111111`, borda `1px solid #464646`, border-radius `20px`, padding `30px 25px` -- mesmo estilo do card de cursos
+2. **LED glow bar**: Adicionar a mesma barra de LED vermelha no topo do container (reutilizar o mesmo codigo do card de cursos)
+3. **Emoji com fundo circular**: Cada emoji ganha um circulo de `w-12 h-12` com fundo `rgba(255,0,0,0.1)` e border-radius completo
+4. **Hover dos cards**: Adicionar `hover:bg-[#1a1a1a]` e um box-shadow sutil vermelho no hover
+5. **Espacamento**: Aumentar o `mb-10` entre o card de cursos e o bloco de rateio para `mb-14` para melhor separacao
+
+Nenhum arquivo novo sera criado. Apenas `WhatYouGetSection.tsx` sera editado.
