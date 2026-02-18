@@ -199,8 +199,8 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                   lineHeight: "1.3",
                 }}
               >
-                Junte-se a{" "}
-                <b className="text-white">+9.000 membros na maior comunidade de rateio do Brasil.</b>
+                Junte-se a mais de{" "}
+                <b className="text-white">9.000 membros</b>
               </p>
             </div>
           </div>
