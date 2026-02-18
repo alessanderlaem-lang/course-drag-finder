@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 import bonusMetodos from "@/assets/bonus-metodos.png";
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
 import bonus2 from "@/assets/bonus-2.jpeg";
@@ -86,7 +86,7 @@ const NessaOfertaGratis = () => (
 
 const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -157,6 +157,8 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
               src={bonus.image}
               alt={bonus.title}
               className="w-[260px] md:w-[300px] lg:w-[340px] h-auto object-contain"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -203,16 +205,17 @@ const BonusCard = ({ bonus, index }: { bonus: BonusItem; index: number }) => {
           </div>
       </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 };
 
 const BonusSection = () => {
   return (
+    <LazyMotion features={domAnimation}>
     <section className="w-full pt-[8rem] md:pt-8 pb-10 md:pb-16 px-4 md:px-6 bg-background relative z-50">
       <div className="max-w-7xl mx-auto relative z-50">
         {/* Section header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -233,7 +236,7 @@ const BonusSection = () => {
             Só esses diferenciais já valeriam o investimento, mas você leva tudo
             incluso no acesso vitalício.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Bonus cards — gap entre cards */}
         <div className="flex flex-col gap-6 md:gap-8">
@@ -243,6 +246,7 @@ const BonusSection = () => {
         </div>
       </div>
     </section>
+    </LazyMotion>
   );
 };
 
