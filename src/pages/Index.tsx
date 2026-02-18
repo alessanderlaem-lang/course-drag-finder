@@ -12,6 +12,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
 import AboutSection from "@/components/sections/AboutSection";
 import HowAccessWorks from "@/components/HowAccessWorks";
+import WhatYouGetSection from "@/components/sections/WhatYouGetSection";
 
 
 const Index = () => {
@@ -48,6 +49,8 @@ const Index = () => {
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
       <DiferenciaisCriticosSection />
 
+      {/* What You Get Section - Entrega do Rateio */}
+      <WhatYouGetSection />
 
       {/* How Access Works Section */}
       <HowAccessWorks />
