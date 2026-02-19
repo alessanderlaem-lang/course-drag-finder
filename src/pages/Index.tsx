@@ -41,8 +41,6 @@ const Index = () => {
       {/* Topics Section anchor */}
       <div id="topics-section" />
 
-      {/* About Section - O Que é a Rise Community? */}
-      <AboutSection />
 
       <div id="comunidade" />
 
