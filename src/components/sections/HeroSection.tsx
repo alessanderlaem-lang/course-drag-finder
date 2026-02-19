@@ -118,7 +118,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               textAlign: "center",
             }}
           >
-            Por que pagar por dezenas de acessos diferentes?{" "}
+            Por que pagar por dezenas de conteúdos diferentes?{" "}
             <span style={{ fontWeight: 600, color: "white" }}>
               O acervo completo para você reunido em um único lugar.
             </span>
