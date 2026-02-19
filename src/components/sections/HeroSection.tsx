@@ -92,7 +92,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 color: "rgb(255, 255, 255)",
               }}
             >
-              O lugar certo pra quem quer transformar esforço em{" "}
+              O lugar certo pra quem quer ter todos os cursos e arquivos em{" "}
             </span>
             <span
               style={{
@@ -103,7 +103,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 backgroundClip: "text",
               }}
             >
-              resultado consistente.
+              um só acesso
             </span>
           </h1>
 
