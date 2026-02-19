@@ -55,29 +55,6 @@ const AboutSection = () => {
   return (
     <section className="py-20 sm:py-32 bg-black">
       <div className="container mx-auto px-4">
-        {/* Cabeçalho */}
-        <div className="text-center mb-16">
-          {/* Título Principal */}
-          <h3 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
-            <span className="text-white">O Que é a </span>
-            <span
-              style={{
-                background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Rise Community
-            </span>
-            <span className="text-white">?</span>
-          </h3>
-
-          {/* Subtítulo */}
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            A Rise é um rateio inteligente para quem cansou de pular de curso em curso. Pare de pagar caro e tenha tudo num único acesso. Feita:
-          </p>
-        </div>
 
         {/* Cards */}
         <div className="max-w-5xl mx-auto space-y-8">
