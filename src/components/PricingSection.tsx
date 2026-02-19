@@ -2,7 +2,7 @@ import Section from "@/components/layout/Section";
 import { Check } from "lucide-react";
 import paymentMethods from "@/assets/payment-methods.webp";
 
-const CHECKOUT_URL = "https://risecheckout.com/c/b0a5e71_943557";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/56xiqv5";
 
 const PricingSection = () => {
   const benefits = [
