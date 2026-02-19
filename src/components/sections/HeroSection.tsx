@@ -118,11 +118,10 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               textAlign: "center",
             }}
           >
-            Uma comunidade completa que te dá direção,{" "}
+            Por que pagar por dezenas de acessos diferentes?{" "}
             <span style={{ fontWeight: 600, color: "white" }}>
-              oportunidades reais e networking,
-            </span>{" "}
-            para você dominar o mercado digital.
+              O acervo completo para você reunido em um único lugar.
+            </span>
           </p>
 
           {/* CTA + Social Proof - mobile: coluna, desktop: linha */}
