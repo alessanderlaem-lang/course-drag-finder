@@ -349,7 +349,7 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 </span>
               </h3>
               <p className="text-base leading-[1.3]" style={{ color: "rgb(171, 171, 171)", fontFamily: "'Articulat CF', sans-serif" }}>
-                O ambiente define seu resultado. Conecte-se com players ativos, tire dúvidas técnicas e nunca mais trave por falta de apoio.
+                O ambiente define seu resultado. Conecte-se com pessoas ativas, tire dúvidas e nunca mais trave por falta de apoio.
               </p>
               <img src={btSvg} alt="" className="absolute bottom-3 left-3 w-[22px] h-[22px] opacity-40" />
               <img src={tpSvg} alt="" className="absolute top-3 right-3 w-[22px] h-[22px] opacity-40" />
