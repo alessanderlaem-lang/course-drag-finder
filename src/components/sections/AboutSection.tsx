@@ -75,7 +75,7 @@ const AboutSection = () => {
 
           {/* Subtítulo */}
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            A Rise é um rateio inteligente para quem cansou de pular de curso em curso. Pare de pagar caro e tenha tudo em um único acesso liberado.
+            A Rise é um rateio inteligente para quem cansou de pular de curso em curso. Pare de pagar caro e tenha tudo num único acesso. Feita:
           </p>
         </div>
 
