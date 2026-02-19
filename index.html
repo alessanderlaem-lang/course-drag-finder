@@ -3,7 +3,7 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://api.risecheckout.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
@@ -17,8 +17,20 @@
     <link rel="preload" as="font" href="/src/assets/hero/fonts/ArticulatCF-Normal.ttf" type="font/ttf" crossorigin>
     <link rel="preload" as="font" href="/src/assets/hero/fonts/ArticulatCF-DemiBold.ttf" type="font/ttf" crossorigin>
     
-    <script>(function(){try{var s=location.search;if(s&&s.length>1)sessionStorage.setItem("_rise_ec_qs",s)}catch(e){}})()</script>
-    <script src="https://api.risecheckout.com/functions/v1/rise-pixel-js" defer></script>
+    <!-- Facebook Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '653351790061731');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=653351790061731&ev=PageView&noscript=1"/></noscript>
 
 
     <meta property="og:type" content="website" />
