@@ -105,6 +105,14 @@ const RendaExtraSection = () => {
             {/* LED glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
 
+            <h3
+              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
+              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
+              <span className="text-white">Afiliação </span>
+              <span className="text-primary">Rise Community</span>
+            </h3>
+
             <p
               className="text-sm md:text-base text-[#bbb] leading-relaxed mb-6"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
