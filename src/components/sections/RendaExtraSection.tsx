@@ -8,7 +8,7 @@ const checklistItems = [
   "Freelancer com habilidades aprendidas na Rise",
   "Criação de infoprodutos do zero",
   "Dropshipping com fornecedores exclusivos",
-  "Automações, bots e ferramentas digitais",
+  "Revenda de produtos da comunidade",
   "Renda recorrente e escalável",
   "Recupere o investimento em poucas vendas",
 ];
