@@ -66,7 +66,7 @@ const SalesNotifications = () => {
                 style={{ fontFamily: "'Articulat CF', sans-serif" }}
               >
                 <Bell size={18} className="text-white" />
-                Tempo Real
+                Afiliação
               </span>
             </div>
 
@@ -75,8 +75,8 @@ const SalesNotifications = () => {
               className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Notificações em<br />
-              <span className="text-primary">Tempo Real</span>
+              Ganhe indicando<br />
+              <span className="text-primary">Rise Community</span>
             </h2>
 
             {/* Subtitle */}
@@ -84,7 +84,7 @@ const SalesNotifications = () => {
               className="text-white font-semibold text-base md:text-lg"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Com a Rise Community você acompanha suas vendas em tempo real
+              Cada indicação sua vira comissão direto na sua conta
             </p>
 
             {/* Description */}
@@ -92,7 +92,7 @@ const SalesNotifications = () => {
               className="text-white/50 text-sm md:text-base leading-relaxed max-w-sm mx-auto lg:mx-0"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Receba notificações instantâneas de todas as suas vendas, avisos e métricas importantes do seu negócio.
+              Indique a Rise Community e receba comissões automáticas a cada venda. Sem burocracia, sem limite de ganhos.
             </p>
           </div>
 
