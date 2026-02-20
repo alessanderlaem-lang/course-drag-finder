@@ -1,6 +1,6 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import vendaAprovada from "@/assets/venda-aprovada.jpg";
-import { Users, ShoppingCart, Bot, Briefcase, Gift, TrendingUp, Megaphone, Repeat } from "lucide-react";
+import { DollarSign, Users, Repeat, BadgeCheck, Rocket, HeadphonesIcon } from "lucide-react";
 
 const ITEMS_PER_SET = 15;
 const blurIndicesRow1 = [2, 6, 11];
@@ -72,7 +72,7 @@ const RendaExtraSection = () => {
               className="text-3xl md:text-4xl lg:text-5xl font-bold"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              <span className="text-white">Transforme Conhecimento em </span>
+              <span className="text-white">Ganhe Dinheiro com o </span>
               <span
                 style={{
                   background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
@@ -81,14 +81,14 @@ const RendaExtraSection = () => {
                   backgroundClip: "text",
                 }}
               >
-                Renda Extra
+                Programa de Afiliados
               </span>
             </h2>
             <p
               className="text-sm md:text-base text-[#999] max-w-2xl mx-auto mt-4"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Dentro da Rise, você não apenas aprende — você monetiza. Descubra as formas de gerar renda extra usando o que está disponível na comunidade.
+              Seja afiliado da Rise Community e ganhe comissão em cada venda que indicar. Recupere seu investimento com apenas 2 vendas e transforme isso em renda recorrente.
             </p>
           </m.div>
         </div>
@@ -107,31 +107,32 @@ const RendaExtraSection = () => {
             {/* LED glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {[
-                { icon: Users, title: "Programa de Afiliados", desc: "Comissão em cada venda indicada" },
-                { icon: ShoppingCart, title: "Revenda de PLRs", desc: "Produtos prontos para revender" },
-                { icon: Bot, title: "Robôs & Automação", desc: "Bots que geram renda no piloto" },
-                { icon: Briefcase, title: "Freelancer Digital", desc: "Use as skills aprendidas aqui" },
-                { icon: Gift, title: "Checkout Próprio", desc: "Venda com taxa 70% menor" },
-                { icon: TrendingUp, title: "Ofertas Validadas", desc: "Oportunidades diárias testadas" },
-                { icon: Megaphone, title: "Criação de Infoprodutos", desc: "Crie e venda seus produtos" },
-                { icon: Repeat, title: "Dropshipping", desc: "Venda sem estoque próprio" },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col items-center text-center p-4 md:p-5 rounded-xl bg-[#0D0D0D] border border-[#333] hover:border-primary/40 transition-colors duration-300 gap-2"
-                >
-                  <item.icon className="w-7 h-7 md:w-8 md:h-8 text-primary mb-1" />
-                  <h4
-                    className="text-white font-bold text-xs md:text-sm leading-tight"
-                    style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                { icon: DollarSign, title: "Comissão Generosa", desc: "Ganhe por cada venda que indicar" },
+                { icon: Users, title: "Link Exclusivo", desc: "Seu link personalizado de afiliado" },
+                { icon: Repeat, title: "Renda Recorrente", desc: "Ganhos mensais automáticos" },
+                { icon: BadgeCheck, title: "Produtos Validados", desc: "Conversão alta e comprovada" },
+                { icon: Rocket, title: "Retorno Rápido", desc: "Recupere o investimento em 2 vendas" },
+                { icon: HeadphonesIcon, title: "Suporte Completo", desc: "Direcionamento para vender mais" },
+              ].map((item, i) => {
+                const IconComp = item.icon;
+                return (
+                  <div
+                    key={i}
+                    className="flex flex-col items-center text-center p-4 md:p-5 rounded-xl bg-[#0D0D0D] border border-[#333] hover:border-primary/40 transition-colors duration-300 gap-2"
                   >
-                    {item.title}
-                  </h4>
-                  <p className="text-[#999] text-[10px] md:text-xs leading-snug">{item.desc}</p>
-                </div>
-              ))}
+                    <IconComp className="w-7 h-7 md:w-8 md:h-8 text-primary mb-1" />
+                    <h4
+                      className="text-white font-bold text-xs md:text-sm leading-tight"
+                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                    >
+                      {item.title}
+                    </h4>
+                    <p className="text-[#999] text-[10px] md:text-xs leading-snug">{item.desc}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </m.div>
