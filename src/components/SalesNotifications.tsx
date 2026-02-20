@@ -73,7 +73,7 @@ const SalesNotifications = () => {
                   // Only truly NEW items (uid >= 3) slide in from top
                   initial={
                     item.uid >= 3
-                      ? { opacity: 0, y: -70, scale: SCALES[0] }
+                      ? { opacity: 1, y: -70, scale: SCALES[0] }
                       : false
                   }
                   animate={{
