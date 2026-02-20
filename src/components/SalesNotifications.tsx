@@ -52,7 +52,7 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
-        <div className="max-w-lg mx-auto px-4 overflow-hidden" style={{ height: 280 }}>
+        <div className="max-w-lg mx-auto px-4 overflow-hidden" style={{ height: 320 }}>
           <div className="relative flex justify-center">
             <AnimatePresence initial={false}>
               {items.map((item, position) => (
