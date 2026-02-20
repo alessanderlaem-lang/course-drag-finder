@@ -70,13 +70,13 @@ const Index = () => {
       {/* Guarantee Section */}
       <GuaranteeSection />
 
+      {/* FAQ Section - Placeholder */}
+      <div id="faq" />
+
       {/* Pricing Section */}
       <div id="pricing" className="relative z-20">
         <PricingSection />
       </div>
-
-      {/* FAQ Section - Placeholder */}
-      <div id="faq" />
 
       {/* Footer */}
       <Footer />
