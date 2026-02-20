@@ -60,6 +60,28 @@ const RendaExtraSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Scrolling images - reverse direction */}
+        <div className="overflow-hidden w-full mt-2">
+          <div
+            className="flex gap-0"
+            style={{
+              animation: "scroll-right 45s linear infinite",
+              width: "max-content",
+            }}
+          >
+            {Array.from({ length: 30 }).map((_, i) => (
+              <img
+                key={i}
+                src={vendaAprovada}
+                alt="Venda Aprovada"
+                className="h-12 md:h-14 rounded-lg flex-shrink-0"
+                loading="lazy"
+                decoding="async"
+              />
+            ))}
+          </div>
+        </div>
       </section>
     </LazyMotion>
   );
