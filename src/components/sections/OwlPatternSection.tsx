@@ -8,12 +8,20 @@ const OwlRow = ({ offset = false, flipped = false }: { offset?: boolean; flipped
   return (
     <div className={`flex ${offset ? 'ml-10' : ''}`}>
       {owls.map((_, i) => (
-        <img
+        <div
           key={i}
-          src={owlLogo}
-          alt=""
-          className={`w-16 h-16 md:w-20 md:h-20 object-contain mx-1 opacity-50 grayscale brightness-[5] contrast-200 mix-blend-screen ${flipClass}`}
-          loading="lazy"
+          className={`w-16 h-16 md:w-20 md:h-20 mx-1 shrink-0 ${flipClass}`}
+          style={{
+            backgroundColor: 'rgba(255,255,255,0.5)',
+            WebkitMaskImage: `url(${owlLogo})`,
+            maskImage: `url(${owlLogo})`,
+            WebkitMaskSize: 'contain',
+            maskSize: 'contain',
+            WebkitMaskRepeat: 'no-repeat',
+            maskRepeat: 'no-repeat',
+            WebkitMaskPosition: 'center',
+            maskPosition: 'center',
+          }}
         />
       ))}
     </div>
