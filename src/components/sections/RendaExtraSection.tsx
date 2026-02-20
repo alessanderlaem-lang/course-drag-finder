@@ -4,10 +4,10 @@ import rendaExtraPhones from "@/assets/renda-extra-phones.png";
 
 const checklistItems = [
   "Revenda de produtos da comunidade",
-  "Programa de Afiliados com comissão generosa",
+  "Dropshipping com fornecedores exclusivos",
   "Produtos prontos para revender",
   "Criação de infoprodutos do zero",
-  "Dropshipping com fornecedores exclusivos",
+  "Programa de Afiliados com comissão generosa",
   "Revenda de produtos da comunidade",
   "Renda recorrente e escalável",
   "Recupere o investimento em poucas vendas",
