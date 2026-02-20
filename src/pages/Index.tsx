@@ -81,29 +81,19 @@ const Index = () => {
       </div>
 
       {/* Text block below notifications */}
-      <div className="max-w-2xl mx-auto px-6 mt-10 md:mt-14 text-center">
+      <div className="max-w-4xl mx-auto px-6 mt-10 md:mt-14 text-center">
         <h2
-          className="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-6"
+          className="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-8"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
           <span className="text-primary">Afilie-se</span> e comece a faturar hoje.
         </h2>
-        <div className="flex flex-col gap-3" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
-          <p className="text-white font-semibold text-base md:text-lg">
-            Aqui o afiliado é prioridade.
-          </p>
-          <p className="text-white/50 text-sm md:text-base">
-            Acesso completo aos materiais oficiais, suporte exclusivo<br className="hidden md:block" />
-            para afiliados e apoio constante da equipe.
-          </p>
-          <p className="text-white/50 text-sm md:text-base">
-            Você entra com estrutura, direcionamento claro<br className="hidden md:block" />
-            e acompanhamento de verdade.
-          </p>
-          <p className="text-white font-semibold text-base md:text-lg">
-            Nada no escuro. Tudo pensado para facilitar suas vendas.
-          </p>
-        </div>
+        <p
+          className="text-white/50 text-base md:text-lg leading-[2.2]"
+          style={{ fontFamily: "'Articulat CF', sans-serif" }}
+        >
+          <span className="text-white font-semibold">Aqui o afiliado é prioridade.</span> Acesso completo aos materiais oficiais, suporte exclusivo para afiliados e apoio constante da equipe. Você entra com estrutura, direcionamento claro e acompanhamento de verdade. <span className="text-white font-semibold">Nada no escuro. Tudo pensado para facilitar suas vendas.</span>
+        </p>
       </div>
 
       {/* Scrolling Sales */}
