@@ -1,6 +1,6 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import vendaAprovada from "@/assets/venda-aprovada.jpg";
-import { DollarSign, Users, Repeat, BadgeCheck, Rocket, HeadphonesIcon } from "lucide-react";
+import { Check, Link2, DollarSign } from "lucide-react";
 
 const ITEMS_PER_SET = 15;
 const blurIndicesRow1 = [2, 6, 11];
@@ -93,7 +93,7 @@ const RendaExtraSection = () => {
           </m.div>
         </div>
 
-        {/* Grid de cards */}
+        {/* Conteúdo sobre afiliação */}
         <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,38 +101,51 @@ const RendaExtraSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-5xl mx-auto px-4 md:px-6"
         >
-          <div
-            className="rounded-[20px] border border-[#464646] bg-[#111111] p-6 md:p-10 relative overflow-hidden"
-          >
+          <div className="rounded-[20px] border border-[#464646] bg-[#111111] p-6 md:p-10 relative overflow-hidden">
             {/* LED glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            <p
+              className="text-sm md:text-base text-[#bbb] leading-relaxed mb-6"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              Seja afiliado oficial da Rise Community e ganhe comissão em cada venda que indicar.
+              Estrutura completa pronta para você começar — sem precisar criar produto, sem precisar de experiência.
+              Recupere seu investimento com apenas 2 vendas e transforme isso em renda recorrente.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mb-6">
               {[
-                { icon: DollarSign, title: "Comissão Generosa", desc: "Ganhe por cada venda que indicar" },
-                { icon: Users, title: "Link Exclusivo", desc: "Seu link personalizado de afiliado" },
-                { icon: Repeat, title: "Renda Recorrente", desc: "Ganhos mensais automáticos" },
-                { icon: BadgeCheck, title: "Produtos Validados", desc: "Conversão alta e comprovada" },
-                { icon: Rocket, title: "Retorno Rápido", desc: "Recupere o investimento em 2 vendas" },
-                { icon: HeadphonesIcon, title: "Suporte Completo", desc: "Direcionamento para vender mais" },
-              ].map((item, i) => {
-                const IconComp = item.icon;
-                return (
-                  <div
-                    key={i}
-                    className="flex flex-col items-center text-center p-4 md:p-5 rounded-xl bg-[#0D0D0D] border border-[#333] hover:border-primary/40 transition-colors duration-300 gap-2"
+                "Comissão generosa por cada venda",
+                "Link de afiliado exclusivo e personalizado",
+                "Materiais de divulgação prontos",
+                "Suporte e direcionamento completo",
+                "Produtos com alta conversão validada",
+                "Renda recorrente e escalável",
+                "Recupere o investimento em 2 vendas",
+                "Sem precisar criar produto do zero",
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 py-1">
+                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span
+                    className="text-white/90 text-sm md:text-base"
+                    style={{ fontFamily: "'Articulat CF', sans-serif" }}
                   >
-                    <IconComp className="w-7 h-7 md:w-8 md:h-8 text-primary mb-1" />
-                    <h4
-                      className="text-white font-bold text-xs md:text-sm leading-tight"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      {item.title}
-                    </h4>
-                    <p className="text-[#999] text-[10px] md:text-xs leading-snug">{item.desc}</p>
-                  </div>
-                );
-              })}
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary text-xs md:text-sm font-semibold px-4 py-2 rounded-lg">
+                <DollarSign className="w-4 h-4" />
+                Comissão por venda
+              </span>
+              <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary text-xs md:text-sm font-semibold px-4 py-2 rounded-lg">
+                <Link2 className="w-4 h-4" />
+                Link exclusivo de afiliado
+              </span>
             </div>
           </div>
         </m.div>
