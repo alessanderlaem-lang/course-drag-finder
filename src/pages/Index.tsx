@@ -92,9 +92,10 @@ const Index = () => {
           className="text-white/60 text-base md:text-lg leading-loose"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
-          Acesse materiais prontos para divulgar e ganhe comissões automáticas a cada venda.<br />
-          Suporte direto da nossa equipe, sem estoque e sem atendimento ao cliente.<br />
-          <span className="text-white/80 font-semibold">Você divulga. A Rise cuida do resto. O dinheiro cai na sua conta.</span>
+          <span className="text-white/80 font-semibold">Aqui o afiliado é prioridade.</span><br />
+          Acesso completo aos materiais oficiais, suporte exclusivo para afiliados e apoio constante da equipe.<br />
+          Você entra com estrutura, direcionamento claro e acompanhamento de verdade.<br />
+          <span className="text-white/80 font-semibold">Nada no escuro. Tudo pensado para facilitar suas vendas.</span>
         </p>
       </div>
 
