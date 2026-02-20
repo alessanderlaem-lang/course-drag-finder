@@ -111,11 +111,13 @@ const RendaExtraSection = () => {
         </m.div>
 
         {/* Row 1 - scrolling left */}
-        <ScrollRow direction="left" blurIndices={blurIndicesRow1} />
+        <div className="-mt-8 md:-mt-12 relative z-10">
+          <ScrollRow direction="left" blurIndices={blurIndicesRow1} />
 
-        {/* Row 2 - scrolling right */}
-        <div className="mt-2">
-          <ScrollRow direction="right" blurIndices={blurIndicesRow2} />
+          {/* Row 2 - scrolling right */}
+          <div className="mt-2">
+            <ScrollRow direction="right" blurIndices={blurIndicesRow2} />
+          </div>
         </div>
       </section>
     </LazyMotion>
