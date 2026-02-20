@@ -1,6 +1,6 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import vendaAprovada from "@/assets/venda-aprovada.jpg";
-import rendaExtraPhones from "@/assets/renda-extra-phones.png";
+import { Users, ShoppingCart, Bot, Briefcase, Gift, TrendingUp, Megaphone, Repeat } from "lucide-react";
 
 const ITEMS_PER_SET = 15;
 const blurIndicesRow1 = [2, 6, 11];
@@ -93,21 +93,47 @@ const RendaExtraSection = () => {
           </m.div>
         </div>
 
-        {/* Phone mockup image */}
+        {/* Grid de cards */}
         <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center mb-0"
+          className="max-w-5xl mx-auto px-4 md:px-6"
         >
-          <img
-            src={rendaExtraPhones}
-            alt="Rise Community"
-            className="w-full max-w-2xl md:max-w-3xl"
-            loading="lazy"
-            decoding="async"
-          />
+          <div
+            className="rounded-[20px] border border-[#464646] bg-[#111111] p-6 md:p-10 relative overflow-hidden"
+          >
+            {/* LED glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              {[
+                { icon: Users, title: "Programa de Afiliados", desc: "Comissão em cada venda indicada" },
+                { icon: ShoppingCart, title: "Revenda de PLRs", desc: "Produtos prontos para revender" },
+                { icon: Bot, title: "Robôs & Automação", desc: "Bots que geram renda no piloto" },
+                { icon: Briefcase, title: "Freelancer Digital", desc: "Use as skills aprendidas aqui" },
+                { icon: Gift, title: "Checkout Próprio", desc: "Venda com taxa 70% menor" },
+                { icon: TrendingUp, title: "Ofertas Validadas", desc: "Oportunidades diárias testadas" },
+                { icon: Megaphone, title: "Criação de Infoprodutos", desc: "Crie e venda seus produtos" },
+                { icon: Repeat, title: "Dropshipping", desc: "Venda sem estoque próprio" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col items-center text-center p-4 md:p-5 rounded-xl bg-[#0D0D0D] border border-[#333] hover:border-primary/40 transition-colors duration-300 gap-2"
+                >
+                  <item.icon className="w-7 h-7 md:w-8 md:h-8 text-primary mb-1" />
+                  <h4
+                    className="text-white font-bold text-xs md:text-sm leading-tight"
+                    style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                  >
+                    {item.title}
+                  </h4>
+                  <p className="text-[#999] text-[10px] md:text-xs leading-snug">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </m.div>
 
         {/* Row 1 - scrolling left */}
