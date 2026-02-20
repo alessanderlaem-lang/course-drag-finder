@@ -9,38 +9,51 @@ const NOTIFICATIONS = [
   { price: "R$ 149,90" },
   { price: "R$ 89,90" },
   { price: "R$ 197,00" },
-  { price: "R$ 347,00" },
-  { price: "R$ 99,90" },
 ];
 
 const TIME_LABELS = ["agora", "1seg", "2seg"];
 const SCALES = [1, 0.92, 0.84];
 const Y_POSITIONS = [0, 112, 216];
 
-const SalesNotifications = () => {
-  const [offset, setOffset] = useState(0);
-  const preloaded = useRef(false);
+interface NotifItem {
+  uid: number;
+  price: string;
+}
 
+const SalesNotifications = () => {
+  const nextUid = useRef(3);
+  const nextNI = useRef(3);
+  const mounted = useRef(false);
+
+  const [items, setItems] = useState<NotifItem[]>([
+    { uid: 0, price: NOTIFICATIONS[0].price },
+    { uid: 1, price: NOTIFICATIONS[1].price },
+    { uid: 2, price: NOTIFICATIONS[2].price },
+  ]);
+
+  // Preload image
   useEffect(() => {
-    if (!preloaded.current) {
-      const img = new Image();
-      img.src = riseLogo;
-      preloaded.current = true;
-    }
+    const img = new Image();
+    img.src = riseLogo;
+    mounted.current = true;
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setOffset((prev) => (prev + 1) % NOTIFICATIONS.length);
+      setItems((prev) => {
+        const ni = nextNI.current % NOTIFICATIONS.length;
+        nextNI.current++;
+        const newItem: NotifItem = {
+          uid: nextUid.current++,
+          price: NOTIFICATIONS[ni].price,
+        };
+        // Prepend new item, keep only first 2 existing ones
+        return [newItem, prev[0], prev[1]];
+      });
     }, 3000);
+
     return () => clearInterval(interval);
   }, []);
-
-  // Get the 3 visible items based on current offset
-  const visible = [0, 1, 2].map((i) => {
-    const index = (offset + i) % NOTIFICATIONS.length;
-    return { ...NOTIFICATIONS[index], id: index, position: i };
-  });
 
   return (
     <LazyMotion features={domAnimation}>
@@ -48,11 +61,20 @@ const SalesNotifications = () => {
         <div className="max-w-lg mx-auto px-4 overflow-hidden" style={{ height: 320 }}>
           <div className="relative flex justify-center">
             <AnimatePresence initial={false}>
-              {visible.map(({ price, id, position }) => (
+              {items.map((item, position) => (
                 <m.div
-                  key={id}
-                  initial={position === 0 ? { opacity: 1, y: -80, scale: SCALES[0] } : false}
-                  animate={{ opacity: 1, y: Y_POSITIONS[position], scale: SCALES[position] }}
+                  key={item.uid}
+                  // Only truly NEW items (uid >= 3) slide in from top
+                  initial={
+                    item.uid >= 3
+                      ? { opacity: 0, y: -70, scale: SCALES[0] }
+                      : false
+                  }
+                  animate={{
+                    opacity: 1,
+                    y: Y_POSITIONS[position],
+                    scale: SCALES[position],
+                  }}
                   exit={{ opacity: 0, y: 310, scale: 0.75 }}
                   transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
                   className="absolute rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
@@ -75,14 +97,23 @@ const SalesNotifications = () => {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-white font-bold text-sm md:text-base" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
+                    <p
+                      className="text-white font-bold text-sm md:text-base"
+                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                    >
                       Venda realizada!
                     </p>
-                    <p className="text-white/60 text-xs md:text-sm" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
-                      Valor: {price}
+                    <p
+                      className="text-white/60 text-xs md:text-sm"
+                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                    >
+                      Valor: {item.price}
                     </p>
                   </div>
-                  <span className="text-white/40 text-xs md:text-sm flex-shrink-0" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
+                  <span
+                    className="text-white/40 text-xs md:text-sm flex-shrink-0"
+                    style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                  >
                     {TIME_LABELS[position]}
                   </span>
                 </m.div>
