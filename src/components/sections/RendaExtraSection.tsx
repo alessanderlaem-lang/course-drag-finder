@@ -5,39 +5,6 @@ const RendaExtraSection = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full pt-20 md:pt-32 pb-16 md:pb-24 bg-background">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
-          {/* Header */}
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold"
-              style={{ fontFamily: "'Articulat CF', sans-serif" }}
-            >
-              <span className="text-white">Ganhe Dinheiro com o </span>
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Programa de Afiliados
-              </span>
-            </h2>
-            <p
-              className="text-sm md:text-base text-[#999] max-w-2xl mx-auto mt-4"
-              style={{ fontFamily: "'Articulat CF', sans-serif" }}
-            >
-              Seja afiliado da Rise Community e ganhe comissão em cada venda que indicar. Recupere seu investimento com apenas 2 vendas e transforme isso em renda recorrente.
-            </p>
-          </m.div>
-        </div>
 
         {/* Conteúdo sobre afiliação */}
         <m.div
