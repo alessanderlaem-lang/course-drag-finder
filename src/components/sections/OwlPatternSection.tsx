@@ -12,7 +12,7 @@ const OwlRow = ({ offset = false, flipped = false }: { offset?: boolean; flipped
           key={i}
           src={owlLogo}
           alt=""
-          className={`w-16 h-16 md:w-20 md:h-20 object-contain mx-1 opacity-60 grayscale brightness-[3] contrast-125 mix-blend-screen ${flipClass}`}
+          className={`w-16 h-16 md:w-20 md:h-20 object-contain mx-1 opacity-50 grayscale brightness-[5] contrast-200 mix-blend-screen ${flipClass}`}
           loading="lazy"
         />
       ))}
