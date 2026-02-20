@@ -79,6 +79,25 @@ const Index = () => {
         <SalesNotifications />
       </div>
 
+      {/* Text block below notifications */}
+      <div className="max-w-3xl mx-auto px-6 mt-10 md:mt-14 text-center">
+        <h2
+          className="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-6"
+          style={{ fontFamily: "'Articulat CF', sans-serif" }}
+        >
+          <span className="text-primary">Conecte-se</span> às principais plataformas do mercado.
+        </h2>
+        <p
+          className="text-white/60 text-base md:text-lg leading-relaxed"
+          style={{ fontFamily: "'Articulat CF', sans-serif" }}
+        >
+          A Rise Community se integra com as ferramentas mais utilizadas para escalar seu negócio:
+          chats em tempo real, análise de dados, trackeamento, automações, área de membros
+          externa e muito mais.<br />
+          Tudo fluindo no mesmo ecossistema, sem gambiarras, sem complicação.
+        </p>
+      </div>
+
       {/* Spacer: compensa a subida das notificações para o pricing não mover */}
       <div className="h-10 md:h-[100px]" />
 
