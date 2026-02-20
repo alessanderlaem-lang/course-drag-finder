@@ -17,7 +17,7 @@ const OwlRow = ({ direction = "left", speed = 30 }: { direction?: "left" | "righ
             key={i}
             src={owlLogo}
             alt=""
-            className="w-16 h-16 md:w-20 md:h-20 object-contain mx-1 opacity-80 grayscale brightness-200 contrast-125"
+            className="w-16 h-16 md:w-20 md:h-20 object-contain mx-1 opacity-60 grayscale brightness-[3] contrast-125 mix-blend-screen"
             loading="lazy"
           />
         ))}
@@ -34,7 +34,7 @@ const OwlRow = ({ direction = "left", speed = 30 }: { direction?: "left" | "righ
             key={`dup-${i}`}
             src={owlLogo}
             alt=""
-            className="w-16 h-16 md:w-20 md:h-20 object-contain mx-1 opacity-80 grayscale brightness-200 contrast-125"
+            className="w-16 h-16 md:w-20 md:h-20 object-contain mx-1 opacity-60 grayscale brightness-[3] contrast-125 mix-blend-screen"
             loading="lazy"
           />
         ))}
