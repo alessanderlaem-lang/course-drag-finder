@@ -99,7 +99,7 @@ const RendaExtraSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center mb-10"
+          className="flex justify-center mb-0"
         >
           <img
             src={rendaExtraPhones}
@@ -111,7 +111,7 @@ const RendaExtraSection = () => {
         </m.div>
 
         {/* Row 1 - scrolling left */}
-        <div className="-mt-20 md:-mt-28 relative z-10">
+        <div className="-mt-32 md:-mt-44 relative z-10">
           <ScrollRow direction="left" blurIndices={blurIndicesRow1} />
 
           {/* Row 2 - scrolling right */}
