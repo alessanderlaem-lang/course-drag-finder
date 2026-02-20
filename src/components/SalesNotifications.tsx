@@ -62,7 +62,7 @@ const SalesNotifications = () => {
             {/* Badge */}
             <div className="flex justify-center lg:justify-start">
               <span
-                className="inline-flex items-center gap-2 border border-white/20 rounded-full px-4 py-1.5 text-white/70 text-sm"
+                className="inline-flex items-center gap-2 border border-primary rounded-full px-4 py-1.5 text-primary text-sm"
                 style={{ fontFamily: "'Articulat CF', sans-serif" }}
               >
                 <Bell size={14} />
