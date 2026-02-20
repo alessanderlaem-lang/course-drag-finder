@@ -54,6 +54,7 @@ const RendaExtraSection = () => {
                 src={vendaAprovada}
                 alt="Venda Aprovada"
                 className="h-12 md:h-14 rounded-lg flex-shrink-0"
+                style={[3, 7, 12, 18, 24].includes(i) ? { animation: "blur-pulse 4s ease-in-out infinite", animationDelay: `${i * 0.7}s` } : undefined}
                 loading="lazy"
                 decoding="async"
               />
@@ -76,6 +77,7 @@ const RendaExtraSection = () => {
                 src={vendaAprovada}
                 alt="Venda Aprovada"
                 className="h-12 md:h-14 rounded-lg flex-shrink-0"
+                style={[2, 8, 14, 20, 26].includes(i) ? { animation: "blur-pulse 4s ease-in-out infinite", animationDelay: `${i * 0.5}s` } : undefined}
                 loading="lazy"
                 decoding="async"
               />
