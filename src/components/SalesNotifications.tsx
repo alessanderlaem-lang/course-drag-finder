@@ -65,7 +65,7 @@ const SalesNotifications = () => {
                 className="inline-flex items-center gap-2 border border-primary rounded-full px-4 py-1.5 text-white text-sm"
                 style={{ fontFamily: "'Articulat CF', sans-serif" }}
               >
-                <Bell size={18} className="text-primary" />
+                <Bell size={18} className="text-white" />
                 Tempo Real
               </span>
             </div>
