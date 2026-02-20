@@ -75,7 +75,9 @@ const Index = () => {
       <div id="faq" />
 
       {/* Sales Notifications */}
-      <SalesNotifications />
+      <div className="mt-16 md:mt-24">
+        <SalesNotifications />
+      </div>
 
       {/* Pricing Section */}
       <div id="pricing" className="relative z-20">
