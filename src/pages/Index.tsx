@@ -85,16 +85,15 @@ const Index = () => {
           className="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-6"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
-          <span className="text-primary">Conecte-se</span> às principais plataformas do mercado.
+          <span className="text-primary">Afilie-se</span> e comece a faturar hoje.
         </h2>
         <p
           className="text-white/60 text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
-          A Rise Community se integra com as ferramentas mais utilizadas para escalar seu negócio:
-          chats em tempo real, análise de dados, trackeamento, automações, área de membros
-          externa e muito mais.<br />
-          Tudo fluindo no mesmo ecossistema, sem gambiarras, sem complicação.
+          Divulgue a Rise Community com seu link de afiliado e receba comissões automáticas
+          a cada venda gerada. Sem estoque, sem suporte, sem complicação.<br />
+          Você divulga. A venda acontece. O dinheiro cai na sua conta.
         </p>
       </div>
 
