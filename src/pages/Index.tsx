@@ -92,9 +92,10 @@ const Index = () => {
           className="text-white/60 text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
-          Divulgue a Rise Community com seu link de afiliado e receba comissões automáticas
-          a cada venda gerada. Sem estoque, sem suporte, sem complicação.<br />
-          Você divulga. A venda acontece. O dinheiro cai na sua conta.
+          Acesse materiais prontos para divulgar, receba suporte direto da nossa equipe
+          e ganhe comissões automáticas a cada venda gerada pelo seu link.<br />
+          Sem estoque, sem atendimento ao cliente, sem complicação.<br />
+          <span className="text-white/80">Você divulga. A Rise cuida do resto. O dinheiro cai na sua conta.</span>
         </p>
       </div>
 
