@@ -54,14 +54,12 @@ const SalesNotifications = () => {
               <m.div
                 key={item.id}
                 layout
-                initial={{ opacity: 0, y: -50, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.3 } }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, transition: { duration: 0.15 } }}
                 transition={{
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 30,
-                  layout: { type: "spring", stiffness: 400, damping: 30 },
+                  duration: 0.12,
+                  layout: { type: "spring", stiffness: 500, damping: 35 },
                 }}
                 className="rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
               >
