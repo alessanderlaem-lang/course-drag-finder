@@ -58,7 +58,7 @@ const ScrollRow = ({
 const RendaExtraSection = () => {
   return (
     <LazyMotion features={domAnimation}>
-      <section className="w-full pt-6 md:pt-10 pb-16 md:pb-24 bg-background">
+      <section className="w-full pt-0 pb-16 md:pb-24 bg-background -mt-10 md:-mt-16">
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           {/* Header */}
           <m.div
