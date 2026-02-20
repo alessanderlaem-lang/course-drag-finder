@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { LazyMotion, domAnimation, m, AnimatePresence } from "framer-motion";
+import { Bell } from "lucide-react";
 import riseLogo from "@/assets/rise-logo-owl.webp";
 
 const NOTIFICATIONS = [
@@ -28,7 +29,6 @@ const SalesNotifications = () => {
   const nextUid = useRef(4);
   const nextNI  = useRef(4);
 
-  // Start with 4 items: index 0 = hidden buffer, 1-3 = visible
   const [items, setItems] = useState<NotifItem[]>([
     { uid: 0, price: NOTIFICATIONS[0].price },
     { uid: 1, price: NOTIFICATIONS[1].price },
@@ -45,9 +45,6 @@ const SalesNotifications = () => {
           uid: nextUid.current++,
           price: NOTIFICATIONS[ni].price,
         };
-        // New item goes to buffer (pos 0, invisible).
-        // Old buffer (prev[0]) slides down to visible pos 1.
-        // prev[3] falls off the array → AnimatePresence fires exit on it.
         return [newItem, prev[0], prev[1], prev[2]];
       });
     }, 3000);
@@ -58,68 +55,110 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
-        <div className="max-w-xl px-4 overflow-hidden mx-auto lg:ml-[55%]" style={{ height: 360 }}>
-          <div className="relative flex justify-center">
-            <AnimatePresence initial={false}>
-              {items.map((item, position) => (
-                <m.div
-                  key={item.uid}
-                  // New items land directly at buffer position without animation
-                  initial={false}
-                  animate={{
-                    opacity: OPACITIES[position],
-                    y: Y_POSITIONS[position],
-                    scale: SCALES[position],
-                  }}
-                  exit={{ opacity: 0, y: 320, scale: 0.75 }}
-                  transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="absolute rounded-2xl border border-white/10 bg-[#111111] p-5 flex items-center gap-5 shadow-lg shadow-black/30"
-                  style={{
-                    top: 0,
-                    left: "50%",
-                    x: "-50%",
-                    width: `${WIDTHS[position]}%`,
-                    maxWidth: 480,
-                    transformOrigin: "center top",
-                    // pointer-events off for the hidden buffer slot
-                    pointerEvents: position === 0 ? "none" : "auto",
-                  }}
-                >
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0">
-                    <img
-                      src={riseLogo}
-                      alt="Rise Community"
-                      className="w-full h-full object-cover"
-                      fetchPriority="high"
-                      decoding="sync"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className="text-white font-bold text-base md:text-lg"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      Venda realizada!
-                    </p>
-                    <p
-                      className="text-white/60 text-sm md:text-base"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      Valor: {item.price}
-                    </p>
-                  </div>
-                  {position > 0 && (
-                    <span
-                      className="text-white/40 text-sm md:text-base flex-shrink-0"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      {position === 1 ? "agora" : position === 2 ? "1seg" : "2seg"}
-                    </span>
-                  )}
-                </m.div>
-              ))}
-            </AnimatePresence>
+        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+          {/* Text side */}
+          <div className="flex-1 flex flex-col gap-5 text-center lg:text-left">
+            {/* Badge */}
+            <div className="flex justify-center lg:justify-start">
+              <span
+                className="inline-flex items-center gap-2 border border-white/20 rounded-full px-4 py-1.5 text-white/70 text-sm"
+                style={{ fontFamily: "'Articulat CF', sans-serif" }}
+              >
+                <Bell size={14} />
+                Tempo Real
+              </span>
+            </div>
+
+            {/* Title */}
+            <h2
+              className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              Notificações em<br />
+              <span className="text-primary">Tempo Real</span>
+            </h2>
+
+            {/* Subtitle */}
+            <p
+              className="text-white font-semibold text-base md:text-lg"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              Com a Rise Community você acompanha suas vendas em tempo real
+            </p>
+
+            {/* Description */}
+            <p
+              className="text-white/50 text-sm md:text-base leading-relaxed max-w-sm mx-auto lg:mx-0"
+              style={{ fontFamily: "'Articulat CF', sans-serif" }}
+            >
+              Receba notificações instantâneas de todas as suas vendas, avisos e métricas importantes do seu negócio.
+            </p>
           </div>
+
+          {/* Notifications side */}
+          <div className="flex-1 w-full max-w-xl overflow-hidden" style={{ height: 360 }}>
+            <div className="relative flex justify-center">
+              <AnimatePresence initial={false}>
+                {items.map((item, position) => (
+                  <m.div
+                    key={item.uid}
+                    initial={false}
+                    animate={{
+                      opacity: OPACITIES[position],
+                      y: Y_POSITIONS[position],
+                      scale: SCALES[position],
+                    }}
+                    exit={{ opacity: 0, y: 320, scale: 0.75 }}
+                    transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="absolute rounded-2xl border border-white/10 bg-[#111111] p-5 flex items-center gap-5 shadow-lg shadow-black/30"
+                    style={{
+                      top: 0,
+                      left: "50%",
+                      x: "-50%",
+                      width: `${WIDTHS[position]}%`,
+                      maxWidth: 480,
+                      transformOrigin: "center top",
+                      pointerEvents: position === 0 ? "none" : "auto",
+                    }}
+                  >
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0">
+                      <img
+                        src={riseLogo}
+                        alt="Rise Community"
+                        className="w-full h-full object-cover"
+                        fetchPriority="high"
+                        decoding="sync"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p
+                        className="text-white font-bold text-base md:text-lg"
+                        style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                      >
+                        Venda realizada!
+                      </p>
+                      <p
+                        className="text-white/60 text-sm md:text-base"
+                        style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                      >
+                        Valor: {item.price}
+                      </p>
+                    </div>
+                    {position > 0 && (
+                      <span
+                        className="text-white/40 text-sm md:text-base flex-shrink-0"
+                        style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                      >
+                        {position === 1 ? "agora" : position === 2 ? "1seg" : "2seg"}
+                      </span>
+                    )}
+                  </m.div>
+                ))}
+              </AnimatePresence>
+            </div>
+          </div>
+
         </div>
       </section>
     </LazyMotion>
