@@ -1,11 +1,7 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
-
+import vendaAprovada from "@/assets/venda-aprovada.jpg";
 
 const RendaExtraSection = () => {
-  const scrollToPricing = () => {
-    document.querySelector("#pricing")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full py-16 md:py-24 px-4 md:px-6 bg-background">
@@ -42,8 +38,27 @@ const RendaExtraSection = () => {
             </p>
           </m.div>
 
-          {/* Conteúdo será adicionado depois */}
-
+          {/* Scrolling images */}
+          <div className="overflow-hidden w-full">
+            <div
+              className="flex gap-4"
+              style={{
+                animation: "scroll-left 20s linear infinite",
+                width: "max-content",
+              }}
+            >
+              {Array.from({ length: 12 }).map((_, i) => (
+                <img
+                  key={i}
+                  src={vendaAprovada}
+                  alt="Venda Aprovada"
+                  className="h-16 md:h-20 rounded-xl flex-shrink-0"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </LazyMotion>
