@@ -14,6 +14,7 @@ import HeroSection from "@/components/sections/HeroSection";
 
 import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriticosSection";
 import AboutSection from "@/components/sections/AboutSection";
+import OwlPatternSection from "@/components/sections/OwlPatternSection";
 import HowAccessWorks from "@/components/HowAccessWorks";
 import WhatYouGetSection from "@/components/sections/WhatYouGetSection";
 
@@ -102,6 +103,9 @@ const Index = () => {
 
       {/* Renda Extra Section */}
       <RendaExtraSection />
+
+      {/* Owl Pattern Section */}
+      <OwlPatternSection />
 
       {/* Spacer: compensa a subida das notificações para o pricing não mover */}
       <div className="h-10 md:h-[100px]" />
