@@ -75,8 +75,8 @@ const SalesNotifications = () => {
               className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Venda como<br />
-              <span className="text-primary">Afiliado Rise</span>
+              Afiliação<br />
+              <span className="text-primary">Rise Community</span>
             </h2>
 
             {/* Subtitle */}
