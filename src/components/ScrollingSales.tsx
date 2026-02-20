@@ -59,7 +59,7 @@ const SaleCard = ({ price, index }: { price: string; index: number }) => {
 
 const ScrollingSales = () => {
   return (
-    <section className="w-full bg-background py-10 overflow-hidden">
+    <section className="w-full bg-background pt-16 pb-10 overflow-hidden">
       {/* Row 1 — scroll left */}
       <div className="relative mb-4">
         <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10 bg-gradient-to-r from-background to-transparent" />
