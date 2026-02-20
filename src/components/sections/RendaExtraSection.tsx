@@ -1,6 +1,59 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import vendaAprovada from "@/assets/venda-aprovada.jpg";
 
+const ITEMS_PER_SET = 15;
+const blurIndicesRow1 = [2, 6, 11];
+const blurIndicesRow2 = [3, 8, 13];
+
+const ScrollRow = ({
+  direction,
+  blurIndices,
+}: {
+  direction: "left" | "right";
+  blurIndices: number[];
+}) => {
+  const animName = direction === "left" ? "scroll-left" : "scroll-right";
+
+  const renderSet = (setIndex: number) =>
+    Array.from({ length: ITEMS_PER_SET }).map((_, i) => {
+      const shouldBlur = blurIndices.includes(i);
+      return (
+        <img
+          key={`${setIndex}-${i}`}
+          src={vendaAprovada}
+          alt="Venda Aprovada"
+          className="h-12 md:h-14 rounded-lg flex-shrink-0"
+          style={
+            shouldBlur
+              ? {
+                  animation: `blur-pulse 5s ease-in-out infinite`,
+                  animationDelay: `${i * 1.2}s`,
+                }
+              : undefined
+          }
+          loading="lazy"
+          decoding="async"
+        />
+      );
+    });
+
+  return (
+    <div className="overflow-hidden w-full">
+      <div
+        className="flex gap-0"
+        style={{
+          animation: `${animName} 70s linear infinite`,
+          width: "max-content",
+          willChange: "transform",
+        }}
+      >
+        {renderSet(0)}
+        {renderSet(1)}
+      </div>
+    </div>
+  );
+};
+
 const RendaExtraSection = () => {
   return (
     <LazyMotion features={domAnimation}>
@@ -39,50 +92,12 @@ const RendaExtraSection = () => {
           </m.div>
         </div>
 
-        {/* Scrolling images - full width */}
-        <div className="overflow-hidden w-full">
-          <div
-            className="flex gap-0"
-            style={{
-              animation: "scroll-left 70s linear infinite",
-              width: "max-content",
-            }}
-          >
-            {Array.from({ length: 30 }).map((_, i) => (
-              <img
-                key={i}
-                src={vendaAprovada}
-                alt="Venda Aprovada"
-                className="h-12 md:h-14 rounded-lg flex-shrink-0"
-                style={[3, 7, 12, 18, 24].includes(i) ? { animation: "blur-pulse 4s ease-in-out infinite", animationDelay: `${i * 0.7}s` } : undefined}
-                loading="lazy"
-                decoding="async"
-              />
-            ))}
-          </div>
-        </div>
+        {/* Row 1 - scrolling left */}
+        <ScrollRow direction="left" blurIndices={blurIndicesRow1} />
 
-        {/* Scrolling images - reverse direction */}
-        <div className="overflow-hidden w-full mt-2">
-          <div
-            className="flex gap-0"
-            style={{
-              animation: "scroll-right 70s linear infinite",
-              width: "max-content",
-            }}
-          >
-            {Array.from({ length: 30 }).map((_, i) => (
-              <img
-                key={i}
-                src={vendaAprovada}
-                alt="Venda Aprovada"
-                className="h-12 md:h-14 rounded-lg flex-shrink-0"
-                style={[2, 8, 14, 20, 26].includes(i) ? { animation: "blur-pulse 4s ease-in-out infinite", animationDelay: `${i * 0.5}s` } : undefined}
-                loading="lazy"
-                decoding="async"
-              />
-            ))}
-          </div>
+        {/* Row 2 - scrolling right */}
+        <div className="mt-2">
+          <ScrollRow direction="right" blurIndices={blurIndicesRow2} />
         </div>
       </section>
     </LazyMotion>
