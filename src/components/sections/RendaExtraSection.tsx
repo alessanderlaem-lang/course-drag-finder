@@ -42,7 +42,7 @@ const RendaExtraSection = () => {
         {/* Scrolling images - full width */}
         <div className="overflow-hidden w-full">
           <div
-            className="flex gap-1"
+            className="flex gap-0"
             style={{
               animation: "scroll-left 45s linear infinite",
               width: "max-content",
