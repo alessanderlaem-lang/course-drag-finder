@@ -81,22 +81,29 @@ const Index = () => {
       </div>
 
       {/* Text block below notifications */}
-      <div className="max-w-3xl mx-auto px-6 mt-10 md:mt-14 text-center">
+      <div className="max-w-2xl mx-auto px-6 mt-10 md:mt-14 text-center">
         <h2
           className="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-6"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
           <span className="text-primary">Afilie-se</span> e comece a faturar hoje.
         </h2>
-        <p
-          className="text-white/60 text-base md:text-lg leading-loose"
-          style={{ fontFamily: "'Articulat CF', sans-serif" }}
-        >
-          <span className="text-white/80 font-semibold">Aqui o afiliado é prioridade.</span><br />
-          Acesso completo aos materiais oficiais, suporte exclusivo para afiliados e apoio constante da equipe.<br />
-          Você entra com estrutura, direcionamento claro e acompanhamento de verdade.<br />
-          <span className="text-white/80 font-semibold">Nada no escuro. Tudo pensado para facilitar suas vendas.</span>
-        </p>
+        <div className="flex flex-col gap-3" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
+          <p className="text-white font-semibold text-base md:text-lg">
+            Aqui o afiliado é prioridade.
+          </p>
+          <p className="text-white/50 text-sm md:text-base">
+            Acesso completo aos materiais oficiais, suporte exclusivo<br className="hidden md:block" />
+            para afiliados e apoio constante da equipe.
+          </p>
+          <p className="text-white/50 text-sm md:text-base">
+            Você entra com estrutura, direcionamento claro<br className="hidden md:block" />
+            e acompanhamento de verdade.
+          </p>
+          <p className="text-white font-semibold text-base md:text-lg">
+            Nada no escuro. Tudo pensado para facilitar suas vendas.
+          </p>
+        </div>
       </div>
 
       {/* Scrolling Sales */}
