@@ -75,8 +75,8 @@ const SalesNotifications = () => {
               className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Ganhe indicando<br />
-              <span className="text-primary">Rise Community</span>
+              Venda como<br />
+              <span className="text-primary">Afiliado Rise</span>
             </h2>
 
             {/* Subtitle */}
@@ -84,7 +84,7 @@ const SalesNotifications = () => {
               className="text-white font-semibold text-base md:text-lg"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Cada indicação sua vira comissão direto na sua conta
+              Promova a Rise Community e lucre com cada venda que você gerar
             </p>
 
             {/* Description */}
@@ -92,7 +92,7 @@ const SalesNotifications = () => {
               className="text-white/50 text-sm md:text-base leading-relaxed max-w-sm mx-auto lg:mx-0"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Indique a Rise Community e receba comissões automáticas a cada venda. Sem burocracia, sem limite de ganhos.
+              Divulgue seu link de afiliado, gere vendas e receba comissões automáticas. Uma das formas mais simples de faturar no digital.
             </p>
           </div>
 
