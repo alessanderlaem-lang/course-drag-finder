@@ -17,6 +17,11 @@ const SALE_PRICES = [
 
 const TIME_LABELS = ["agora", "1seg", "2seg"];
 
+// Scale per position: 1st biggest, 2nd medium, 3rd smallest
+const SCALES = [1, 0.92, 0.84];
+// Y positions with gap between cards
+const Y_POSITIONS = [0, 90, 168];
+
 interface NotifItem {
   id: number;
   priceIndex: number;
@@ -47,18 +52,29 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
-        <div className="max-w-md mx-auto px-4 overflow-hidden" style={{ height: 260 }}>
-          <div className="relative">
+        <div className="max-w-lg mx-auto px-4 overflow-hidden" style={{ height: 280 }}>
+          <div className="relative flex justify-center">
             <AnimatePresence initial={false}>
               {items.map((item, position) => (
                 <m.div
                   key={item.id}
-                  initial={position === 0 ? { opacity: 1, y: -80 } : false}
-                  animate={{ opacity: 1, y: position * 84 }}
-                  exit={{ opacity: 0, y: 3 * 84 }}
+                  initial={position === 0 ? { opacity: 1, y: -80, scale: SCALES[0] } : false}
+                  animate={{
+                    opacity: 1,
+                    y: Y_POSITIONS[position],
+                    scale: SCALES[position],
+                  }}
+                  exit={{ opacity: 0, y: 250, scale: 0.75 }}
                   transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="absolute left-0 right-0 rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
-                  style={{ top: 0 }}
+                  className="absolute rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
+                  style={{
+                    top: 0,
+                    left: "50%",
+                    x: "-50%",
+                    width: `${100 - position * 6}%`,
+                    maxWidth: 480,
+                    transformOrigin: "center top",
+                  }}
                 >
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0">
                     <img src={riseLogo} alt="Rise Community" className="w-full h-full object-cover" />
