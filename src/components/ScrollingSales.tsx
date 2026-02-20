@@ -18,8 +18,8 @@ const SALES = [
 const ITEMS = [...SALES, ...SALES, ...SALES];
 
 const SaleCard = ({ price }: { price: string }) => (
-  <div className="flex-shrink-0 flex items-center gap-5 bg-[#111111] border border-white/10 rounded-2xl px-7 py-3 mx-4 shadow-lg shadow-black/30 min-w-[420px]">
-    <div className="w-10 h-10 rounded-xl overflow-hidden flex-shrink-0">
+  <div className="flex-shrink-0 flex items-center gap-5 bg-[#111111] border border-white/10 rounded-2xl px-7 py-4 mx-4 shadow-lg shadow-black/30 min-w-[420px]">
+    <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
       <img
         src={riseLogo}
         alt="Rise"
