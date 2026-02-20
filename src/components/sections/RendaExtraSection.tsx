@@ -103,32 +103,6 @@ const RendaExtraSection = () => {
             </div>
           </m.div>
 
-          {/* CTA */}
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-center mt-12"
-          >
-            <button
-              onClick={scrollToPricing}
-              className="px-8 py-4 rounded-xl font-bold text-white text-lg transition-all duration-300 hover:scale-105"
-              style={{
-                fontFamily: "'Articulat CF', sans-serif",
-                background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
-                boxShadow: "0 0 30px rgba(255,0,0,0.3)",
-              }}
-            >
-              Quero começar a lucrar
-            </button>
-            <p
-              className="text-white/40 text-xs mt-3"
-              style={{ fontFamily: "'Articulat CF', sans-serif" }}
-            >
-              Acesso vitalício · Comunidade ativa · Suporte contínuo
-            </p>
-          </m.div>
         </div>
       </section>
     </LazyMotion>
