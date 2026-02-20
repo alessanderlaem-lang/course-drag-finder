@@ -74,8 +74,8 @@ const Index = () => {
       {/* FAQ Section - Placeholder */}
       <div id="faq" />
 
-      {/* Sales Notifications */}
-      <div className="mt-64 md:mt-[380px]">
+      {/* Sales Notifications - mt sobe a seção, mb negativo compensa para não mover o pricing */}
+      <div className="mt-20 md:mt-[180px] -mb-44 md:-mb-[200px]">
         <SalesNotifications />
       </div>
 
