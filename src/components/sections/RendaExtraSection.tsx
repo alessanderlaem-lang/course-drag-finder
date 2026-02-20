@@ -1,5 +1,6 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import vendaAprovada from "@/assets/venda-aprovada.jpg";
+import rendaExtraPhones from "@/assets/renda-extra-phones.png";
 
 const ITEMS_PER_SET = 15;
 const blurIndicesRow1 = [2, 6, 11];
@@ -91,6 +92,23 @@ const RendaExtraSection = () => {
             </p>
           </m.div>
         </div>
+
+        {/* Phone mockup image */}
+        <m.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center mb-10"
+        >
+          <img
+            src={rendaExtraPhones}
+            alt="Rise Community"
+            className="w-full max-w-lg md:max-w-xl"
+            loading="lazy"
+            decoding="async"
+          />
+        </m.div>
 
         {/* Row 1 - scrolling left */}
         <ScrollRow direction="left" blurIndices={blurIndicesRow1} />
