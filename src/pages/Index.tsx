@@ -89,13 +89,12 @@ const Index = () => {
           <span className="text-primary">Afilie-se</span> e comece a faturar hoje.
         </h2>
         <p
-          className="text-white/60 text-base md:text-lg leading-relaxed"
+          className="text-white/60 text-base md:text-lg leading-loose"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
-          Acesse materiais prontos para divulgar, receba suporte direto da nossa equipe
-          e ganhe comissões automáticas a cada venda gerada pelo seu link.<br />
-          Sem estoque, sem atendimento ao cliente, sem complicação.<br />
-          <span className="text-white/80">Você divulga. A Rise cuida do resto. O dinheiro cai na sua conta.</span>
+          Acesse materiais prontos para divulgar e ganhe comissões automáticas a cada venda.<br />
+          Suporte direto da nossa equipe, sem estoque e sem atendimento ao cliente.<br />
+          <span className="text-white/80 font-semibold">Você divulga. A Rise cuida do resto. O dinheiro cai na sua conta.</span>
         </p>
       </div>
 
