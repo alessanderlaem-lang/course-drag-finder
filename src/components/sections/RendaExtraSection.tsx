@@ -104,7 +104,7 @@ const RendaExtraSection = () => {
           <img
             src={rendaExtraPhones}
             alt="Rise Community"
-            className="w-full max-w-lg md:max-w-xl"
+            className="w-full max-w-2xl md:max-w-3xl"
             loading="lazy"
             decoding="async"
           />
