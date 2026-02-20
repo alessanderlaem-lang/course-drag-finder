@@ -58,7 +58,7 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
-        <div className="max-w-lg px-4 overflow-hidden ml-auto mr-8 md:mr-16 lg:mr-32" style={{ height: 320 }}>
+        <div className="max-w-xl px-4 overflow-hidden ml-auto mr-4 md:mr-12 lg:mr-20" style={{ height: 360 }}>
           <div className="relative flex justify-center">
             <AnimatePresence initial={false}>
               {items.map((item, position) => (
@@ -73,7 +73,7 @@ const SalesNotifications = () => {
                   }}
                   exit={{ opacity: 0, y: 320, scale: 0.75 }}
                   transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="absolute rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
+                  className="absolute rounded-2xl border border-white/10 bg-[#111111] p-5 flex items-center gap-5 shadow-lg shadow-black/30"
                   style={{
                     top: 0,
                     left: "50%",
@@ -85,7 +85,7 @@ const SalesNotifications = () => {
                     pointerEvents: position === 0 ? "none" : "auto",
                   }}
                 >
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0">
                     <img
                       src={riseLogo}
                       alt="Rise Community"
@@ -96,13 +96,13 @@ const SalesNotifications = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p
-                      className="text-white font-bold text-sm md:text-base"
+                      className="text-white font-bold text-base md:text-lg"
                       style={{ fontFamily: "'Articulat CF', sans-serif" }}
                     >
                       Venda realizada!
                     </p>
                     <p
-                      className="text-white/60 text-xs md:text-sm"
+                      className="text-white/60 text-sm md:text-base"
                       style={{ fontFamily: "'Articulat CF', sans-serif" }}
                     >
                       Valor: {item.price}
@@ -110,7 +110,7 @@ const SalesNotifications = () => {
                   </div>
                   {position > 0 && (
                     <span
-                      className="text-white/40 text-xs md:text-sm flex-shrink-0"
+                      className="text-white/40 text-sm md:text-base flex-shrink-0"
                       style={{ fontFamily: "'Articulat CF', sans-serif" }}
                     >
                       {position === 1 ? "agora" : position === 2 ? "1seg" : "2seg"}
