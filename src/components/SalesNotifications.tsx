@@ -11,9 +11,13 @@ const NOTIFICATIONS = [
   { price: "R$ 197,00" },
 ];
 
-const TIME_LABELS = ["agora", "1seg", "2seg"];
-const SCALES = [1, 0.92, 0.84];
-const Y_POSITIONS = [0, 112, 216];
+// Position 0 = buffer (hidden above stack, loads image silently)
+// Positions 1, 2, 3 = visible stack
+const BUFFER_Y = -100;
+const Y_POSITIONS = [BUFFER_Y, 0, 112, 216];
+const SCALES    = [1,        1, 0.92, 0.84];
+const OPACITIES = [0,        1, 1,    1   ];
+const WIDTHS    = [100,    100, 94,   88  ]; // %
 
 interface NotifItem {
   uid: number;
@@ -21,22 +25,16 @@ interface NotifItem {
 }
 
 const SalesNotifications = () => {
-  const nextUid = useRef(3);
-  const nextNI = useRef(3);
-  const mounted = useRef(false);
+  const nextUid = useRef(4);
+  const nextNI  = useRef(4);
 
+  // Start with 4 items: index 0 = hidden buffer, 1-3 = visible
   const [items, setItems] = useState<NotifItem[]>([
     { uid: 0, price: NOTIFICATIONS[0].price },
     { uid: 1, price: NOTIFICATIONS[1].price },
     { uid: 2, price: NOTIFICATIONS[2].price },
+    { uid: 3, price: NOTIFICATIONS[3].price },
   ]);
-
-  // Preload image
-  useEffect(() => {
-    const img = new Image();
-    img.src = riseLogo;
-    mounted.current = true;
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,8 +45,10 @@ const SalesNotifications = () => {
           uid: nextUid.current++,
           price: NOTIFICATIONS[ni].price,
         };
-        // Prepend new item, keep only first 2 existing ones
-        return [newItem, prev[0], prev[1]];
+        // New item goes to buffer (pos 0, invisible).
+        // Old buffer (prev[0]) slides down to visible pos 1.
+        // prev[3] falls off the array → AnimatePresence fires exit on it.
+        return [newItem, prev[0], prev[1], prev[2]];
       });
     }, 3000);
 
@@ -58,39 +58,31 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
-        {/* Preload: render all images hidden so browser caches them instantly */}
-        <div aria-hidden className="sr-only absolute">
-          {NOTIFICATIONS.map((_, i) => (
-            <img key={i} src={riseLogo} alt="" fetchPriority="high" decoding="sync" />
-          ))}
-        </div>
         <div className="max-w-lg mx-auto px-4 overflow-hidden" style={{ height: 320 }}>
           <div className="relative flex justify-center">
             <AnimatePresence initial={false}>
               {items.map((item, position) => (
                 <m.div
                   key={item.uid}
-                  // Only truly NEW items (uid >= 3) slide in from top
-                  initial={
-                    item.uid >= 3
-                      ? { opacity: 1, y: -70, scale: SCALES[0] }
-                      : false
-                  }
+                  // New items land directly at buffer position without animation
+                  initial={false}
                   animate={{
-                    opacity: 1,
+                    opacity: OPACITIES[position],
                     y: Y_POSITIONS[position],
                     scale: SCALES[position],
                   }}
-                  exit={{ opacity: 0, y: 310, scale: 0.75 }}
-                  transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                  exit={{ opacity: 0, y: 320, scale: 0.75 }}
+                  transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
                   className="absolute rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
                   style={{
                     top: 0,
                     left: "50%",
                     x: "-50%",
-                    width: `${100 - position * 6}%`,
+                    width: `${WIDTHS[position]}%`,
                     maxWidth: 480,
                     transformOrigin: "center top",
+                    // pointer-events off for the hidden buffer slot
+                    pointerEvents: position === 0 ? "none" : "auto",
                   }}
                 >
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0">
@@ -116,12 +108,14 @@ const SalesNotifications = () => {
                       Valor: {item.price}
                     </p>
                   </div>
-                  <span
-                    className="text-white/40 text-xs md:text-sm flex-shrink-0"
-                    style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                  >
-                    {TIME_LABELS[position]}
-                  </span>
+                  {position > 0 && (
+                    <span
+                      className="text-white/40 text-xs md:text-sm flex-shrink-0"
+                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                    >
+                      {position === 1 ? "agora" : position === 2 ? "1seg" : "2seg"}
+                    </span>
+                  )}
                 </m.div>
               ))}
             </AnimatePresence>
