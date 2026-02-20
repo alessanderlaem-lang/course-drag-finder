@@ -6,6 +6,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
 import SalesNotifications from "@/components/SalesNotifications";
+import ScrollingSales from "@/components/ScrollingSales";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 
@@ -96,6 +97,9 @@ const Index = () => {
           Você divulga. A venda acontece. O dinheiro cai na sua conta.
         </p>
       </div>
+
+      {/* Scrolling Sales */}
+      <ScrollingSales />
 
       {/* Spacer: compensa a subida das notificações para o pricing não mover */}
       <div className="h-10 md:h-[100px]" />
