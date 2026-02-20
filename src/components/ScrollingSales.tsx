@@ -57,7 +57,7 @@ const ScrollingSales = () => {
         <div
           className="flex"
           style={{
-            animation: "scroll-left 35s linear infinite",
+            animation: "scroll-left 42s linear infinite",
             width: "max-content",
           }}
         >
