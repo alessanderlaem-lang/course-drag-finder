@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 
 import BonusSection from "@/components/BonusSection";
+import RendaExtraSection from "@/components/sections/RendaExtraSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
@@ -98,6 +99,9 @@ const Index = () => {
 
       {/* Scrolling Sales */}
       <ScrollingSales />
+
+      {/* Renda Extra Section */}
+      <RendaExtraSection />
 
       {/* Spacer: compensa a subida das notificações para o pricing não mover */}
       <div className="h-10 md:h-[100px]" />
