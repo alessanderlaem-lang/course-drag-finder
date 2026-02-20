@@ -5,7 +5,7 @@ import rendaExtraPhones from "@/assets/renda-extra-phones.png";
 const checklistItems = [
   "Revenda de produtos da comunidade",
   "Programa de Afiliados com comissão generosa",
-  "Freelancer com habilidades aprendidas na Rise",
+  "Produtos prontos para revender",
   "Criação de infoprodutos do zero",
   "Dropshipping com fornecedores exclusivos",
   "Revenda de produtos da comunidade",
