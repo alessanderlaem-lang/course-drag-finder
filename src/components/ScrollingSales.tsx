@@ -17,7 +17,7 @@ const ITEMS = [...SALES, ...SALES, ...SALES]; // 30 items
 
 // Cycle = 10s, clear window ≈ 15% = 1.5s → ~4-5 cards clear at any moment
 // Delays spread evenly across 30 cards: step = 10/30 ≈ 0.33s
-const CYCLE = 10;
+const CYCLE = 14;
 
 const SaleCard = ({ price, index }: { price: string; index: number }) => {
   const delay = `${((index % 30) * (CYCLE / 30)).toFixed(2)}s`;
@@ -96,9 +96,9 @@ const ScrollingSales = () => {
         }
         @keyframes blur-pulse {
           0%   { filter: blur(0px);  opacity: 1;   }
-          12%  { filter: blur(6px);  opacity: 0.4; }
-          82%  { filter: blur(6px);  opacity: 0.4; }
-          92%  { filter: blur(0px);  opacity: 1;   }
+          25%  { filter: blur(6px);  opacity: 0.4; }
+          75%  { filter: blur(6px);  opacity: 0.4; }
+          95%  { filter: blur(0px);  opacity: 1;   }
           100% { filter: blur(0px);  opacity: 1;   }
         }
       `}</style>
