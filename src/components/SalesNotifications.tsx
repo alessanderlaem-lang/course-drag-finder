@@ -58,6 +58,12 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
+        {/* Preload: render all images hidden so browser caches them instantly */}
+        <div aria-hidden className="sr-only absolute">
+          {NOTIFICATIONS.map((_, i) => (
+            <img key={i} src={riseLogo} alt="" fetchPriority="high" decoding="sync" />
+          ))}
+        </div>
         <div className="max-w-lg mx-auto px-4 overflow-hidden" style={{ height: 320 }}>
           <div className="relative flex justify-center">
             <AnimatePresence initial={false}>
