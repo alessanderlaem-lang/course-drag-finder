@@ -5,6 +5,7 @@ import BonusSection from "@/components/BonusSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import PricingSection from "@/components/PricingSection";
+import SalesNotifications from "@/components/SalesNotifications";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 
@@ -73,8 +74,11 @@ const Index = () => {
       {/* FAQ Section - Placeholder */}
       <div id="faq" />
 
+      {/* Sales Notifications */}
+      <SalesNotifications />
+
       {/* Pricing Section */}
-      <div id="pricing" className="relative z-20 mt-64 md:mt-96 lg:mt-[32rem]">
+      <div id="pricing" className="relative z-20">
         <PricingSection />
       </div>
 
