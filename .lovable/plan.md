@@ -1,29 +1,37 @@
 
+## Plano: Nova Seção de Renda Extra + Espaçamento
 
-## Corrigir erro de build - Facebook Pixel noscript
+### O que será feito
 
-### Problema
-O Vite nao permite uma tag `<noscript>` contendo `<img>` dentro do `<head>`. Isso causa o erro `disallowed-content-in-noscript-in-head`.
+1. **Criar a seção "Renda Extra"** entre os feedbacks (TestimonialsCarousel) e a seção de garantia/compra, com visual similar ao WhatYouGetSection (cards em grid, container premium com LED vermelho, shimmer effect).
 
-### Solucao
-Mover a tag `<noscript>` do Facebook Pixel do `<head>` para logo apos a abertura do `<body>` no `index.html`. O script principal do Pixel permanece no `<head>` (esta correto la).
+2. **Adicionar espaçamento** entre os feedbacks e a nova seção.
 
-### Detalhes tecnicos
+---
 
-**Arquivo: `index.html`**
+### Conteudo da Seção
 
-1. Remover a linha 33 do `<head>`:
-```html
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=653351790061731&ev=PageView&noscript=1"/></noscript>
-```
+- Titulo: algo como "Transforme Conhecimento em Renda Extra"
+- Subtitulo descritivo
+- Grid de cards com formas de gerar renda extra dentro da Rise (ex: Programa de Afiliados, Revenda de PLRs, Freelancer com habilidades aprendidas, Dropshipping, Criacao de Infoprodutos, Automacoes e Bots, etc.)
+- CTA final levando ao pricing
 
-2. Adicionar essa mesma linha logo apos `<body>`, antes do `<div id="root">`:
-```html
-<body>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=653351790061731&ev=PageView&noscript=1"/></noscript>
-  <div id="root"></div>
-  ...
-</body>
-```
+---
 
-Nenhuma outra mudanca necessaria.
+### Detalhes Tecnicos
+
+**Novo arquivo:** `src/components/sections/RendaExtraSection.tsx`
+- Usa `LazyMotion` + `m` do framer-motion (mesmo padrao do WhatYouGetSection)
+- Container com fundo `#111111`, borda `#464646`, border-radius 20px
+- LED glow bar vermelho no topo do container
+- Shimmer sweep animation
+- Grid de 6-8 cards com emoji, titulo e descricao curta
+- Cada card com fundo `#0D0D0D`, borda `#333`, hover vermelho
+- Fonte: Articulat CF
+- Gradiente vermelho nos destaques de texto
+- CTA button ao final
+
+**Alteracao:** `src/pages/Index.tsx`
+- Importar `RendaExtraSection`
+- Inserir entre `<TestimonialsCarousel />` e `<GuaranteeSection />`
+- Adicionar `mt-12 md:mt-16` ou similar para espacamento entre feedbacks e a nova secao
