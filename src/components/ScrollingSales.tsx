@@ -13,21 +13,33 @@ const SALES = [
   { price: "R$ 399,00" },
 ];
 
-// Cards that get the blur pulse effect (every 3rd card, with varied delays)
-const BLUR_DELAYS = ["0s", "4s", "8s", "2s", "6s", "10s", "1s", "5s", "9s", "3s"];
+// Each card gets unique duration + delay for organic feel
+// index % 10 → varied config; index % 11 === 5 = no blur (1 in 11 cards clean)
+const BLUR_CONFIGS = [
+  { duration: "4s",  delay: "0s"  },
+  { duration: "7s",  delay: "1.5s" },
+  { duration: "5s",  delay: "3s"  },
+  { duration: "9s",  delay: "0.5s" },
+  { duration: "3s",  delay: "5s"  },
+  { duration: "6s",  delay: "2s"  },
+  { duration: "8s",  delay: "4s"  },
+  { duration: "4.5s",delay: "6s"  },
+  { duration: "5.5s",delay: "1s"  },
+  { duration: "7.5s",delay: "3.5s"},
+];
 
 const ITEMS = [...SALES, ...SALES, ...SALES];
 
 const SaleCard = ({ price, index }: { price: string; index: number }) => {
-  const hasBlur = index % 3 === 1; // every 3rd card gets blur
-  const delay = BLUR_DELAYS[index % BLUR_DELAYS.length];
+  const skipBlur = index % 11 === 5; // ~1 in 11 stays clean
+  const cfg = BLUR_CONFIGS[index % BLUR_CONFIGS.length];
 
   return (
     <div
       className="flex-shrink-0 flex items-center gap-5 bg-[#111111] border border-white/10 rounded-2xl pl-4 pr-7 py-4 mx-2 shadow-lg shadow-black/30 min-w-[420px]"
       style={
-        hasBlur
-          ? { animation: `blur-pulse 6s ease-in-out ${delay} infinite` }
+        !skipBlur
+          ? { animation: `blur-pulse ${cfg.duration} ease-in-out ${cfg.delay} infinite` }
           : undefined
       }
     >
@@ -84,7 +96,7 @@ const ScrollingSales = () => {
           style={{ animation: "scroll-right 35s linear infinite", width: "max-content" }}
         >
           {ITEMS.map((s, i) => (
-            <SaleCard key={`row2-${i}`} price={s.price} index={i + 1} />
+            <SaleCard key={`row2-${i}`} price={s.price} index={i + 3} />
           ))}
         </div>
       </div>
@@ -99,11 +111,11 @@ const ScrollingSales = () => {
           100% { transform: translateX(0); }
         }
         @keyframes blur-pulse {
-          0%   { filter: blur(0px);   opacity: 1; }
-          30%  { filter: blur(4px);   opacity: 0.6; }
-          50%  { filter: blur(4px);   opacity: 0.6; }
-          80%  { filter: blur(0px);   opacity: 1; }
-          100% { filter: blur(0px);   opacity: 1; }
+          0%   { filter: blur(0px);  opacity: 1;   }
+          25%  { filter: blur(5px);  opacity: 0.5; }
+          55%  { filter: blur(5px);  opacity: 0.5; }
+          85%  { filter: blur(0px);  opacity: 1;   }
+          100% { filter: blur(0px);  opacity: 1;   }
         }
       `}</style>
     </section>
