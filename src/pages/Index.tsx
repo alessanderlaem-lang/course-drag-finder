@@ -13,7 +13,7 @@ import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriti
 import AboutSection from "@/components/sections/AboutSection";
 import HowAccessWorks from "@/components/HowAccessWorks";
 import WhatYouGetSection from "@/components/sections/WhatYouGetSection";
-import RendaExtraSection from "@/components/sections/RendaExtraSection";
+
 
 
 const Index = () => {
@@ -66,10 +66,6 @@ const Index = () => {
       {/* Testimonials Carousel */}
       <TestimonialsCarousel />
 
-      {/* Renda Extra Section */}
-      <div className="mt-12 md:mt-16">
-        <RendaExtraSection />
-      </div>
 
       {/* Guarantee Section */}
       <GuaranteeSection />
