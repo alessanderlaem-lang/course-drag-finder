@@ -111,7 +111,7 @@ const RendaExtraSection = () => {
         </m.div>
 
         {/* Row 1 - scrolling left */}
-        <div className="-mt-8 md:-mt-12 relative z-10">
+        <div className="-mt-20 md:-mt-28 relative z-10">
           <ScrollRow direction="left" blurIndices={blurIndicesRow1} />
 
           {/* Row 2 - scrolling right */}
