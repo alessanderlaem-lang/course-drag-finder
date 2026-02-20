@@ -3,11 +3,11 @@ import { Check, DollarSign, RefreshCw, Users, TrendingUp, Zap, ShoppingBag } fro
 import rendaExtraPhones from "@/assets/renda-extra-phones.png";
 
 const checklistItems = [
+  "Revenda de produtos da comunidade",
   "Programa de Afiliados com comissão generosa",
-  "Revenda de PLRs e infoprodutos prontos",
   "Freelancer com habilidades aprendidas na Rise",
-  "Dropshipping com fornecedores exclusivos",
   "Criação de infoprodutos do zero",
+  "Dropshipping com fornecedores exclusivos",
   "Automações, bots e ferramentas digitais",
   "Renda recorrente e escalável",
   "Recupere o investimento em poucas vendas",
