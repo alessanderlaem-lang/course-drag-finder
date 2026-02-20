@@ -81,7 +81,7 @@ const Index = () => {
       </div>
 
       {/* Text block below notifications */}
-      <div className="max-w-4xl mx-auto px-6 mt-10 md:mt-14 text-center">
+      <div className="max-w-4xl mx-auto px-6 mt-2 md:mt-4 text-center">
         <h2
           className="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-8"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
