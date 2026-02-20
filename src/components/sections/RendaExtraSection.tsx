@@ -44,7 +44,7 @@ const RendaExtraSection = () => {
           <div
             className="flex gap-0"
             style={{
-              animation: "scroll-left 45s linear infinite",
+              animation: "scroll-left 90s linear infinite",
               width: "max-content",
             }}
           >
@@ -66,7 +66,7 @@ const RendaExtraSection = () => {
           <div
             className="flex gap-0"
             style={{
-              animation: "scroll-right 45s linear infinite",
+              animation: "scroll-right 90s linear infinite",
               width: "max-content",
             }}
           >
