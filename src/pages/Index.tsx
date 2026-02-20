@@ -75,7 +75,7 @@ const Index = () => {
       <div id="faq" />
 
       {/* Sales Notifications */}
-      <div className="mt-80 md:mt-[500px]">
+      <div className="mt-20 md:mt-[200px]">
         <SalesNotifications />
       </div>
 
