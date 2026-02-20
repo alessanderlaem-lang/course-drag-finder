@@ -1,15 +1,5 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 
-const incomeItems = [
-  { emoji: "🤝", title: "Programa de Afiliados", desc: "Ganhe comissões indicando a Rise para novos membros" },
-  { emoji: "📦", title: "Revenda de PLRs", desc: "Personalize e venda produtos digitais prontos" },
-  { emoji: "💻", title: "Freelancer Digital", desc: "Use as habilidades aprendidas para prestar serviços" },
-  { emoji: "🛒", title: "Dropshipping & E-commerce", desc: "Monte sua loja com fornecedores e estratégias da comunidade" },
-  { emoji: "🎯", title: "Criação de Infoprodutos", desc: "Crie e venda seus próprios cursos e materiais" },
-  { emoji: "🤖", title: "Automações & Bots", desc: "Venda soluções automatizadas para empresas e profissionais" },
-  { emoji: "🎨", title: "Design & Criativos", desc: "Ofereça serviços de design usando os packs disponíveis" },
-  { emoji: "📈", title: "Gestão de Tráfego", desc: "Gerencie anúncios para clientes com as estratégias da Rise" },
-];
 
 const RendaExtraSection = () => {
   const scrollToPricing = () => {
@@ -109,43 +99,7 @@ const RendaExtraSection = () => {
             </div>
 
             <div className="relative z-10">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-                {incomeItems.map((item, i) => (
-                  <m.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.04, duration: 0.3 }}
-                    className="rounded-xl border border-[#333] hover:border-[#FF0000]/40 transition-all duration-300 p-4 md:p-5 flex flex-col items-center text-center gap-2.5"
-                    style={{ background: "#0D0D0D" }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "#1a1a1a";
-                      e.currentTarget.style.boxShadow = "0 0 20px rgba(255,0,0,0.1)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "#0D0D0D";
-                      e.currentTarget.style.boxShadow = "none";
-                    }}
-                  >
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(255,0,0,0.1)" }}>
-                      <span className="text-2xl md:text-3xl">{item.emoji}</span>
-                    </div>
-                    <span
-                      className="text-white font-bold text-xs md:text-sm leading-tight"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      {item.title}
-                    </span>
-                    <span
-                      className="text-[#999] text-[11px] md:text-xs leading-snug"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      {item.desc}
-                    </span>
-                  </m.div>
-                ))}
-              </div>
+            {/* Cards vazios - conteúdo será adicionado depois */}
             </div>
           </m.div>
 
