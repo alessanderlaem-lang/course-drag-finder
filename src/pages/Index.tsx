@@ -75,9 +75,12 @@ const Index = () => {
       <div id="faq" />
 
       {/* Sales Notifications */}
-      <div className="mt-20 md:mt-[180px]">
+      <div className="mt-10 md:mt-[80px]">
         <SalesNotifications />
       </div>
+
+      {/* Spacer: compensa a subida das notificações para o pricing não mover */}
+      <div className="h-10 md:h-[100px]" />
 
       {/* Pricing Section */}
       <div id="pricing" className="relative z-20">
