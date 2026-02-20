@@ -42,18 +42,18 @@ const RendaExtraSection = () => {
         {/* Scrolling images - full width */}
         <div className="overflow-hidden w-full">
           <div
-            className="flex gap-4"
+            className="flex gap-2"
             style={{
-              animation: "scroll-left 30s linear infinite",
+              animation: "scroll-left 45s linear infinite",
               width: "max-content",
             }}
           >
-            {Array.from({ length: 24 }).map((_, i) => (
+            {Array.from({ length: 30 }).map((_, i) => (
               <img
                 key={i}
                 src={vendaAprovada}
                 alt="Venda Aprovada"
-                className="h-16 md:h-20 rounded-xl flex-shrink-0"
+                className="h-12 md:h-14 rounded-lg flex-shrink-0"
                 loading="lazy"
                 decoding="async"
               />
