@@ -35,6 +35,12 @@ const SalesNotifications = () => {
     { id: 2, priceIndex: 2 },
   ]);
 
+  // Preload image immediately so it's cached before first notification
+  useEffect(() => {
+    const img = new Image();
+    img.src = riseLogo;
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setItems((prev) => {
@@ -77,7 +83,7 @@ const SalesNotifications = () => {
                   }}
                 >
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0">
-                    <img src={riseLogo} alt="Rise Community" className="w-full h-full object-cover" />
+                    <img src={riseLogo} alt="Rise Community" className="w-full h-full object-cover" fetchPriority="high" decoding="sync" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-white font-bold text-sm md:text-base" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
