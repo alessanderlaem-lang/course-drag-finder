@@ -37,7 +37,6 @@ const SalesNotifications = () => {
           id: nextId.current++,
           priceIndex: (nextId.current - 1) % SALE_PRICES.length,
         };
-        // New one at top, keep first 2 of previous (drop the 3rd/oldest)
         return [newItem, prev[0], prev[1]];
       });
     }, 3000);
@@ -48,38 +47,37 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
-        <div className="max-w-md mx-auto px-4 flex flex-col gap-4 min-h-[280px]">
-          <AnimatePresence mode="popLayout" initial={false}>
-            {items.map((item, position) => (
-              <m.div
-                key={item.id}
-                layout
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, transition: { duration: 0.15 } }}
-                transition={{
-                  duration: 0.12,
-                  layout: { type: "spring", stiffness: 500, damping: 35 },
-                }}
-                className="rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
-              >
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0">
-                  <img src={riseLogo} alt="Rise Community" className="w-full h-full object-cover" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-white font-bold text-sm md:text-base" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
-                    Venda realizada!
-                  </p>
-                  <p className="text-white/60 text-xs md:text-sm" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
-                    Valor: {SALE_PRICES[item.priceIndex]}
-                  </p>
-                </div>
-                <span className="text-white/40 text-xs md:text-sm flex-shrink-0" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
-                  {TIME_LABELS[position]}
-                </span>
-              </m.div>
-            ))}
-          </AnimatePresence>
+        <div className="max-w-md mx-auto px-4 overflow-hidden" style={{ height: 260 }}>
+          <div className="relative">
+            <AnimatePresence initial={false}>
+              {items.map((item, position) => (
+                <m.div
+                  key={item.id}
+                  initial={position === 0 ? { opacity: 1, y: -80 } : false}
+                  animate={{ opacity: 1, y: position * 84 }}
+                  exit={{ opacity: 0, y: 3 * 84 }}
+                  transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="absolute left-0 right-0 rounded-2xl border border-white/10 bg-[#111111] p-4 flex items-center gap-4 shadow-lg shadow-black/30"
+                  style={{ top: 0 }}
+                >
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0">
+                    <img src={riseLogo} alt="Rise Community" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white font-bold text-sm md:text-base" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
+                      Venda realizada!
+                    </p>
+                    <p className="text-white/60 text-xs md:text-sm" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
+                      Valor: {SALE_PRICES[item.priceIndex]}
+                    </p>
+                  </div>
+                  <span className="text-white/40 text-xs md:text-sm flex-shrink-0" style={{ fontFamily: "'Articulat CF', sans-serif" }}>
+                    {TIME_LABELS[position]}
+                  </span>
+                </m.div>
+              ))}
+            </AnimatePresence>
+          </div>
         </div>
       </section>
     </LazyMotion>
