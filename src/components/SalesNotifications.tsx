@@ -20,7 +20,7 @@ const TIME_LABELS = ["agora", "1seg", "2seg"];
 // Scale per position: 1st biggest, 2nd medium, 3rd smallest
 const SCALES = [1, 0.92, 0.84];
 // Y positions with gap between cards
-const Y_POSITIONS = [0, 90, 168];
+const Y_POSITIONS = [0, 100, 192];
 
 interface NotifItem {
   id: number;
