@@ -81,19 +81,6 @@ const RendaExtraSection = () => {
               renda extra usando o que a comunidade oferece. Sem precisar criar do zero, sem experiência prévia.
             </p>
 
-            {/* Scrolling text behind grid */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden opacity-[0.04] z-0">
-              <div
-                className="whitespace-nowrap text-white text-[3rem] md:text-[5rem] font-bold uppercase"
-                style={{
-                  fontFamily: "'Articulat CF', sans-serif",
-                  animation: "scroll-left-marquee 20s linear infinite",
-                }}
-              >
-                Renda Extra · Afiliados · PLR · Dropshipping · Freelancer · Infoprodutos · Automações · Bots · Renda Extra · Afiliados · PLR · Dropshipping · Freelancer · Infoprodutos · Automações · Bots ·&nbsp;
-              </div>
-            </div>
-
             {/* Checklist 2 columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mb-6 relative z-10">
               {checklistItems.map((item, i) => (
