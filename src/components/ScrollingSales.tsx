@@ -15,17 +15,20 @@ const SALES = [
 
 const ITEMS = [...SALES, ...SALES, ...SALES]; // 30 items
 
-// Cycle = 10s, clear window ≈ 15% = 1.5s → ~4-5 cards clear at any moment
-// Delays spread evenly across 30 cards: step = 10/30 ≈ 0.33s
-const CYCLE = 14;
+// Use 4 different cycle durations (prime-ish) so cards never fully sync
+// Clear window = 20% of each cycle → guarantees ~6 cards visible at all times
+const DURATIONS = [11, 14, 17, 20];
 
 const SaleCard = ({ price, index }: { price: string; index: number }) => {
-  const delay = `${((index % 30) * (CYCLE / 30)).toFixed(2)}s`;
+  const duration = DURATIONS[index % DURATIONS.length];
+  // Spread delays within their own cycle so the clear window hits at different times
+  const delay = `${((index % 10) * (duration / 10)).toFixed(2)}s`;
+  const animName = `blur-pulse-${duration}`;
 
   return (
     <div
       className="flex-shrink-0 flex items-center gap-5 bg-[#111111] border border-white/10 rounded-2xl pl-4 pr-7 py-4 mx-2 shadow-lg shadow-black/30 min-w-[420px]"
-      style={{ animation: `blur-pulse ${CYCLE}s ease-in-out ${delay} infinite` }}
+      style={{ animation: `${animName} ${duration}s linear ${delay} infinite` }}
     >
       <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
         <img
@@ -80,7 +83,7 @@ const ScrollingSales = () => {
           style={{ animation: "scroll-right 35s linear infinite", width: "max-content" }}
         >
           {ITEMS.map((s, i) => (
-            <SaleCard key={`row2-${i}`} price={s.price} index={i + 5} />
+            <SaleCard key={`row2-${i}`} price={s.price} index={i + 2} />
           ))}
         </div>
       </div>
@@ -94,12 +97,39 @@ const ScrollingSales = () => {
           0%   { transform: translateX(-33.333%); }
           100% { transform: translateX(0); }
         }
-        @keyframes blur-pulse {
-          0%   { filter: blur(0px);  opacity: 1;   }
-          25%  { filter: blur(6px);  opacity: 0.4; }
-          75%  { filter: blur(6px);  opacity: 0.4; }
-          95%  { filter: blur(0px);  opacity: 1;   }
-          100% { filter: blur(0px);  opacity: 1;   }
+
+        /* Shared keyframe shape — 20% clear at start+end, 60% blurred in middle */
+        @keyframes blur-pulse-11 {
+          0%   { filter: blur(0px); opacity: 1;   }
+          10%  { filter: blur(0px); opacity: 1;   }
+          25%  { filter: blur(6px); opacity: 0.35;}
+          75%  { filter: blur(6px); opacity: 0.35;}
+          90%  { filter: blur(0px); opacity: 1;   }
+          100% { filter: blur(0px); opacity: 1;   }
+        }
+        @keyframes blur-pulse-14 {
+          0%   { filter: blur(0px); opacity: 1;   }
+          10%  { filter: blur(0px); opacity: 1;   }
+          25%  { filter: blur(6px); opacity: 0.35;}
+          75%  { filter: blur(6px); opacity: 0.35;}
+          90%  { filter: blur(0px); opacity: 1;   }
+          100% { filter: blur(0px); opacity: 1;   }
+        }
+        @keyframes blur-pulse-17 {
+          0%   { filter: blur(0px); opacity: 1;   }
+          10%  { filter: blur(0px); opacity: 1;   }
+          25%  { filter: blur(6px); opacity: 0.35;}
+          75%  { filter: blur(6px); opacity: 0.35;}
+          90%  { filter: blur(0px); opacity: 1;   }
+          100% { filter: blur(0px); opacity: 1;   }
+        }
+        @keyframes blur-pulse-20 {
+          0%   { filter: blur(0px); opacity: 1;   }
+          10%  { filter: blur(0px); opacity: 1;   }
+          25%  { filter: blur(6px); opacity: 0.35;}
+          75%  { filter: blur(6px); opacity: 0.35;}
+          90%  { filter: blur(0px); opacity: 1;   }
+          100% { filter: blur(0px); opacity: 1;   }
         }
       `}</style>
     </section>
