@@ -85,13 +85,13 @@ const Index = () => {
       {/* Text block below notifications */}
       <div className="max-w-4xl mx-auto px-6 mt-2 md:mt-4 text-center">
         <h2
-          className="text-3xl md:text-5xl font-extrabold leading-tight text-white mb-8"
+          className="text-2xl md:text-5xl font-extrabold leading-tight text-white mb-8"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
           <span className="text-primary">Afilie-se</span> e comece a faturar hoje.
         </h2>
         <p
-          className="text-white/50 text-base md:text-lg leading-[2.2]"
+          className="text-white/50 text-sm md:text-lg leading-[2]"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
           <span className="text-white font-semibold">Aqui o afiliado é prioridade.</span> Acesso completo aos materiais oficiais, suporte exclusivo para afiliados e apoio constante da equipe. Você entra com estrutura, direcionamento claro e acompanhamento de verdade. <span className="text-white font-semibold">Nada no escuro. Tudo pensado para facilitar suas vendas.</span>
