@@ -106,7 +106,7 @@ const SalesNotifications = () => {
         <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
 
           {/* Text side */}
-          <div className="flex-1 flex flex-col gap-5 text-left lg:text-left">
+          <div className="flex-1 flex flex-col gap-3 md:gap-5 text-left lg:text-left">
             {/* Badge */}
             <div className="flex justify-start">
               <span
