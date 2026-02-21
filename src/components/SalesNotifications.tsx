@@ -69,12 +69,12 @@ const SalesNotifications = () => {
   return (
     <LazyMotion features={domAnimation}>
       <section className="w-full bg-background py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
 
           {/* Text side */}
-          <div className="flex-1 flex flex-col gap-5 text-center lg:text-left">
+          <div className="flex-1 flex flex-col gap-5 text-left lg:text-left">
             {/* Badge */}
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-start">
               <span
                 className="inline-flex items-center gap-2 border border-primary rounded-full px-4 py-1.5 text-white text-sm"
                 style={{ fontFamily: "'Articulat CF', sans-serif" }}
@@ -103,7 +103,7 @@ const SalesNotifications = () => {
 
             {/* Description */}
             <p
-              className="text-white/50 text-sm md:text-base leading-relaxed max-w-sm mx-auto lg:mx-0"
+              className="text-white/50 text-sm md:text-base leading-relaxed max-w-sm lg:mx-0"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               Divulgue seu link de afiliado, gere vendas e receba comissões automáticas. Uma das formas mais simples de faturar no digital.
