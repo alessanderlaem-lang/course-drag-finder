@@ -97,8 +97,8 @@ const SalesNotifications = () => {
           </div>
 
           {/* Notifications side */}
-          <div className="flex-1 w-full max-w-xl overflow-hidden" style={{ height: 360 }}>
-            <div className="relative flex justify-center">
+          <div className="w-full max-w-xl overflow-hidden" style={{ height: 360 }}>
+            <div className="relative w-full" style={{ height: 360 }}>
               <AnimatePresence initial={false}>
                 {items.map((item, position) => (
                   <m.div
