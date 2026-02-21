@@ -27,10 +27,10 @@ const SaleCard = ({ price, index }: { price: string; index: number }) => {
 
   return (
     <div
-      className="flex-shrink-0 flex items-center gap-2.5 md:gap-5 bg-[#111111] border border-white/10 rounded-2xl pl-2.5 pr-4 md:pl-4 md:pr-7 py-2.5 md:py-4 mx-1.5 md:mx-2 shadow-lg shadow-black/30 min-w-[250px] md:min-w-[420px]"
+      className="flex-shrink-0 flex items-center gap-2 md:gap-5 bg-[#111111] border border-white/10 rounded-xl md:rounded-2xl pl-2 pr-3 md:pl-4 md:pr-7 py-2 md:py-4 mx-1 md:mx-2 shadow-lg shadow-black/30 min-w-[200px] md:min-w-[420px]"
       style={{ animation: `${animName} ${duration}s linear ${delay} infinite` }}
     >
-      <div className="w-8 h-8 md:w-12 md:h-12 rounded-xl overflow-hidden flex-shrink-0">
+      <div className="w-7 h-7 md:w-12 md:h-12 rounded-lg md:rounded-xl overflow-hidden flex-shrink-0">
         <img
           src={riseLogo}
           alt="Rise"
@@ -41,13 +41,13 @@ const SaleCard = ({ price, index }: { price: string; index: number }) => {
       </div>
       <div>
         <p
-          className="text-white font-bold text-sm"
+          className="text-white font-bold text-xs md:text-sm"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
           Venda Aprovada!
         </p>
         <p
-          className="text-white/60 text-xs"
+          className="text-white/60 text-[10px] md:text-xs"
           style={{ fontFamily: "'Articulat CF', sans-serif" }}
         >
           Valor {price}
