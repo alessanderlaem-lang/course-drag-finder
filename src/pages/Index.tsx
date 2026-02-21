@@ -16,7 +16,7 @@ import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriti
 import AboutSection from "@/components/sections/AboutSection";
 
 import HowAccessWorks from "@/components/HowAccessWorks";
-import WhatYouGetSection from "@/components/sections/WhatYouGetSection";
+
 
 
 
@@ -52,8 +52,7 @@ const Index = () => {
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
       <DiferenciaisCriticosSection />
 
-      {/* What You Get Section - Entrega do Rateio */}
-      <WhatYouGetSection />
+
 
       {/* How Access Works Section */}
       <HowAccessWorks />
