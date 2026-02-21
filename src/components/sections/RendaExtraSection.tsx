@@ -22,7 +22,7 @@ const badges = [
 const RendaExtraSection = () => {
   return (
     <LazyMotion features={domAnimation}>
-      <section className="w-full py-16 md:py-24 bg-background">
+      <section className="w-full py-10 md:py-24 bg-background">
         <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ const RendaExtraSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-5xl mx-auto px-4 md:px-6"
         >
-          <div className="rounded-[20px] border border-[#464646] bg-[#111111] p-6 md:p-10 relative overflow-hidden">
+          <div className="rounded-[20px] border border-[#464646] bg-[#111111] p-4 md:p-10 relative overflow-hidden">
             {/* LED glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent" />
             {/* Glow blur */}
@@ -65,7 +65,7 @@ const RendaExtraSection = () => {
 
             {/* Title */}
             <h3
-              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 relative z-10"
+              className="text-xl md:text-3xl lg:text-4xl font-bold mb-1.5 relative z-10"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               <span className="text-white">Transforme Conhecimento em </span>
@@ -74,7 +74,7 @@ const RendaExtraSection = () => {
 
             {/* Description */}
             <p
-              className="text-sm md:text-base text-[#bbb] leading-relaxed mb-6 max-w-2xl relative z-10"
+              className="text-xs md:text-base text-[#bbb] leading-relaxed mb-4 md:mb-6 max-w-2xl relative z-10"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               Dentro da Rise, você não aprende só — você monetiza. São diversas formas de gerar
@@ -82,12 +82,12 @@ const RendaExtraSection = () => {
             </p>
 
             {/* Checklist 2 columns */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 mb-6 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1 md:gap-y-2 mb-4 md:mb-6 relative z-10">
               {checklistItems.map((item, i) => (
-                <div key={i} className="flex items-center gap-2 py-1">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                <div key={i} className="flex items-center gap-2 py-0.5 md:py-1">
+                  <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary flex-shrink-0" />
                   <span
-                    className="text-white/90 text-sm md:text-base"
+                    className="text-white/90 text-xs md:text-base"
                     style={{ fontFamily: "'Articulat CF', sans-serif" }}
                   >
                     {item}
@@ -97,13 +97,13 @@ const RendaExtraSection = () => {
             </div>
 
             {/* Badges */}
-            <div className="flex flex-wrap gap-3 relative z-10">
+            <div className="flex flex-wrap gap-2 md:gap-3 relative z-10">
               {badges.map((badge, i) => (
                 <span
                   key={i}
-                  className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary text-xs md:text-sm font-semibold px-4 py-2 rounded-lg"
+                  className="inline-flex items-center gap-1.5 md:gap-2 bg-primary/10 border border-primary/30 text-primary text-[10px] md:text-sm font-semibold px-3 py-1.5 md:px-4 md:py-2 rounded-lg"
                 >
-                  <badge.icon className="w-4 h-4" />
+                  <badge.icon className="w-3.5 h-3.5 md:w-4 md:h-4" />
                   {badge.label}
                 </span>
               ))}
