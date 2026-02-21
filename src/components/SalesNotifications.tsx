@@ -17,9 +17,9 @@ const NOTIFICATIONS = [
 const BUFFER_Y = -80;
 const Y_POSITIONS_MOBILE = [BUFFER_Y, 0, 88, 170];
 const Y_POSITIONS_DESKTOP = [BUFFER_Y, 0, 128, 248];
-const SCALES    = [1,        1, 0.92, 0.84];
+const SCALES    = [1,        1, 0.95, 0.90];
 const OPACITIES = [0,        1, 1,    1   ];
-const WIDTHS    = [100,    100, 94,   88  ]; // %
+const WIDTHS    = [100,    100, 96,   92  ]; // %
 
 interface NotifItem {
   uid: number;
