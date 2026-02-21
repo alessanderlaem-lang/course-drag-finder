@@ -1,5 +1,5 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import bonusMetodos from "@/assets/bonus-metodos.png";
+
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
 import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
@@ -14,14 +14,6 @@ interface BonusItem {
 }
 
 const bonusItems: BonusItem[] = [
-  {
-    number: 1,
-    image: bonusMetodos,
-    title: "Recupere seu investimento",
-    description:
-      "Seja afiliado da maior comunidade de todas, com suporte, direcionamento, estrutura organizada e diversos produtos prontos para revenda.",
-    originalPrice: "R$ 97,90",
-  },
   {
     number: 2,
     image: bonusOfertas,
