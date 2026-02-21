@@ -86,11 +86,10 @@ const SalesNotifications = () => {
 
             {/* Title */}
             <h2
-              className="text-white text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
+              className="text-white text-xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
-              Afiliação<br />
-              <span className="text-primary">Rise Community</span>
+              Afiliação <span className="text-primary">Rise Community</span>
             </h2>
 
             {/* Subtitle */}
