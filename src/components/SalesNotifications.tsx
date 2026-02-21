@@ -43,10 +43,24 @@ const SalesNotifications = () => {
   const nextUid = useRef(4);
   const nextNI  = useRef(4);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
     audioRef.current = new Audio("/audio/sale-notification.mp3");
     audioRef.current.volume = 0.5;
+  }, []);
+
+  // Track section visibility
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { isVisibleRef.current = entry.isIntersecting; },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   const [items, setItems] = useState<NotifItem[]>([
@@ -68,8 +82,8 @@ const SalesNotifications = () => {
         return [newItem, prev[0], prev[1], prev[2]];
       });
 
-      // Play notification sound
-      if (audioRef.current) {
+      // Play sound only when section is visible
+      if (audioRef.current && isVisibleRef.current) {
         audioRef.current.currentTime = 0;
         audioRef.current.play().catch(() => {});
       }
@@ -80,7 +94,7 @@ const SalesNotifications = () => {
 
   return (
     <LazyMotion features={domAnimation}>
-      <section className="w-full bg-background py-16 md:py-24">
+      <section ref={sectionRef} className="w-full bg-background py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
 
           {/* Text side */}
