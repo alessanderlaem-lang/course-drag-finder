@@ -42,6 +42,12 @@ const SalesNotifications = () => {
   const isMd = useIsMd();
   const nextUid = useRef(4);
   const nextNI  = useRef(4);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    audioRef.current = new Audio("/audio/sale-notification.mp3");
+    audioRef.current.volume = 0.5;
+  }, []);
 
   const [items, setItems] = useState<NotifItem[]>([
     { uid: 0, price: NOTIFICATIONS[0].price },
@@ -61,6 +67,12 @@ const SalesNotifications = () => {
         };
         return [newItem, prev[0], prev[1], prev[2]];
       });
+
+      // Play notification sound
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play().catch(() => {});
+      }
     }, 3000);
 
     return () => clearInterval(interval);
