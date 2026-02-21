@@ -102,7 +102,7 @@ const SalesNotifications = () => {
 
   return (
     <LazyMotion features={domAnimation}>
-      <section ref={sectionRef} className="w-full bg-background py-6 md:py-24">
+      <section ref={sectionRef} className="w-full bg-background py-0 md:py-24">
         <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
 
           {/* Text side */}
