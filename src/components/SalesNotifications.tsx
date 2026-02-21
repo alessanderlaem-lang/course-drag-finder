@@ -14,8 +14,9 @@ const NOTIFICATIONS = [
 
 // Position 0 = buffer (hidden above stack, loads image silently)
 // Positions 1, 2, 3 = visible stack
-const BUFFER_Y = -100;
-const Y_POSITIONS = [BUFFER_Y, 0, 128, 248];
+const BUFFER_Y = -80;
+const Y_POSITIONS_MOBILE = [BUFFER_Y, 0, 88, 170];
+const Y_POSITIONS_DESKTOP = [BUFFER_Y, 0, 128, 248];
 const SCALES    = [1,        1, 0.92, 0.84];
 const OPACITIES = [0,        1, 1,    1   ];
 const WIDTHS    = [100,    100, 94,   88  ]; // %
@@ -25,7 +26,20 @@ interface NotifItem {
   price: string;
 }
 
+const useIsMd = () => {
+  const [isMd, setIsMd] = useState(false);
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 768px)");
+    const onChange = () => setIsMd(mql.matches);
+    mql.addEventListener("change", onChange);
+    setIsMd(mql.matches);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+  return isMd;
+};
+
 const SalesNotifications = () => {
+  const isMd = useIsMd();
   const nextUid = useRef(4);
   const nextNI  = useRef(4);
 
@@ -97,8 +111,8 @@ const SalesNotifications = () => {
           </div>
 
           {/* Notifications side */}
-          <div className="w-full max-w-xl overflow-hidden" style={{ height: 360 }}>
-            <div className="relative w-full" style={{ height: 360 }}>
+          <div className="w-full max-w-xl overflow-hidden" style={{ height: isMd ? 360 : 280 }}>
+            <div className="relative w-full" style={{ height: isMd ? 360 : 280 }}>
               <AnimatePresence initial={false}>
                 {items.map((item, position) => (
                   <m.div
@@ -106,12 +120,12 @@ const SalesNotifications = () => {
                     initial={false}
                     animate={{
                       opacity: OPACITIES[position],
-                      y: Y_POSITIONS[position],
+                      y: (isMd ? Y_POSITIONS_DESKTOP : Y_POSITIONS_MOBILE)[position],
                       scale: SCALES[position],
                     }}
                     exit={{ opacity: 0, y: 320, scale: 0.75 }}
                     transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
-                    className="absolute rounded-2xl border border-white/10 bg-[#111111] p-5 flex items-center gap-5 shadow-lg shadow-black/30"
+                    className="absolute rounded-2xl border border-white/10 bg-[#111111] p-3 md:p-5 flex items-center gap-3 md:gap-5 shadow-lg shadow-black/30"
                     style={{
                       top: 0,
                       left: "50%",
@@ -122,7 +136,7 @@ const SalesNotifications = () => {
                       pointerEvents: position === 0 ? "none" : "auto",
                     }}
                   >
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0">
+                    <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0">
                       <img
                         src={riseLogo}
                         alt="Rise Community"
@@ -133,13 +147,13 @@ const SalesNotifications = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p
-                        className="text-white font-bold text-base md:text-lg"
+                        className="text-white font-bold text-sm md:text-lg"
                         style={{ fontFamily: "'Articulat CF', sans-serif" }}
                       >
                         Venda realizada!
                       </p>
                       <p
-                        className="text-white/60 text-sm md:text-base"
+                        className="text-white/60 text-xs md:text-base"
                         style={{ fontFamily: "'Articulat CF', sans-serif" }}
                       >
                         Valor: {item.price}
