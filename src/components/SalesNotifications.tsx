@@ -47,8 +47,14 @@ const SalesNotifications = () => {
   const isVisibleRef = useRef(false);
 
   useEffect(() => {
-    audioRef.current = new Audio("/audio/sale-notification.mp3");
-    audioRef.current.volume = 0.5;
+    const audio = new Audio("/audio/sale-notification.mp3");
+    audio.volume = 0.5;
+    audioRef.current = audio;
+    return () => {
+      audio.pause();
+      audio.src = "";
+      audioRef.current = null;
+    };
   }, []);
 
   // Track section visibility
@@ -83,9 +89,11 @@ const SalesNotifications = () => {
       });
 
       // Play sound only when section is visible
-      if (audioRef.current && isVisibleRef.current) {
-        audioRef.current.currentTime = 0;
-        audioRef.current.play().catch(() => {});
+      const audio = audioRef.current;
+      if (audio && isVisibleRef.current) {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
       }
     }, 3000);
 
