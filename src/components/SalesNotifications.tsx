@@ -86,7 +86,7 @@ const SalesNotifications = () => {
 
             {/* Title */}
             <h2
-              className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
+              className="text-white text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight"
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               Afiliação<br />
