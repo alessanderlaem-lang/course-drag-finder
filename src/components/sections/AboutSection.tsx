@@ -22,8 +22,8 @@ const AboutSection = () => {
 
           {/* Subtítulo */}
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Veja na prática tudo que você vai receber entrando na{" "}
-            <strong>Rise Community</strong>
+            Vamos ao que interessa. Veja na prática tudo que você vai receber de forma vitalícia entrando na{" "}
+            <strong>Rise Community</strong> hoje.
           </p>
         </div>
 
