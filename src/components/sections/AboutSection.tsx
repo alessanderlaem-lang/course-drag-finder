@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           {/* Título Principal */}
           <h3 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
-            <span className="text-white">O Que é a </span>
+            <span className="text-white">O Que Você Vai </span>
             <span
               style={{
                 background: "linear-gradient(90deg, #FF0000 0%, #A70505 100%)",
@@ -16,16 +16,14 @@ const AboutSection = () => {
                 backgroundClip: "text",
               }}
             >
-              Rise Community
+              Receber
             </span>
-            <span className="text-white">?</span>
           </h3>
 
           {/* Subtítulo */}
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            A Rise Community é o{" "}
-            <strong>ecossistema definitivo de marketing digital e networking</strong>
-            , desenhado estrategicamente para...
+            Veja na prática tudo que você vai receber entrando na{" "}
+            <strong>Rise Community</strong>
           </p>
         </div>
 
