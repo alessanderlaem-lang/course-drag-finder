@@ -55,13 +55,13 @@ const Index = () => {
       {/* About Section - O Que é a Rise Community */}
       <AboutSection />
 
+      {/* How Access Works Section */}
+      <HowAccessWorks />
+
       {/* Bonus Section */}
       <div id="bonus-section" className="-mt-32 lg:-mt-20">
         <BonusSection />
       </div>
-
-      {/* How Access Works Section */}
-      <HowAccessWorks />
 
       {/* Sobre nós Section - Placeholder */}
       <div id="sobre" />
