@@ -15,8 +15,8 @@ const benefitCards: BenefitCard[] = [
   },
   {
     icon: Package,
-    title: "Fornecedores Exclusivos",
-    description: "Lista secreta de fornecedores de rateio e ferramentas premium.",
+    title: "Atualizações Semanais",
+    description: "Receba atualizações semanais com novos conteúdos, estratégias e materiais para se manter sempre à frente.",
   },
   {
     icon: Zap,

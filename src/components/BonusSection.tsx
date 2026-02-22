@@ -1,6 +1,6 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 
-import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
+
 import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
 import bonusNetworking from "@/assets/bonus-networking-new.webp";
@@ -14,14 +14,6 @@ interface BonusItem {
 }
 
 const bonusItems: BonusItem[] = [
-  {
-    number: 2,
-    image: bonusOfertas,
-    title: "Atualizações Semanalmente",
-    description:
-      "Receba atualizações semanais com novos conteúdos, estratégias e materiais para se manter sempre à frente.",
-    originalPrice: "R$ 67,00",
-  },
   {
     number: 3,
     image: bonus2,
