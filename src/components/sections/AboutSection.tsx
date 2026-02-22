@@ -10,8 +10,8 @@ interface BenefitCard {
 const benefitCards: BenefitCard[] = [
   {
     icon: GraduationCap,
-    title: "+10.000 Cursos Completos",
-    description: "Acesso a cursos de todas as áreas do digital, sempre atualizados.",
+    title: "+10k de Cursos via Fornecedores",
+    description: "Tenha acesso a cursos de diversos nichos: marketing, design, programação, finanças, idiomas e muito mais.",
   },
   {
     icon: Package,
