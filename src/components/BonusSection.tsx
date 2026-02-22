@@ -3,7 +3,7 @@ import { LazyMotion, domAnimation, m } from "framer-motion";
 
 import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusFornecedores from "@/assets/bonus-fornecedores.jpeg";
-import bonusNetworking from "@/assets/bonus-networking-new.webp";
+
 
 interface BonusItem {
   number: number;
@@ -28,14 +28,6 @@ const bonusItems: BonusItem[] = [
     description:
       "Acesso direto a fornecedores de cursos, ferramentas e materiais do digital",
     originalPrice: "R$ 197,00",
-  },
-  {
-    number: 5,
-    image: bonusNetworking,
-    title: "Grupos de Networking no WhatsApp",
-    description:
-      "Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias...",
-    originalPrice: "R$ 97,00",
   },
 ];
 
