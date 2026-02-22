@@ -1,5 +1,5 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import { GraduationCap, Package, Zap, CreditCard, Users, ShoppingBag, LucideIcon } from "lucide-react";
+import { GraduationCap, Package, Zap, LucideIcon } from "lucide-react";
 
 interface BenefitCard {
   icon: LucideIcon;
@@ -22,21 +22,6 @@ const benefitCards: BenefitCard[] = [
     icon: Zap,
     title: "Grupos de Networking no WhatsApp",
     description: "Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias.",
-  },
-  {
-    icon: CreditCard,
-    title: "Checkout com Taxa 70% Menor",
-    description: "Venda seus produtos sem intermediários e maximize seus lucros.",
-  },
-  {
-    icon: Users,
-    title: "Programa de Afiliados",
-    description: "Ganhe comissão por cada venda indicada dentro do ecossistema.",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Produtos Prontos para Revenda",
-    description: "PLRs, e-books e templates validados prontos para monetizar.",
   },
 ];
 
