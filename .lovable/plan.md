@@ -1,37 +1,15 @@
 
-## Plano: Nova Seção de Renda Extra + Espaçamento
+## Alterar botão "Login" para "Área de Membros"
 
-### O que será feito
+Trocar o texto do botão na Navbar de "Login" para "Área de Membros" e ajustar o estilo para acomodar o texto maior.
 
-1. **Criar a seção "Renda Extra"** entre os feedbacks (TestimonialsCarousel) e a seção de garantia/compra, com visual similar ao WhatYouGetSection (cards em grid, container premium com LED vermelho, shimmer effect).
+### Alterações no arquivo `src/components/Navbar.tsx`:
 
-2. **Adicionar espaçamento** entre os feedbacks e a nova seção.
+1. **Botão Desktop**: Reduzir o padding horizontal, diminuir levemente o tamanho da fonte e trocar o texto para "Área de Membros"
+2. **Botão Mobile** (dentro do menu hamburguer): Trocar o texto para "Área de Membros"
 
----
+### Detalhes Técnicos
 
-### Conteudo da Seção
-
-- Titulo: algo como "Transforme Conhecimento em Renda Extra"
-- Subtitulo descritivo
-- Grid de cards com formas de gerar renda extra dentro da Rise (ex: Programa de Afiliados, Revenda de PLRs, Freelancer com habilidades aprendidas, Dropshipping, Criacao de Infoprodutos, Automacoes e Bots, etc.)
-- CTA final levando ao pricing
-
----
-
-### Detalhes Tecnicos
-
-**Novo arquivo:** `src/components/sections/RendaExtraSection.tsx`
-- Usa `LazyMotion` + `m` do framer-motion (mesmo padrao do WhatYouGetSection)
-- Container com fundo `#111111`, borda `#464646`, border-radius 20px
-- LED glow bar vermelho no topo do container
-- Shimmer sweep animation
-- Grid de 6-8 cards com emoji, titulo e descricao curta
-- Cada card com fundo `#0D0D0D`, borda `#333`, hover vermelho
-- Fonte: Articulat CF
-- Gradiente vermelho nos destaques de texto
-- CTA button ao final
-
-**Alteracao:** `src/pages/Index.tsx`
-- Importar `RendaExtraSection`
-- Inserir entre `<TestimonialsCarousel />` e `<GuaranteeSection />`
-- Adicionar `mt-12 md:mt-16` ou similar para espacamento entre feedbacks e a nova secao
+- Botão desktop: reduzir padding de `16px 41px` para algo como `12px 28px` e fonte de `15px` para `14px` para o texto maior não ficar desproporcional
+- Manter o estilo arredondado (pill shape) e efeito hover existentes
+- Trocar ambas as ocorrências de "Login" no componente
