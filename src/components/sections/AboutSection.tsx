@@ -20,8 +20,8 @@ const benefitCards: BenefitCard[] = [
   },
   {
     icon: Zap,
-    title: "Ofertas Validadas Diárias",
-    description: "Oportunidades testadas e aprovadas pela comunidade todos os dias.",
+    title: "Grupos de Networking no WhatsApp",
+    description: "Acesso a grupos ativos no WhatsApp com membros que trocam experiências, estratégias e oportunidades todos os dias.",
   },
   {
     icon: CreditCard,
