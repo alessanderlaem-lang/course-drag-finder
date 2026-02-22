@@ -107,14 +107,14 @@ const Navbar = ({ onLoginClick }: NavbarProps) => {
           {/* Login Button - Desktop */}
           <button
             onClick={onLoginClick}
-            className="hidden md:block bg-white text-black rounded-full font-medium text-[15px] hover:scale-105 hover:shadow-xl transition-all duration-300"
+            className="hidden md:block bg-white text-black rounded-full font-medium text-[14px] hover:scale-105 hover:shadow-xl transition-all duration-300"
             style={{
-              padding: '16px 41px',
+              padding: '12px 28px',
               borderRadius: '49px',
               fontFamily: "'Articulat CF', sans-serif",
             }}
           >
-            Login
+            Área de Membros
           </button>
 
           {/* Mobile Toggle */}
@@ -170,7 +170,7 @@ const Navbar = ({ onLoginClick }: NavbarProps) => {
                   className="w-full bg-white text-black px-6 py-3.5 rounded-full font-medium hover:scale-[1.02] transition-transform text-[15px]"
                   style={{ fontFamily: "'Articulat CF', sans-serif" }}
                 >
-                  Login
+                  Área de Membros
                 </button>
               </li>
             </ul>
