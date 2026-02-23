@@ -1,44 +1,38 @@
 
 
-## Nova Secao de Fornecedores (substituindo BonusSection)
+## Reformular FornecedoresSection para cards individuais empilhados
 
-### Resumo
+### O que muda
 
-Remover completamente o `BonusSection` atual e criar uma nova secao dedicada chamada `FornecedoresSection` que destaca o acesso a fornecedores como um diferencial de alto valor -- nao mais como "bonus", mas como uma entrega principal com secao propria.
+O layout atual usa um **container unico** com um grid de 6 mini-cards dentro. O novo layout tera **cada categoria como um card individual separado**, empilhados verticalmente, exatamente como aparece na screenshot de referencia.
 
-### Conceito Visual
+### Formato de cada card
 
-Em vez de cards simples com badge de bonus, a nova secao tera um layout premium com:
+Cada card tera:
+- Container proprio com fundo `#111111`, borda `#464646`, border-radius `20px`, padding `25px`
+- LED vermelho no topo (glow bar + blur layer)
+- Efeito shimmer (light-sweep)
+- Icone Lucide vermelho (sem background box, apenas o icone solto)
+- Titulo em branco, bold, tamanho grande
+- Descricao em cinza `#999`
 
-1. **Cabecalho impactante** -- Titulo grande tipo "Acesso a Fornecedores Exclusivos" com subtitulo explicando que o membro tem acesso direto a fornecedores de diversas categorias
-2. **Grid de categorias** -- Cards compactos e elegantes mostrando cada tipo de fornecedor (Rateio, Streaming, Ferramentas Premium, Cursos, Templates, etc.) com icones e descricao curta
-3. **Destaque visual** -- Container principal com o estilo premium (fundo #111, borda #464646, LED vermelho, shimmer) envolvendo todo o conteudo, dando peso visual a secao inteira
+### Categorias (6 cards)
 
-### Categorias de Fornecedores (sugestao)
-
-- **Rateio de Cursos** -- Acesso a cursos premium por uma fracao do preco
-- **Streaming** -- Contas e acessos a plataformas de streaming
-- **Ferramentas Premium** -- ChatGPT, Canva Pro, CapCut e 50+ ferramentas
-- **Templates e PLRs** -- Produtos prontos para revenda e uso
-- **Materiais do Digital** -- Criativos, copys, funis validados
-- **Consulta de Dados** -- Puxada de dados exclusiva via Telegram
+1. **+10.000 Cursos Completos** (BookOpen) -- "Acesso a cursos de todas as areas do digital, sempre atualizados."
+2. **Fornecedores Exclusivos** (Package) -- "Lista secreta de fornecedores de rateio e ferramentas premium."
+3. **Ofertas Validadas Diarias** (Zap) -- "Oportunidades testadas e aprovadas pela comunidade todos os dias."
+4. **Checkout com Taxa 70% Menor** (CreditCard) -- "Venda seus produtos sem intermediarios e maximize seus lucros."
+5. **Ferramentas Premium** (Wrench) -- "ChatGPT, Canva Pro, CapCut e +50 ferramentas do digital."
+6. **Consulta de Dados** (Search) -- "Puxada de dados exclusiva via Telegram da comunidade."
 
 ### Detalhes tecnicos
 
-**Arquivos afetados:**
+**Arquivo:** `src/components/sections/FornecedoresSection.tsx`
 
-1. **`src/components/sections/FornecedoresSection.tsx`** (novo) -- Componente da nova secao
-2. **`src/pages/Index.tsx`** -- Remover import e uso do `BonusSection`, adicionar `FornecedoresSection` no mesmo lugar
-3. **`src/components/BonusSection.tsx`** -- Nao sera deletado (pode ser util futuramente), apenas removido do Index
-
-**Estrutura do componente:**
-
-- LazyMotion + framer-motion para animacoes de entrada
-- Container premium com LED vermelho e shimmer (reutilizando o padrao visual existente)
-- Grid responsivo: 2 colunas no mobile, 3 no desktop
-- Cada card de categoria: icone Lucide + titulo + descricao curta
-- Fundo da secao: preto (bg-black) com o container central em #111111
-- Icones em vermelho (#FF0000) para manter consistencia com a identidade visual
-
-**Posicao na pagina:** Mesmo lugar do BonusSection atual (depois do HowAccessWorks), mantendo o id `bonus-section` e as margens negativas para compatibilidade
-
+- Manter o cabecalho da secao (titulo "Fornecedores de Tudo" e subtitulo)
+- Trocar o container unico + grid por um `flex flex-col gap-6` de cards individuais
+- Cada card e um container premium independente com LED, glow e shimmer
+- Icones renderizados diretamente (sem box de fundo, tamanho ~32px, cor vermelha)
+- Remover o texto "+50 fornecedores verificados em" (inner heading do container unico)
+- Trocar os icones Lucide conforme a lista acima (adicionar Package, Zap, CreditCard; remover Tv, FileText, Palette)
+- Animacao de entrada com framer-motion em cada card individual (staggered por index)
