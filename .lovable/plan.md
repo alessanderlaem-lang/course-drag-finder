@@ -1,28 +1,44 @@
 
-## Transformar os cards da AboutSection no formato grande (estilo Bonus)
 
-### O que muda
+## Nova Secao de Fornecedores (substituindo BonusSection)
 
-Os 3 cards pequenos em grid (estilo compacto com icone) vao ser substituidos por 3 cards grandes empilhados verticalmente, no mesmo formato visual dos cards de bonus: imagem a esquerda + titulo e descricao a direita.
+### Resumo
 
-**Sem incluir**: numero de bonus, preco riscado, badge "NESSA OFERTA: GRATIS" -- pois aqui e o que a pessoa recebe, nao bonus.
+Remover completamente o `BonusSection` atual e criar uma nova secao dedicada chamada `FornecedoresSection` que destaca o acesso a fornecedores como um diferencial de alto valor -- nao mais como "bonus", mas como uma entrega principal com secao propria.
 
-### Imagens para cada card
+### Conceito Visual
 
-1. **+10k de Cursos via Fornecedores** -- `bonus-ofertas.jpeg`
-2. **Atualizacoes Semanais** -- `bonus-2.jpeg` (era a imagem original desse conteudo)
-3. **Grupos de Networking no WhatsApp** -- `bonus-networking-new.webp`
+Em vez de cards simples com badge de bonus, a nova secao tera um layout premium com:
+
+1. **Cabecalho impactante** -- Titulo grande tipo "Acesso a Fornecedores Exclusivos" com subtitulo explicando que o membro tem acesso direto a fornecedores de diversas categorias
+2. **Grid de categorias** -- Cards compactos e elegantes mostrando cada tipo de fornecedor (Rateio, Streaming, Ferramentas Premium, Cursos, Templates, etc.) com icones e descricao curta
+3. **Destaque visual** -- Container principal com o estilo premium (fundo #111, borda #464646, LED vermelho, shimmer) envolvendo todo o conteudo, dando peso visual a secao inteira
+
+### Categorias de Fornecedores (sugestao)
+
+- **Rateio de Cursos** -- Acesso a cursos premium por uma fracao do preco
+- **Streaming** -- Contas e acessos a plataformas de streaming
+- **Ferramentas Premium** -- ChatGPT, Canva Pro, CapCut e 50+ ferramentas
+- **Templates e PLRs** -- Produtos prontos para revenda e uso
+- **Materiais do Digital** -- Criativos, copys, funis validados
+- **Consulta de Dados** -- Puxada de dados exclusiva via Telegram
 
 ### Detalhes tecnicos
 
-**Arquivo:** `src/components/sections/AboutSection.tsx`
+**Arquivos afetados:**
 
-- Remover imports de icones Lucide (GraduationCap, Package, Zap) pois nao serao mais usados
-- Importar as 3 imagens dos assets
-- Atualizar a interface `BenefitCard` para ter campo `image: string` em vez de `icon: LucideIcon`
-- Trocar o grid de 3 colunas por um `flex flex-col gap-6 md:gap-8` (cards empilhados)
-- Cada card tera o layout do BonusCard: flex row no desktop (imagem + conteudo), flex column no mobile
-- Manter todos os efeitos visuais: LED vermelho no topo, glow blur, shimmer (light-sweep)
-- Manter o mesmo estilo do card: fundo #111111, borda 1px #464646, border-radius 20px, padding 25px
-- Conteudo de cada card: apenas titulo (branco, bold, grande, uppercase) + descricao (cinza #999)
-- Manter o cabecalho da secao e o placeholder de video inalterados
+1. **`src/components/sections/FornecedoresSection.tsx`** (novo) -- Componente da nova secao
+2. **`src/pages/Index.tsx`** -- Remover import e uso do `BonusSection`, adicionar `FornecedoresSection` no mesmo lugar
+3. **`src/components/BonusSection.tsx`** -- Nao sera deletado (pode ser util futuramente), apenas removido do Index
+
+**Estrutura do componente:**
+
+- LazyMotion + framer-motion para animacoes de entrada
+- Container premium com LED vermelho e shimmer (reutilizando o padrao visual existente)
+- Grid responsivo: 2 colunas no mobile, 3 no desktop
+- Cada card de categoria: icone Lucide + titulo + descricao curta
+- Fundo da secao: preto (bg-black) com o container central em #111111
+- Icones em vermelho (#FF0000) para manter consistencia com a identidade visual
+
+**Posicao na pagina:** Mesmo lugar do BonusSection atual (depois do HowAccessWorks), mantendo o id `bonus-section` e as margens negativas para compatibilidade
+
