@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 
-import BonusSection from "@/components/BonusSection";
+import FornecedoresSection from "@/components/sections/FornecedoresSection";
 import RendaExtraSection from "@/components/sections/RendaExtraSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -60,7 +60,7 @@ const Index = () => {
 
       {/* Bonus Section */}
       <div id="bonus-section" className="-mt-32 lg:-mt-20">
-        <BonusSection />
+        <FornecedoresSection />
       </div>
 
       {/* Sobre nós Section - Placeholder */}
