@@ -1,11 +1,10 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import {
   BookOpen,
-  Package,
-  Zap,
-  CreditCard,
+  Tv,
   Wrench,
-  Search,
+  Gamepad2,
+  MoreHorizontal,
   LucideIcon,
 } from "lucide-react";
 
@@ -17,24 +16,14 @@ interface Category {
 
 const categories: Category[] = [
   {
+    icon: Tv,
+    title: "Streaming",
+    description: "Contas e acessos a plataformas de streaming populares.",
+  },
+  {
     icon: BookOpen,
-    title: "+10.000 Cursos Completos",
-    description: "Acesso a cursos de todas as áreas do digital, sempre atualizados.",
-  },
-  {
-    icon: Package,
-    title: "Fornecedores Exclusivos",
-    description: "Lista secreta de fornecedores de rateio e ferramentas premium.",
-  },
-  {
-    icon: Zap,
-    title: "Ofertas Validadas Diárias",
-    description: "Oportunidades testadas e aprovadas pela comunidade todos os dias.",
-  },
-  {
-    icon: CreditCard,
-    title: "Checkout com Taxa 70% Menor",
-    description: "Venda seus produtos sem intermediários e maximize seus lucros.",
+    title: "Rateio de Cursos",
+    description: "Acesso a cursos premium por uma fração do preço original.",
   },
   {
     icon: Wrench,
@@ -42,9 +31,14 @@ const categories: Category[] = [
     description: "ChatGPT, Canva Pro, CapCut e +50 ferramentas do digital.",
   },
   {
-    icon: Search,
-    title: "Consulta de Dados",
-    description: "Puxada de dados exclusiva via Telegram da comunidade.",
+    icon: Gamepad2,
+    title: "Jogos",
+    description: "Games, contas e itens para as principais plataformas.",
+  },
+  {
+    icon: MoreHorizontal,
+    title: "E Muito Mais...",
+    description: "Dezenas de outras categorias atualizadas toda semana.",
   },
 ];
 
@@ -79,7 +73,7 @@ const FornecedoresSection = () => {
               style={{ fontFamily: "'Articulat CF', sans-serif" }}
             >
               Acesso direto a fornecedores verificados de diversas categorias.
-              Tudo organizado e atualizado dentro da comunidade.
+              Tudo organizado e atualizado.
             </p>
           </m.div>
 
