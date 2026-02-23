@@ -1,43 +1,50 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import {
   BookOpen,
-  Tv,
+  Package,
+  Zap,
+  CreditCard,
   Wrench,
-  FileText,
-  Palette,
   Search,
+  LucideIcon,
 } from "lucide-react";
 
-const categories = [
+interface Category {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+const categories: Category[] = [
   {
     icon: BookOpen,
-    title: "Rateio de Cursos",
-    description: "Acesso a cursos premium por uma fração do preço original",
+    title: "+10.000 Cursos Completos",
+    description: "Acesso a cursos de todas as áreas do digital, sempre atualizados.",
   },
   {
-    icon: Tv,
-    title: "Streaming",
-    description: "Contas e acessos a plataformas de streaming populares",
+    icon: Package,
+    title: "Fornecedores Exclusivos",
+    description: "Lista secreta de fornecedores de rateio e ferramentas premium.",
+  },
+  {
+    icon: Zap,
+    title: "Ofertas Validadas Diárias",
+    description: "Oportunidades testadas e aprovadas pela comunidade todos os dias.",
+  },
+  {
+    icon: CreditCard,
+    title: "Checkout com Taxa 70% Menor",
+    description: "Venda seus produtos sem intermediários e maximize seus lucros.",
   },
   {
     icon: Wrench,
     title: "Ferramentas Premium",
-    description: "ChatGPT, Canva Pro, CapCut e +50 ferramentas do digital",
-  },
-  {
-    icon: FileText,
-    title: "Templates & PLRs",
-    description: "Produtos prontos para revenda e uso imediato",
-  },
-  {
-    icon: Palette,
-    title: "Materiais do Digital",
-    description: "Criativos, copys e funis validados prontos para usar",
+    description: "ChatGPT, Canva Pro, CapCut e +50 ferramentas do digital.",
   },
   {
     icon: Search,
     title: "Consulta de Dados",
-    description: "Puxada de dados exclusiva via Telegram da comunidade",
+    description: "Puxada de dados exclusiva via Telegram da comunidade.",
   },
 ];
 
@@ -76,134 +83,99 @@ const FornecedoresSection = () => {
             </p>
           </m.div>
 
-          {/* Premium container */}
-          <m.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative overflow-hidden"
-            style={{
-              borderRadius: "24px",
-              padding: "32px 24px",
-              background: "#111111",
-              border: "1px solid #464646",
-            }}
-          >
-            {/* Red LED glow bar */}
-            <div
-              className="absolute pointer-events-none left-[20%]"
-              style={{
-                top: "-1px",
-                width: "60%",
-                height: "3px",
-                borderRadius: "2px",
-                background:
-                  "linear-gradient(90deg, transparent 0%, hsl(0 100% 55%) 25%, hsl(0 100% 60%) 50%, hsl(0 100% 55%) 75%, transparent 100%)",
-                zIndex: 10,
-              }}
-            />
-            {/* Glow layer */}
-            <div
-              className="absolute pointer-events-none left-[15%]"
-              style={{
-                top: "-4px",
-                width: "70%",
-                height: "12px",
-                borderRadius: "50%",
-                background:
-                  "radial-gradient(ellipse at center, hsl(0 100% 50% / 0.35) 0%, hsl(0 100% 50% / 0.15) 40%, transparent 70%)",
-                filter: "blur(6px)",
-                zIndex: 9,
-              }}
-            />
-
-            {/* Shimmer */}
-            <div
-              className="absolute inset-0 pointer-events-none overflow-hidden"
-              style={{ borderRadius: "24px" }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  top: "-30%",
-                  left: "-40%",
-                  width: "20%",
-                  height: "160%",
-                  background:
-                    "radial-gradient(ellipse at center, rgba(255,255,255,0.07) 0%, rgba(255,240,240,0.04) 30%, rgba(255,255,255,0.015) 55%, transparent 75%)",
-                  filter: "blur(15px)",
-                  animation: "light-sweep 6s linear infinite",
-                  transform: "skewX(-15deg)",
-                }}
-              />
-            </div>
-
-            {/* Inner heading */}
-            <div className="text-center mb-8 relative z-10">
-              <p
-                className="text-muted-foreground text-xs md:text-sm tracking-wide uppercase"
-                style={{ fontFamily: "'Articulat CF', sans-serif" }}
-              >
-                +50 fornecedores verificados em
-              </p>
-            </div>
-
-            {/* Categories grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 relative z-10">
-              {categories.map((cat, index) => {
-                const Icon = cat.icon;
-                return (
-                  <m.div
-                    key={cat.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: index * 0.08,
-                      duration: 0.4,
-                      ease: "easeOut",
-                    }}
-                    className="group relative rounded-2xl p-5 md:p-6 transition-all duration-300 hover:scale-[1.02]"
+          {/* Stacked cards */}
+          <div className="flex flex-col gap-6 md:gap-8 max-w-[940px] mx-auto">
+            {categories.map((cat, index) => {
+              const Icon = cat.icon;
+              return (
+                <m.div
+                  key={cat.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
+                >
+                  <div
+                    className="group relative overflow-hidden transition-all duration-500"
                     style={{
-                      background: "rgba(255,255,255,0.03)",
-                      border: "1px solid rgba(255,255,255,0.06)",
+                      borderRadius: "20px",
+                      padding: "25px",
+                      background: "#111111",
+                      border: "1px solid #464646",
                     }}
                   >
-                    {/* Icon */}
+                    {/* Red LED glow bar */}
                     <div
-                      className="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center mb-4 transition-colors duration-300"
+                      className="absolute pointer-events-none left-[12%] md:left-[7%]"
                       style={{
-                        background: "rgba(255,0,0,0.1)",
-                        border: "1px solid rgba(255,0,0,0.15)",
+                        top: "-1px",
+                        width: "28%",
+                        height: "3px",
+                        borderRadius: "2px",
+                        background: "linear-gradient(90deg, transparent 0%, hsl(0 100% 55%) 25%, hsl(0 100% 60%) 50%, hsl(0 100% 55%) 75%, transparent 100%)",
+                        zIndex: 10,
                       }}
+                    />
+                    {/* Glow layer */}
+                    <div
+                      className="absolute pointer-events-none left-[7%] md:left-[2%]"
+                      style={{
+                        top: "-4px",
+                        width: "28%",
+                        height: "10px",
+                        borderRadius: "50%",
+                        background: "radial-gradient(ellipse at center, hsl(0 100% 50% / 0.35) 0%, hsl(0 100% 50% / 0.15) 40%, transparent 70%)",
+                        filter: "blur(6px)",
+                        zIndex: 9,
+                      }}
+                    />
+
+                    {/* Shimmer */}
+                    <div
+                      className="absolute inset-0 pointer-events-none overflow-hidden"
+                      style={{ borderRadius: "20px" }}
                     >
-                      <Icon
-                        className="w-5 h-5 md:w-6 md:h-6 text-primary"
-                        strokeWidth={1.5}
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "-30%",
+                          left: "-40%",
+                          width: "20%",
+                          height: "160%",
+                          background: "radial-gradient(ellipse at center, rgba(255,255,255,0.07) 0%, rgba(255,240,240,0.04) 30%, rgba(255,255,255,0.015) 55%, transparent 75%)",
+                          filter: "blur(15px)",
+                          animation: "light-sweep 6s linear infinite",
+                          transform: "skewX(-15deg)",
+                        }}
                       />
                     </div>
 
-                    {/* Title */}
-                    <h3
-                      className="text-foreground font-bold text-sm md:text-base mb-1.5"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      {cat.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p
-                      className="text-muted-foreground text-xs md:text-sm leading-relaxed"
-                      style={{ fontFamily: "'Articulat CF', sans-serif" }}
-                    >
-                      {cat.description}
-                    </p>
-                  </m.div>
-                );
-              })}
-            </div>
-          </m.div>
+                    {/* Card content */}
+                    <div className="flex items-start gap-5 relative z-10">
+                      <Icon
+                        className="w-8 h-8 text-primary shrink-0 mt-1"
+                        strokeWidth={1.5}
+                      />
+                      <div>
+                        <h4
+                          className="text-foreground font-bold text-xl md:text-2xl lg:text-[1.75rem] leading-tight uppercase"
+                          style={{ fontFamily: "'Articulat CF', sans-serif" }}
+                        >
+                          {cat.title}
+                        </h4>
+                        <p
+                          className="text-sm md:text-[15px] leading-relaxed mt-2 max-w-[500px]"
+                          style={{ color: "#999", fontFamily: "'Articulat CF', sans-serif" }}
+                        >
+                          {cat.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </m.div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </LazyMotion>
