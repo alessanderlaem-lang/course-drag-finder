@@ -53,11 +53,11 @@ const Index = () => {
       {/* Diferenciais Críticos Section - Parte 2: 6 Diferenciais */}
       <DiferenciaisCriticosSection />
 
-      {/* About Section - O Que é a Rise Community */}
-      <AboutSection />
-
       {/* Showcase Images */}
       <ShowcaseImagesSection />
+
+      {/* About Section - O Que é a Rise Community */}
+      <AboutSection />
 
       {/* How Access Works Section */}
       <HowAccessWorks />
