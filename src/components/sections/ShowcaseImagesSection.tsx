@@ -24,7 +24,7 @@ const ShowcaseImagesSection = () => {
               <img
                 src={src}
                 alt={`Showcase ${i + 1}`}
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto rounded-lg"
                 loading="lazy"
               />
             </motion.div>
@@ -42,7 +42,7 @@ const ShowcaseImagesSection = () => {
           <img
             src={img5}
             alt="Showcase 5"
-            className="w-full md:w-1/2 h-auto rounded-2xl"
+            className="w-full md:w-1/2 h-auto rounded-lg"
             loading="lazy"
           />
         </motion.div>
