@@ -16,6 +16,7 @@ import DiferenciaisCriticosSection from "@/components/sections/DiferenciaisCriti
 import AboutSection from "@/components/sections/AboutSection";
 
 import HowAccessWorks from "@/components/HowAccessWorks";
+import ShowcaseImagesSection from "@/components/sections/ShowcaseImagesSection";
 
 
 
@@ -57,6 +58,9 @@ const Index = () => {
 
       {/* How Access Works Section */}
       <HowAccessWorks />
+
+      {/* Showcase Images */}
+      <ShowcaseImagesSection />
 
       {/* Bonus Section */}
       <div id="bonus-section" className="-mt-32 lg:-mt-20" />
