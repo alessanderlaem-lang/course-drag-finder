@@ -10,7 +10,7 @@ const images = [img1, img2, img3, img4];
 const ShowcaseImagesSection = () => {
   return (
     <div className="py-8 md:py-12">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Grid 2x2 */}
         <div className="grid grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
           {images.map((src, i) => (
