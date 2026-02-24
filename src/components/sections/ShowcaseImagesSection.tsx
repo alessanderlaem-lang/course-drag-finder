@@ -1,23 +1,32 @@
 import { motion } from "framer-motion";
+import img1 from "@/assets/showcase/1.webp";
+import img2 from "@/assets/showcase/2.webp";
+import img3 from "@/assets/showcase/3.webp";
+import img4 from "@/assets/showcase/4.webp";
+import img5 from "@/assets/showcase/5.webp";
+
+const images = [img1, img2, img3, img4];
 
 const ShowcaseImagesSection = () => {
-  const placeholders = [1, 2, 3, 4];
-
   return (
     <div className="py-8 md:py-12">
       <div className="max-w-5xl mx-auto">
         {/* Grid 2x2 */}
         <div className="grid grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
-          {placeholders.map((i) => (
+          {images.map((src, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="aspect-video bg-[#111] border border-[#333] rounded-2xl flex items-center justify-center"
             >
-              <span className="text-gray-500 text-sm md:text-base">Imagem {i}</span>
+              <img
+                src={src}
+                alt={`Showcase ${i + 1}`}
+                className="w-full h-auto rounded-2xl"
+                loading="lazy"
+              />
             </motion.div>
           ))}
         </div>
@@ -30,9 +39,12 @@ const ShowcaseImagesSection = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="flex justify-center"
         >
-          <div className="w-full md:w-1/2 aspect-video bg-[#111] border border-[#333] rounded-2xl flex items-center justify-center">
-            <span className="text-gray-500 text-sm md:text-base">Imagem 5</span>
-          </div>
+          <img
+            src={img5}
+            alt="Showcase 5"
+            className="w-full md:w-1/2 h-auto rounded-2xl"
+            loading="lazy"
+          />
         </motion.div>
       </div>
     </div>
