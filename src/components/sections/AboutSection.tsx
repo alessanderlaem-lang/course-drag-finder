@@ -1,5 +1,5 @@
 import { LazyMotion, domAnimation, m } from "framer-motion";
-
+import ShowcaseImagesSection from "@/components/sections/ShowcaseImagesSection";
 import bonusOfertas from "@/assets/bonus-ofertas.jpeg";
 import bonus2 from "@/assets/bonus-2.jpeg";
 import bonusNetworking from "@/assets/bonus-networking-new.webp";
@@ -69,6 +69,9 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Showcase Images Grid */}
+          <ShowcaseImagesSection />
 
           {/* Benefit Cards — stacked vertically */}
           <div className="max-w-5xl mx-auto flex flex-col gap-6 md:gap-8">

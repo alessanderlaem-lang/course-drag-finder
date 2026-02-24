@@ -4,8 +4,8 @@ const ShowcaseImagesSection = () => {
   const placeholders = [1, 2, 3, 4];
 
   return (
-    <section className="py-16 md:py-24 bg-black">
-      <div className="max-w-5xl mx-auto px-6">
+    <div className="py-8 md:py-12">
+      <div className="max-w-5xl mx-auto">
         {/* Grid 2x2 */}
         <div className="grid grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
           {placeholders.map((i) => (
@@ -35,7 +35,7 @@ const ShowcaseImagesSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 
