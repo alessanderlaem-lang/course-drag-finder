@@ -12,7 +12,7 @@ const ShowcaseImagesSection = () => {
     <div className="py-8 md:py-12 pb-16 md:pb-24">
       <div className="max-w-6xl mx-auto">
         {/* Grid 2x2 */}
-        <div className="grid grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
           {images.map((src, i) => (
             <motion.div
               key={i}
